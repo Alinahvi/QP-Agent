@@ -1,0 +1,89 @@
+<template>
+    <lightning-card title="Create / Update Ticket">
+        <div class="slds-p-around_medium">
+            <!-- Project Dropdown -->
+            <lightning-combobox
+                name="project"
+                label="Project"
+                value={selectedProjectId}
+                options={projectOptions}
+                onchange={handleProjectChange}
+                required
+            ></lightning-combobox>
+
+            <!-- Epic Dropdown -->
+            <lightning-combobox
+                name="epic"
+                label="Epic"
+                value={selectedEpicId}
+                options={epicOptions}
+                onchange={handleEpicChange}
+                required
+            ></lightning-combobox>
+            <template if:true={showNewEpicInput}>
+                <lightning-input
+                    name="newEpicName"
+                    label="New Epic Name"
+                    value={newEpicName}
+                    onchange={handleNewEpicNameChange}
+                    required
+                ></lightning-input>
+            </template>
+
+            <!-- Work Dropdown -->
+            <lightning-combobox
+                name="work"
+                label="Work"
+                value={selectedWorkId}
+                options={workOptions}
+                onchange={handleWorkChange}
+                required
+            ></lightning-combobox>
+            <template if:true={showNewWorkInput}>
+                <lightning-input
+                    name="newWorkName"
+                    label="New Work Name"
+                    value={newWorkName}
+                    onchange={handleNewWorkNameChange}
+                    required
+                ></lightning-input>
+            </template>
+
+            <!-- Description -->
+            <lightning-textarea
+                name="description"
+                label="Description"
+                value={description}
+                onchange={handleDescriptionChange}
+                required={isDescriptionRequired}
+            ></lightning-textarea>
+
+            <!-- Assignee Lookup -->
+            <c-user-lookup
+                label="Assignee (optional)"
+                value={assigneeId}
+                onuserchange={handleAssigneeChange}
+            ></c-user-lookup>
+
+            <!-- Product Tag Dropdown -->
+            <lightning-combobox
+                name="productTag"
+                label="Product Tag"
+                value={selectedProductTagId}
+                options={productTagOptions}
+                onchange={handleProductTagChange}
+                required
+            ></lightning-combobox>
+
+            <!-- Submit Button -->
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Submit"
+                    onclick={handleSubmit}
+                    disabled={isSubmitting}
+                ></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template> 
