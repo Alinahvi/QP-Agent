@@ -9,25 +9,6 @@ This guide will help you set up a secure GitHub integration with your Salesforce
 - GitHub personal access token
 - Access to your Salesforce project
 
-## Security Notice ⚠️
-**IMPORTANT**: The GitHub token you shared earlier has been exposed. You must:
-1. **Immediately revoke** the token from GitHub Settings → Developer settings → Personal access tokens
-2. **Generate a new token** with appropriate permissions
-3. **Never share tokens in plain text** in chat, emails, or code comments
-
-## Step 1: Generate New GitHub Token
-1. Go to [GitHub Settings](https://github.com/settings/tokens)
-2. Click "Generate new token (classic)"
-3. Give it a descriptive name (e.g., "Salesforce Integration")
-4. Select scopes:
-   - `repo` (Full control of private repositories)
-   - `read:user` (Read user profile data)
-   - `read:org` (Read organization data)
-5. Click "Generate token"
-6. **Copy the token immediately** (you won't see it again)
-
-## Step 2: Deploy Integration Classes
-Run the deployment script from your project root:
 
 ```bash
 chmod +x scripts/deploy-github-integration.sh
