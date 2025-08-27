@@ -5,6 +5,11 @@
  * @description Service class for Open Pipe Analysis operations on Agent_Open_Pipe__c records.
  * Handles all business logic for analyzing open pipeline data across AEs with grouping, filtering, and aggregation.
  *
+ * Realism Guardrails for DAYS_IN_STAGE Analysis:
+ * - Outlier cap: 540 days (18 months) to exclude ultra-outliers
+ * - Minimum sample size: 3 opportunities per product for meaningful averages
+ * - Uses proper AggregateResult patterns for accurate aggregation
+ *
  * Key fields referenced (ONLY these allowed):
  *   - emp_id__c: Employee identifier for the AE
  *   - full_name__c: AE full name
@@ -31,6 +36,9 @@
  * @version 3.0
  */
 public with sharing class ANAgentOpenPipeAnalysisV3Service {
+    
+    // Import Pattern and Matcher for regex operations
+    private static final Pattern STAGE_PATTERN = Pattern.compile('open_pipe_opty_stg_nm=\'([^\']+)\'');
     
     // Field mapping constants for grouping
     private static final Map<String, String> GROUP_FIELD_MAP = new Map<String, String>{
@@ -349,7 +357,7 @@ public with sharing class ANAgentOpenPipeAnalysisV3Service {
         if (records.isEmpty()) {
             message += '- No records found matching the criteria\n';
         } else {
-            message += buildInsightsByAnalysisType(records, groupBy, analysisType, limitN);
+            message += buildInsightsByAnalysisType(records, ouName, workLocationCountry, groupBy, analysisType, limitN, filterCriteria);
         }
         message += '\n';
         
@@ -375,7 +383,7 @@ public with sharing class ANAgentOpenPipeAnalysisV3Service {
     /**
      * Builds insights based on analysis type
      */
-    private static String buildInsightsByAnalysisType(List<Agent_Open_Pipe__c> records, String groupBy, String analysisType, Integer limitN) {
+    private static String buildInsightsByAnalysisType(List<Agent_Open_Pipe__c> records, String ouName, String workLocationCountry, String groupBy, String analysisType, Integer limitN, String filterCriteria) {
         switch on analysisType {
             when 'STAGE_COUNT' {
                 return buildStageCountInsights(records, groupBy, limitN);
@@ -386,8 +394,23 @@ public with sharing class ANAgentOpenPipeAnalysisV3Service {
             when 'AE_SCORE_ANALYSIS' {
                 return buildAEScoreInsights(records, groupBy, limitN);
             }
+            when 'AE_ANALYSIS' {
+                return buildAEAnalysisInsights(records, groupBy, limitN);
+            }
             when 'DAYS_IN_STAGE' {
-                return buildDaysInStageInsights(records, groupBy, limitN);
+                // For DAYS_IN_STAGE analysis, use the new realistic aggregation helper
+                // Extract stage name from filter criteria if available
+                System.debug('DEBUG: filterCriteria = ' + filterCriteria);
+                String stageName = extractStageNameFromFilter(filterCriteria);
+                System.debug('DEBUG: extracted stageName = ' + stageName);
+                if (String.isNotBlank(stageName)) {
+                    System.debug('DEBUG: Using new realistic aggregation helper');
+                    return aggregateDaysByProduct(ouName, workLocationCountry, stageName, limitN);
+                } else {
+                    System.debug('DEBUG: No stage filter found, falling back to old method');
+                    // Fallback to old method if no stage filter
+                    return buildDaysInStageInsights(records, groupBy, limitN);
+                }
             }
             when 'OPPORTUNITY_DETAILS' {
                 return buildOpportunityDetailsInsights(records, groupBy, limitN);
@@ -548,6 +571,77 @@ public with sharing class ANAgentOpenPipeAnalysisV3Service {
     }
     
     /**
+     * Builds AE analysis insights
+     */
+    private static String buildAEAnalysisInsights(List<Agent_Open_Pipe__c> records, String groupBy, Integer limitN) {
+        String insights = '\n**AE Analysis**:\n';
+
+        // Group records by AE
+        Map<String, Integer> aeCounts = new Map<String, Integer>();
+        Map<String, Set<String>> aeProducts = new Map<String, Set<String>>();
+        Map<String, Set<String>> aeAccounts = new Map<String, Set<String>>();
+        Map<String, String> aeEmails = new Map<String, String>();
+
+        for (Agent_Open_Pipe__c record : records) {
+            if (String.isNotBlank(record.full_name__c)) {
+                String aeName = record.full_name__c;
+                aeCounts.put(aeName, aeCounts.get(aeName) != null ? aeCounts.get(aeName) + 1 : 1);
+
+                // Track unique products per AE
+                if (!aeProducts.containsKey(aeName)) {
+                    aeProducts.put(aeName, new Set<String>());
+                }
+                if (String.isNotBlank(record.open_pipe_prod_nm__c)) {
+                    aeProducts.get(aeName).add(record.open_pipe_prod_nm__c);
+                }
+
+                // Track unique accounts per AE (using opportunity name as proxy for account)
+                if (!aeAccounts.containsKey(aeName)) {
+                    aeAccounts.put(aeName, new Set<String>());
+                }
+                if (String.isNotBlank(record.open_pipe_opty_nm__c)) {
+                    aeAccounts.get(aeName).add(record.open_pipe_opty_nm__c);
+                }
+
+                // Track email address for AE (store first occurrence)
+                if (!aeEmails.containsKey(aeName) && String.isNotBlank(record.emp_email_addr__c)) {
+                    aeEmails.put(aeName, record.emp_email_addr__c);
+                }
+            }
+        }
+
+        // Sort by count (descending)
+        List<String> sortedAEs = new List<String>(aeCounts.keySet());
+        sortedAEs.sort(new AECountComparator(aeCounts));
+
+        // Apply limit
+        Integer displayLimit = limitN != null && limitN > 0 ? limitN : sortedAEs.size();
+        Integer actualShown = Math.min(displayLimit, sortedAEs.size());
+
+        for (Integer i = 0; i < actualShown; i++) {
+            String aeName = sortedAEs[i];
+            Integer count = aeCounts.get(aeName);
+            Integer uniqueProducts = aeProducts.get(aeName).size();
+            Integer uniqueAccounts = aeAccounts.get(aeName).size();
+            String email = aeEmails.get(aeName);
+
+            insights += '- **' + aeName + '**: ' + count + ' open pipeline opportunities';
+            insights += ', ' + uniqueProducts + ' unique products';
+            insights += ', ' + uniqueAccounts + ' unique opportunities';
+            if (String.isNotBlank(email)) {
+                insights += ', Email: ' + email;
+            }
+            insights += '\n';
+        }
+
+        if (limitN != null && limitN > 0 && sortedAEs.size() > limitN) {
+            insights += '- *... and ' + (sortedAEs.size() - limitN) + ' more AEs*\n';
+        }
+
+        return insights;
+    }
+
+    /**
      * Builds default insights
      */
     private static String buildDefaultInsights(List<Agent_Open_Pipe__c> records, String groupBy, Integer limitN) {
@@ -598,6 +692,7 @@ public with sharing class ANAgentOpenPipeAnalysisV3Service {
                 recordData.put('amount', record.open_pipe_original_openpipe_alloc_amt__c);
                 recordData.put('daysInStage', record.open_pipe_opty_days_in_stage__c);
                 recordData.put('aeName', record.full_name__c);
+                recordData.put('aeEmail', record.emp_email_addr__c);
                 recordData.put('aeScore', record.open_pipe_ae_score__c);
                 
                 groups.get(groupValue).add(recordData);
@@ -705,6 +800,25 @@ public with sharing class ANAgentOpenPipeAnalysisV3Service {
             
             if (amountA > amountB) return -1;
             if (amountA < amountB) return 1;
+            return 0;
+        }
+    }
+
+    /**
+     * Comparator class for sorting AEs by count (descending)
+     */
+    public class AECountComparator implements Comparator<String> {
+        private Map<String, Integer> countMap;
+
+        public AECountComparator(Map<String, Integer> countMap) {
+            this.countMap = countMap;
+        }
+
+        public Integer compare(String a, String b) {
+            Integer countA = countMap.get(a) != null ? countMap.get(a) : 0;
+            Integer countB = countMap.get(b) != null ? countMap.get(b) : 0;
+            if (countA < countB) return 1;  // Descending order
+            if (countA > countB) return -1;
             return 0;
         }
     }
@@ -889,5 +1003,72 @@ public with sharing class ANAgentOpenPipeAnalysisV3Service {
         }
         
         return correctedFilter;
+    }
+    
+    /**
+     * Helper method to aggregate days by product with realism guardrails
+     * Applies outlier caps, minimum sample sizes, and returns realistic metrics
+     */
+    private static String aggregateDaysByProduct(String ouName, String workLocationCountry, String stageName, Integer limitN) {
+        // Realism guardrails
+        Integer maxDaysCap = 540;  // Cap at 18 months to exclude ultra-outliers
+        Integer minN = 3;          // Minimum sample size for meaningful averages
+        
+        String query = 'SELECT open_pipe_prod_nm__c, ' +
+                      'AVG(open_pipe_opty_days_in_stage__c) avgDays, ' +
+                      'COUNT(Id) oppCount ' +
+                      'FROM Agent_Open_Pipe__c ' +
+                      'WHERE ou_name__c = \'' + String.escapeSingleQuotes(ouName) + '\' ' +
+                      'AND open_pipe_opty_stg_nm__c = \'' + String.escapeSingleQuotes(stageName) + '\' ' +
+                      'AND open_pipe_opty_days_in_stage__c != NULL ' +
+                      'AND open_pipe_opty_days_in_stage__c <= ' + maxDaysCap + ' ' +
+                      'AND open_pipe_prod_nm__c != NULL ' +
+                      'GROUP BY open_pipe_prod_nm__c ' +
+                      'HAVING COUNT(Id) >= ' + minN + ' ' +
+                      'ORDER BY AVG(open_pipe_opty_days_in_stage__c) DESC ' +
+                      'LIMIT ' + limitN;
+        
+        List<AggregateResult> aggregatedData = Database.query(query);
+        
+        if (aggregatedData.isEmpty()) {
+            return 'No products found with sufficient data (min ' + minN + ' opportunities, max ' + maxDaysCap + ' days cap)';
+        }
+        
+        List<String> insights = new List<String>();
+        insights.add('**Top ' + aggregatedData.size() + ' products by average days in stage (cap=' + maxDaysCap + ' days, minN=' + minN + '):**');
+        
+        for (AggregateResult agg : aggregatedData) {
+            String product = (String) agg.get('open_pipe_prod_nm__c');
+            Decimal avgDays = (Decimal) agg.get('avgDays');
+            Integer oppCount = (Integer) agg.get('oppCount');
+            
+            // Round to 1 decimal place for readability
+            Decimal roundedDays = avgDays.setScale(1, RoundingMode.HALF_UP);
+            
+            insights.add('- **' + product + '**: Average ' + roundedDays + ' days (N=' + oppCount + ')');
+        }
+        
+        return String.join(insights, '\n');
+    }
+    
+    /**
+     * Extracts stage name from filter criteria for DAYS_IN_STAGE analysis
+     */
+    private static String extractStageNameFromFilter(String filterCriteria) {
+        if (String.isBlank(filterCriteria)) {
+            return null;
+        }
+        
+        // Look for stage filter patterns
+        if (filterCriteria.contains('open_pipe_opty_stg_nm=')) {
+            // Extract the stage name from the filter using the pre-compiled pattern
+            Matcher m = STAGE_PATTERN.matcher(filterCriteria);
+            
+            if (m.find()) {
+                return m.group(1);
+            }
+        }
+        
+        return null;
     }
 } 
