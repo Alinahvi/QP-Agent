@@ -1,0 +1,56 @@
+{
+  "name": "EBP Agent Test Pack",
+  "description": "10 diverse utterances for EBP Agent testing",
+  "utterances": [
+    {
+      "id": "1",
+      "text": "Show me avg calls in Germany for EMEA ENTR",
+      "expectedAction": "KPI Analysis"
+    },
+    {
+      "id": "2", 
+      "text": "What's the average ACV for AMER ACC this quarter?",
+      "expectedAction": "KPI Analysis"
+    },
+    {
+      "id": "3",
+      "text": "Find SMEs for Data Cloud in AMER ACC region",
+      "expectedAction": "SME Search"
+    },
+    {
+      "id": "4",
+      "text": "Show me cross-sell opportunities for Data Cloud in EMEA ENTR",
+      "expectedAction": "Future Pipeline"
+    },
+    {
+      "id": "5",
+      "text": "What products are in the passed stage for AMER ACC?",
+      "expectedAction": "Open Pipe Analysis"
+    },
+    {
+      "id": "6",
+      "text": "Show me ACT articles on AI and machine learning for EMEA ENTR",
+      "expectedAction": "Content Search"
+    },
+    {
+      "id": "7",
+      "text": "Who are the Service Cloud experts in UKI?",
+      "expectedAction": "SME Search"
+    },
+    {
+      "id": "8",
+      "text": "Generate upsell pipeline for Lightning Web Components in AMER ACC",
+      "expectedAction": "Future Pipeline"
+    },
+    {
+      "id": "9",
+      "text": "Show me open pipe analysis for EMEA ENTR by stage",
+      "expectedAction": "Open Pipe Analysis"
+    },
+    {
+      "id": "10",
+      "text": "What's the process for opportunity management in AMER ACC?",
+      "expectedAction": "Workflow"
+    }
+  ]
+}

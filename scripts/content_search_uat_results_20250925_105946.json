@@ -1,0 +1,502 @@
+[
+  {
+    "utterance_number": 1,
+    "utterance": "Show me ACT courses related to Data Cloud",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:20.538109"
+  },
+  {
+    "utterance_number": 2,
+    "utterance": "List Sales Cloud ACT courses created between Jan 1 and Mar 31",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:21.052672"
+  },
+  {
+    "utterance_number": 3,
+    "utterance": "Find Sales Cloud ACT courses with completion rate > 60%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:21.562859"
+  },
+  {
+    "utterance_number": 4,
+    "utterance": "For those courses, show enrollments",
+    "source_requested": "Mixed",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:22.069489"
+  },
+  {
+    "utterance_number": 5,
+    "utterance": "Show a Consensus demo on Data Cloud",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:22.582378"
+  },
+  {
+    "utterance_number": 6,
+    "utterance": "Find Consensus demo videos for Data Cloud created in the last quarter",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:23.090763"
+  },
+  {
+    "utterance_number": 7,
+    "utterance": "List ACT curricula for Sales Cloud with completion rate > 75% and show links",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:23.600104"
+  },
+  {
+    "utterance_number": 8,
+    "utterance": "Show ACT assets tagged Data Cloud created this year",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:24.109666"
+  },
+  {
+    "utterance_number": 9,
+    "utterance": "From ACT, show top 5 Sales Cloud courses by enrollment",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:24.618288"
+  },
+  {
+    "utterance_number": 10,
+    "utterance": "Show Consensus demos for Sales Cloud with a public preview link",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:25.123407"
+  },
+  {
+    "utterance_number": 11,
+    "utterance": "Find ACT courses for Marketing Cloud with completion rate > 70%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:25.631973"
+  },
+  {
+    "utterance_number": 12,
+    "utterance": "Show Consensus demos for Service Cloud created in Q1 2024",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:26.137364"
+  },
+  {
+    "utterance_number": 13,
+    "utterance": "List ACT assets for Data Cloud with enrollment > 1000",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:26.651617"
+  },
+  {
+    "utterance_number": 14,
+    "utterance": "Show top 3 Consensus demos for Marketing Cloud by view count",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:27.156817"
+  },
+  {
+    "utterance_number": 15,
+    "utterance": "Find ACT curricula for Service Cloud with completion rate > 80%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:27.664958"
+  },
+  {
+    "utterance_number": 16,
+    "utterance": "Show Consensus demos for Data Cloud with duration > 15 minutes",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:28.171387"
+  },
+  {
+    "utterance_number": 17,
+    "utterance": "List ACT courses for Sales Cloud created between Feb 1 and Apr 30",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:28.681907"
+  },
+  {
+    "utterance_number": 18,
+    "utterance": "Show Consensus demos for Service Cloud with public preview",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:29.190224"
+  },
+  {
+    "utterance_number": 19,
+    "utterance": "Find ACT assets for Marketing Cloud tagged with 'advanced'",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:29.699274"
+  },
+  {
+    "utterance_number": 20,
+    "utterance": "Show Consensus demos for Data Cloud with view count > 5000",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:30.205681"
+  },
+  {
+    "utterance_number": 21,
+    "utterance": "List ACT courses for Service Cloud with completion rate > 65%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:30.712713"
+  },
+  {
+    "utterance_number": 22,
+    "utterance": "Show Consensus demos for Marketing Cloud created this year",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:31.222356"
+  },
+  {
+    "utterance_number": 23,
+    "utterance": "Find ACT curricula for Data Cloud with enrollment > 2000",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:31.726868"
+  },
+  {
+    "utterance_number": 24,
+    "utterance": "Show top 5 Consensus demos for Sales Cloud by engagement",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:32.235599"
+  },
+  {
+    "utterance_number": 25,
+    "utterance": "List ACT assets for Service Cloud with completion rate > 75%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:32.745788"
+  },
+  {
+    "utterance_number": 26,
+    "utterance": "Show Consensus demos for Data Cloud with duration < 20 minutes",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:33.252151"
+  },
+  {
+    "utterance_number": 27,
+    "utterance": "Find ACT courses for Marketing Cloud created in the last 6 months",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:33.755763"
+  },
+  {
+    "utterance_number": 28,
+    "utterance": "Show Consensus demos for Service Cloud with view count > 3000",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:34.264063"
+  },
+  {
+    "utterance_number": 29,
+    "utterance": "List ACT curricula for Sales Cloud with completion rate > 85%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:34.772863"
+  },
+  {
+    "utterance_number": 30,
+    "utterance": "Show Consensus demos for Data Cloud with public preview and high engagement",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:35.279910"
+  },
+  {
+    "utterance_number": 31,
+    "utterance": "Find ACT assets for Service Cloud tagged with 'integration'",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:35.788910"
+  },
+  {
+    "utterance_number": 32,
+    "utterance": "Show Consensus demos for Marketing Cloud with duration > 10 minutes",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:36.299644"
+  },
+  {
+    "utterance_number": 33,
+    "utterance": "List ACT courses for Data Cloud with enrollment > 1500",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:36.805900"
+  },
+  {
+    "utterance_number": 34,
+    "utterance": "Show Consensus demos for Sales Cloud created between Jan 1 and Mar 31",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:37.409933"
+  },
+  {
+    "utterance_number": 35,
+    "utterance": "Find ACT curricula for Marketing Cloud with completion rate > 78%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:37.920307"
+  },
+  {
+    "utterance_number": 36,
+    "utterance": "Show Consensus demos for Service Cloud with view count > 4000",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:38.432090"
+  },
+  {
+    "utterance_number": 37,
+    "utterance": "List ACT assets for Data Cloud with completion rate > 80%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:38.963619"
+  },
+  {
+    "utterance_number": 38,
+    "utterance": "Show Consensus demos for Marketing Cloud with public preview",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:39.473613"
+  },
+  {
+    "utterance_number": 39,
+    "utterance": "Find ACT courses for Service Cloud created in Q2 2024",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:39.983006"
+  },
+  {
+    "utterance_number": 40,
+    "utterance": "Show Consensus demos for Data Cloud with duration > 25 minutes",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:40.492234"
+  },
+  {
+    "utterance_number": 41,
+    "utterance": "List ACT curricula for Sales Cloud with enrollment > 3000",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:41.002902"
+  },
+  {
+    "utterance_number": 42,
+    "utterance": "Show Consensus demos for Service Cloud with view count > 6000",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:41.511567"
+  },
+  {
+    "utterance_number": 43,
+    "utterance": "Find ACT assets for Marketing Cloud with completion rate > 72%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:42.020823"
+  },
+  {
+    "utterance_number": 44,
+    "utterance": "Show Consensus demos for Data Cloud with public preview and duration < 15 minutes",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:42.529883"
+  },
+  {
+    "utterance_number": 45,
+    "utterance": "List ACT courses for Service Cloud with completion rate > 68%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:43.042264"
+  },
+  {
+    "utterance_number": 46,
+    "utterance": "Show Consensus demos for Marketing Cloud created in the last quarter",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:43.555313"
+  },
+  {
+    "utterance_number": 47,
+    "utterance": "Find ACT curricula for Data Cloud with enrollment > 2500",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:44.067314"
+  },
+  {
+    "utterance_number": 48,
+    "utterance": "Show Consensus demos for Sales Cloud with view count > 8000",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:44.570901"
+  },
+  {
+    "utterance_number": 49,
+    "utterance": "List ACT assets for Service Cloud with completion rate > 77%",
+    "source_requested": "ACT",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:45.083757"
+  },
+  {
+    "utterance_number": 50,
+    "utterance": "Show Consensus demos for Data Cloud with public preview and high view count",
+    "source_requested": "Consensus",
+    "method_used": "API",
+    "agent_response": "API Error: 403 - ",
+    "result": "FAIL",
+    "notes": "HTTP 403",
+    "timestamp": "2025-09-25T10:59:45.595843"
+  }
+]

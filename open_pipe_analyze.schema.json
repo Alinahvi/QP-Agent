@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "required": ["ouName"],
+  "properties": {
+    "ouName": { 
+      "type": "string", 
+      "description": "Operating Unit name, e.g., 'AMER ACC', 'EMEA ENTR'" 
+    },
+    "country": { 
+      "type": "string", 
+      "description": "Work location country filter. Optional if ouName is given." 
+    },
+    "minStage": { 
+      "type": "integer", 
+      "minimum": 0, 
+      "maximum": 8, 
+      "description": "Only include opps at or beyond this stage. E.g., 4 = post-Stage-4." 
+    },
+    "productListCsv": { 
+      "type": "string", 
+      "description": "Optional CSV list of product names to include." 
+    },
+    "timeFrame": { 
+      "type": "string", 
+      "enum": ["CURRENT", "PREVIOUS"], 
+      "default": "CURRENT" 
+    },
+    "limitN": { 
+      "type": "integer", 
+      "minimum": 1, 
+      "maximum": 50, 
+      "default": 10 
+    }
+  },
+  "additionalProperties": false
+}

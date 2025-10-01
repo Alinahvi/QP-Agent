@@ -1,0 +1,36 @@
+scope:
+  primaryObject: Audience__c
+  objects:
+    - Audience__c
+actionLayer:
+  invocableMethod:
+    className: FRAGENTAudienceHandler
+    methodLabel: FRAGENT Manage Audience
+    methodName: manageAudiences
+    singleOutputEnvelope:
+      contractName: AudienceResult
+      version: "1.0"
+related:
+  member:
+    objectApiName: Audience_Member__c
+    parentFieldApiName: Audience__c
+    relationshipNameOnParent: Audience_Members__r
+  checklist:
+    objectApiName: Audience_Checklist__c
+  assignedLearning:
+    objectApiName: Assigned_Learning__c
+recordTypes:
+  create:
+    developerName: Cohort
+    label: Manual
+dependencies:
+  apexLibs:
+    - AgentCore_Permissions
+    - AgentCore_SafeQuery
+    - AgentCore_Dedupe
+    - AgentCore_TestFactory
+  permissionSets:
+    - Checklist Manager
+    - Agent Retrieve
+    - Agent CRU
+    - Agent CRUD

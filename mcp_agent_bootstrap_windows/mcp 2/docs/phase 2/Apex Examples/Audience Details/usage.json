@@ -1,0 +1,132 @@
+{
+  "objectApiName": "Audience__c",
+  "apex": [
+    {
+      "name": "AgentCore_Dedupe_Test.cls",
+      "path": "force-app/main/default/classes/AgentCore_Dedupe_Test.cls",
+      "hits": 7
+    },
+    {
+      "name": "AgentCore_Primer.cls",
+      "path": "force-app/main/default/classes/AgentCore_Primer.cls",
+      "hits": 4
+    },
+    {
+      "name": "AgentCore_TestFactory.cls",
+      "path": "force-app/main/default/classes/AgentCore_TestFactory.cls",
+      "hits": 31
+    },
+    {
+      "name": "DebugAssignedLearningTest.cls",
+      "path": "force-app/main/default/classes/DebugAssignedLearningTest.cls",
+      "hits": 2
+    },
+    {
+      "name": "DebugAudiencePerms_Test.cls",
+      "path": "force-app/main/default/classes/DebugAudiencePerms_Test.cls",
+      "hits": 2
+    },
+    {
+      "name": "FRAGENTAssignedLearningHandler.cls",
+      "path": "force-app/main/default/classes/FRAGENTAssignedLearningHandler.cls",
+      "hits": 2
+    },
+    {
+      "name": "FRAGENTAssignedLearningHandler_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAssignedLearningHandler_Test.cls",
+      "hits": 3
+    },
+    {
+      "name": "FRAGENTAssignedLearningService.cls",
+      "path": "force-app/main/default/classes/FRAGENTAssignedLearningService.cls",
+      "hits": 9
+    },
+    {
+      "name": "FRAGENTAssignedLearningService_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAssignedLearningService_Test.cls",
+      "hits": 21
+    },
+    {
+      "name": "FRAGENTAudienceChecklistHandler.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceChecklistHandler.cls",
+      "hits": 2
+    },
+    {
+      "name": "FRAGENTAudienceChecklistHandler_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceChecklistHandler_Test.cls",
+      "hits": 9
+    },
+    {
+      "name": "FRAGENTAudienceChecklistService.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceChecklistService.cls",
+      "hits": 13
+    },
+    {
+      "name": "FRAGENTAudienceChecklistService_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceChecklistService_Test.cls",
+      "hits": 27
+    },
+    {
+      "name": "FRAGENTAudienceHandler.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceHandler.cls",
+      "hits": 25
+    },
+    {
+      "name": "FRAGENTAudienceHandler_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceHandler_Test.cls",
+      "hits": 17
+    },
+    {
+      "name": "FRAGENTAudienceMemberHandler.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceMemberHandler.cls",
+      "hits": 3
+    },
+    {
+      "name": "FRAGENTAudienceMemberHandler_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceMemberHandler_Test.cls",
+      "hits": 1
+    },
+    {
+      "name": "FRAGENTAudienceMemberService.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceMemberService.cls",
+      "hits": 21
+    },
+    {
+      "name": "FRAGENTAudienceMemberService_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceMemberService_Test.cls",
+      "hits": 38
+    },
+    {
+      "name": "FRAGENTAudienceService.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceService.cls",
+      "hits": 167
+    },
+    {
+      "name": "FRAGENTAudienceService_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTAudienceService_Test.cls",
+      "hits": 82
+    },
+    {
+      "name": "FRAGENTCommandCenterController.cls",
+      "path": "force-app/main/default/classes/FRAGENTCommandCenterController.cls",
+      "hits": 3
+    },
+    {
+      "name": "FRAGENTConstants.cls",
+      "path": "force-app/main/default/classes/FRAGENTConstants.cls",
+      "hits": 2
+    },
+    {
+      "name": "FRAGENTCSVGeneratorHandler_Test.cls",
+      "path": "force-app/main/default/classes/FRAGENTCSVGeneratorHandler_Test.cls",
+      "hits": 3
+    },
+    {
+      "name": "FRAGENTProvisionCohortService.cls",
+      "path": "force-app/main/default/classes/FRAGENTProvisionCohortService.cls",
+      "hits": 4
+    }
+  ],
+  "flows": [],
+  "lwcs": []
+}

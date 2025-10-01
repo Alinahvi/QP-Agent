@@ -1,0 +1,529 @@
+=== Content Search 100 Utterance Test ===
+Testing 100 utterances in 10 batches of 10 each
+MCP Server: http://localhost:8787
+Tool: content_search
+✅ MCP server is running
+
+=== BATCH 1: Testing 10 utterances ===
+   1. Testing: Find data cloud content
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Show me sales cloud training materials
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Search for marketing cloud resources
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   4. Testing: Get service cloud documentation
+      ✅ Success: True, Results: 0, Length: 0
+   5. Testing: Look for platform content
+      ✅ Success: True, Results: 0, Length: 0
+   6. Testing: Find analytics training
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   7. Testing: Show me automation guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   8. Testing: Search for integration content
+      ✅ Success: True, Results: 0, Length: 0
+   9. Testing: Get security best practices
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  10. Testing: Find mobile development resources
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  Waiting 2 seconds before next batch...
+
+=== BATCH 2: Testing 10 utterances ===
+   1. Testing: Show me AI and machine learning content
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Search for cloud computing materials
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Get digital transformation guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   4. Testing: Find customer success stories
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   5. Testing: Show me implementation guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   6. Testing: Search for troubleshooting content
+      ✅ Success: True, Results: 0, Length: 0
+   7. Testing: Get performance optimization guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   8. Testing: Find scalability resources
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   9. Testing: Show me architecture patterns
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  10. Testing: Search for best practices content
+      ✅ Success: True, Results: 0, Length: 0
+  Waiting 2 seconds before next batch...
+
+=== BATCH 3: Testing 10 utterances ===
+   1. Testing: Data Cloud platform training
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Sales Cloud CRM courses
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Marketing Cloud automation
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   4. Testing: Service Cloud support tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   5. Testing: Commerce Cloud e-commerce
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   6. Testing: Experience Cloud portals
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   7. Testing: MuleSoft integration platform
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   8. Testing: Tableau analytics dashboard
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   9. Testing: Slack collaboration tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  10. Testing: Heroku cloud platform
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  Waiting 2 seconds before next batch...
+
+=== BATCH 4: Testing 10 utterances ===
+   1. Testing: Einstein AI features
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Lightning Web Components
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Apex development guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   4. Testing: Flow automation builder
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   5. Testing: Process Builder workflows
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   6. Testing: Validation rules setup
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   7. Testing: Custom objects creation
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   8. Testing: Reports and dashboards
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   9. Testing: Data loader tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  10. Testing: Sandbox management
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  Waiting 2 seconds before next batch...
+
+=== BATCH 5: Testing 10 utterances ===
+   1. Testing: Content for sales representatives
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Training for account executives
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Resources for solution architects
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   4. Testing: Guides for system administrators
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   5. Testing: Materials for developers
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   6. Testing: Content for project managers
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   7. Testing: Training for business analysts
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   8. Testing: Resources for consultants
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   9. Testing: Guides for technical leads
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+  10. Testing: Materials for product managers
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  Waiting 2 seconds before next batch...
+
+=== BATCH 6: Testing 10 utterances ===
+   1. Testing: Content for customer success
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Training for support teams
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Resources for marketing teams
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   4. Testing: Guides for sales operations
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   5. Testing: Materials for IT teams
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   6. Testing: Content for executives
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   7. Testing: Training for new hires
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   8. Testing: Resources for experienced users
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   9. Testing: Guides for power users
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+  10. Testing: Materials for end users
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  Waiting 2 seconds before next batch...
+
+=== BATCH 7: Testing 10 utterances ===
+   1. Testing: Healthcare industry solutions
+      ✅ Success: True, Results: 0, Length: 0
+   2. Testing: Financial services content
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Manufacturing automation
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   4. Testing: Retail commerce solutions
+      ✅ Success: True, Results: 0, Length: 0
+   5. Testing: Education platform tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   6. Testing: Government compliance guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   7. Testing: Non-profit organization resources
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   8. Testing: Real estate management tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   9. Testing: Media and entertainment solutions
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  10. Testing: Travel and hospitality guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+  Waiting 2 seconds before next batch...
+
+=== BATCH 8: Testing 10 utterances ===
+   1. Testing: Energy sector resources
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Telecommunications tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Automotive industry solutions
+      ✅ Success: True, Results: 0, Length: 0
+   4. Testing: Aerospace and defense guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   5. Testing: Consumer goods resources
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   6. Testing: Professional services tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   7. Testing: Technology sector solutions
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   8. Testing: Consulting industry guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   9. Testing: Legal services resources
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  10. Testing: Insurance industry tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  Waiting 2 seconds before next batch...
+
+=== BATCH 9: Testing 10 utterances ===
+   1. Testing: Advanced data modeling techniques
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Complex integration patterns
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Enterprise architecture best practices
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   4. Testing: Security implementation guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   5. Testing: Performance tuning strategies
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   6. Testing: Scalability planning resources
+      ✅ Success: True, Results: 0, Length: 0
+   7. Testing: Disaster recovery procedures
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   8. Testing: Backup and restore guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   9. Testing: Monitoring and alerting setup
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  10. Testing: Logging and debugging tools
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  Waiting 2 seconds before next batch...
+
+=== BATCH 10: Testing 10 utterances ===
+   1. Testing: Testing strategies and frameworks
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   2. Testing: Code review best practices
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   3. Testing: Documentation standards
+      ✅ Success: True, Results: 0, Length: 0
+   4. Testing: Change management processes
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   5. Testing: Release management guides
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+   6. Testing: Deployment strategies
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   7. Testing: Environment management
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   8. Testing: User training programs
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+   9. Testing: Support escalation procedures
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Unknown error
+  10. Testing: Troubleshooting methodologies
+      ❌ Success: False, Results: 0, Length: 0
+      Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+
+============================================================
+FINAL SUMMARY REPORT
+============================================================
+Total Tests: 100
+Successful: 10 (10.0%)
+Failed: 90 (90.0%)
+Tests with Results: 0 (0.0%)
+Average Message Length: 0 characters
+
+Failed Tests (90):
+  - Find data cloud content
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Show me sales cloud training materials
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Search for marketing cloud resources
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Find analytics training
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Show me automation guides
+    Error: Tool not detected: Unknown error
+  - Get security best practices
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Find mobile development resources
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Show me AI and machine learning content
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Search for cloud computing materials
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Get digital transformation guides
+    Error: Tool not detected: Unknown error
+  - Find customer success stories
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Show me implementation guides
+    Error: Tool not detected: Unknown error
+  - Get performance optimization guides
+    Error: Tool not detected: Unknown error
+  - Find scalability resources
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Show me architecture patterns
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Data Cloud platform training
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Sales Cloud CRM courses
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Marketing Cloud automation
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Service Cloud support tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Commerce Cloud e-commerce
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Experience Cloud portals
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - MuleSoft integration platform
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Tableau analytics dashboard
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Slack collaboration tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Heroku cloud platform
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Einstein AI features
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Lightning Web Components
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Apex development guides
+    Error: Tool not detected: Unknown error
+  - Flow automation builder
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Process Builder workflows
+    Error: Tool not detected: Unknown error
+  - Validation rules setup
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Custom objects creation
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Reports and dashboards
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Data loader tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Sandbox management
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Content for sales representatives
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Training for account executives
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Resources for solution architects
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Guides for system administrators
+    Error: Tool not detected: Unknown error
+  - Materials for developers
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Content for project managers
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Training for business analysts
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Resources for consultants
+    Error: Tool not detected: Unknown error
+  - Guides for technical leads
+    Error: Tool not detected: Unknown error
+  - Materials for product managers
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Content for customer success
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Training for support teams
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Resources for marketing teams
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Guides for sales operations
+    Error: Tool not detected: Unknown error
+  - Materials for IT teams
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Content for executives
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Training for new hires
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Resources for experienced users
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Guides for power users
+    Error: Tool not detected: Unknown error
+  - Materials for end users
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Financial services content
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Manufacturing automation
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Education platform tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Government compliance guides
+    Error: Tool not detected: Unknown error
+  - Non-profit organization resources
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Real estate management tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Media and entertainment solutions
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Travel and hospitality guides
+    Error: Tool not detected: Unknown error
+  - Energy sector resources
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Telecommunications tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Aerospace and defense guides
+    Error: Tool not detected: Unknown error
+  - Consumer goods resources
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Professional services tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Technology sector solutions
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Consulting industry guides
+    Error: Tool not detected: Unknown error
+  - Legal services resources
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Insurance industry tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Advanced data modeling techniques
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Complex integration patterns
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Enterprise architecture best practices
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Security implementation guides
+    Error: Tool not detected: Unknown error
+  - Performance tuning strategies
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Disaster recovery procedures
+    Error: Tool not detected: Unknown error
+  - Backup and restore guides
+    Error: Tool not detected: Unknown error
+  - Monitoring and alerting setup
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Logging and debugging tools
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Testing strategies and frameworks
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Code review best practices
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Change management processes
+    Error: Tool not detected: Unknown error
+  - Release management guides
+    Error: Tool not detected: Unknown error
+  - Deployment strategies
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Environment management
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - User training programs
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+  - Support escalation procedures
+    Error: Tool not detected: Unknown error
+  - Troubleshooting methodologies
+    Error: Tool not detected: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+
+Successful Tests with No Results (10):
+  - Get service cloud documentation
+  - Look for platform content
+  - Search for integration content
+  - Search for troubleshooting content
+  - Search for best practices content
+  - Healthcare industry solutions
+  - Retail commerce solutions
+  - Automotive industry solutions
+  - Scalability planning resources
+  - Documentation standards
+
+=== Test Complete ===

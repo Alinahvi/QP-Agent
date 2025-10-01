@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACTION_LINK__c</fullName>
+    <description>Direct link to the recommended enablement resource or training course. This field provides a clickable URL that takes the AE directly to the suggested learning material or action item.</description>
+    <externalId>false</externalId>
+    <label>Action Link</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+    <unique>false</unique>
+</CustomField> 

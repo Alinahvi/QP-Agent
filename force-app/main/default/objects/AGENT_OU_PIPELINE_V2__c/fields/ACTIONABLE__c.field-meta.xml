@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACTIONABLE__c</fullName>
+    <description>If growth factor has action that AE can take to meet their quota. Example values: A pipe assessment and more targeted client communication could help you reduce your early-stage deals and increase your pipe quality. Sellers like you realized an increase in {} after taking the recommended course.</description>
+    <externalId>false</externalId>
+    <label>Actionable</label>
+    <length>32768</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField> 

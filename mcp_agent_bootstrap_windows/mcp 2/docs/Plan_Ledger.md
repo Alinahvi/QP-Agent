@@ -1,0 +1,4 @@
+- 2025-09-24T11:44:14.132Z AssignedLearning__c: Plan v2 updated at .artifacts/plan/AssignedLearning__c.plan.v2.json (doc: docs/plan/AssignedLearning__c.Plan.md)
+- 2025-09-24T11:53:52.160Z AssignedLearning__c: Plan v2 updated at .artifacts/plan/AssignedLearning__c.plan.v2.json (doc: docs/plan/AssignedLearning__c.Plan.md)
+- 2025-09-24T12:14:02.549Z AssignedLearning__c: Plan v2 updated at .artifacts/plan/AssignedLearning__c.plan.v2.json (doc: docs/plan/AssignedLearning__c.Plan.md)
+- 2025-09-24T13:02:21.222Z ADR-001: Plan V2 updated for AssignedLearning__c — plan: .artifacts/plan/AssignedLearning__c.plan.v2.json

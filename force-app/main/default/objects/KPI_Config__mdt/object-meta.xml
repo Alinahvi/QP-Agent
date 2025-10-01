@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>KPI Config</label>
+    <pluralLabel>KPI Configs</pluralLabel>
+    <visibility>Public</visibility>
+    <description>Configuration for KPI Analysis features and limits</description>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

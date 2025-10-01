@@ -1,0 +1,1337 @@
+{
+  "status": 100,
+  "result": {
+    "summary": {
+      "failRate": "21%",
+      "failing": 18,
+      "hostname": "https://readiness--innovation.sandbox.my.salesforce.com",
+      "orgId": "00DD7000000jTUCMA2",
+      "outcome": "Failed",
+      "passRate": "79%",
+      "passing": 68,
+      "skipped": 0,
+      "testRunId": "707D700004HpMKA",
+      "testStartTime": "2025-09-19T12:46:04.000Z",
+      "testsRan": 86,
+      "userId": "0052E00000NjqfeQAB",
+      "username": "gardisana@readiness.salesforce.com.innovation",
+      "commandTime": "163 ms",
+      "testExecutionTime": "196435 ms",
+      "testTotalTime": "221093 ms"
+    },
+    "tests": [
+      {
+        "Id": "07MD700000WSmWiMAL",
+        "QueueItemId": "709D7000003X62aIAC",
+        "StackTrace": "Class.FRAGENTGeneralService_Wildcard_Test.testResolveUserId_LiteralSpecialCharacters: line 29, column 1",
+        "Message": "System.AssertException: Assertion Failed: resolveUserId threw unexpected exception: Input cannot end with a solitary backslash.",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testResolveUserId_LiteralSpecialCharacters",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUigkIAC",
+          "Name": "FRAGENTGeneralService_Wildcard_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 14946,
+        "FullName": "FRAGENTGeneralService_Wildcard_Test.testResolveUserId_LiteralSpecialCharacters"
+      },
+      {
+        "Id": "07MD700000WSmWjMAL",
+        "QueueItemId": "709D7000003X62aIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testResolveUserId_SingleTrailingBackslashRejected",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUigkIAC",
+          "Name": "FRAGENTGeneralService_Wildcard_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5,
+        "FullName": "FRAGENTGeneralService_Wildcard_Test.testResolveUserId_SingleTrailingBackslashRejected"
+      },
+      {
+        "Id": "07MD700000WSmV9MAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Cru_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 534,
+        "FullName": "FRAGENTAudienceService_Test.testCreate_Cru_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmVAMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_DuplicateName_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 245,
+        "FullName": "FRAGENTAudienceService_Test.testCreate_DuplicateName_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWJMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_InvalidData_FailsGracefully",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 81,
+        "FullName": "FRAGENTAudienceService_Test.testCreate_InvalidData_FailsGracefully"
+      },
+      {
+        "Id": "07MD700000WSmWKMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 194,
+        "FullName": "FRAGENTAudienceService_Test.testCreate_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWLMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRemove_NoCrud_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 83,
+        "FullName": "FRAGENTAudienceService_Test.testRemove_NoCrud_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWMMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRemove_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 272,
+        "FullName": "FRAGENTAudienceService_Test.testRemove_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWNMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveById_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 3808,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveById_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWTMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieveSearch_DefaultLimit: line 237, column 1",
+        "Message": "System.AssertException: Assertion Failed: Retrieve should succeed with default limit: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_DefaultLimit",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 260,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_DefaultLimit"
+      },
+      {
+        "Id": "07MD700000WSmWUMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieveSearch_FullNameWithDate_OnlyExactMatch: line 282, column 1",
+        "Message": "System.AssertException: Assertion Failed: Retrieve should succeed: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_FullNameWithDate_OnlyExactMatch",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 171,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_FullNameWithDate_OnlyExactMatch"
+      },
+      {
+        "Id": "07MD700000WSmWVMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_FuzzyTokens",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 206,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_FuzzyTokens"
+      },
+      {
+        "Id": "07MD700000WSmWWMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_HighLoad_NoGovernorLimits",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 627,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_HighLoad_NoGovernorLimits"
+      },
+      {
+        "Id": "07MD700000WSmWXMA1",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieveSearch_LimitMessage: line 222, column 1",
+        "Message": "System.AssertException: Assertion Failed: Retrieve should succeed when under the custom limit: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_LimitMessage",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 177,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_LimitMessage"
+      },
+      {
+        "Id": "07MD700000WSmWdMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_MultiRowCountHandled",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 187,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_MultiRowCountHandled"
+      },
+      {
+        "Id": "07MD700000WSmWeMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieveSearch_NameWithDate: line 255, column 1",
+        "Message": "System.AssertException: Assertion Failed: Retrieve should succeed: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_NameWithDate",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 183,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_NameWithDate"
+      },
+      {
+        "Id": "07MD700000WSmWfMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieveSearch_ReturnsMemberProfiles: line 197, column 1",
+        "Message": "System.AssertException: Assertion Failed: Retrieve should succeed: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_ReturnsMemberProfiles",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 3714,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_ReturnsMemberProfiles"
+      },
+      {
+        "Id": "07MD700000WSmWgMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieveSearch_Succeeds: line 157, column 1",
+        "Message": "System.AssertException: Assertion Failed: Retrieve should succeed for CRU user: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieveSearch_Succeeds",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5539,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieveSearch_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWhMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_FallbackWithWildcards",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 165,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieve_FallbackWithWildcards"
+      },
+      {
+        "Id": "07MD700000WSmWxMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_FuzzyFallback",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 186,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieve_FuzzyFallback"
+      },
+      {
+        "Id": "07MD700000WSmWyMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_FuzzyMultiTokenRanking",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 210,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieve_FuzzyMultiTokenRanking"
+      },
+      {
+        "Id": "07MD700000WSmWzMAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieve_NameWithSlash: line 349, column 1",
+        "Message": "System.AssertException: Assertion Failed: Search should succeed for names containing special characters: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_NameWithSlash",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 178,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieve_NameWithSlash"
+      },
+      {
+        "Id": "07MD700000WSmX0MAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieve_NameWithWildcards: line 369, column 1",
+        "Message": "System.AssertException: Assertion Failed: Search should handle names with wildcard characters: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_NameWithWildcards",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 163,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieve_NameWithWildcards"
+      },
+      {
+        "Id": "07MD700000WSmX1MAL",
+        "QueueItemId": "709D7000003X62bIAC",
+        "StackTrace": "Class.FRAGENTAudienceService_Test.testRetrieve_SearchFullName_DirectMatch: line 328, column 1",
+        "Message": "System.AssertException: Assertion Failed: Retrieve should succeed with full name search: Search query failed: Invalid field Audience_Members__r for Audience__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_SearchFullName_DirectMatch",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcsjIAC",
+          "Name": "FRAGENTAudienceService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 186,
+        "FullName": "FRAGENTAudienceService_Test.testRetrieve_SearchFullName_DirectMatch"
+      },
+      {
+        "Id": "07MD700000WSmAjMAL",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_MissingName_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 92,
+        "FullName": "FRAGENTAudienceHandler_Test.testCreate_MissingName_Fails"
+      },
+      {
+        "Id": "07MD700000WSmAkMAL",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 520,
+        "FullName": "FRAGENTAudienceHandler_Test.testCreate_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmAlMAL",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testDelete_NoId_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 84,
+        "FullName": "FRAGENTAudienceHandler_Test.testDelete_NoId_Fails"
+      },
+      {
+        "Id": "07MD700000WSmW9MAL",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testDelete_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 266,
+        "FullName": "FRAGENTAudienceHandler_Test.testDelete_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWAMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testInvalidAction_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 35,
+        "FullName": "FRAGENTAudienceHandler_Test.testInvalidAction_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWBMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testNoActionSpecified_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 28,
+        "FullName": "FRAGENTAudienceHandler_Test.testNoActionSpecified_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWCMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": "Class.FRAGENTAudienceHandler_Test.testRetrieve_ByCriteria_Succeeds: line 119, column 1",
+        "Message": "System.AssertException: Assertion Failed: Expected success on valid Retrieve action",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_ByCriteria_Succeeds",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 127,
+        "FullName": "FRAGENTAudienceHandler_Test.testRetrieve_ByCriteria_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWDMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_ById_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 3892,
+        "FullName": "FRAGENTAudienceHandler_Test.testRetrieve_ById_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWOMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_InvalidId_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 108,
+        "FullName": "FRAGENTAudienceHandler_Test.testRetrieve_InvalidId_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWPMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": "Class.FRAGENTAudienceHandler_Test.testRetrieve_SearchWithHyphen_Succeeds: line 136, column 1",
+        "Message": "System.AssertException: Assertion Failed: Expected success on hyphenated search term",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_SearchWithHyphen_Succeeds",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 128,
+        "FullName": "FRAGENTAudienceHandler_Test.testRetrieve_SearchWithHyphen_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWQMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": "Class.FRAGENTAudienceHandler_Test.testRetrieve_SearchWithSpecialCharacters_Succeeds: line 154, column 1",
+        "Message": "System.AssertException: Assertion Failed: Expected success on search term with special character",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_SearchWithSpecialCharacters_Succeeds",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 122,
+        "FullName": "FRAGENTAudienceHandler_Test.testRetrieve_SearchWithSpecialCharacters_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWRMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testUpdate_InvalidId_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 83,
+        "FullName": "FRAGENTAudienceHandler_Test.testUpdate_InvalidId_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWSMA1",
+        "QueueItemId": "709D7000003X62cIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testUpdate_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUcqsIAC",
+          "Name": "FRAGENTAudienceHandler_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 192,
+        "FullName": "FRAGENTAudienceHandler_Test.testUpdate_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWYMA1",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testAddMembersToAudience_Bulk_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 4457,
+        "FullName": "FRAGENTAudienceMemberService_Test.testAddMembersToAudience_Bulk_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWZMA1",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testAddMembersToAudience_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 444,
+        "FullName": "FRAGENTAudienceMemberService_Test.testAddMembersToAudience_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWaMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": "Class.FRAGENTAudienceMemberService_Test.testAddMembersToAudience_WithSuggestedMatch: line 339, column 1",
+        "Message": "System.AssertException: Assertion Failed: Expected suggested match. Response: SObject row was retrieved via SOQL without querying the requested field: Learner_Profile__c.Title__c",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testAddMembersToAudience_WithSuggestedMatch",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 616,
+        "FullName": "FRAGENTAudienceMemberService_Test.testAddMembersToAudience_WithSuggestedMatch"
+      },
+      {
+        "Id": "07MD700000WSmWbMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Cru_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 482,
+        "FullName": "FRAGENTAudienceMemberService_Test.testCreate_Cru_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWcMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Fails_WhenAssignmentsExist",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 885,
+        "FullName": "FRAGENTAudienceMemberService_Test.testCreate_Fails_WhenAssignmentsExist"
+      },
+      {
+        "Id": "07MD700000WSmWnMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Fails_WhenLearnerMissingPermission",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 113,
+        "FullName": "FRAGENTAudienceMemberService_Test.testCreate_Fails_WhenLearnerMissingPermission"
+      },
+      {
+        "Id": "07MD700000WSmWoMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Fails_WhenPermissionSetMissing",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 93,
+        "FullName": "FRAGENTAudienceMemberService_Test.testCreate_Fails_WhenPermissionSetMissing"
+      },
+      {
+        "Id": "07MD700000WSmWpMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_InvalidData_FailsGracefully",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 77,
+        "FullName": "FRAGENTAudienceMemberService_Test.testCreate_InvalidData_FailsGracefully"
+      },
+      {
+        "Id": "07MD700000WSmWqMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCreate_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 464,
+        "FullName": "FRAGENTAudienceMemberService_Test.testCreate_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWrMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetAuthorizedLearners_NoGroup",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 339,
+        "FullName": "FRAGENTAudienceMemberService_Test.testGetAuthorizedLearners_NoGroup"
+      },
+      {
+        "Id": "07MD700000WSmWsMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRemoveMembersFromAudience_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 298,
+        "FullName": "FRAGENTAudienceMemberService_Test.testRemoveMembersFromAudience_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWtMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRemove_Fails_WhenAssignmentsExist",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 586,
+        "FullName": "FRAGENTAudienceMemberService_Test.testRemove_Fails_WhenAssignmentsExist"
+      },
+      {
+        "Id": "07MD700000WSmWuMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRemove_NoCrud_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 80,
+        "FullName": "FRAGENTAudienceMemberService_Test.testRemove_NoCrud_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWvMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRemove_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 190,
+        "FullName": "FRAGENTAudienceMemberService_Test.testRemove_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmX2MAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 3912,
+        "FullName": "FRAGENTAudienceMemberService_Test.testRetrieve_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmWwMAL",
+        "QueueItemId": "709D7000003X62dIAC",
+        "StackTrace": "Class.AgentCore_Permissions.checkPermissionLabel: line 179, column 1\nClass.FRAGENTAudienceMemberService.search: line 396, column 1\nClass.FRAGENTAudienceMemberService.retrieveAudienceMembers: line 157, column 1\nClass.FRAGENTAudienceMemberService_Test.testRetrieve_NoPermission_Fails: line 286, column 1",
+        "Message": "AgentCore_Permissions.PermissionException: Insufficient permissions: Missing Permission Set \"AEA Field Readiness Agent Cohort Management Retrieve\"",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testRetrieve_NoPermission_Fails",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUctDIAS",
+          "Name": "FRAGENTAudienceMemberService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 1873,
+        "FullName": "FRAGENTAudienceMemberService_Test.testRetrieve_NoPermission_Fails"
+      },
+      {
+        "Id": "07MD700000WSmWFMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testCountFieldValues",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 7345,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testCountFieldValues"
+      },
+      {
+        "Id": "07MD700000WSmWGMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetDirectReports",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5434,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetDirectReports"
+      },
+      {
+        "Id": "07MD700000WSmWHMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetDirectReports_ById",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5620,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetDirectReports_ById"
+      },
+      {
+        "Id": "07MD700000WSmWIMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetDistinctFieldValues",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5678,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetDistinctFieldValues"
+      },
+      {
+        "Id": "07MD700000WSmX7MAL",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetDistinctFieldValues_MultiSelect",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5830,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetDistinctFieldValues_MultiSelect"
+      },
+      {
+        "Id": "07MD700000WSmX8MAL",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetManagementChain_MissingLevel",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5760,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetManagementChain_MissingLevel"
+      },
+      {
+        "Id": "07MD700000WSmX9MAL",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetManagementChain_MultipleLevels",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 7389,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetManagementChain_MultipleLevels"
+      },
+      {
+        "Id": "07MD700000WSmXAMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetManagementChain_SingleLevel",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 3830,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetManagementChain_SingleLevel"
+      },
+      {
+        "Id": "07MD700000WSmXBMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetOrgHierarchy",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5689,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetOrgHierarchy"
+      },
+      {
+        "Id": "07MD700000WSmXCMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetOrganizationHierarchyDepthMultipleLevels",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 7416,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetOrganizationHierarchyDepthMultipleLevels"
+      },
+      {
+        "Id": "07MD700000WSmXDMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetOrganizationHierarchyMultiLevelCounts",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 10966,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetOrganizationHierarchyMultiLevelCounts"
+      },
+      {
+        "Id": "07MD700000WSmXEMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetOrganizationHierarchyNoInvalidId",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 3899,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetOrganizationHierarchyNoInvalidId"
+      },
+      {
+        "Id": "07MD700000WSmXFMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testGetOrganizationHierarchyNoSlackId",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 2039,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testGetOrganizationHierarchyNoSlackId"
+      },
+      {
+        "Id": "07MD700000WSmXGMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testHandlerGetOrgHierarchyMultiLevel",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 7718,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testHandlerGetOrgHierarchyMultiLevel"
+      },
+      {
+        "Id": "07MD700000WSmXHMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testOtherMethods_NoPermission",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 1984,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testOtherMethods_NoPermission"
+      },
+      {
+        "Id": "07MD700000WSmXIMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_BlankSlackIdExcluded",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 2240,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_BlankSlackIdExcluded"
+      },
+      {
+        "Id": "07MD700000WSmXJMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_DefaultLimitTooMany",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 86,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_DefaultLimitTooMany"
+      },
+      {
+        "Id": "07MD700000WSmXKMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_DefaultLimitWithinCap",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 3823,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_DefaultLimitWithinCap"
+      },
+      {
+        "Id": "07MD700000WSmXLMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_ExactMatch",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 149,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_ExactMatch"
+      },
+      {
+        "Id": "07MD700000WSmXMMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": "Class.FRAGENTEmployeeSearchService_Test.testSearch_FallbackToUser: line 70, column 1",
+        "Message": "System.ListException: List index out of bounds: 0",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_FallbackToUser",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 2398,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_FallbackToUser"
+      },
+      {
+        "Id": "07MD700000WSmXNMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_FilterByCompany",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5673,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_FilterByCompany"
+      },
+      {
+        "Id": "07MD700000WSmXOMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_Fuzzy",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 172,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_Fuzzy"
+      },
+      {
+        "Id": "07MD700000WSmXPMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_InactiveStatusExcluded",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 2405,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_InactiveStatusExcluded"
+      },
+      {
+        "Id": "07MD700000WSmXQMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_NoPermission_ReturnsError",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 1965,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_NoPermission_ReturnsError"
+      },
+      {
+        "Id": "07MD700000WSmXRMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_SortedPagination",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 7513,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_SortedPagination"
+      },
+      {
+        "Id": "07MD700000WSmXSMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_SpecialCharactersLiteralMatch",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 14484,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_SpecialCharactersLiteralMatch"
+      },
+      {
+        "Id": "07MD700000WSmXTMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": "Class.FRAGENTEmployeeSearchService_Test.testSearch_Succeeds: line 25, column 1",
+        "Message": "System.AssertException: Assertion Failed: Should return at least one record",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_Succeeds",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 192,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_Succeeds"
+      },
+      {
+        "Id": "07MD700000WSmXUMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": "Class.FRAGENTEmployeeSearchService_Test.testSearch_UserScoped: line 200, column 1",
+        "Message": "System.AssertException: Assertion Failed: Should return only records scoped to the user: Expected: 2, Actual: 0",
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_UserScoped",
+        "Outcome": "Fail",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 10118,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_UserScoped"
+      },
+      {
+        "Id": "07MD700000WSmXVMA1",
+        "QueueItemId": "709D7000003X62eIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004HpMKAIA3",
+        "MethodName": "testSearch_WithFilters",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfE3IAK",
+          "Name": "FRAGENTEmployeeSearchService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 5714,
+        "FullName": "FRAGENTEmployeeSearchService_Test.testSearch_WithFilters"
+      }
+    ]
+  }
+}

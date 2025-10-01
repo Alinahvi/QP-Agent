@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>SME Search Features</label>
+    <pluralLabel>SME Search Features</pluralLabel>
+    <visibility>Public</visibility>
+    <description>Feature flags and configuration for SME Search functionality</description>
+    <fields>
+        <fullName>EnableSemantic__c</fullName>
+        <label>Enable Semantic Search</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+        <description>Enable semantic search with synonym expansion</description>
+    </fields>
+    <fields>
+        <fullName>EnableFuzzy__c</fullName>
+        <label>Enable Fuzzy Matching</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable fuzzy string matching for product names</description>
+    </fields>
+    <fields>
+        <fullName>EnablePrivacyMasking__c</fullName>
+        <label>Enable Privacy Masking</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Mask email and phone numbers for privacy</description>
+    </fields>
+    <fields>
+        <fullName>EnableAnalytics__c</fullName>
+        <label>Enable Analytics</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable search analytics and logging</description>
+    </fields>
+    <fields>
+        <fullName>MaxResults__c</fullName>
+        <label>Max Results</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>0</scale>
+        <defaultValue>50</defaultValue>
+        <description>Maximum number of results to return</description>
+    </fields>
+    <fields>
+        <fullName>StaleDays__c</fullName>
+        <label>Stale Days</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>0</scale>
+        <defaultValue>180</defaultValue>
+        <description>Number of days after which a record is considered stale</description>
+    </fields>
+</CustomObject>

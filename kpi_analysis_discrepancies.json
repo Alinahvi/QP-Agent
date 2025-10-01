@@ -1,0 +1,290 @@
+[
+  {
+    "utterance": "Show me PG performance in APAC",
+    "api_result": {
+      "success": true,
+      "utterance": "Show me PG performance in APAC",
+      "message_length": 599,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: PG\n- **Timeframe**: CURRENT\n- **Grouped By**: COUNTRY\n- **Filter**: ou_name__c LIKE '%APAC%'\n- **Per-AE Normalized**: No\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"PG\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"COUNTRY\",\n  \"filter\": \"ou_name__c LIKE '%APAC%'\",\n  \"perAENormalize\": false,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Analyze calls in Tech industry",
+    "api_result": {
+      "success": true,
+      "utterance": "Analyze calls in Tech industry",
+      "message_length": 615,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: CALLS\n- **Timeframe**: CURRENT\n- **Grouped By**: INDUSTRY\n- **Filter**: primary_industry__c = 'Tech'\n- **Per-AE Normalized**: No\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"CALLS\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"INDUSTRY\",\n  \"filter\": \"primary_industry__c = 'Tech'\",\n  \"perAENormalize\": false,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Show me AI mentions by country",
+    "api_result": {
+      "success": true,
+      "utterance": "Show me AI mentions by country",
+      "message_length": 433,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART, CQ_DAYS_PG_PART, DAYS_PG, CQ_DAYS_PG, AOV, FULL_TOTAL_ACV_QUOTA, DAYS_TO_PRODUCTIVITY, PQ_CC_ACV, PQ_DAYS_ACV, PQ_DAYS_ACV_PART, PQ_DAYS_PG_PART, PQ_DAYS_PG, CQ_CUSTOMER_MEETING, PQ_CUSTOMER_MEETING, PQ_PG, PQ_ACV, PQ_CALL_CONNECT."
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Find top AI mention performers",
+    "api_result": {
+      "success": true,
+      "utterance": "Find top AI mention performers",
+      "message_length": 433,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART, CQ_DAYS_PG_PART, DAYS_PG, CQ_DAYS_PG, AOV, FULL_TOTAL_ACV_QUOTA, DAYS_TO_PRODUCTIVITY, PQ_CC_ACV, PQ_DAYS_ACV, PQ_DAYS_ACV_PART, PQ_DAYS_PG_PART, PQ_DAYS_PG, CQ_CUSTOMER_MEETING, PQ_CUSTOMER_MEETING, PQ_PG, PQ_ACV, PQ_CALL_CONNECT."
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Analyze AI mentions in Tech industry",
+    "api_result": {
+      "success": true,
+      "utterance": "Analyze AI mentions in Tech industry",
+      "message_length": 433,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART, CQ_DAYS_PG_PART, DAYS_PG, CQ_DAYS_PG, AOV, FULL_TOTAL_ACV_QUOTA, DAYS_TO_PRODUCTIVITY, PQ_CC_ACV, PQ_DAYS_ACV, PQ_DAYS_ACV_PART, PQ_DAYS_PG_PART, PQ_DAYS_PG, CQ_CUSTOMER_MEETING, PQ_CUSTOMER_MEETING, PQ_PG, PQ_ACV, PQ_CALL_CONNECT."
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Show me AI adoption in APAC",
+    "api_result": {
+      "success": true,
+      "utterance": "Show me AI adoption in APAC",
+      "message_length": 433,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART, CQ_DAYS_PG_PART, DAYS_PG, CQ_DAYS_PG, AOV, FULL_TOTAL_ACV_QUOTA, DAYS_TO_PRODUCTIVITY, PQ_CC_ACV, PQ_DAYS_ACV, PQ_DAYS_ACV_PART, PQ_DAYS_PG_PART, PQ_DAYS_PG, CQ_CUSTOMER_MEETING, PQ_CUSTOMER_MEETING, PQ_PG, PQ_ACV, PQ_CALL_CONNECT."
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Compare AI mentions by organizational unit",
+    "api_result": {
+      "success": true,
+      "utterance": "Compare AI mentions by organizational unit",
+      "message_length": 433,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART, CQ_DAYS_PG_PART, DAYS_PG, CQ_DAYS_PG, AOV, FULL_TOTAL_ACV_QUOTA, DAYS_TO_PRODUCTIVITY, PQ_CC_ACV, PQ_DAYS_ACV, PQ_DAYS_ACV_PART, PQ_DAYS_PG_PART, PQ_DAYS_PG, CQ_CUSTOMER_MEETING, PQ_CUSTOMER_MEETING, PQ_PG, PQ_ACV, PQ_CALL_CONNECT."
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Show me slow rampers in LATAM",
+    "api_result": {
+      "success": true,
+      "utterance": "Show me slow rampers in LATAM",
+      "message_length": 649,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: CALLS\n- **Timeframe**: CURRENT\n- **Grouped By**: AE\n- **Filter**: ramp_status__c='Slow' AND ou_name__c LIKE '%LATAM%'\n- **Per-AE Normalized**: Yes\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"CALLS\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"AE\",\n  \"filter\": \"ramp_status__c='Slow' AND ou_name__c LIKE '%LATAM%'\",\n  \"perAENormalize\": true,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Find fast rampers in AMER",
+    "api_result": {
+      "success": true,
+      "utterance": "Find fast rampers in AMER",
+      "message_length": 657,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: CALLS\n- **Timeframe**: CURRENT\n- **Grouped By**: COUNTRY\n- **Filter**: ramp_status__c='Fast' AND ou_name__c LIKE '%AMER%'\n- **Per-AE Normalized**: Yes\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"CALLS\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"COUNTRY\",\n  \"filter\": \"ramp_status__c='Fast' AND ou_name__c LIKE '%AMER%'\",\n  \"perAENormalize\": true,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Analyze new hire performance",
+    "api_result": {
+      "success": true,
+      "utterance": "Analyze new hire performance",
+      "message_length": 631,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: CALLS\n- **Timeframe**: CURRENT\n- **Grouped By**: AE\n- **Filter**: ramp_status__c IN ('Slow','Medium','Fast')\n- **Per-AE Normalized**: Yes\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"CALLS\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"AE\",\n  \"filter\": \"ramp_status__c IN ('Slow','Medium','Fast')\",\n  \"perAENormalize\": true,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Compare ramp status across regions",
+    "api_result": {
+      "success": true,
+      "utterance": "Compare ramp status across regions",
+      "message_length": 641,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: CALLS\n- **Timeframe**: CURRENT\n- **Grouped By**: COUNTRY\n- **Filter**: ramp_status__c IN ('Slow','Medium','Fast')\n- **Per-AE Normalized**: Yes\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"CALLS\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"COUNTRY\",\n  \"filter\": \"ramp_status__c IN ('Slow','Medium','Fast')\",\n  \"perAENormalize\": true,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Show me ACV in US Tech industry",
+    "api_result": {
+      "success": true,
+      "utterance": "Show me ACV in US Tech industry",
+      "message_length": 671,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: ACV\n- **Timeframe**: CURRENT\n- **Grouped By**: AE\n- **Filter**: work_location_country__c = 'US' AND primary_industry__c = 'Tech'\n- **Per-AE Normalized**: No\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"ACV\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"AE\",\n  \"filter\": \"work_location_country__c = 'US' AND primary_industry__c = 'Tech'\",\n  \"perAENormalize\": false,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Analyze performance in Healthcare industry",
+    "api_result": {
+      "success": true,
+      "utterance": "Analyze performance in Healthcare industry",
+      "message_length": 619,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: PG\n- **Timeframe**: CURRENT\n- **Grouped By**: COUNTRY\n- **Filter**: primary_industry__c = 'Healthcare'\n- **Per-AE Normalized**: No\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"PG\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"COUNTRY\",\n  \"filter\": \"primary_industry__c = 'Healthcare'\",\n  \"perAENormalize\": false,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Show me median AI mentions by industry",
+    "api_result": {
+      "success": true,
+      "utterance": "Show me median AI mentions by industry",
+      "message_length": 433,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART, CQ_DAYS_PG_PART, DAYS_PG, CQ_DAYS_PG, AOV, FULL_TOTAL_ACV_QUOTA, DAYS_TO_PRODUCTIVITY, PQ_CC_ACV, PQ_DAYS_ACV, PQ_DAYS_ACV_PART, PQ_DAYS_PG_PART, PQ_DAYS_PG, CQ_CUSTOMER_MEETING, PQ_CUSTOMER_MEETING, PQ_PG, PQ_ACV, PQ_CALL_CONNECT."
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Find average calls per AE in Tech",
+    "api_result": {
+      "success": true,
+      "utterance": "Find average calls per AE in Tech",
+      "message_length": 615,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "# KPI Analysis\n\n## Summary\n- **Metric**: CALLS\n- **Timeframe**: CURRENT\n- **Grouped By**: INDUSTRY\n- **Filter**: primary_industry__c = 'Tech'\n- **Per-AE Normalized**: Yes\n- **Total Records Found**: 0\n\n## Data Quality Assessment\n\u2705 Data quality appears good for this metric.\n\n## Insights\n- No records found matching the criteria\n\n## Limits & Counts\n- **Total Records Found**: 0\n- **Records Shown**: 0 records\n\n## Data (JSON)\n```json\n{\n  \"metric\": \"CALLS\",\n  \"timeframe\": \"CURRENT\",\n  \"groupBy\": \"INDUSTRY\",\n  \"filter\": \"primary_industry__c = 'Tech'\",\n  \"perAENormalize\": true,\n  \"totalCount\": 0,\n  \"groups\": []\n}\n```\n"
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  },
+  {
+    "utterance": "Find average AI mentions per AE",
+    "api_result": {
+      "success": true,
+      "utterance": "Find average AI mentions per AE",
+      "message_length": 433,
+      "has_data": true,
+      "raw_data": {
+        "analysisMessage": "Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART, CQ_DAYS_PG_PART, DAYS_PG, CQ_DAYS_PG, AOV, FULL_TOTAL_ACV_QUOTA, DAYS_TO_PRODUCTIVITY, PQ_CC_ACV, PQ_DAYS_ACV, PQ_DAYS_ACV_PART, PQ_DAYS_PG_PART, PQ_DAYS_PG, CQ_CUSTOMER_MEETING, PQ_CUSTOMER_MEETING, PQ_PG, PQ_ACV, PQ_CALL_CONNECT."
+      }
+    },
+    "soql_result": {
+      "success": true,
+      "record_count": 0,
+      "records": []
+    },
+    "comparison_result": "DISCREPANCY"
+  }
+]

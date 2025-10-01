@@ -1,0 +1,246 @@
+# CSV Aggregator Service Guide
+
+## 🎯 **Overview**
+
+The `ANAgentCSVAggregatorService` is a smart CSV generation service that leverages existing agent actions to create dynamic CSV exports. Unlike traditional CSV generators that require predefined field mappings, this service analyzes user intent and aggregates data from multiple agent actions with minimal transformation.
+
+## 🚀 **Key Features**
+
+### **1. Agent Action Orchestration**
+- **Leverages Existing Actions**: Uses `ANAgentOpenPipeHandlerV2`, `ANAgent Search SMEs`, `ANAgentAPMNominationHandlerV2`, `ANAgentContentSearchHandlerV2`
+- **No Data Rebuilding**: Doesn't duplicate existing query logic
+- **Smart Integration**: Combines results from multiple agent actions
+
+### **2. Dynamic Column Generation**
+- **User-Driven**: Columns determined by available data from agent actions
+- **Automatic Detection**: Identifies all available fields across datasets
+- **Flexible Structure**: Adapts to different data types and structures
+
+### **3. Multi-Object Joins**
+- **Intelligent Joins**: Automatically joins data based on common keys
+- **Product Matching**: Joins by `PRODUCT_L3__c`, `PRODUCT_L2__c`
+- **Region Matching**: Joins by `EMPLOYEE_LOCATION_REGION__c`, `OU__c`
+- **AE Matching**: Joins by `AE_NAME__c`, `AE_NAME`
+- **Course Matching**: Joins by `name`, `course_name`, `title`
+
+### **4. User-Friendly Error Handling**
+- **Plain English Messages**: Clear error descriptions
+- **Resolution Guidance**: Specific steps to fix issues
+- **Context-Aware**: Tailored solutions based on error type
+
+## 📋 **Supported Use Cases**
+
+### **Example 1: Single Object Export**
+```
+User Request: "Export all courses related to data cloud"
+Agent Actions: ANAgentContentSearchHandlerV2
+Output: CSV with course data (name, learnerCount, completionRate, etc.)
+```
+
+### **Example 2: Multi-Object Join**
+```
+User Request: "Export top pipe gen product in AMER + SME for each product"
+Agent Actions: ANAgentOpenPipeHandlerV2 + ANAgent Search SMEs
+Output: CSV with product performance + SME information joined by product
+```
+
+### **Example 3: Complex Aggregation**
+```
+User Request: "Export all courses related to data cloud + their APM result"
+Agent Actions: ANAgentContentSearchHandlerV2 + ANAgentAPMNominationHandlerV2
+Output: CSV with course data + APM nomination results joined by course name
+```
+
+### **Example 4: Performance Analysis**
+```
+User Request: "Export all low performer AEs with their product help needs + related courses"
+Agent Actions: ANAgentOpenPipeHandlerV2 + ANAgent Search SMEs + ANAgentContentSearchHandlerV2
+Output: CSV with AE performance + product needs + recommended courses
+```
+
+## 🔧 **Technical Implementation**
+
+### **Request Structure**
+```apex
+ANAgentCSVAggregatorService.CSVRequest request = new ANAgentCSVAggregatorService.CSVRequest();
+request.userRequest = 'Export all courses related to data cloud + their APM result';
+request.actionResults = '{"content_results": {...}, "apm_results": {...}}';
+request.requestId = 'REQ-001';
+request.includeMetadata = true;
+```
+
+### **Response Structure**
+```apex
+ANAgentCSVAggregatorService.CSVResponse response = new ANAgentCSVAggregatorService.CSVResponse();
+response.success = true;
+response.csvData = 'Course Name,Completion Rate,APM Status\nData Cloud 101,85%,Approved';
+response.recordCount = 10;
+response.columnCount = 3;
+response.metadata = '{"joinType": "MULTI_OBJECT", "joinKeys": ["course_name"]}';
+```
+
+### **Join Keys Configuration**
+```apex
+private static final Map<String, List<String>> JOIN_KEYS = new Map<String, List<String>>{
+    'product' => new List<String>{'PRODUCT_L3__c', 'PRODUCT_L2__c', 'product'},
+    'region' => new List<String>{'EMPLOYEE_LOCATION_REGION__c', 'region', 'OU__c'},
+    'ae_name' => new List<String>{'AE_NAME__c', 'AE_NAME', 'name'},
+    'course_name' => new List<String>{'name', 'course_name', 'title'}
+};
+```
+
+## 🎯 **Agent Integration**
+
+### **Agent Instructions**
+```
+When users request CSV exports, use the ANAgentCSVAggregatorService:
+
+1. First, execute the required agent actions to gather data
+2. Collect the results from all relevant actions
+3. Combine the results into a single JSON string
+4. Call ANAgentCSVAggregatorService.generateCSVFromActions()
+5. Present the CSV data to the user with metadata
+
+Example workflow:
+- User: "Export top products in AMER with their SMEs"
+- Agent: Execute OpenPipe search for AMER products
+- Agent: Execute SME search for those products
+- Agent: Combine results and call CSV aggregator
+- Agent: Return formatted CSV with product + SME data
+```
+
+### **Supported Agent Actions**
+- **ANAgentOpenPipeHandlerV2**: Performance and territory data
+- **ANAgent Search SMEs**: Subject matter expert information
+- **ANAgentAPMNominationHandlerV2**: APM nomination and completion data
+- **ANAgentContentSearchHandlerV2**: Course and content information
+
+## 📊 **CSV Output Format**
+
+### **Metadata Section** (when includeMetadata = true)
+```csv
+"Generated by ANAgentCSVAggregatorService"
+"User Request: Export top products in AMER + SME for each product"
+"Join Type: MULTI_OBJECT"
+"Generated Date: 2024-01-15 10:30:00"
+
+Course Name,Completion Rate,APM Status,Product,AE Name,Performance
+Data Cloud 101,85%,Approved,Data Cloud,John Smith,2500000
+Einstein Analytics,72%,In Progress,Einstein,Sarah Johnson,1800000
+```
+
+### **Dynamic Columns**
+- **Automatic Detection**: All available fields from agent actions
+- **Sorted Alphabetically**: Consistent column ordering
+- **Proper Escaping**: Handles commas, quotes, and newlines
+- **Null Handling**: Empty strings for missing data
+
+## 🛠️ **Error Handling**
+
+### **Common Error Scenarios**
+
+#### **1. Invalid JSON Format**
+```
+Error: Failed to parse agent action results
+Resolution: Please ensure agent actions return valid JSON data. 
+Check that the action completed successfully before requesting CSV export.
+```
+
+#### **2. Missing Action Results**
+```
+Error: No valid action results found
+Resolution: Please check that agent actions returned data in the expected format.
+Verify that all referenced agent actions have been executed and returned data.
+```
+
+#### **3. No Matching Data**
+```
+Error: No data found matching your request
+Resolution: Please check your search criteria or try a broader search.
+Consider using different keywords or expanding your search scope.
+```
+
+#### **4. Join Key Mismatch**
+```
+Error: Unable to join datasets - no common keys found
+Resolution: The datasets don't have matching fields for joining.
+Consider using different search criteria or requesting separate exports.
+```
+
+## 🔒 **Security & Permissions**
+
+### **Permission Set Access**
+The service is included in `AEAE_AN_Agents_CRUD.permissionset-meta.xml`:
+```xml
+<classAccesses>
+    <apexClass>ANAgentCSVAggregatorService</apexClass>
+    <enabled>true</enabled>
+</classAccesses>
+```
+
+### **Data Access**
+- **With Sharing**: Respects Salesforce sharing rules
+- **Field Level Security**: Only accessible fields are included
+- **Object Permissions**: Requires read access to referenced objects
+
+## 📈 **Performance Considerations**
+
+### **Optimization Features**
+- **Lazy Loading**: Only processes data when needed
+- **Efficient Joins**: Simple left join implementation
+- **Memory Management**: Processes data in chunks
+- **Error Recovery**: Graceful handling of partial failures
+
+### **Limitations**
+- **JSON Size**: Large action results may impact performance
+- **Join Complexity**: Complex multi-object joins may be slower
+- **Memory Usage**: Very large datasets may require chunking
+
+## 🧪 **Testing**
+
+### **Test Script**
+Use `test-csv-aggregator.apex` to test the service:
+```apex
+// Test single object CSV
+String singleObjectResults = JSON.serialize(...);
+ANAgentCSVAggregatorService.CSVRequest request = new ANAgentCSVAggregatorService.CSVRequest();
+request.userRequest = 'Export all courses related to data cloud';
+request.actionResults = singleObjectResults;
+List<ANAgentCSVAggregatorService.CSVResponse> responses = 
+    ANAgentCSVAggregatorService.generateCSVFromActions(new List<ANAgentCSVAggregatorService.CSVRequest>{request});
+```
+
+### **Test Scenarios**
+1. **Single Object Export**: Basic CSV generation
+2. **Multi-Object Join**: Complex data aggregation
+3. **Error Handling**: Invalid inputs and edge cases
+4. **Performance**: Large datasets and complex joins
+
+## 🚀 **Future Enhancements**
+
+### **Planned Features**
+- **Advanced Joins**: Support for multiple join types (INNER, OUTER)
+- **Custom Field Mapping**: User-defined field aliases
+- **Filtering**: Pre-export data filtering
+- **Sorting**: Multi-column sorting options
+- **Templates**: Predefined CSV templates for common use cases
+
+### **Integration Opportunities**
+- **Email Service**: Send CSV exports via email
+- **File Storage**: Save CSV files to Salesforce Files
+- **Scheduling**: Automated CSV generation
+- **Analytics**: CSV usage analytics and reporting
+
+## 📞 **Support**
+
+For questions or issues with the CSV Aggregator Service:
+1. Check the error messages for resolution guidance
+2. Verify agent action results are in expected format
+3. Test with simpler requests first
+4. Review the test script for examples
+
+---
+
+**Version**: 1.0  
+**Last Updated**: January 2024  
+**Compatible With**: ANAgentOpenPipeHandlerV2, ANAgent Search SMEs, ANAgentAPMNominationHandlerV2, ANAgentContentSearchHandlerV2 

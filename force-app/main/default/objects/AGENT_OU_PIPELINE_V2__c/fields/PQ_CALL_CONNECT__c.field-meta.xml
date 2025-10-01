@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PQ_CALL_CONNECT__c</fullName>
+    <description>Previous quarter Call Connect by AE. Example values: 8.0, 0.0, 22.0.</description>
+    <externalId>false</externalId>
+    <label>Previous Quarter Call Connect</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Agent Action for Unified Pipeline Analysis (Renewals, Cross-sell, Upsell)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Action_Type__c</fullName>
+        <description>Type of analysis to perform</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Must be one of: RENEWALS, CROSS_SELL, UPSELL</inlineHelpText>
+        <label>Analysis Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>RENEWALS</fullName>
+                    <default>false</default>
+                    <label>Renewals Analysis</label>
+                </value>
+                <value>
+                    <fullName>CROSS_SELL</fullName>
+                    <default>false</default>
+                    <label>Cross-sell Analysis</label>
+                </value>
+                <value>
+                    <fullName>UPSELL</fullName>
+                    <default>false</default>
+                    <label>Upsell Analysis</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OU_Name__c</fullName>
+        <description>Organizational Unit to filter by</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional - if not provided, will use work location country</inlineHelpText>
+        <label>OU Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Work_Location_Country__c</fullName>
+        <description>Work location country filter</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required if OU is not specified</inlineHelpText>
+        <label>Work Location Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Group_By__c</fullName>
+        <description>Field to group results by</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Must be one of: AE, PRODUCT, INDUSTRY, MACRO_SEGMENT, COUNTRY, MANAGER, ACCOUNT</inlineHelpText>
+        <label>Group By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AE</fullName>
+                    <default>false</default>
+                    <label>AE</label>
+                </value>
+                <value>
+                    <fullName>PRODUCT</fullName>
+                    <default>true</default>
+                    <label>PRODUCT</label>
+                </value>
+                <value>
+                    <fullName>INDUSTRY</fullName>
+                    <default>false</default>
+                    <label>INDUSTRY</label>
+                </value>
+                <value>
+                    <fullName>MACRO_SEGMENT</fullName>
+                    <default>false</default>
+                    <label>MACRO_SEGMENT</label>
+                </value>
+                <value>
+                    <fullName>COUNTRY</fullName>
+                    <default>false</default>
+                    <label>COUNTRY</label>
+                </value>
+                <value>
+                    <fullName>MANAGER</fullName>
+                    <default>false</default>
+                    <label>MANAGER</label>
+                </value>
+                <value>
+                    <fullName>ACCOUNT</fullName>
+                    <default>false</default>
+                    <label>ACCOUNT</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Filter_Criteria__c</fullName>
+        <description>SOQL WHERE clause filter using allowed fields</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Example: product='Sales Cloud' AND amount > 50000</inlineHelpText>
+        <label>Filter Criteria</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Limit_N__c</fullName>
+        <description>Maximum number of results to return</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defaults to 20, maximum 200</inlineHelpText>
+        <label>Limit N</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>0</scale>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aggregation_Type__c</fullName>
+        <description>Type of aggregation to perform</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Options: COUNT, SUM, AVG, MAX, MIN</inlineHelpText>
+        <label>Aggregation Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>COUNT</fullName>
+                    <default>true</default>
+                    <label>COUNT</label>
+                </value>
+                <value>
+                    <fullName>SUM</fullName>
+                    <default>false</default>
+                    <label>SUM</label>
+                </value>
+                <value>
+                    <fullName>AVG</fullName>
+                    <default>false</default>
+                    <label>AVG</label>
+                </value>
+                <value>
+                    <fullName>MAX</fullName>
+                    <default>false</default>
+                    <label>MAX</label>
+                </value>
+                <value>
+                    <fullName>MIN</fullName>
+                    <default>false</default>
+                    <label>MIN</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Analysis_Type_Detail__c</fullName>
+        <description>Detailed analysis type for reporting</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Examples: AE_ANALYSIS, PRODUCT_ANALYSIS, ACCOUNT_ANALYSIS</inlineHelpText>
+        <label>Analysis Type Detail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Per_AE_Normalize__c</fullName>
+        <description>Whether to normalize results per AE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defaults to false</inlineHelpText>
+        <label>Per-AE Normalized</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Start date for date range filtering</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Format: YYYY-MM-DD. Only applicable for Renewals analysis</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>End date for date range filtering</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Format: YYYY-MM-DD. Only applicable for Renewals analysis</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Restrict_Values_CSV__c</fullName>
+        <description>Comma-separated values to restrict results to specific groups</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Example: Sales Cloud,Service Cloud for product grouping</inlineHelpText>
+        <label>Restrict Values CSV</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <label>ABAgent Future Pipeline Analysis Action</label>
+    <nameField>
+        <displayFormat>ABA-{0000}</displayFormat>
+        <label>Action Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>ABAgent Future Pipeline Analysis Actions</pluralLabel>
+    <searchLayouts></searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

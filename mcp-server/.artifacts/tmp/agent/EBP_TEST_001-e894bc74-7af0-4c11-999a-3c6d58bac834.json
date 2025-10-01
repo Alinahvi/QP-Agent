@@ -1,0 +1,12 @@
+{
+  "agentApiName": "EBP_Agent_POC",
+  "utterances": "Show me avg calls in Germany for EMEA ENTR,What's the average ACV for AMER ACC this quarter?,Find SMEs for Data Cloud in AMER ACC region,Show me cross-sell opportunities for Data Cloud in EMEA ENTR,What products are in the passed stage for AMER ACC?,Show me ACT articles on AI and machine learning for EMEA ENTR,Who are the Service Cloud experts in UKI?,Generate upsell pipeline for Lightning Web Components in AMER ACC,Show me open pipe analysis for EMEA ENTR by stage,What's the process for opportunity management in AMER ACC?",
+  "context": {},
+  "mode": "test",
+  "capture": [
+    "transcript",
+    "actions",
+    "metrics"
+  ],
+  "maxTurns": 1
+}

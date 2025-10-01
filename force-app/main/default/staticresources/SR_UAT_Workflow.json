@@ -1,0 +1,232 @@
+{
+  "testCases": [
+    {
+      "id": "WF_001",
+      "utterance": "Execute workflow for AMER ACC current quarter",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "WF_002",
+      "utterance": "Run workflow analysis for EMEA ENTR previous quarter",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "timeFrame": "previous"
+      }
+    },
+    {
+      "id": "WF_003",
+      "utterance": "What's the workflow for UKI this year?",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "WF_004",
+      "utterance": "Show workflow execution for AMER ACC enterprise segment",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "WF_005",
+      "utterance": "Find workflow for EMEA ENTR mid-market",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "WF_006",
+      "utterance": "Analyze workflow for UKI small business segment",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "WF_007",
+      "utterance": "Show me workflow for AMER ACC with Data Cloud",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Data Cloud"
+      }
+    },
+    {
+      "id": "WF_008",
+      "utterance": "What's the workflow for EMEA ENTR with Sales Cloud?",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Sales Cloud"
+      }
+    },
+    {
+      "id": "WF_009",
+      "utterance": "Find workflow for UKI with Service Cloud",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Service Cloud"
+      }
+    },
+    {
+      "id": "WF_010",
+      "utterance": "Show workflow for AMER ACC with Marketing Cloud",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Marketing Cloud"
+      }
+    },
+    {
+      "id": "WF_011",
+      "utterance": "Execute workflow for EMEA ENTR last quarter",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "timeFrame": "previous"
+      }
+    },
+    {
+      "id": "WF_012",
+      "utterance": "What's the workflow for UKI current period?",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "WF_013",
+      "utterance": "Show me workflow for AMER ACC with Data Cloud and Sales Cloud",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "products": ["Data Cloud", "Sales Cloud"]
+      }
+    },
+    {
+      "id": "WF_014",
+      "utterance": "Find workflow for EMEA ENTR enterprise segment",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "WF_015",
+      "utterance": "Analyze workflow for UKI mid-market segment",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "WF_016",
+      "utterance": "Show workflow for AMER ACC with Service Cloud and Marketing Cloud",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "products": ["Service Cloud", "Marketing Cloud"]
+      }
+    },
+    {
+      "id": "WF_017",
+      "utterance": "What's the workflow for EMEA ENTR small business?",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "WF_018",
+      "utterance": "Find workflow for UKI with Data Cloud",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Data Cloud"
+      }
+    },
+    {
+      "id": "WF_019",
+      "utterance": "Show me workflow for AMER ACC previous quarter",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "timeFrame": "previous"
+      }
+    },
+    {
+      "id": "WF_020",
+      "utterance": "Analyze workflow for EMEA ENTR current quarter",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "WF_021",
+      "utterance": "What's the workflow for UKI with Sales Cloud and Service Cloud?",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "products": ["Sales Cloud", "Service Cloud"]
+      }
+    },
+    {
+      "id": "WF_022",
+      "utterance": "Show workflow for AMER ACC enterprise segment current quarter",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "segment": "enterprise",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "WF_023",
+      "utterance": "Find workflow for EMEA ENTR with Marketing Cloud",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Marketing Cloud"
+      }
+    },
+    {
+      "id": "WF_024",
+      "utterance": "Analyze workflow for UKI mid-market current period",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "segment": "mid-market",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "WF_025",
+      "utterance": "Show me workflow for AMER ACC with Data Cloud enterprise",
+      "expectedTool": "agent_workflow",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Data Cloud",
+        "segment": "enterprise"
+      }
+    }
+  ]
+}

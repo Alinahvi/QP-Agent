@@ -1,0 +1,287 @@
+{
+  "testUtterances": [
+    {
+      "id": "kpi_001",
+      "utterance": "KPI compare AMER ACC vs EMEA ENTR for the current quarter — coverage and AOV only.",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage", "AOV"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "EMEA ENTR"
+    },
+    {
+      "id": "kpi_002", 
+      "utterance": "Show KPIs for AMER-ACC last quarter with ramping breakouts.",
+      "expectedOuName": "AMER-ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["ramping"],
+      "expectedTimeFrame": "previous",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_003",
+      "utterance": "What's the trend in stage-2→3 conversion for AMER ACC vs prior quarter?",
+      "expectedOuName": "AMER ACC", 
+      "expectedRegion": null,
+      "expectedMetrics": ["stage-2→3 conversion"],
+      "expectedTimeFrame": "previous",
+      "expectedComparison": "prior quarter"
+    },
+    {
+      "id": "kpi_004",
+      "utterance": "Current month coverage and AOV for UKI, filter to new hires.",
+      "expectedOuName": "UKI",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage", "AOV"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_005",
+      "utterance": "KPI snapshot for AMER ACC (US) — coverage, AOV, win rate; previous quarter.",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": "US",
+      "expectedMetrics": ["coverage", "AOV", "win rate"],
+      "expectedTimeFrame": "previous",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_006",
+      "utterance": "Compare coverage for AMER ACC vs EMEA ENTR; highlight deltas and pcts.",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "EMEA ENTR"
+    },
+    {
+      "id": "kpi_007",
+      "utterance": "Stage velocity current vs previous for AMER ACC; show top gaps.",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["stage velocity"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "previous"
+    },
+    {
+      "id": "kpi_008",
+      "utterance": "KPI analysis for EMEA ENTR current quarter coverage and AOV",
+      "expectedOuName": "EMEA ENTR",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage", "AOV"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_009",
+      "utterance": "Show me KPI analysis for AMER ACC with ramping status breakdown",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["ramping status"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_010",
+      "utterance": "What are the KPIs for UKI region in the current quarter?",
+      "expectedOuName": "UKI",
+      "expectedRegion": null,
+      "expectedMetrics": ["all"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_011",
+      "utterance": "KPI comparison: AMER ACC vs EMEA ENTR for coverage and win rate",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage", "win rate"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "EMEA ENTR"
+    },
+    {
+      "id": "kpi_012",
+      "utterance": "Show KPIs for AMER-ACC last quarter with new hire filter",
+      "expectedOuName": "AMER-ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["all"],
+      "expectedTimeFrame": "previous",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_013",
+      "utterance": "Current quarter AOV and coverage for EMEA ENTR region",
+      "expectedOuName": "EMEA ENTR",
+      "expectedRegion": null,
+      "expectedMetrics": ["AOV", "coverage"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_014",
+      "utterance": "KPI trend analysis for AMER ACC: current vs previous quarter",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["all"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "previous quarter"
+    },
+    {
+      "id": "kpi_015",
+      "utterance": "Show me stage-2 to stage-3 conversion rates for UKI",
+      "expectedOuName": "UKI",
+      "expectedRegion": null,
+      "expectedMetrics": ["stage-2→3 conversion"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_016",
+      "utterance": "KPI analysis for AMER ACC (US) - coverage, AOV, win rate",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": "US",
+      "expectedMetrics": ["coverage", "AOV", "win rate"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_017",
+      "utterance": "Compare EMEA ENTR vs AMER ACC KPIs for current quarter",
+      "expectedOuName": "EMEA ENTR",
+      "expectedRegion": null,
+      "expectedMetrics": ["all"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "AMER ACC"
+    },
+    {
+      "id": "kpi_018",
+      "utterance": "Show ramping status KPIs for AMER ACC new hires",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["ramping status"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_019",
+      "utterance": "KPI snapshot: UKI region current quarter vs previous",
+      "expectedOuName": "UKI",
+      "expectedRegion": null,
+      "expectedMetrics": ["all"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "previous"
+    },
+    {
+      "id": "kpi_020",
+      "utterance": "What's the AOV trend for EMEA ENTR over the last two quarters?",
+      "expectedOuName": "EMEA ENTR",
+      "expectedRegion": null,
+      "expectedMetrics": ["AOV"],
+      "expectedTimeFrame": "previous",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_021",
+      "utterance": "KPI analysis for AMER-ACC: coverage, AOV, win rate - current quarter",
+      "expectedOuName": "AMER-ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage", "AOV", "win rate"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_022",
+      "utterance": "Show me stage velocity metrics for UKI region",
+      "expectedOuName": "UKI",
+      "expectedRegion": null,
+      "expectedMetrics": ["stage velocity"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_023",
+      "utterance": "KPI comparison: AMER ACC vs EMEA ENTR coverage and AOV",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage", "AOV"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "EMEA ENTR"
+    },
+    {
+      "id": "kpi_024",
+      "utterance": "Current quarter KPIs for EMEA ENTR with ramping breakdown",
+      "expectedOuName": "EMEA ENTR",
+      "expectedRegion": null,
+      "expectedMetrics": ["ramping"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_025",
+      "utterance": "Show KPIs for AMER ACC (US) - coverage, AOV, win rate; previous quarter",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": "US",
+      "expectedMetrics": ["coverage", "AOV", "win rate"],
+      "expectedTimeFrame": "previous",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_026",
+      "utterance": "KPI analysis for UKI: current vs previous quarter trends",
+      "expectedOuName": "UKI",
+      "expectedRegion": null,
+      "expectedMetrics": ["all"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "previous quarter"
+    },
+    {
+      "id": "kpi_027",
+      "utterance": "What are the stage-2→3 conversion rates for EMEA ENTR?",
+      "expectedOuName": "EMEA ENTR",
+      "expectedRegion": null,
+      "expectedMetrics": ["stage-2→3 conversion"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_028",
+      "utterance": "KPI snapshot for AMER-ACC last quarter with new hire filter",
+      "expectedOuName": "AMER-ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["all"],
+      "expectedTimeFrame": "previous",
+      "expectedComparison": null
+    },
+    {
+      "id": "kpi_029",
+      "utterance": "Compare coverage and AOV for AMER ACC vs EMEA ENTR current quarter",
+      "expectedOuName": "AMER ACC",
+      "expectedRegion": null,
+      "expectedMetrics": ["coverage", "AOV"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": "EMEA ENTR"
+    },
+    {
+      "id": "kpi_030",
+      "utterance": "Show me KPI analysis for UKI region with ramping status",
+      "expectedOuName": "UKI",
+      "expectedRegion": null,
+      "expectedMetrics": ["ramping status"],
+      "expectedTimeFrame": "current",
+      "expectedComparison": null
+    }
+  ],
+  "metadata": {
+    "testName": "KPI Analysis UAT Test Set",
+    "version": "1.0",
+    "description": "Comprehensive test utterances for KPI Analysis MCP vs Direct path comparison",
+    "totalUtterances": 30,
+    "coverage": {
+      "ouNames": ["AMER ACC", "AMER-ACC", "EMEA ENTR", "UKI"],
+      "regions": ["US", null],
+      "metrics": ["coverage", "AOV", "win rate", "stage velocity", "stage-2→3 conversion", "ramping status", "ramping"],
+      "timeFrames": ["current", "previous", "last quarter", "prior quarter"],
+      "comparisons": ["AMER ACC", "EMEA ENTR", "UKI", "previous quarter", "prior quarter"]
+    }
+  }
+}

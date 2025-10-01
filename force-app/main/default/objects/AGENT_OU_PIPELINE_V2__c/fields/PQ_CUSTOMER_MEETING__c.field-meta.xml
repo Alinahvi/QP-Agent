@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PQ_CUSTOMER_MEETING__c</fullName>
+    <description>Number of customer meetings for an AE in the previous quarter. Example values: 124.0, 121.0, 119.0.</description>
+    <externalId>false</externalId>
+    <label>Previous Quarter Customer Meeting</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

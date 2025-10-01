@@ -1,0 +1,197 @@
+=== AGENTFORCE SETUP - COPY & PASTE INSTRUCTIONS ===
+
+ACTION NAME: Search Knowledge Articles
+DESCRIPTION: Search for information in approved knowledge articles. Only requires a user query - other fields have smart defaults.
+
+=== LOADING TEXT ===
+Searching knowledge articles...
+
+=== INPUT FIELDS ===
+
+searchQuery:
+Enter the user's search query or question here. Examples: 'Tell me about AE Academy', 'How does SME Finder work?', 'What is Agentforce Badge?'
+
+CHECKBOXES:
+✅ Collect data from user
+❌ Require input
+
+maxResults:
+Maximum number of articles to return (1-10). Leave empty for default of 3 results. Users don't need to specify this - it has a smart default.
+
+CHECKBOXES:
+❌ Collect data from user
+❌ Require input
+
+searchType:
+Type of search: 'title' (titles only), 'content' (full content), 'all' (comprehensive). Leave empty for comprehensive search (recommended).
+
+CHECKBOXES:
+❌ Collect data from user
+❌ Require input
+
+=== OUTPUT FIELDS ===
+
+knowledgeContent:
+Display this content to the user. Contains formatted knowledge article content with questions, answers, and metadata. Each article starts with "=== [Title] ===" followed by the content.
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+matchedArticles:
+Show which articles were found. Contains a comma-separated list of article titles that matched the search. Example: "AE Academy Table Documentation, SME Finder Documentation"
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+totalResults:
+Display count of results found. Shows the number of articles returned. May be 0 if no matches found.
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+success:
+Use to check if search worked. true = successful (even if no results), false = error occurred. Don't show this to users.
+
+CHECKBOXES:
+❌ Show in conversation
+❌ Filter from agent action
+
+errorMessage:
+Display if search failed. Contains error details when success = false. Common errors: "Search query is required", "Query error: [details]". Leave empty if success = true.
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+=== QUICK SETUP STEPS ===
+
+1. Find "Search Knowledge Articles" action
+2. Set Loading Text: "Searching knowledge articles..."
+3. For each field above, copy the instruction text and paste it into the "Instructions" field
+4. Set the checkboxes as indicated (✅ = checked, ❌ = unchecked)
+5. Set Output Rendering to "Text" for text fields
+6. Save and test!
+
+=== TEST QUERIES ===
+
+Working queries:
+- "Tell me about AE Academy"
+- "How does SME Finder work?"
+- "What is Agentforce Badge?"
+
+No results queries:
+- "what do know about seller roster?"
+- "random topic"
+
+=== EXPECTED BEHAVIOR ===
+
+✅ Users only need to provide their search query
+✅ Smart defaults handle all technical fields
+✅ Helpful error messages and guidance
+✅ Comprehensive knowledge content returned
+✅ Available topics list shown when no results found 
+
+ACTION NAME: Search Knowledge Articles
+DESCRIPTION: Search for information in approved knowledge articles. Only requires a user query - other fields have smart defaults.
+
+=== LOADING TEXT ===
+Searching knowledge articles...
+
+=== INPUT FIELDS ===
+
+searchQuery:
+Enter the user's search query or question here. Examples: 'Tell me about AE Academy', 'How does SME Finder work?', 'What is Agentforce Badge?'
+
+CHECKBOXES:
+✅ Collect data from user
+❌ Require input
+
+maxResults:
+Maximum number of articles to return (1-10). Leave empty for default of 3 results. Users don't need to specify this - it has a smart default.
+
+CHECKBOXES:
+❌ Collect data from user
+❌ Require input
+
+searchType:
+Type of search: 'title' (titles only), 'content' (full content), 'all' (comprehensive). Leave empty for comprehensive search (recommended).
+
+CHECKBOXES:
+❌ Collect data from user
+❌ Require input
+
+=== OUTPUT FIELDS ===
+
+knowledgeContent:
+Display this content to the user. Contains formatted knowledge article content with questions, answers, and metadata. Each article starts with "=== [Title] ===" followed by the content.
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+matchedArticles:
+Show which articles were found. Contains a comma-separated list of article titles that matched the search. Example: "AE Academy Table Documentation, SME Finder Documentation"
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+totalResults:
+Display count of results found. Shows the number of articles returned. May be 0 if no matches found.
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+success:
+Use to check if search worked. true = successful (even if no results), false = error occurred. Don't show this to users.
+
+CHECKBOXES:
+❌ Show in conversation
+❌ Filter from agent action
+
+errorMessage:
+Display if search failed. Contains error details when success = false. Common errors: "Search query is required", "Query error: [details]". Leave empty if success = true.
+
+CHECKBOXES:
+✅ Show in conversation
+❌ Filter from agent action
+OUTPUT RENDERING: Text
+
+=== QUICK SETUP STEPS ===
+
+1. Find "Search Knowledge Articles" action
+2. Set Loading Text: "Searching knowledge articles..."
+3. For each field above, copy the instruction text and paste it into the "Instructions" field
+4. Set the checkboxes as indicated (✅ = checked, ❌ = unchecked)
+5. Set Output Rendering to "Text" for text fields
+6. Save and test!
+
+=== TEST QUERIES ===
+
+Working queries:
+- "Tell me about AE Academy"
+- "How does SME Finder work?"
+- "What is Agentforce Badge?"
+
+No results queries:
+- "what do know about seller roster?"
+- "random topic"
+
+=== EXPECTED BEHAVIOR ===
+
+✅ Users only need to provide their search query
+✅ Smart defaults handle all technical fields
+✅ Helpful error messages and guidance
+✅ Comprehensive knowledge content returned
+✅ Available topics list shown when no results found 

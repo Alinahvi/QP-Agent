@@ -1,0 +1,119 @@
+# Non-Critical Classes to Remove from Org
+
+## Small Utility & Helper Classes (< 1,000 bytes)
+- WithoutSharingUtilities (707 bytes)
+- AHMayQueryException (55 bytes)
+- attendanceController (51 bytes)
+- AHMayQueryHandler (131 bytes)
+- AHMayCourseQueryHandler (137 bytes)
+- GCalStatusResponseBatchHelper (60 bytes)
+- GcalHandler (42 bytes)
+- GCalStatusResponseBatch (366 bytes)
+- SiteLink (597 bytes)
+- EmailLogo (868 bytes)
+
+## Simple Batch Jobs (Can be consolidated)
+- ThCompletionBatch (1,436 bytes)
+- RecommendationsCreateBatch (2,226 bytes)
+- RecommendationsDeactivateBatch (1,696 bytes)
+- SlackEscalationNotificationBatch (2,068 bytes)
+- SlackNotificationBatch (1,258 bytes)
+- SlackSecurityNotificationBatch (3,525 bytes)
+- RecommendationDataCloudSkillBatch (6,271 bytes)
+- RecommendationDataCloudBatch (6,100 bytes)
+
+## UI/Display Classes
+- FilterModal (16,921 bytes)
+- QuizDesigner (4,923 bytes)
+- learningItemDetailQuiz (19,076 bytes)
+
+## Simple Notification Classes
+- SurveyNotification (3,233 bytes)
+- RecommendationNotification (2,940 bytes)
+- RecommendationNotificationHelper (11,548 bytes)
+- SessionReminderNotificationBatch (2,802 bytes)
+- SessionSlackNotification (6,786 bytes)
+- SessionAttendedNotification (3,487 bytes)
+- SessionOwnerRoleNotification (8,129 bytes)
+- LearningAppCaseNotification (9,134 bytes)
+- LearningAppCaseStatusNotification (2,256 bytes)
+- SkillAssessmentAssessorNotifiction (3,697 bytes)
+
+## Data/Constants Classes
+- ResultData (782 bytes)
+- MediaConstants (1,245 bytes)
+- AHMayQueryRequest (309 bytes)
+- AHMayQueryResult (817 bytes)
+- AHMayEmployeeRecord (291 bytes)
+
+## Small Helper Classes
+- ExceptionUtility2 (1,920 bytes)
+- AHMayValidator (1,340 bytes)
+- AHMayUnsupportedQueryHandler (1,409 bytes)
+- AHMayOrConditionQueryHandler (2,583 bytes)
+- AHMayCrossTopicContext (2,062 bytes)
+- AHMayMonitoringService (436 bytes)
+- AHMayErrorHandler (4,595 bytes)
+- AHMayFieldConstants (4,649 bytes)
+
+## Assessment Helper Classes
+- assessmentResponseTriggerHelper (809 bytes)
+- assessmentLearnerList (930 bytes)
+- SkillAssessmentReassign (1,975 bytes)
+
+## Upload/Import Classes
+- UploadLearnersByCSV (2,798 bytes)
+- UploadSessionAttendeesByCsv (8,536 bytes)
+- UploadSessionRolesByCsv (4,285 bytes)
+- TrailheadImportModules (5,458 bytes)
+
+## Zoom Integration Classes
+- ZoomAttendanceBatch (1,468 bytes)
+- ZoomAttendanceBatchHelper (17,062 bytes)
+- ZoomAttendanceTracker (3,096 bytes)
+- ZoomAsyncDeleteSession (1,401 bytes)
+- UpdateZoomSessionQueueable (1,698 bytes)
+- DeleteZoomSessionQueueable (1,421 bytes)
+- SessionGuestReassignZoomQueueable (4,525 bytes)
+
+## Generic Utilities
+- Utilities (22,201 bytes)
+- WithoutSharingUtilities (707 bytes)
+- ExceptionUtility2 (1,920 bytes)
+
+## Small Action Classes
+- SessionCloneAction (1,535 bytes)
+- UnenrollLearning (13,336 bytes)
+- UpdateMediaAssignmentStatus (2,580 bytes)
+- UpdateMediaVersion (3,145 bytes)
+- SessionTriggerQueueable (4,602 bytes)
+- SessionGuestTriggerHelper (8,779 bytes)
+- TrainerWorkingRegionTriggerHelper (4,191 bytes)
+
+## Survey/Assessment Classes
+- SurveyQuestionScoreHelper (11,780 bytes)
+- SEF_AssessmentConsumer (3,260 bytes)
+
+## Data Cloud Classes
+- RecommendationDataCloudSkillHelper (6,373 bytes)
+- SEEDDataCloudTaxonomyHelper (1,733 bytes)
+
+## Approval Classes
+- TrainerApproval (4,265 bytes)
+- TrainerManagerApproval (3,516 bytes)
+
+## Other Small Classes
+- TrailheadAuth (2,120 bytes)
+- newEventOverride (2,315 bytes)
+- availabilityList (4,988 bytes)
+- SlackQueueableNotification (13,493 bytes)
+- SlackNotificationLog (11,932 bytes)
+- SlackEscalationNotificationBatchHelper (13,989 bytes)
+- ContentTagging (7,776 bytes)
+- manageAttendance (8,812 bytes)
+- ThCompletionBatchHelper (8,375 bytes)
+- EventManager (5,598 bytes)
+- LearnerSessionManager (11,758 bytes)
+- CourseAssetTriggerHelper (2,555 bytes)
+- CurriculumCourseTriggerHelper (3,282 bytes)
+- Lookup (3,328 bytes)

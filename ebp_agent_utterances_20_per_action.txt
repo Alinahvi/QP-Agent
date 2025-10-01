@@ -1,0 +1,143 @@
+EBP Agent POC - 20 Utterances Per Action
+================================================================================
+
+KPI ANALYZE (20 utterances)
+------------------------------------------------------------
+ 1. Show me avg calls in Germany for EMEA ENTR
+ 2. What's the average ACV for AMER ACC this quarter?
+ 3. Compare coverage rates between US and UK for this month
+ 4. Find meeting statistics for APAC region
+ 5. Show me call connections in LATAM OU
+ 6. Break down meetings by slow ramping vs fast ramping AEs in EMEA ENTR
+ 7. Compare ACV performance between ramped and ramping AEs in AMER ACC
+ 8. Show me coverage by ramp status in UKI OU
+ 9. What's the pipeline generation difference between ramped and ramping AEs in APAC?
+10. Analyze call connections by ramp status in LATAM
+11. Compare this quarter vs last quarter ACV in Germany
+12. Show me meeting trends: current vs previous quarter in EMEA ENTR
+13. What's the ACV growth from last quarter to this quarter in AMER ACC?
+14. Compare call connection improvement in UKI this quarter vs last quarter
+15. Show me coverage changes from last quarter in APAC
+16. Show me performance metrics by management level in EMEA ENTR
+17. Compare ACV by vertical industry in AMER ACC
+18. What's the meeting performance by management tier in UKI?
+19. Show me call connections by vertical in APAC
+20. Analyze coverage rates by management level in LATAM
+
+CONTENT SEARCH (20 utterances)
+------------------------------------------------------------
+ 1. Show me ACT articles on AI and machine learning for EMEA ENTR
+ 2. Find ACT courses on Data Cloud implementation in AMER ACC
+ 3. Search for ACT content about Service Cloud best practices in UKI
+ 4. Look for ACT articles on Marketing Cloud automation in APAC
+ 5. Get ACT courses on Platform development for LATAM
+ 6. Find documentation about Sales Cloud configuration in EMEA ENTR
+ 7. Look for guides on Einstein Analytics setup in AMER ACC
+ 8. Search for documentation on Lightning Web Components in UKI
+ 9. Get guides on Apex programming best practices in APAC
+10. Find documentation about Flow automation in LATAM
+11. Show me content about healthcare industry solutions in EMEA ENTR
+12. Find articles on financial services implementations in AMER ACC
+13. Search for manufacturing industry content in UKI
+14. Look for retail industry solutions in APAC
+15. Get content about government sector implementations in LATAM
+16. Find management training content for EMEA ENTR leaders
+17. Search for executive-level Salesforce content in AMER ACC
+18. Look for team management guides in UKI
+19. Get leadership development content in APAC
+20. Find strategic planning resources for LATAM management
+
+SME SEARCH (20 utterances)
+------------------------------------------------------------
+ 1. Search for experts on Salesforce CRM in EMEA ENTR
+ 2. Find SMEs for Data Cloud in AMER ACC region
+ 3. Who are the Service Cloud experts in UKI?
+ 4. Look for Marketing Cloud specialists in APAC
+ 5. Find Platform development experts in LATAM
+ 6. Who knows about healthcare industry solutions in EMEA ENTR?
+ 7. Find experts on financial services implementations in AMER ACC
+ 8. Search for manufacturing industry specialists in UKI
+ 9. Look for retail industry experts in APAC
+10. Who are the government sector specialists in LATAM?
+11. Find Apex programming experts in EMEA ENTR
+12. Who knows about Lightning Web Components in AMER ACC?
+13. Search for Flow automation specialists in UKI
+14. Look for Einstein Analytics experts in APAC
+15. Find Integration specialists in LATAM
+16. Who are the management consultants in EMEA ENTR?
+17. Find executive advisors in AMER ACC
+18. Search for leadership coaches in UKI
+19. Look for strategic advisors in APAC
+20. Who are the change management experts in LATAM?
+
+FUTURE PIPELINE (20 utterances)
+------------------------------------------------------------
+ 1. What are the top renewal products for UKI OU?
+ 2. Show me renewal opportunities for EMEA ENTR
+ 3. Generate renewal pipeline for AMER ACC
+ 4. Find renewal opportunities in APAC region
+ 5. What are the best renewal products for LATAM?
+ 6. Show me cross-sell opportunities for Data Cloud in EMEA ENTR
+ 7. Generate cross-sell pipeline for Service Cloud in AMER ACC
+ 8. Find cross-sell opportunities for Marketing Cloud in UKI
+ 9. What are the top cross-sell products for APAC?
+10. Create cross-sell opportunities for Platform in LATAM
+11. Show me upsell potential for Einstein Analytics in EMEA ENTR
+12. Generate upsell pipeline for Lightning Web Components in AMER ACC
+13. Find upsell opportunities for Apex in UKI
+14. What are the highest value upsell products for APAC?
+15. Create upsell opportunities for Flow in LATAM
+16. What are the top products for healthcare industry in EMEA ENTR?
+17. Show me opportunities for financial services in AMER ACC
+18. Generate pipeline for manufacturing industry in UKI
+19. Find opportunities for retail sector in APAC
+20. What are the best products for government sector in LATAM?
+
+OPEN PIPE ANALYZE (20 utterances)
+------------------------------------------------------------
+ 1. Show me open pipe analysis for EMEA ENTR by stage
+ 2. What products are in the passed stage for AMER ACC?
+ 3. Analyze open pipe by stage for UKI OU
+ 4. Show me stage breakdown for APAC region
+ 5. What's the open pipe analysis for LATAM by stage?
+ 6. Show me Data Cloud products in open pipe for EMEA ENTR
+ 7. What Service Cloud opportunities are in open pipe for AMER ACC?
+ 8. Analyze Marketing Cloud open pipe for UKI
+ 9. Show me Platform products in open pipe for APAC
+10. What Einstein Analytics opportunities are open for LATAM?
+11. Show me healthcare industry open pipe for EMEA ENTR
+12. What financial services opportunities are open for AMER ACC?
+13. Analyze manufacturing industry open pipe for UKI
+14. Show me retail sector open pipe for APAC
+15. What government sector opportunities are open for LATAM?
+16. Show me high-value open pipe opportunities for EMEA ENTR
+17. What are the largest open pipe deals for AMER ACC?
+18. Analyze open pipe by deal size for UKI
+19. Show me strategic open pipe opportunities for APAC
+20. What are the priority open pipe deals for LATAM?
+
+WORKFLOW (20 utterances)
+------------------------------------------------------------
+ 1. Show me the workflow for lead qualification in EMEA ENTR
+ 2. What's the process for opportunity management in AMER ACC?
+ 3. Guide me through the sales process workflow in UKI
+ 4. Show me the customer onboarding workflow in APAC
+ 5. What's the process for contract renewal in LATAM?
+ 6. Show me the management approval workflow in EMEA ENTR
+ 7. What's the process for budget approval in AMER ACC?
+ 8. Guide me through the performance review workflow in UKI
+ 9. Show me the strategic planning workflow in APAC
+10. What's the process for team management in LATAM?
+11. Show me the deployment workflow for EMEA ENTR
+12. What's the process for code review in AMER ACC?
+13. Guide me through the testing workflow in UKI
+14. Show me the release management workflow in APAC
+15. What's the process for system maintenance in LATAM?
+16. Show me the healthcare compliance workflow in EMEA ENTR
+17. What's the process for financial services approval in AMER ACC?
+18. Guide me through the manufacturing quality workflow in UKI
+19. Show me the retail inventory workflow in APAC
+20. What's the process for government procurement in LATAM?
+
+================================================================================
+Total utterances: 120

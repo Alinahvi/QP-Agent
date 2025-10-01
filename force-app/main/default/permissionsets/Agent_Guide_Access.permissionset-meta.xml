@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set to access Agent Guide functionality</description>
+    <label>Agent Guide Access</label>
+    
+    <!-- Apex Class Access for AgentGuideController -->
+    <classAccesses>
+        <apexClass>AgentGuideController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    
+    <!-- Tab Settings -->
+    <tabSettings>
+        <tab>Agent_Guide</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Agent_Guide_UI</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>QP_Topic_Comment_Center</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    
+    <!-- Field Permissions for AGENT_OU_PIPELINE_V2__c -->
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>AGENT_OU_PIPELINE_V2__c.OU_NAME__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>AGENT_OU_PIPELINE_V2__c.WORK_LOCATION_COUNTRY__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    
+    <!-- Object Permissions -->
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AGENT_OU_PIPELINE_V2__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+</PermissionSet>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DESCRIPTION__c</fullName>
+    <description>Detailed description of the growth factor or performance metric. This field explains the business impact and importance of improving the specific metric for the AE's success.</description>
+    <externalId>false</externalId>
+    <label>Description</label>
+    <length>32768</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <unique>false</unique>
+    <visibleLines>3</visibleLines>
+</CustomField> 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set for MCP Open Pipe Analysis integration</description>
+    <label>MCP Open Pipe Analysis</label>
+    <apexClassAccesses>
+        <apexClass>ANAgentOpenPipeViaMCPV1_Simple</apexClass>
+        <enabled>true</enabled>
+    </apexClassAccesses>
+</PermissionSet>

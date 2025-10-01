@@ -1,0 +1,18 @@
+<template>
+    <lightning-input
+        type="search"
+        label="Search User"
+        value={searchTerm}
+        onchange={handleSearchChange}
+        placeholder="Type to search users..."
+    ></lightning-input>
+    <template if:true={users}>
+        <lightning-combobox
+            name="user"
+            label="Select User"
+            value={selectedUserId}
+            options={userOptions}
+            onchange={handleSelect}
+        ></lightning-combobox>
+    </template>
+</template> 

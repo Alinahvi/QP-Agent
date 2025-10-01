@@ -1,0 +1,29 @@
+=== CRITICAL BACKUP MANIFEST ===
+Date: Wed Oct  1 16:36:35 EDT 2025
+Git Commit: 8d77738c73431b53488f3c7074f88d5e56be20b8
+Git Branch: feature/consolidated-content-search-v2
+
+=== FILES INCLUDED ===
+critical-backup-20251001_163550/consolidated-content-search-v2/ANAgentContentSearchHandlerV2.cls
+critical-backup-20251001_163550/consolidated-content-search-v2/ANAgentConsensusContentSearchService.cls
+critical-backup-20251001_163550/consolidated-content-search-v2/ANAgentContentSearchServiceV2Test.cls
+critical-backup-20251001_163550/consolidated-content-search-v2/ANAgentContentSearchHandlerV2Test.cls
+critical-backup-20251001_163550/consolidated-content-search-v2/force-app/main/default/classes/ANAgentContentSearchHandlerV2.cls
+critical-backup-20251001_163550/consolidated-content-search-v2/force-app/main/default/classes/ANAgentContentSearchServiceV2.cls
+critical-backup-20251001_163550/consolidated-content-search-v2/ANAgentContentSearchServiceV2.cls
+critical-backup-20251001_163550/complete-git-archive.zip
+critical-backup-20251001_163550/consolidated-content-search-v2-github-ready.zip
+critical-backup-20251001_163550/consolidated-content-search-v2/FR_AGENT_V2_CONTENT_SEARCH_COMPLETE_MANIFEST.md
+critical-backup-20251001_163550/consolidated-content-search-v2/DEPLOYMENT_MANIFEST.md
+critical-backup-20251001_163550/consolidated-content-search-v2/README.md
+critical-backup-20251001_163550/consolidated-content-search-v2/VERSION_CONTROL_GUIDE.md
+critical-backup-20251001_163550/consolidated-content-search-v2/DEPLOYMENT_SUMMARY.md
+critical-backup-20251001_163550/consolidated-content-search-v2/GITHUB_UPLOAD_INSTRUCTIONS.md
+critical-backup-20251001_163550/consolidated-content-search-v2/ANAGENT_CONTENT_SEARCH_V2_COMPLETE_MARKDOWN.md
+
+=== RESTORE COMMANDS ===
+# To restore from git archive:
+unzip complete-git-archive.zip
+
+# To restore from consolidated package:
+cp -r consolidated-content-search-v2/* .

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>FPA Scoring Weights</label>
+    <pluralLabel>FPA Scoring Weights</pluralLabel>
+    <visibility>Public</visibility>
+    <description>Configurable weights and thresholds for Future Pipeline Analysis Intelligence scoring</description>
+    <fields>
+        <fullName>RenewalRiskWeight__c</fullName>
+        <label>Renewal Risk Weight</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>0.3</defaultValue>
+        <description>Weight for renewal risk in health score calculation</description>
+    </fields>
+    <fields>
+        <fullName>AEPerformanceWeight__c</fullName>
+        <label>AE Performance Weight</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>0.25</defaultValue>
+        <description>Weight for AE performance in health score calculation</description>
+    </fields>
+    <fields>
+        <fullName>PMFWeight__c</fullName>
+        <label>PMF Weight</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>0.2</defaultValue>
+        <description>Weight for product-market fit in health score calculation</description>
+    </fields>
+    <fields>
+        <fullName>ConcentrationRiskWeight__c</fullName>
+        <label>Concentration Risk Weight</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>0.15</defaultValue>
+        <description>Weight for concentration risk in health score calculation</description>
+    </fields>
+    <fields>
+        <fullName>TimeToRenewalWeight__c</fullName>
+        <label>Time to Renewal Weight</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>0.1</defaultValue>
+        <description>Weight for time to renewal in health score calculation</description>
+    </fields>
+    <fields>
+        <fullName>RenewalRiskThreshold__c</fullName>
+        <label>Renewal Risk Threshold</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>0.7</defaultValue>
+        <description>Threshold for high renewal risk (0-1 scale)</description>
+    </fields>
+    <fields>
+        <fullName>AEScoreThreshold__c</fullName>
+        <label>AE Score Threshold</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>3.0</defaultValue>
+        <description>Threshold for on-track AE performance (0-5 scale)</description>
+    </fields>
+    <fields>
+        <fullName>CoverageThreshold__c</fullName>
+        <label>Coverage Threshold</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>2.0</defaultValue>
+        <description>Threshold for healthy coverage ratio</description>
+    </fields>
+    <fields>
+        <fullName>HealthScoreThreshold__c</fullName>
+        <label>Health Score Threshold</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>2</scale>
+        <defaultValue>7.0</defaultValue>
+        <description>Threshold for healthy pipeline (0-10 scale)</description>
+    </fields>
+</CustomObject>

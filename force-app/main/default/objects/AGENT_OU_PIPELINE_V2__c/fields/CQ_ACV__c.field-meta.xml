@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CQ_ACV__c</fullName>
+    <description>Current Quarter Annual Contract Value (ACV) for the AE. This represents the total ACV generated from closed deals in the current quarter.</description>
+    <externalId>false</externalId>
+    <label>Current Quarter ACV</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+    <unique>false</unique>
+</CustomField> 

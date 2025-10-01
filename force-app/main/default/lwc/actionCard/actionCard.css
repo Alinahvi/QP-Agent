@@ -1,0 +1,15 @@
+.action-card {
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.action-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive grid adjustments for action cards */
+@media (max-width: 768px) {
+  .slds-medium-size_1-of-2 {
+    width: 100% !important;
+  }
+}

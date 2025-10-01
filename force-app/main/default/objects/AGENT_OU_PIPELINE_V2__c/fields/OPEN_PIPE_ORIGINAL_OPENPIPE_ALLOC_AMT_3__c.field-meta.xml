@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPEN_PIPE_ORIGINAL_OPENPIPE_ALLOC_AMT_3__c</fullName>
+    <description>Open Pipeline Original OpenPipe Allocation Amount for Stage 3 opportunity. This field represents the allocated pipeline value for the third stage opportunity.</description>
+    <externalId>false</externalId>
+    <label>Open Pipe Original OpenPipe Alloc Amt 3</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+    <unique>false</unique>
+</CustomField> 

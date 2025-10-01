@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMP_MGR_NM__c</fullName>
+    <description>Employee Manager Name for the AE. This field identifies the direct manager or supervisor responsible for the AE's performance and development.</description>
+    <externalId>false</externalId>
+    <label>Employee Manager Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField> 

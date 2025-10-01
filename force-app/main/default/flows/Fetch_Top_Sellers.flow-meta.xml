@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <description>Screen Flow to fetch top N sellers (SMEs) for a given product SKU.</description>
+    <label>Fetch Top Sellers</label>
+    <processType>Flow</processType>
+    <status>Active</status>
+    <variables>
+        <name>Product</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>N</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>sme_prime_ae__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <startElementReference>Screen_Fetch_Top_Sellers</startElementReference>
+    <screens>
+        <name>Screen_Fetch_Top_Sellers</name>
+        <label>Fetch Top Sellers</label>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <fieldTextInput>
+                <name>Product</name>
+                <dataType>String</dataType>
+                <label>Product SKU</label>
+                <isRequired>true</isRequired>
+            </fieldTextInput>
+        </fields>
+        <fields>
+            <fieldNumberInput>
+                <name>N</name>
+                <label>Number of Sellers</label>
+                <defaultValue>10</defaultValue>
+                <isRequired>true</isRequired>
+            </fieldNumberInput>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+</Flow>

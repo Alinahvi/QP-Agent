@@ -1,0 +1,47 @@
+<template>
+  <div class="slds-accordion">
+    <ul class="slds-accordion__list">
+      <li class="slds-accordion__list-item">
+        <section class="slds-accordion__section">
+          <div class="slds-accordion__summary">
+            <h3 class="slds-accordion__summary-heading">
+              <button 
+                class="slds-button slds-button_reset slds-accordion__summary-action" 
+                aria-expanded="false" 
+                aria-controls="accordion-details-{subflow.id}"
+                onclick={handleToggle}>
+                <span class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left">
+                  <lightning-icon 
+                    icon-name="utility:chevronright" 
+                    size="x-small" 
+                    class="accordion-icon">
+                  </lightning-icon>
+                </span>
+                <span class="slds-truncate" title={subflow.title}>
+                  <strong>{subflow.title}</strong>
+                </span>
+              </button>
+            </h3>
+            <p class="slds-text-body_small slds-text-color_weak slds-m-top_x-small">
+              {subflow.description}
+            </p>
+          </div>
+          <div 
+            class="slds-accordion__content slds-is-collapsed" 
+            id="accordion-details-{subflow.id}" 
+            aria-hidden="true">
+            <div class="slds-p-around_medium">
+              <div class="slds-grid slds-wrap slds-gutters">
+                <template for:each={filteredActions} for:item="action">
+                  <div key={action.id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <c-action-card action={action}></c-action-card>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </section>
+      </li>
+    </ul>
+  </div>
+</template>

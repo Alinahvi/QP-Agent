@@ -1,0 +1,570 @@
+{
+  "status": 0,
+  "result": {
+    "summary": {
+      "failRate": "0%",
+      "failing": 0,
+      "hostname": "https://readiness--innovation.sandbox.my.salesforce.com",
+      "orgId": "00DD7000000jTUCMA2",
+      "outcome": "Passed",
+      "passRate": "100%",
+      "passing": 35,
+      "skipped": 0,
+      "testRunId": "707D700004IUzhg",
+      "testStartTime": "2025-09-26T10:45:05.000Z",
+      "testsRan": 35,
+      "userId": "0052E00000NjqfeQAB",
+      "username": "gardisana@readiness.salesforce.com.innovation",
+      "commandTime": "234 ms",
+      "testExecutionTime": "3706 ms",
+      "testTotalTime": "18801 ms"
+    },
+    "tests": [
+      {
+        "Id": "07MD700000WTHCfMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testBuildResult_MessageFallbacks",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 146,
+        "FullName": "FRAGENTAssignedLearningService_Test.testBuildResult_MessageFallbacks"
+      },
+      {
+        "Id": "07MD700000WTHCgMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testBypassEnforcementCoverage",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 88,
+        "FullName": "FRAGENTAssignedLearningService_Test.testBypassEnforcementCoverage"
+      },
+      {
+        "Id": "07MD700000WTHChMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_DueDateBeforeStart_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 91,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_DueDateBeforeStart_Fails"
+      },
+      {
+        "Id": "07MD700000WTHCiMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_Duplicate_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 58,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_Duplicate_Fails"
+      },
+      {
+        "Id": "07MD700000WTHCjMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_ForcedDmlFailure",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 82,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_ForcedDmlFailure"
+      },
+      {
+        "Id": "07MD700000WTHCkMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_InvalidContentType",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 67,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_InvalidContentType"
+      },
+      {
+        "Id": "07MD700000WTHClMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_MissingFields_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 60,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_MissingFields_Fails"
+      },
+      {
+        "Id": "07MD700000WTHCmMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_MultipleContentIds_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 176,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_MultipleContentIds_Fails"
+      },
+      {
+        "Id": "07MD700000WTHCnMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_PermissionDenied",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 80,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_PermissionDenied"
+      },
+      {
+        "Id": "07MD700000WTHCoMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testCreate_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 119,
+        "FullName": "FRAGENTAssignedLearningService_Test.testCreate_Succeeds"
+      },
+      {
+        "Id": "07MD700000WTHCpMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testDelete_ForceQueryException",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 91,
+        "FullName": "FRAGENTAssignedLearningService_Test.testDelete_ForceQueryException"
+      },
+      {
+        "Id": "07MD700000WTHCqMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testDelete_PartialFailure",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 421,
+        "FullName": "FRAGENTAssignedLearningService_Test.testDelete_PartialFailure"
+      },
+      {
+        "Id": "07MD700000WTHCrMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testDelete_PermissionDenied",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 132,
+        "FullName": "FRAGENTAssignedLearningService_Test.testDelete_PermissionDenied"
+      },
+      {
+        "Id": "07MD700000WTHCsMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testDelete_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 184,
+        "FullName": "FRAGENTAssignedLearningService_Test.testDelete_Succeeds"
+      },
+      {
+        "Id": "07MD700000WTHCtMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testHelperCoverage",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 120,
+        "FullName": "FRAGENTAssignedLearningService_Test.testHelperCoverage"
+      },
+      {
+        "Id": "07MD700000WTHCuMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testRetrieveById_ForcedException",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 53,
+        "FullName": "FRAGENTAssignedLearningService_Test.testRetrieveById_ForcedException"
+      },
+      {
+        "Id": "07MD700000WTHCvMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testRetrieveById_NotFound",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 55,
+        "FullName": "FRAGENTAssignedLearningService_Test.testRetrieveById_NotFound"
+      },
+      {
+        "Id": "07MD700000WTHCwMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testRetrieveById_PermissionDenied",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 52,
+        "FullName": "FRAGENTAssignedLearningService_Test.testRetrieveById_PermissionDenied"
+      },
+      {
+        "Id": "07MD700000WTHCxMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testRetrieveById_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 233,
+        "FullName": "FRAGENTAssignedLearningService_Test.testRetrieveById_Succeeds"
+      },
+      {
+        "Id": "07MD700000WTHCyMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_ByAudience",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 120,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_ByAudience"
+      },
+      {
+        "Id": "07MD700000WTHCzMAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_ByUserFilter",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 184,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_ByUserFilter"
+      },
+      {
+        "Id": "07MD700000WTHD0MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_CountQueryOverride",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 56,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_CountQueryOverride"
+      },
+      {
+        "Id": "07MD700000WTHD1MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_DateLiteralFilter",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 112,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_DateLiteralFilter"
+      },
+      {
+        "Id": "07MD700000WTHD2MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_DateRangeFilter",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 119,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_DateRangeFilter"
+      },
+      {
+        "Id": "07MD700000WTHD3MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_DateRange_StartOnly",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 55,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_DateRange_StartOnly"
+      },
+      {
+        "Id": "07MD700000WTHD4MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_ForcedQueryError",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 48,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_ForcedQueryError"
+      },
+      {
+        "Id": "07MD700000WTHD5MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_IdentityLookupException",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 51,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_IdentityLookupException"
+      },
+      {
+        "Id": "07MD700000WTHD6MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_InvalidDateField",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 49,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_InvalidDateField"
+      },
+      {
+        "Id": "07MD700000WTHD7MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_InvalidDateLiteral_Fails",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 51,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_InvalidDateLiteral_Fails"
+      },
+      {
+        "Id": "07MD700000WTHD8MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_NoPermission",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 47,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_NoPermission"
+      },
+      {
+        "Id": "07MD700000WTHD9MAP",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testSearch_UserNotFound_ReturnsEmpty",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 105,
+        "FullName": "FRAGENTAssignedLearningService_Test.testSearch_UserNotFound_ReturnsEmpty"
+      },
+      {
+        "Id": "07MD700000WTHDAMA5",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testUpdate_PartialFailure",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 148,
+        "FullName": "FRAGENTAssignedLearningService_Test.testUpdate_PartialFailure"
+      },
+      {
+        "Id": "07MD700000WTHDBMA5",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testUpdate_PermissionDenied",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 129,
+        "FullName": "FRAGENTAssignedLearningService_Test.testUpdate_PermissionDenied"
+      },
+      {
+        "Id": "07MD700000WTHDCMA5",
+        "QueueItemId": "709D7000003X6jnIAC",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707D700004IUzhgIAD",
+        "MethodName": "testUpdate_Succeeds",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pD700000aUfEDIA0",
+          "Name": "FRAGENTAssignedLearningService_Test",
+          "NamespacePrefix": null
+        },
+        "RunTime": 124,
+        "FullName": "FRAGENTAssignedLearningService_Test.testUpdate_Succeeds"
+      }
+    ]
+  },
+  "warnings": []
+}

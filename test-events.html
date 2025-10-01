@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Guide UI - Event Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        button { margin: 10px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .event-log { background: #f8f9fa; padding: 10px; border-radius: 4px; margin: 10px 0; max-height: 200px; overflow-y: auto; }
+        .event-item { margin: 5px 0; padding: 5px; background: white; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Agent Guide UI - Event System Test</h1>
+    
+    <div class="test-section">
+        <h2>Event Listener Test</h2>
+        <p>This page listens for 'agent:utterance' events. Click the buttons below to test the event system.</p>
+        
+        <button onclick="sendTestEvent('onboarding', 'ramp-health', 'identify-slow-rampers')">
+            Test Onboarding Event
+        </button>
+        
+        <button onclick="sendTestEvent('territory', 'open-pipe', 'biggest-open-pipe')">
+            Test Territory Event
+        </button>
+        
+        <button onclick="sendTestEvent('kpi', 'ramp-status', 'calls-per-ae-latam')">
+            Test KPI Event
+        </button>
+        
+        <button onclick="clearEventLog()">Clear Log</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Event Log</h2>
+        <div id="eventLog" class="event-log">
+            <p>Waiting for events...</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Open the main Agent Guide UI at <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></li>
+            <li>Navigate to any topic page (e.g., /onboarding)</li>
+            <li>Click on any subflow to expand it</li>
+            <li>Click "Use this" on any action</li>
+            <li>Come back to this page to see the event logged</li>
+        </ol>
+    </div>
+
+    <script>
+        const eventLog = document.getElementById('eventLog');
+        let eventCount = 0;
+
+        function addEventToLog(event) {
+            eventCount++;
+            const eventItem = document.createElement('div');
+            eventItem.className = 'event-item';
+            eventItem.innerHTML = `
+                <strong>Event #${eventCount}</strong><br>
+                <strong>Utterance:</strong> ${event.detail.utterance}<br>
+                <strong>Meta:</strong> ${JSON.stringify(event.detail.meta, null, 2)}<br>
+                <small>Time: ${new Date().toLocaleTimeString()}</small>
+            `;
+            eventLog.appendChild(eventItem);
+            eventLog.scrollTop = eventLog.scrollHeight;
+        }
+
+        function sendTestEvent(topicId, subflowId, actionId) {
+            const testUtterances = {
+                'identify-slow-rampers': 'Identify slow and no-ramp AEs in {OU} (CURRENT, group by AE, filter ramp_status in (\'Slow\',\'No Ramp\')).',
+                'biggest-open-pipe': 'Open Pipe Analysis: which product has the largest open pipe in {OU}? Include counts, ACV, and stage breakdown.',
+                'calls-per-ae-latam': 'KPI: CALLS CURRENT grouped by AE where ramp_status=\'Slow\' and country in (\'Brazil\',\'Argentina\',\'Chile\',\'Mexico\',\'Colombia\').'
+            };
+
+            const utterance = testUtterances[actionId] || 'Test utterance for ' + actionId;
+            
+            const event = new CustomEvent('agent:utterance', {
+                detail: {
+                    utterance: utterance,
+                    meta: {
+                        topicId: topicId,
+                        subflowId: subflowId,
+                        actionId: actionId
+                    }
+                }
+            });
+            
+            window.dispatchEvent(event);
+            addEventToLog(event);
+        }
+
+        function clearEventLog() {
+            eventLog.innerHTML = '<p>Event log cleared. Waiting for new events...</p>';
+            eventCount = 0;
+        }
+
+        // Listen for agent:utterance events
+        window.addEventListener('agent:utterance', function(event) {
+            addEventToLog(event);
+        });
+
+        // Clear initial message
+        setTimeout(() => {
+            if (eventLog.innerHTML.includes('Waiting for events')) {
+                eventLog.innerHTML = '<p>Event listener active. Send events from the main app or use test buttons above.</p>';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

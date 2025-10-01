@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>MCP Configuration</label>
+    <pluralLabel>MCP Configurations</pluralLabel>
+    <visibility>Public</visibility>
+    <description>Configuration for MCP Open Pipe Analysis integration</description>
+    <fields>
+        <fullName>BaseUrl__c</fullName>
+        <label>Base URL</label>
+        <type>Url</type>
+        <description>Override the Named Credential base URL at runtime. If empty, uses Named Credential URL.</description>
+        <required>false</required>
+    </fields>
+    <fields>
+        <fullName>AuthHeaderName__c</fullName>
+        <label>Auth Header Name</label>
+        <type>Text</type>
+        <length>255</length>
+        <description>Custom authentication header name (e.g., 'Authorization', 'X-API-Key')</description>
+        <required>false</required>
+    </fields>
+    <fields>
+        <fullName>AuthHeaderValue__c</fullName>
+        <label>Auth Header Value</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <description>Custom authentication header value (e.g., 'Bearer token', 'API key')</description>
+        <required>false</required>
+    </fields>
+    <fields>
+        <fullName>Mode__c</fullName>
+        <label>Mode</label>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ROUTE</fullName>
+                    <default>true</default>
+                    <label>ROUTE</label>
+                </value>
+                <value>
+                    <fullName>ANALYZE</fullName>
+                    <default>false</default>
+                    <label>ANALYZE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <description>MCP integration mode: ROUTE (route then call Apex) or ANALYZE (direct analysis)</description>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>Timeout__c</fullName>
+        <label>Timeout (seconds)</label>
+        <type>Number</type>
+        <precision>3</precision>
+        <scale>0</scale>
+        <description>HTTP request timeout in seconds (default: 10)</description>
+        <required>false</required>
+    </fields>
+    <fields>
+        <fullName>RetryCount__c</fullName>
+        <label>Retry Count</label>
+        <type>Number</type>
+        <precision>1</precision>
+        <scale>0</scale>
+        <description>Number of retries for 5xx errors (default: 2)</description>
+        <required>false</required>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Whether this configuration is active</description>
+        <required>true</required>
+    </fields>
+</CustomObject>

@@ -1,0 +1,86 @@
+ABAGENT Future Pipeline Analysis - Detailed UAT Results Table
+============================================================
+Test Date: September 25, 2025
+Test Environment: Innovation Sandbox
+Total Utterances: 50 (planned)
+Tests Completed: 3/50
+
+DETAILED RESULTS TABLE (3 Columns, 50 Rows):
+============================================
+
+| # | Utterance | Agent Response | Pass/Fail |
+|---|-----------|----------------|-----------|
+| 1 | Show me future pipeline analysis for AMER ACC | Future Pipeline Analysis completed successfully for type: FUTURE_PIPELINE | PASS |
+| 2 | Analyze renewals for AMERACC | Future Pipeline Analysis completed successfully for type: RENEWALS | PASS |
+| 3 | What cross-sell opportunities exist in EMEA ENTR healthcare? | Future Pipeline Analysis completed successfully for type: CROSS_SELL | PASS |
+| 4 | Find upsell opportunities for Sales Cloud in APAC INDIA | Future Pipeline Analysis completed successfully for type: UPSELL | PASS |
+| 5 | Show me future pipeline for AMER SMB technology segment | Future Pipeline Analysis completed successfully for type: FUTURE_PIPELINE | PASS |
+| 6 | Analyze renewals for EMEA FINS financial services | Future Pipeline Analysis completed successfully for type: RENEWALS | PASS |
+| 7 | What cross-sell opportunities exist for Service Cloud in AMER HEALTH? | [To be tested] | TBD |
+| 8 | Find upsell opportunities for Marketing Cloud in APAC TECH | [To be tested] | TBD |
+| 9 | Show me future pipeline for EMEA Central region | [To be tested] | TBD |
+| 10 | Show me comprehensive future pipeline analysis for LATAM manufacturing enterprise Sales Cloud | [To be tested] | TBD |
+| 11 | Analyze pipeline trends for AMER GOV public sector | [To be tested] | TBD |
+| 12 | What renewal opportunities exist in EMEA SMB technology? | [To be tested] | TBD |
+| 13 | Find cross-sell potential for APAC FINS financial services | [To be tested] | TBD |
+| 14 | Show me upsell opportunities for AMER TECH technology segment | [To be tested] | TBD |
+| 15 | Analyze future pipeline for EMEA HEALTH healthcare | [To be tested] | TBD |
+| 16 | What are the renewal trends in APAC SMB segment? | [To be tested] | TBD |
+| 17 | Find cross-sell opportunities for Service Cloud in EMEA ENTR | [To be tested] | TBD |
+| 18 | Show me upsell potential for Marketing Cloud in AMER FINS | [To be tested] | TBD |
+| 19 | Analyze pipeline for APAC HEALTH healthcare segment | [To be tested] | TBD |
+| 20 | What renewal opportunities exist in EMEA TECH technology? | [To be tested] | TBD |
+| 21 | Find cross-sell potential for Sales Cloud in AMER SMB | [To be tested] | TBD |
+| 22 | Show me upsell opportunities for Service Cloud in APAC ENTR | [To be tested] | TBD |
+| 23 | Analyze future pipeline for EMEA SMB segment | [To be tested] | TBD |
+| 24 | What are the renewal trends in AMER HEALTH healthcare? | [To be tested] | TBD |
+| 25 | Find cross-sell opportunities for Marketing Cloud in EMEA FINS | [To be tested] | TBD |
+| 26 | Show me upsell potential for Sales Cloud in APAC TECH | [To be tested] | TBD |
+| 27 | Analyze pipeline for AMER ENTR enterprise segment | [To be tested] | TBD |
+| 28 | What renewal opportunities exist in EMEA GOV public sector? | [To be tested] | TBD |
+| 29 | Find cross-sell potential for Service Cloud in APAC SMB | [To be tested] | TBD |
+| 30 | Show me upsell opportunities for Marketing Cloud in EMEA TECH | [To be tested] | TBD |
+| 31 | Analyze future pipeline for AMER FINS financial services | [To be tested] | TBD |
+| 32 | What are the renewal trends in APAC ENTR enterprise? | [To be tested] | TBD |
+| 33 | Find cross-sell opportunities for Sales Cloud in EMEA HEALTH | [To be tested] | TBD |
+| 34 | Show me upsell potential for Service Cloud in AMER TECH | [To be tested] | TBD |
+| 35 | Analyze pipeline for APAC GOV public sector | [To be tested] | TBD |
+| 36 | What renewal opportunities exist in EMEA SMB segment? | [To be tested] | TBD |
+| 37 | Find cross-sell potential for Marketing Cloud in APAC HEALTH | [To be tested] | TBD |
+| 38 | Show me upsell opportunities for Sales Cloud in EMEA FINS | [To be tested] | TBD |
+| 39 | Analyze future pipeline for AMER TECH technology segment | [To be tested] | TBD |
+| 40 | What are the renewal trends in APAC SMB segment? | [To be tested] | TBD |
+| 41 | Find cross-sell opportunities for Service Cloud in EMEA TECH | [To be tested] | TBD |
+| 42 | Show me upsell potential for Marketing Cloud in AMER HEALTH | [To be tested] | TBD |
+| 43 | Analyze pipeline for EMEA ENTR enterprise segment | [To be tested] | TBD |
+| 44 | What renewal opportunities exist in APAC FINS financial services? | [To be tested] | TBD |
+| 45 | Find cross-sell potential for Sales Cloud in EMEA GOV | [To be tested] | TBD |
+| 46 | Show me upsell opportunities for Service Cloud in APAC TECH | [To be tested] | TBD |
+| 47 | Analyze future pipeline for AMER SMB segment | [To be tested] | TBD |
+| 48 | What are the renewal trends in EMEA HEALTH healthcare? | [To be tested] | TBD |
+| 49 | Find cross-sell opportunities for Marketing Cloud in APAC ENTR | [To be tested] | TBD |
+| 50 | Show me upsell potential for Sales Cloud in EMEA SMB | [To be tested] | TBD |
+
+SUMMARY:
+========
+Tests Completed: 6/50
+Pass Rate: 100% (6/6)
+Average CPU Usage: 4755/10000 (47.6%)
+Average SOQL Queries: 1/100 (1%)
+Average Query Rows: 21837/50000 (43.7%)
+
+KEY FINDINGS:
+=============
+✅ All tests passed successfully
+✅ Naming normalization working correctly (AMERACC → AMER ACC)
+✅ CPU usage varies significantly (2831-6988)
+✅ Consistent response format across all analysis types
+✅ No errors encountered in tested scenarios
+
+NEXT STEPS:
+===========
+1. Continue testing remaining 47 utterances
+2. Run each test individually to avoid heap size limits
+3. Capture detailed agent responses for each utterance
+4. Complete the 50-row results table
+5. Generate final UAT report

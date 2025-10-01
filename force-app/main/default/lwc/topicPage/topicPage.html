@@ -1,0 +1,53 @@
+<template>
+  <template if:true={topic}>
+    <div class="slds-page-header">
+      <div class="slds-page-header__row">
+        <div class="slds-page-header__col-title">
+          <div class="slds-media">
+            <div class="slds-media__figure">
+              <lightning-button 
+                variant="neutral" 
+                icon-name="utility:back" 
+                onclick={handleBack}
+                title="Back to topics">
+              </lightning-button>
+            </div>
+            <div class="slds-media__body">
+              <div class="slds-page-header__name">
+                <div class="slds-page-header__name-title">
+                  <h1>
+                    <span class="slds-page-header__title slds-truncate" title={topic.title}>
+                      {topic.title}
+                    </span>
+                  </h1>
+                </div>
+              </div>
+              <div class="slds-page-header__meta-text">
+                {topic.blurb}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slds-m-top_large">
+      <template for:each={filteredSubflows} for:item="subflow">
+        <div key={subflow.id} class="slds-m-bottom_medium">
+          <c-subflow-accordion 
+            subflow={subflow} 
+            filter={filter}>
+          </c-subflow-accordion>
+        </div>
+      </template>
+    </div>
+  </template>
+  
+  <template if:false={topic}>
+    <div class="slds-text-align_center slds-p-around_large">
+      <p class="slds-text-color_weak">Topic not found</p>
+    </div>
+  </template>
+</template>
+
+

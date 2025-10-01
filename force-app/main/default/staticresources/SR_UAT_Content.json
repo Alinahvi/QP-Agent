@@ -1,0 +1,254 @@
+{
+  "testCases": [
+    {
+      "id": "CT_001",
+      "utterance": "Show me ACT courses related to Data Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Data Cloud"
+      }
+    },
+    {
+      "id": "CT_002",
+      "utterance": "List Sales Cloud ACT courses created between Jan 1 and Mar 31",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Sales Cloud",
+        "dateRange": "Jan 1 to Mar 31"
+      }
+    },
+    {
+      "id": "CT_003",
+      "utterance": "Find Sales Cloud ACT courses with completion rate > 60%",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Sales Cloud",
+        "completionRate": "> 60%"
+      }
+    },
+    {
+      "id": "CT_004",
+      "utterance": "For those courses, show enrollments",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "showEnrollments": true
+      }
+    },
+    {
+      "id": "CT_005",
+      "utterance": "Show a Consensus demo on Data Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Data Cloud"
+      }
+    },
+    {
+      "id": "CT_006",
+      "utterance": "Find Consensus demo videos for Data Cloud created in the last quarter",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Data Cloud",
+        "timeFrame": "last quarter"
+      }
+    },
+    {
+      "id": "CT_007",
+      "utterance": "List ACT curricula for Sales Cloud with completion rate > 75% and show links",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Sales Cloud",
+        "completionRate": "> 75%",
+        "showLinks": true
+      }
+    },
+    {
+      "id": "CT_008",
+      "utterance": "Show ACT assets tagged 'Data Cloud' created this year",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Data Cloud",
+        "timeFrame": "this year"
+      }
+    },
+    {
+      "id": "CT_009",
+      "utterance": "From ACT, show top 5 Sales Cloud courses by enrollment",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Sales Cloud",
+        "limit": 5,
+        "sortBy": "enrollment"
+      }
+    },
+    {
+      "id": "CT_010",
+      "utterance": "Show Consensus demos for Sales Cloud with a public preview link",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Sales Cloud",
+        "showPreview": true
+      }
+    },
+    {
+      "id": "CT_011",
+      "utterance": "Find ACT courses for Service Cloud with high completion rates",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Service Cloud",
+        "completionRate": "high"
+      }
+    },
+    {
+      "id": "CT_012",
+      "utterance": "Show me Consensus demos for Marketing Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Marketing Cloud"
+      }
+    },
+    {
+      "id": "CT_013",
+      "utterance": "List ACT courses for Data Cloud created in Q2",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Data Cloud",
+        "timeFrame": "Q2"
+      }
+    },
+    {
+      "id": "CT_014",
+      "utterance": "Find Consensus demos with public preview for Service Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Service Cloud",
+        "showPreview": true
+      }
+    },
+    {
+      "id": "CT_015",
+      "utterance": "Show top 10 ACT courses by enrollment for Marketing Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Marketing Cloud",
+        "limit": 10,
+        "sortBy": "enrollment"
+      }
+    },
+    {
+      "id": "CT_016",
+      "utterance": "Find ACT courses with completion rate > 80% for Sales Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Sales Cloud",
+        "completionRate": "> 80%"
+      }
+    },
+    {
+      "id": "CT_017",
+      "utterance": "Show Consensus demos for Data Cloud created this month",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Data Cloud",
+        "timeFrame": "this month"
+      }
+    },
+    {
+      "id": "CT_018",
+      "utterance": "List ACT curricula for Service Cloud with links and enrollments",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Service Cloud",
+        "showLinks": true,
+        "showEnrollments": true
+      }
+    },
+    {
+      "id": "CT_019",
+      "utterance": "Find ACT assets tagged 'Marketing Cloud' created last quarter",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Marketing Cloud",
+        "timeFrame": "last quarter"
+      }
+    },
+    {
+      "id": "CT_020",
+      "utterance": "Show me top 3 Consensus demos for Data Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Data Cloud",
+        "limit": 3
+      }
+    },
+    {
+      "id": "CT_021",
+      "utterance": "Find ACT courses for Sales Cloud with completion rate between 60% and 80%",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Sales Cloud",
+        "completionRate": "60% to 80%"
+      }
+    },
+    {
+      "id": "CT_022",
+      "utterance": "Show Consensus demos for Service Cloud with public preview",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Service Cloud",
+        "showPreview": true
+      }
+    },
+    {
+      "id": "CT_023",
+      "utterance": "List ACT courses for Marketing Cloud created in Q3",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Marketing Cloud",
+        "timeFrame": "Q3"
+      }
+    },
+    {
+      "id": "CT_024",
+      "utterance": "Find ACT courses with high completion rates for Data Cloud",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "ACT",
+        "product": "Data Cloud",
+        "completionRate": "high"
+      }
+    },
+    {
+      "id": "CT_025",
+      "utterance": "Show me Consensus demos for Marketing Cloud created this year",
+      "expectedTool": "search_content",
+      "expectedArgs": {
+        "contentType": "Consensus",
+        "product": "Marketing Cloud",
+        "timeFrame": "this year"
+      }
+    }
+  ]
+}

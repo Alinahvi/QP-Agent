@@ -1,0 +1,3490 @@
+{
+  "test_metadata": {
+    "total_utterances": 100,
+    "test_timestamp": "2025-09-29 09:06:40",
+    "mcp_url": "http://localhost:8787"
+  },
+  "performance_metrics": {
+    "total_utterances": 100,
+    "total_successful": 94,
+    "total_failed": 6,
+    "overall_success_rate": 94.0,
+    "total_duration": 10.72934865951538,
+    "avg_response_time": 0.07139748096466064,
+    "median_response_time": 0.06658244132995605,
+    "min_response_time": 0.021254777908325195,
+    "max_response_time": 0.23354077339172363,
+    "p95_response_time": 0.1607961654663086,
+    "p99_response_time": 0.23354077339172363
+  },
+  "batch_results": [
+    {
+      "batch_id": 1,
+      "total_utterances": 10,
+      "successful": 8,
+      "failed": 2,
+      "success_rate": 80.0,
+      "avg_response_time": 0.06561911106109619,
+      "batch_duration": 0.15254926681518555,
+      "results": [
+        {
+          "utterance": "List manager SME for Einstein in EMEA",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "IN",
+          "response_time": 0.021254777908325195,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Einstein",
+              "region": "IN"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want an SME for Service Cloud in JAPAN",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "JAPA",
+          "response_time": 0.0319521427154541,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "JAPA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Top performer for Sales Cloud",
+          "batch_id": 1,
+          "success": false,
+          "tool_detected": false,
+          "region_extracted": null,
+          "response_time": 0.06329822540283203,
+          "status_code": 200,
+          "response": {
+            "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+          },
+          "error": null
+        },
+        {
+          "utterance": "Search consultant SME for Slack in EMEA Central",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.08008503913879395,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Slack",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find several SMEs for Education Cloud in APAC",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "APAC",
+          "response_time": 0.10653400421142578,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Education Cloud",
+              "region": "APAC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Looking for any SMEs for Heroku in AMER-ACC",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.0911722183227539,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Heroku",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find an SME for Manufacturing Cloud in BRAZIL",
+          "batch_id": 1,
+          "success": false,
+          "tool_detected": false,
+          "region_extracted": null,
+          "response_time": 0.07969379425048828,
+          "status_code": 200,
+          "response": {
+            "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+          },
+          "error": null
+        },
+        {
+          "utterance": "Find an SME for Tableau in CANADA",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "CANA",
+          "response_time": 0.07499909400939941,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Tableau",
+              "region": "CANA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want an SME for Slack in AMER-ACC",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.06367707252502441,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Slack",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find an SME for MuleSoft in JAPAN",
+          "batch_id": 1,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "JAPA",
+          "response_time": 0.043524742126464844,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "MuleSoft",
+              "region": "JAPA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 2,
+      "total_utterances": 10,
+      "successful": 9,
+      "failed": 1,
+      "success_rate": 90.0,
+      "avg_response_time": 0.06464331150054932,
+      "batch_duration": 0.16186785697937012,
+      "results": [
+        {
+          "utterance": "Get lead SME for Slack in LATAM",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.02590799331665039,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Slack",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find an SME for Manufacturing Cloud in LATAM",
+          "batch_id": 2,
+          "success": false,
+          "tool_detected": false,
+          "region_extracted": null,
+          "response_time": 0.02630305290222168,
+          "status_code": 200,
+          "response": {
+            "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+          },
+          "error": null
+        },
+        {
+          "utterance": "Need SME for Platform",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "PLAT",
+          "response_time": 0.06199908256530762,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Platform",
+              "region": "PLAT"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Find architect SME for Tableau in LATA",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.06973910331726074,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Tableau",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Need SME for Education Cloud",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EDUC",
+          "response_time": 0.08986878395080566,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Education Cloud",
+              "region": "EDUC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get an SME for Marketing Cloud in JAPAN",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "JAPA",
+          "response_time": 0.07770419120788574,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Marketing Cloud",
+              "region": "JAPA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find director SME for MuleSoft in UKI",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "UKI",
+          "response_time": 0.0784449577331543,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "MuleSoft",
+              "region": "UKI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Looking for best SMEs for Tableau in LATAM",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.06668496131896973,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Tableau",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Find SME for Financial Services Cloud",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "FINA",
+          "response_time": 0.07834100723266602,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Financial Services Cloud",
+              "region": "FINA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for architect SME for Experience Cloud in CANADA",
+          "batch_id": 2,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "CANA",
+          "response_time": 0.07143998146057129,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Experience Cloud",
+              "region": "CANA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 3,
+      "total_utterances": 10,
+      "successful": 9,
+      "failed": 1,
+      "success_rate": 90.0,
+      "avg_response_time": 0.1351266622543335,
+      "batch_duration": 0.29146718978881836,
+      "results": [
+        {
+          "utterance": "Get an SME for Analytics Cloud in AMER-ACC",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.033962249755859375,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Analytics Cloud",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find an SME for Einstein in UKI",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "IN",
+          "response_time": 0.03469204902648926,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Einstein",
+              "region": "IN"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get an SME for Heroku in LATA",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.10926079750061035,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Heroku",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Looking for several SMEs for Platform in EMEA",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.20374798774719238,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Platform",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Core SFA expert in UKI",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "UKI",
+          "response_time": 0.23354077339172363,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Core SFA",
+              "region": "UKI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want architect SME for Nonprofit Cloud in EMEA South",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.2171778678894043,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Nonprofit Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Top performer for Sales Cloud",
+          "batch_id": 3,
+          "success": false,
+          "tool_detected": false,
+          "region_extracted": null,
+          "response_time": 0.2169020175933838,
+          "status_code": 200,
+          "response": {
+            "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want an SME for Tableau in EMEA Central",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.1607961654663086,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Tableau",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for manager SME for Heroku in EMEA North",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.055992841720581055,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Heroku",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find an SME for Experience Cloud in EMEA North",
+          "batch_id": 3,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.08519387245178223,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Experience Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 4,
+      "total_utterances": 10,
+      "successful": 9,
+      "failed": 1,
+      "success_rate": 90.0,
+      "avg_response_time": 0.06851258277893066,
+      "batch_duration": 0.16524791717529297,
+      "results": [
+        {
+          "utterance": "Get an SME for Marketing Cloud in AMER-ACC",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.03305697441101074,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Marketing Cloud",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Need help finding Service Cloud expert",
+          "batch_id": 4,
+          "success": false,
+          "tool_detected": true,
+          "region_extracted": null,
+          "response_time": 0.06136584281921387,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want an SME for Experience Cloud in CANADA",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "CANA",
+          "response_time": 0.06359028816223145,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Experience Cloud",
+              "region": "CANA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find architect SME for Health Cloud in APAC",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "APAC",
+          "response_time": 0.09537196159362793,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Health Cloud",
+              "region": "APAC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find several SMEs for Financial Services Cloud in UKI",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "UKI",
+          "response_time": 0.09563016891479492,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Financial Services Cloud",
+              "region": "UKI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want an SME for Government Cloud in ANZ",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "ANZ",
+          "response_time": 0.05885004997253418,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Government Cloud",
+              "region": "ANZ"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Looking for all SMEs for Einstein in CANADA",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "IN",
+          "response_time": 0.0879213809967041,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Einstein",
+              "region": "IN"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find an SME for Sales Cloud in CANADA",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "CANA",
+          "response_time": 0.07079720497131348,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Sales Cloud",
+              "region": "CANA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want SME for Nonprofit Cloud",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "NONP",
+          "response_time": 0.0500330924987793,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Nonprofit Cloud",
+              "region": "NONP"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get manager SME for Sales Cloud in AMER SMB",
+          "batch_id": 4,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.06850886344909668,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Sales Cloud",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 5,
+      "total_utterances": 10,
+      "successful": 10,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_response_time": 0.0665128231048584,
+      "batch_duration": 0.16630101203918457,
+      "results": [
+        {
+          "utterance": "Looking for specialist SME for Education Cloud in BRAZIL",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "BRAZ",
+          "response_time": 0.021988868713378906,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Education Cloud",
+              "region": "BRAZ"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Looking for senior SME for Slack in LATA",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.05850505828857422,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Slack",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find top 5 SMEs for Einstein in AMER ACC",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "IN",
+          "response_time": 0.07246017456054688,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Einstein",
+              "region": "IN"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "List SME for Heroku",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "HERO",
+          "response_time": 0.07816696166992188,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Heroku",
+              "region": "HERO"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show an SME for Tableau in CANADA",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "CANA",
+          "response_time": 0.09550690650939941,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Tableau",
+              "region": "CANA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for several SMEs for Heroku in AMER-ACC",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.08730483055114746,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Heroku",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get an SME for Slack in AMER-ACC",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.0572509765625,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Slack",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find a Commerce Cloud expert in LATAM?",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.05542302131652832,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Commerce Cloud",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "SME in EMEA for any product",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.06895613670349121,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show me Data Cloud specialists in AMER-ACC",
+          "batch_id": 5,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.0695652961730957,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Data Cloud",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 6,
+      "total_utterances": 10,
+      "successful": 10,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_response_time": 0.06209731101989746,
+      "batch_duration": 0.16053414344787598,
+      "results": [
+        {
+          "utterance": "Look for director SME for Tableau in LATAM",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.03241586685180664,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Tableau",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "List all SMEs for Marketing Cloud in MEXICO",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "MEXI",
+          "response_time": 0.0466768741607666,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Marketing Cloud",
+              "region": "MEXI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get an SME for Health Cloud in ANZ",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "ANZ",
+          "response_time": 0.04615497589111328,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Health Cloud",
+              "region": "ANZ"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find a Commerce Cloud expert in LATAM?",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.06687092781066895,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Commerce Cloud",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find specialist SME for Einstein in UKI",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "IN",
+          "response_time": 0.06773209571838379,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Einstein",
+              "region": "IN"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "List all SMEs for Service Cloud in EMEA Central",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.058705806732177734,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Find an SME for Service Cloud in LATA",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.057940006256103516,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Search any SMEs for Platform in MEXICO",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "MEXI",
+          "response_time": 0.07647085189819336,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Platform",
+              "region": "MEXI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show an SME for Education Cloud in ANZ",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "ANZ",
+          "response_time": 0.07532095909118652,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Education Cloud",
+              "region": "ANZ"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show me Data Cloud specialists in AMER-ACC",
+          "batch_id": 6,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.09268474578857422,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Data Cloud",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 7,
+      "total_utterances": 10,
+      "successful": 10,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_response_time": 0.06132748126983643,
+      "batch_duration": 0.15913677215576172,
+      "results": [
+        {
+          "utterance": "List top performer SME for Tableau in EMEA Central",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.028063058853149414,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Tableau",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for SME for Nonprofit Cloud",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "SME",
+          "response_time": 0.028941869735717773,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Nonprofit Cloud",
+              "region": "SME"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want senior SME for Data Cloud in APAC",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "APAC",
+          "response_time": 0.06361222267150879,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Data Cloud",
+              "region": "APAC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show specialist SME for Government Cloud in APAC",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "APAC",
+          "response_time": 0.0626533031463623,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Government Cloud",
+              "region": "APAC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Search architect SME for Nonprofit Cloud in AMER SMB",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.0638430118560791,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Nonprofit Cloud",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for an SME for Analytics Cloud in LATAM",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.05506587028503418,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Analytics Cloud",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Need specialist SME for Financial Services Cloud in UKI",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "UKI",
+          "response_time": 0.07363677024841309,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Financial Services Cloud",
+              "region": "UKI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "List all SMEs for Commerce Cloud in EMEA Central",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.05616593360900879,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Commerce Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for all SMEs for Platform in APAC",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "APAC",
+          "response_time": 0.08814597129821777,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Platform",
+              "region": "APAC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show an SME for Marketing Cloud in LATA",
+          "batch_id": 7,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.09314680099487305,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Marketing Cloud",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 8,
+      "total_utterances": 10,
+      "successful": 10,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_response_time": 0.05889785289764404,
+      "batch_duration": 0.1392660140991211,
+      "results": [
+        {
+          "utterance": "Look for an SME for Service Cloud in EMEA North",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.022678613662719727,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "List SME for Commerce Cloud",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "COMM",
+          "response_time": 0.04707598686218262,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Commerce Cloud",
+              "region": "COMM"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Search SME for MuleSoft",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "MULE",
+          "response_time": 0.06000924110412598,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "MuleSoft",
+              "region": "MULE"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find specialist SME for Nonprofit Cloud in ANZ",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "ANZ",
+          "response_time": 0.060631752014160156,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Nonprofit Cloud",
+              "region": "ANZ"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Find expert SME for Education Cloud in EMEA Central",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.0806121826171875,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Education Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show any SMEs for Platform in BRAZIL",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "BRAZ",
+          "response_time": 0.05898284912109375,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Platform",
+              "region": "BRAZ"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Help me find top 5 SMEs for Health Cloud in EMEA South",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.05308103561401367,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Health Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find all SMEs for Commerce Cloud in MEXICO",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "MEXI",
+          "response_time": 0.05032205581665039,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Commerce Cloud",
+              "region": "MEXI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Find SME for Education Cloud",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EDUC",
+          "response_time": 0.07749199867248535,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Education Cloud",
+              "region": "EDUC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Einstein AI specialist",
+          "batch_id": 8,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AI",
+          "response_time": 0.07809281349182129,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Einstein",
+              "region": "AI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 9,
+      "total_utterances": 10,
+      "successful": 10,
+      "failed": 0,
+      "success_rate": 100.0,
+      "avg_response_time": 0.06792783737182617,
+      "batch_duration": 0.16265296936035156,
+      "results": [
+        {
+          "utterance": "Look for an SME for Nonprofit Cloud in EMEA South",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.040971994400024414,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Nonprofit Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Need an SME for Heroku in AMER",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.05389094352722168,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Heroku",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Looking for an SME for Financial Services Cloud in APAC",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "APAC",
+          "response_time": 0.05344986915588379,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Financial Services Cloud",
+              "region": "APAC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for SME for Platform",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "SME",
+          "response_time": 0.08139991760253906,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Platform",
+              "region": "SME"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Search an SME for Marketing Cloud in CANADA",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "CANA",
+          "response_time": 0.08426809310913086,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Marketing Cloud",
+              "region": "CANA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show multiple SMEs for Service Cloud in EMEA North",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.07435488700866699,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find an SME for Government Cloud in UKI",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "UKI",
+          "response_time": 0.06869387626647949,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Government Cloud",
+              "region": "UKI"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get SME for Commerce Cloud",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "COMM",
+          "response_time": 0.08866500854492188,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Commerce Cloud",
+              "region": "COMM"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find all SMEs for Commerce Cloud in LATAM",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.05799603462219238,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Commerce Cloud",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show several SMEs for Government Cloud in APAC",
+          "batch_id": 9,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "APAC",
+          "response_time": 0.07558774948120117,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Government Cloud",
+              "region": "APAC"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "batch_id": 10,
+      "total_utterances": 10,
+      "successful": 9,
+      "failed": 1,
+      "success_rate": 90.0,
+      "avg_response_time": 0.06330983638763428,
+      "batch_duration": 0.1386420726776123,
+      "results": [
+        {
+          "utterance": "Show several SMEs for Service Cloud in EMEA Central",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "EMEA",
+          "response_time": 0.05621600151062012,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "EMEA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get architect SME for Heroku in AMER ACC",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.05977177619934082,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Heroku",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Want expert SME for Education Cloud in LATAM",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "LATA",
+          "response_time": 0.06482481956481934,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Education Cloud",
+              "region": "LATA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Find an SME for Manufacturing Cloud in EMEA North",
+          "batch_id": 10,
+          "success": false,
+          "tool_detected": false,
+          "region_extracted": null,
+          "response_time": 0.06647992134094238,
+          "status_code": 200,
+          "response": {
+            "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+          },
+          "error": null
+        },
+        {
+          "utterance": "Need SME for Nonprofit Cloud",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "NONP",
+          "response_time": 0.1080009937286377,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Nonprofit Cloud",
+              "region": "NONP"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Look for SME for Marketing Cloud",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "SME",
+          "response_time": 0.0512540340423584,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Marketing Cloud",
+              "region": "SME"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show specialist SME for Service Cloud in JAPAN",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "JAPA",
+          "response_time": 0.057142019271850586,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "JAPA"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Get SME for Service Cloud",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "SERV",
+          "response_time": 0.07353997230529785,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Service Cloud",
+              "region": "SERV"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Can you find SME for Analytics Cloud",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "ANAL",
+          "response_time": 0.06826210021972656,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Analytics Cloud",
+              "region": "ANAL"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        },
+        {
+          "utterance": "Show specialist SME for Government Cloud in AMER-ACC",
+          "batch_id": 10,
+          "success": true,
+          "tool_detected": true,
+          "region_extracted": "AMER",
+          "response_time": 0.027606725692749023,
+          "status_code": 200,
+          "response": {
+            "args": {
+              "expertise": "Government Cloud",
+              "region": "AMER"
+            },
+            "tool": "sme_search"
+          },
+          "error": null
+        }
+      ]
+    }
+  ],
+  "detailed_results": [
+    {
+      "utterance": "List manager SME for Einstein in EMEA",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "IN",
+      "response_time": 0.021254777908325195,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Einstein",
+          "region": "IN"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want an SME for Service Cloud in JAPAN",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "JAPA",
+      "response_time": 0.0319521427154541,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "JAPA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Top performer for Sales Cloud",
+      "batch_id": 1,
+      "success": false,
+      "tool_detected": false,
+      "region_extracted": null,
+      "response_time": 0.06329822540283203,
+      "status_code": 200,
+      "response": {
+        "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+      },
+      "error": null
+    },
+    {
+      "utterance": "Search consultant SME for Slack in EMEA Central",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.08008503913879395,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Slack",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find several SMEs for Education Cloud in APAC",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "APAC",
+      "response_time": 0.10653400421142578,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Education Cloud",
+          "region": "APAC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Looking for any SMEs for Heroku in AMER-ACC",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.0911722183227539,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Heroku",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find an SME for Manufacturing Cloud in BRAZIL",
+      "batch_id": 1,
+      "success": false,
+      "tool_detected": false,
+      "region_extracted": null,
+      "response_time": 0.07969379425048828,
+      "status_code": 200,
+      "response": {
+        "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+      },
+      "error": null
+    },
+    {
+      "utterance": "Find an SME for Tableau in CANADA",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "CANA",
+      "response_time": 0.07499909400939941,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Tableau",
+          "region": "CANA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want an SME for Slack in AMER-ACC",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.06367707252502441,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Slack",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find an SME for MuleSoft in JAPAN",
+      "batch_id": 1,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "JAPA",
+      "response_time": 0.043524742126464844,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "MuleSoft",
+          "region": "JAPA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get lead SME for Slack in LATAM",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.02590799331665039,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Slack",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find an SME for Manufacturing Cloud in LATAM",
+      "batch_id": 2,
+      "success": false,
+      "tool_detected": false,
+      "region_extracted": null,
+      "response_time": 0.02630305290222168,
+      "status_code": 200,
+      "response": {
+        "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+      },
+      "error": null
+    },
+    {
+      "utterance": "Need SME for Platform",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "PLAT",
+      "response_time": 0.06199908256530762,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Platform",
+          "region": "PLAT"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Find architect SME for Tableau in LATA",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.06973910331726074,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Tableau",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Need SME for Education Cloud",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EDUC",
+      "response_time": 0.08986878395080566,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Education Cloud",
+          "region": "EDUC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get an SME for Marketing Cloud in JAPAN",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "JAPA",
+      "response_time": 0.07770419120788574,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Marketing Cloud",
+          "region": "JAPA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find director SME for MuleSoft in UKI",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "UKI",
+      "response_time": 0.0784449577331543,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "MuleSoft",
+          "region": "UKI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Looking for best SMEs for Tableau in LATAM",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.06668496131896973,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Tableau",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Find SME for Financial Services Cloud",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "FINA",
+      "response_time": 0.07834100723266602,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Financial Services Cloud",
+          "region": "FINA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for architect SME for Experience Cloud in CANADA",
+      "batch_id": 2,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "CANA",
+      "response_time": 0.07143998146057129,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Experience Cloud",
+          "region": "CANA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get an SME for Analytics Cloud in AMER-ACC",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.033962249755859375,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Analytics Cloud",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find an SME for Einstein in UKI",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "IN",
+      "response_time": 0.03469204902648926,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Einstein",
+          "region": "IN"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get an SME for Heroku in LATA",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.10926079750061035,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Heroku",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Looking for several SMEs for Platform in EMEA",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.20374798774719238,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Platform",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Core SFA expert in UKI",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "UKI",
+      "response_time": 0.23354077339172363,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Core SFA",
+          "region": "UKI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want architect SME for Nonprofit Cloud in EMEA South",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.2171778678894043,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Nonprofit Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Top performer for Sales Cloud",
+      "batch_id": 3,
+      "success": false,
+      "tool_detected": false,
+      "region_extracted": null,
+      "response_time": 0.2169020175933838,
+      "status_code": 200,
+      "response": {
+        "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want an SME for Tableau in EMEA Central",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.1607961654663086,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Tableau",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for manager SME for Heroku in EMEA North",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.055992841720581055,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Heroku",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find an SME for Experience Cloud in EMEA North",
+      "batch_id": 3,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.08519387245178223,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Experience Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get an SME for Marketing Cloud in AMER-ACC",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.03305697441101074,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Marketing Cloud",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Need help finding Service Cloud expert",
+      "batch_id": 4,
+      "success": false,
+      "tool_detected": true,
+      "region_extracted": null,
+      "response_time": 0.06136584281921387,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want an SME for Experience Cloud in CANADA",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "CANA",
+      "response_time": 0.06359028816223145,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Experience Cloud",
+          "region": "CANA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find architect SME for Health Cloud in APAC",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "APAC",
+      "response_time": 0.09537196159362793,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Health Cloud",
+          "region": "APAC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find several SMEs for Financial Services Cloud in UKI",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "UKI",
+      "response_time": 0.09563016891479492,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Financial Services Cloud",
+          "region": "UKI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want an SME for Government Cloud in ANZ",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "ANZ",
+      "response_time": 0.05885004997253418,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Government Cloud",
+          "region": "ANZ"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Looking for all SMEs for Einstein in CANADA",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "IN",
+      "response_time": 0.0879213809967041,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Einstein",
+          "region": "IN"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find an SME for Sales Cloud in CANADA",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "CANA",
+      "response_time": 0.07079720497131348,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Sales Cloud",
+          "region": "CANA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want SME for Nonprofit Cloud",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "NONP",
+      "response_time": 0.0500330924987793,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Nonprofit Cloud",
+          "region": "NONP"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get manager SME for Sales Cloud in AMER SMB",
+      "batch_id": 4,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.06850886344909668,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Sales Cloud",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Looking for specialist SME for Education Cloud in BRAZIL",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "BRAZ",
+      "response_time": 0.021988868713378906,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Education Cloud",
+          "region": "BRAZ"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Looking for senior SME for Slack in LATA",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.05850505828857422,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Slack",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find top 5 SMEs for Einstein in AMER ACC",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "IN",
+      "response_time": 0.07246017456054688,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Einstein",
+          "region": "IN"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "List SME for Heroku",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "HERO",
+      "response_time": 0.07816696166992188,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Heroku",
+          "region": "HERO"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show an SME for Tableau in CANADA",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "CANA",
+      "response_time": 0.09550690650939941,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Tableau",
+          "region": "CANA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for several SMEs for Heroku in AMER-ACC",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.08730483055114746,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Heroku",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get an SME for Slack in AMER-ACC",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.0572509765625,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Slack",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find a Commerce Cloud expert in LATAM?",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.05542302131652832,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Commerce Cloud",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "SME in EMEA for any product",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.06895613670349121,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show me Data Cloud specialists in AMER-ACC",
+      "batch_id": 5,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.0695652961730957,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Data Cloud",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for director SME for Tableau in LATAM",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.03241586685180664,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Tableau",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "List all SMEs for Marketing Cloud in MEXICO",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "MEXI",
+      "response_time": 0.0466768741607666,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Marketing Cloud",
+          "region": "MEXI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get an SME for Health Cloud in ANZ",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "ANZ",
+      "response_time": 0.04615497589111328,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Health Cloud",
+          "region": "ANZ"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find a Commerce Cloud expert in LATAM?",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.06687092781066895,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Commerce Cloud",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find specialist SME for Einstein in UKI",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "IN",
+      "response_time": 0.06773209571838379,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Einstein",
+          "region": "IN"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "List all SMEs for Service Cloud in EMEA Central",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.058705806732177734,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Find an SME for Service Cloud in LATA",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.057940006256103516,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Search any SMEs for Platform in MEXICO",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "MEXI",
+      "response_time": 0.07647085189819336,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Platform",
+          "region": "MEXI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show an SME for Education Cloud in ANZ",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "ANZ",
+      "response_time": 0.07532095909118652,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Education Cloud",
+          "region": "ANZ"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show me Data Cloud specialists in AMER-ACC",
+      "batch_id": 6,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.09268474578857422,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Data Cloud",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "List top performer SME for Tableau in EMEA Central",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.028063058853149414,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Tableau",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for SME for Nonprofit Cloud",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "SME",
+      "response_time": 0.028941869735717773,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Nonprofit Cloud",
+          "region": "SME"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want senior SME for Data Cloud in APAC",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "APAC",
+      "response_time": 0.06361222267150879,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Data Cloud",
+          "region": "APAC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show specialist SME for Government Cloud in APAC",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "APAC",
+      "response_time": 0.0626533031463623,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Government Cloud",
+          "region": "APAC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Search architect SME for Nonprofit Cloud in AMER SMB",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.0638430118560791,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Nonprofit Cloud",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for an SME for Analytics Cloud in LATAM",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.05506587028503418,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Analytics Cloud",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Need specialist SME for Financial Services Cloud in UKI",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "UKI",
+      "response_time": 0.07363677024841309,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Financial Services Cloud",
+          "region": "UKI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "List all SMEs for Commerce Cloud in EMEA Central",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.05616593360900879,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Commerce Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for all SMEs for Platform in APAC",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "APAC",
+      "response_time": 0.08814597129821777,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Platform",
+          "region": "APAC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show an SME for Marketing Cloud in LATA",
+      "batch_id": 7,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.09314680099487305,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Marketing Cloud",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for an SME for Service Cloud in EMEA North",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.022678613662719727,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "List SME for Commerce Cloud",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "COMM",
+      "response_time": 0.04707598686218262,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Commerce Cloud",
+          "region": "COMM"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Search SME for MuleSoft",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "MULE",
+      "response_time": 0.06000924110412598,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "MuleSoft",
+          "region": "MULE"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find specialist SME for Nonprofit Cloud in ANZ",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "ANZ",
+      "response_time": 0.060631752014160156,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Nonprofit Cloud",
+          "region": "ANZ"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Find expert SME for Education Cloud in EMEA Central",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.0806121826171875,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Education Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show any SMEs for Platform in BRAZIL",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "BRAZ",
+      "response_time": 0.05898284912109375,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Platform",
+          "region": "BRAZ"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Help me find top 5 SMEs for Health Cloud in EMEA South",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.05308103561401367,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Health Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find all SMEs for Commerce Cloud in MEXICO",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "MEXI",
+      "response_time": 0.05032205581665039,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Commerce Cloud",
+          "region": "MEXI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Find SME for Education Cloud",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EDUC",
+      "response_time": 0.07749199867248535,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Education Cloud",
+          "region": "EDUC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Einstein AI specialist",
+      "batch_id": 8,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AI",
+      "response_time": 0.07809281349182129,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Einstein",
+          "region": "AI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for an SME for Nonprofit Cloud in EMEA South",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.040971994400024414,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Nonprofit Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Need an SME for Heroku in AMER",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.05389094352722168,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Heroku",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Looking for an SME for Financial Services Cloud in APAC",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "APAC",
+      "response_time": 0.05344986915588379,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Financial Services Cloud",
+          "region": "APAC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for SME for Platform",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "SME",
+      "response_time": 0.08139991760253906,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Platform",
+          "region": "SME"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Search an SME for Marketing Cloud in CANADA",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "CANA",
+      "response_time": 0.08426809310913086,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Marketing Cloud",
+          "region": "CANA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show multiple SMEs for Service Cloud in EMEA North",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.07435488700866699,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find an SME for Government Cloud in UKI",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "UKI",
+      "response_time": 0.06869387626647949,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Government Cloud",
+          "region": "UKI"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get SME for Commerce Cloud",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "COMM",
+      "response_time": 0.08866500854492188,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Commerce Cloud",
+          "region": "COMM"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find all SMEs for Commerce Cloud in LATAM",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.05799603462219238,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Commerce Cloud",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show several SMEs for Government Cloud in APAC",
+      "batch_id": 9,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "APAC",
+      "response_time": 0.07558774948120117,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Government Cloud",
+          "region": "APAC"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show several SMEs for Service Cloud in EMEA Central",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "EMEA",
+      "response_time": 0.05621600151062012,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "EMEA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get architect SME for Heroku in AMER ACC",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.05977177619934082,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Heroku",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Want expert SME for Education Cloud in LATAM",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "LATA",
+      "response_time": 0.06482481956481934,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Education Cloud",
+          "region": "LATA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Find an SME for Manufacturing Cloud in EMEA North",
+      "batch_id": 10,
+      "success": false,
+      "tool_detected": false,
+      "region_extracted": null,
+      "response_time": 0.06647992134094238,
+      "status_code": 200,
+      "response": {
+        "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+      },
+      "error": null
+    },
+    {
+      "utterance": "Need SME for Nonprofit Cloud",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "NONP",
+      "response_time": 0.1080009937286377,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Nonprofit Cloud",
+          "region": "NONP"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Look for SME for Marketing Cloud",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "SME",
+      "response_time": 0.0512540340423584,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Marketing Cloud",
+          "region": "SME"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show specialist SME for Service Cloud in JAPAN",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "JAPA",
+      "response_time": 0.057142019271850586,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "JAPA"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Get SME for Service Cloud",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "SERV",
+      "response_time": 0.07353997230529785,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Service Cloud",
+          "region": "SERV"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Can you find SME for Analytics Cloud",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "ANAL",
+      "response_time": 0.06826210021972656,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Analytics Cloud",
+          "region": "ANAL"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    },
+    {
+      "utterance": "Show specialist SME for Government Cloud in AMER-ACC",
+      "batch_id": 10,
+      "success": true,
+      "tool_detected": true,
+      "region_extracted": "AMER",
+      "response_time": 0.027606725692749023,
+      "status_code": 200,
+      "response": {
+        "args": {
+          "expertise": "Government Cloud",
+          "region": "AMER"
+        },
+        "tool": "sme_search"
+      },
+      "error": null
+    }
+  ]
+}

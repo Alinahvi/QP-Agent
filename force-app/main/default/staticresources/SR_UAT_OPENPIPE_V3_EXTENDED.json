@@ -1,0 +1,133 @@
+{
+  "testCases": [
+    {
+      "utterance": "Show me top 5 high-value products in open pipe for AMER ACC post stage 4",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 5,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    },
+    {
+      "utterance": "Find top 3 highest value products in open pipe for EMEA ENTR, post stage 3",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 3,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    },
+    {
+      "utterance": "Show me top 4 products by value in open pipe for UKI after stage 4",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 4,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    },
+    {
+      "utterance": "Count opportunities between stage 3 and 5 for Sales Cloud in AMER ACC, limit 8",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 8,
+        "productListCsv": "Sales Cloud",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT",
+        "aggregationType": "COUNT"
+      }
+    },
+    {
+      "utterance": "Show me opportunity count by stage for Service Cloud in EMEA ENTR, post stage 3, limit 6",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 6,
+        "productListCsv": "Service Cloud",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT",
+        "aggregationType": "COUNT"
+      }
+    },
+    {
+      "utterance": "Find top 3 products with highest stagnation in stage 5 for AMER ACC",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "5",
+        "timeFrame": "CURRENT",
+        "limitN": 3,
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Show me stagnation days for Marketing Cloud in EMEA ENTR stage 4, limit 4",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 4,
+        "productListCsv": "Marketing Cloud",
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Open pipe analysis for LATAM post stage 3, current quarter, limit 7",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "LATAM",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 7,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Show me open pipe for AMER ACC with country filter US, post stage 3, limit 5",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 5,
+        "workLocationCountry": "US",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Find top 6 products with stagnation in stage 4 for UKI, current quarter",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 6,
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    }
+  ]
+}

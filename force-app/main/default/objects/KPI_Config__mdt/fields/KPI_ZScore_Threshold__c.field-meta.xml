@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KPI_ZScore_Threshold__c</fullName>
+    <label>Z-Score Threshold</label>
+    <type>Number</type>
+    <precision>3</precision>
+    <scale>1</scale>
+    <defaultValue>2.5</defaultValue>
+    <description>Z-score threshold for outlier detection (default 2.5)</description>
+</CustomField>

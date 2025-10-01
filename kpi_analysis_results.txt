@@ -1,0 +1,2022 @@
+🚀 ANAGENT KPI Analysis V5 - Comprehensive Test Suite
+================================================================================
+
+==================== TEST 1/50 ====================
+
+🔍 Testing: 'Show me ACV by country'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2071 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assessme...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 25090104.3236 (4400 records)
+   2. N/A: 3084574.7701 (562 records)
+   3. N/A: 2144806.42 (645 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Show me ACV by country':
+   📈 API Results: Message length 2071, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 2/50 ====================
+
+🔍 Testing: 'Analyze ACV performance in AMER'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%AMER%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 742 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%AMER%'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 3931
+
+## D...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     AND (ou_name__c LIKE '%AMER%') GROUP BY work_location_country__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 2 grouped results found
+   1. N/A: 21617188.623600002 (3470 records)
+   2. N/A: 1413071.28 (461 records)
+
+📊 COMPARISON for 'Analyze ACV performance in AMER':
+   📈 API Results: Message length 742, Contains data: True
+   📈 SOQL Results: 2 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 3/50 ====================
+
+🔍 Testing: 'Show me ACV by organizational unit'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'OU'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1394 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: OU
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assessment
+✅ ...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT ou_name__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     GROUP BY ou_name__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 18 grouped results found
+   1. N/A: 9454352.0 (870 records)
+   2. N/A: 7600668.273600003 (1717 records)
+   3. N/A: 4563135.14 (791 records)
+   ... and 15 more groups
+
+📊 COMPARISON for 'Show me ACV by organizational unit':
+   📈 API Results: Message length 1394, Contains data: True
+   📈 SOQL Results: 18 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 4/50 ====================
+
+🔍 Testing: 'Find top ACV performers by industry'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Limit: 10
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1556 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: INDUSTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+- **Limit Applied**: 10
+...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     GROUP BY primary_industry__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 15 grouped results found
+   1. N/A: 11480844.07 (1183 records)
+   2. N/A: 7457943.993600003 (1374 records)
+   3. N/A: 6024634.3301 (1916 records)
+   ... and 12 more groups
+
+📊 COMPARISON for 'Find top ACV performers by industry':
+   📈 API Results: Message length 1556, Contains data: True
+   📈 SOQL Results: 15 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 5/50 ====================
+
+🔍 Testing: 'Show me ACV trends in EMEA'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%EMEA%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1472 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%EMEA%'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 1353
+
+## D...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     AND (ou_name__c LIKE '%EMEA%') GROUP BY work_location_country__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 19 grouped results found
+   1. N/A: 2714165.7401 (499 records)
+   2. N/A: 1333022.08 (267 records)
+   3. N/A: 994830.29 (90 records)
+   ... and 16 more groups
+
+📊 COMPARISON for 'Show me ACV trends in EMEA':
+   📈 API Results: Message length 1472, Contains data: True
+   📈 SOQL Results: 19 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 6/50 ====================
+
+🔍 Testing: 'Analyze pipeline generation by country'
+   Metric Key: 'PG'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2114 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assessmen...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_pg__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(cq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 489491838.98 (4400 records)
+   2. N/A: 57887396.37 (645 records)
+   3. N/A: 33164216.22 (469 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Analyze pipeline generation by country':
+   📈 API Results: Message length 2114, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 7/50 ====================
+
+🔍 Testing: 'Show me PG performance in APAC'
+   Metric Key: 'PG'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%APAC%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 599 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%APAC%'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 0
+
+## Data ...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_pg__c != null
+     AND (ou_name__c LIKE '%APAC%') GROUP BY work_location_country__c ORDER BY SUM(cq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Show me PG performance in APAC':
+   📈 API Results: Message length 599, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 8/50 ====================
+
+🔍 Testing: 'Find top PG generators by AE'
+   Metric Key: 'PG'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Limit: 5
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ❌ API Error: 500
+   📝 Response: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18843592\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_pg__c != null
+     GROUP BY full_name__c ORDER BY SUM(cq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 10016640.0 (1 records)
+   2. N/A: 7947000.0 (1 records)
+   3. N/A: 5000000.0 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Find top PG generators by AE':
+   ❌ API failed: HTTP 500: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18843592\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+==================== TEST 9/50 ====================
+
+🔍 Testing: 'Show me PG by industry'
+   Metric Key: 'PG'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1464 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: CURRENT
+- **Grouped By**: INDUSTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assessme...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(cq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_pg__c != null
+     GROUP BY primary_industry__c ORDER BY SUM(cq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 15 grouped results found
+   1. N/A: 150724446.73 (1916 records)
+   2. N/A: 126134449.13 (1374 records)
+   3. N/A: 106690170.45 (815 records)
+   ... and 12 more groups
+
+📊 COMPARISON for 'Show me PG by industry':
+   📈 API Results: Message length 1464, Contains data: True
+   📈 SOQL Results: 15 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 10/50 ====================
+
+🔍 Testing: 'Compare PG between current and previous period'
+   Metric Key: 'PG'
+   Timeframe: 'PREVIOUS'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2157 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: PREVIOUS
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9269
+
+## Data Quality Assessme...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(pq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE pq_pg__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(pq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 6601893588.3202 (4348 records)
+   2. N/A: 749787926.8342 (643 records)
+   3. N/A: 600546282.0076 (468 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Compare PG between current and previous period':
+   📈 API Results: Message length 2157, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 11/50 ====================
+
+🔍 Testing: 'Show me call connect performance by country'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1934 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assess...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 50685.0 (4400 records)
+   2. N/A: 6536.0 (528 records)
+   3. N/A: 1455.0 (562 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Show me call connect performance by country':
+   📈 API Results: Message length 1934, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 12/50 ====================
+
+🔍 Testing: 'Analyze calls in Tech industry'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Filter: 'primary_industry__c = 'Tech''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 615 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: INDUSTRY
+- **Filter**: primary_industry__c = 'Tech'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 0
+
+...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (primary_industry__c = 'Tech') GROUP BY primary_industry__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Analyze calls in Tech industry':
+   📈 API Results: Message length 615, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 13/50 ====================
+
+🔍 Testing: 'Find top call performers by AE'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Limit: 10
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ❌ API Error: 500
+   📝 Response: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18868359\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     GROUP BY full_name__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 279.0 (1 records)
+   2. N/A: 255.0 (1 records)
+   3. N/A: 213.0 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Find top call performers by AE':
+   ❌ API failed: HTTP 500: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18868359\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+==================== TEST 14/50 ====================
+
+🔍 Testing: 'Show me calls in LATAM region'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%LATAM%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 920 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%LATAM%'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 490
+
+##...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (ou_name__c LIKE '%LATAM%') GROUP BY work_location_country__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 7 grouped results found
+   1. N/A: 570.0 (221 records)
+   2. N/A: 228.0 (55 records)
+   3. N/A: 194.0 (124 records)
+   ... and 4 more groups
+
+📊 COMPARISON for 'Show me calls in LATAM region':
+   📈 API Results: Message length 920, Contains data: True
+   📈 SOQL Results: 7 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 15/50 ====================
+
+🔍 Testing: 'Analyze call performance by organizational unit'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'OU'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1351 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: OU
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assessment
+...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT ou_name__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     GROUP BY ou_name__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 18 grouped results found
+   1. N/A: 47658.0 (1717 records)
+   2. N/A: 3149.0 (870 records)
+   3. N/A: 2625.0 (664 records)
+   ... and 15 more groups
+
+📊 COMPARISON for 'Analyze call performance by organizational unit':
+   📈 API Results: Message length 1351, Contains data: True
+   📈 SOQL Results: 18 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 16/50 ====================
+
+🔍 Testing: 'Show me customer meetings by country'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1997 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: MEETINGS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Ass...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_customer_meeting__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(cq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 72041.0 (4400 records)
+   2. N/A: 6840.0 (528 records)
+   3. N/A: 6597.0 (645 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Show me customer meetings by country':
+   📈 API Results: Message length 1997, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 17/50 ====================
+
+🔍 Testing: 'Find top meeting performers in AMER'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Filter: 'ou_name__c LIKE '%AMER%''
+   Limit: 5
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ❌ API Error: 500
+   📝 Response: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 8047368\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_customer_meeting__c != null
+     AND (ou_name__c LIKE '%AMER%') GROUP BY full_name__c ORDER BY SUM(cq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 144.0 (1 records)
+   2. N/A: 122.0 (1 records)
+   3. N/A: 110.0 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Find top meeting performers in AMER':
+   ❌ API failed: HTTP 500: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 8047368\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+==================== TEST 18/50 ====================
+
+🔍 Testing: 'Analyze meetings by industry'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1413 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: MEETINGS
+- **Timeframe**: CURRENT
+- **Grouped By**: INDUSTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality As...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(cq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_customer_meeting__c != null
+     GROUP BY primary_industry__c ORDER BY SUM(cq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 15 grouped results found
+   1. N/A: 24611.0 (1916 records)
+   2. N/A: 18087.0 (1374 records)
+   3. N/A: 16126.0 (1183 records)
+   ... and 12 more groups
+
+📊 COMPARISON for 'Analyze meetings by industry':
+   📈 API Results: Message length 1413, Contains data: True
+   📈 SOQL Results: 15 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 19/50 ====================
+
+🔍 Testing: 'Show me meeting performance in EMEA'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%EMEA%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1446 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: MEETINGS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%EMEA%'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 1353
+...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_customer_meeting__c != null
+     AND (ou_name__c LIKE '%EMEA%') GROUP BY work_location_country__c ORDER BY SUM(cq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 19 grouped results found
+   1. N/A: 3736.0 (267 records)
+   2. N/A: 3175.0 (499 records)
+   3. N/A: 1285.0 (87 records)
+   ... and 16 more groups
+
+📊 COMPARISON for 'Show me meeting performance in EMEA':
+   📈 API Results: Message length 1446, Contains data: True
+   📈 SOQL Results: 19 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 20/50 ====================
+
+🔍 Testing: 'Compare meetings between periods'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'PREVIOUS'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2520 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: MEETINGS
+- **Timeframe**: PREVIOUS
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9269
+
+## Data Quality As...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(pq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE pq_customer_meeting__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(pq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 787588.0 (4348 records)
+   2. N/A: 96251.0 (643 records)
+   3. N/A: 83222.0 (521 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Compare meetings between periods':
+   📈 API Results: Message length 2520, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 21/50 ====================
+
+🔍 Testing: 'Show me AI mentions by country'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(call_ai_mention__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE call_ai_mention__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(call_ai_mention__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Show me AI mentions by country':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 22/50 ====================
+
+🔍 Testing: 'Find top AI mention performers'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Limit: 10
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(call_ai_mention__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE call_ai_mention__c != null
+     GROUP BY full_name__c ORDER BY SUM(call_ai_mention__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Find top AI mention performers':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 23/50 ====================
+
+🔍 Testing: 'Analyze AI mentions in Tech industry'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Filter: 'primary_industry__c = 'Tech''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(call_ai_mention__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE call_ai_mention__c != null
+     AND (primary_industry__c = 'Tech') GROUP BY primary_industry__c ORDER BY SUM(call_ai_mention__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Analyze AI mentions in Tech industry':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 24/50 ====================
+
+🔍 Testing: 'Show me AI adoption in APAC'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%APAC%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(call_ai_mention__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE call_ai_mention__c != null
+     AND (ou_name__c LIKE '%APAC%') GROUP BY work_location_country__c ORDER BY SUM(call_ai_mention__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Show me AI adoption in APAC':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 25/50 ====================
+
+🔍 Testing: 'Compare AI mentions by organizational unit'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'CURRENT'
+   Group By: 'OU'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT ou_name__c, SUM(call_ai_mention__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE call_ai_mention__c != null
+     GROUP BY ou_name__c ORDER BY SUM(call_ai_mention__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Compare AI mentions by organizational unit':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 26/50 ====================
+
+🔍 Testing: 'Show me coverage by country'
+   Metric Key: 'COVERAGE'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2487 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: COVERAGE
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9614
+
+## Data Quality Ass...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(coverage__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE coverage__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(coverage__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 32.755773019131 (14 records)
+   2. N/A: 13.8287959063 (13 records)
+   3. N/A: 8.087726221 (2 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Show me coverage by country':
+   📈 API Results: Message length 2487, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 27/50 ====================
+
+🔍 Testing: 'Find top coverage performers'
+   Metric Key: 'COVERAGE'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Limit: 10
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ❌ API Error: 500
+   📝 Response: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 19079928\n\nExternal entry point\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildCleanGroupedResults: line 1424, column 1\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(coverage__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE coverage__c != null
+     GROUP BY full_name__c ORDER BY SUM(coverage__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 23.115930938 (1 records)
+   2. N/A: 21.12651425 (1 records)
+   3. N/A: 19.935822849 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Find top coverage performers':
+   ❌ API failed: HTTP 500: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 19079928\n\nExternal entry point\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildCleanGroupedResults: line 1424, column 1\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+==================== TEST 28/50 ====================
+
+🔍 Testing: 'Analyze coverage in LATAM'
+   Metric Key: 'COVERAGE'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%LATAM%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1421 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: COVERAGE
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%LATAM%'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 519
+...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(coverage__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE coverage__c != null
+     AND (ou_name__c LIKE '%LATAM%') GROUP BY work_location_country__c ORDER BY SUM(coverage__c) DESC LIMIT 50
+   ✅ SOQL Success: 7 grouped results found
+   1. N/A: -195260.32 (1 records)
+   2. N/A: -492637.5511172479 (22 records)
+   3. N/A: -955994.4714566264 (60 records)
+   ... and 4 more groups
+
+📊 COMPARISON for 'Analyze coverage in LATAM':
+   📈 API Results: Message length 1421, Contains data: True
+   📈 SOQL Results: 7 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 29/50 ====================
+
+🔍 Testing: 'Show me coverage by industry'
+   Metric Key: 'COVERAGE'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1906 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: COVERAGE
+- **Timeframe**: CURRENT
+- **Grouped By**: INDUSTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9614
+
+## Data Quality As...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(coverage__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE coverage__c != null
+     GROUP BY primary_industry__c ORDER BY SUM(coverage__c) DESC LIMIT 50
+   ✅ SOQL Success: 15 grouped results found
+   1. N/A: -688552.6928938461 (7 records)
+   2. N/A: -986461.5882392661 (83 records)
+   3. N/A: -3108115.4879103717 (210 records)
+   ... and 12 more groups
+
+📊 COMPARISON for 'Show me coverage by industry':
+   📈 API Results: Message length 1906, Contains data: True
+   📈 SOQL Results: 15 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 30/50 ====================
+
+🔍 Testing: 'Compare coverage across regions'
+   Metric Key: 'COVERAGE'
+   Timeframe: 'CURRENT'
+   Group By: 'OU'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1891 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: COVERAGE
+- **Timeframe**: CURRENT
+- **Grouped By**: OU
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9614
+
+## Data Quality Assessme...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT ou_name__c, SUM(coverage__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE coverage__c != null
+     GROUP BY ou_name__c ORDER BY SUM(coverage__c) DESC LIMIT 50
+   ✅ SOQL Success: 19 grouped results found
+   1. N/A: 0.0 (1 records)
+   2. N/A: -1219043.0858450884 (371 records)
+   3. N/A: -1301868.74 (43 records)
+   ... and 16 more groups
+
+📊 COMPARISON for 'Compare coverage across regions':
+   📈 API Results: Message length 1891, Contains data: True
+   📈 SOQL Results: 19 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 31/50 ====================
+
+🔍 Testing: 'Show me slow rampers in LATAM'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Filter: 'ramp_status__c='Slow' AND ou_name__c LIKE '%LATAM%''
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 649 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: AE
+- **Filter**: ramp_status__c='Slow' AND ou_name__c LIKE '%LATAM%'
+- **Per-AE Normalized**: Yes
+- **Total Re...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (ramp_status__c='Slow' AND ou_name__c LIKE '%LATAM%') GROUP BY full_name__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Show me slow rampers in LATAM':
+   📈 API Results: Message length 649, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 32/50 ====================
+
+🔍 Testing: 'Find fast rampers in AMER'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ramp_status__c='Fast' AND ou_name__c LIKE '%AMER%''
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 657 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ramp_status__c='Fast' AND ou_name__c LIKE '%AMER%'
+- **Per-AE Normalized**: Yes
+- **Tota...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (ramp_status__c='Fast' AND ou_name__c LIKE '%AMER%') GROUP BY work_location_country__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Find fast rampers in AMER':
+   📈 API Results: Message length 657, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 33/50 ====================
+
+🔍 Testing: 'Analyze new hire performance'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Filter: 'ramp_status__c IN ('Slow','Medium','Fast')'
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 631 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: AE
+- **Filter**: ramp_status__c IN ('Slow','Medium','Fast')
+- **Per-AE Normalized**: Yes
+- **Total Records Fou...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (ramp_status__c IN ('Slow','Medium','Fast')) GROUP BY full_name__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Analyze new hire performance':
+   📈 API Results: Message length 631, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 34/50 ====================
+
+🔍 Testing: 'Compare ramp status across regions'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ramp_status__c IN ('Slow','Medium','Fast')'
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 641 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ramp_status__c IN ('Slow','Medium','Fast')
+- **Per-AE Normalized**: Yes
+- **Total Record...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (ramp_status__c IN ('Slow','Medium','Fast')) GROUP BY work_location_country__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Compare ramp status across regions':
+   📈 API Results: Message length 641, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 35/50 ====================
+
+🔍 Testing: 'Show me AE performance by onboarding tenure'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Filter: 'ramp_status__c != null'
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 28903 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: AE
+- **Filter**: ramp_status__c != null
+- **Per-AE Normalized**: Yes
+- **Total Records Found**: 716
+
+## Data Qua...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     AND (ramp_status__c != null) GROUP BY full_name__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 358097.82 (1 records)
+   2. N/A: 175500.0 (1 records)
+   3. N/A: 162240.0 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Show me AE performance by onboarding tenure':
+   📈 API Results: Message length 28903, Contains data: True
+   📈 SOQL Results: 50 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 36/50 ====================
+
+🔍 Testing: 'Show me ACV in US Tech industry'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Filter: 'work_location_country__c = 'US' AND primary_industry__c = 'Tech''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 671 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: AE
+- **Filter**: work_location_country__c = 'US' AND primary_industry__c = 'Tech'
+- **Per-AE Normalized**: No
+- ...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     AND (work_location_country__c = 'US' AND primary_industry__c = 'Tech') GROUP BY full_name__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Show me ACV in US Tech industry':
+   📈 API Results: Message length 671, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 37/50 ====================
+
+🔍 Testing: 'Find top performers in Brazil'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Filter: 'work_location_country__c = 'Brazil''
+   Limit: 5
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 10668 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: AE
+- **Filter**: work_location_country__c = 'Brazil'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 239
+...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     AND (work_location_country__c = 'Brazil') GROUP BY full_name__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 915416.57 (1 records)
+   2. N/A: 228635.27 (1 records)
+   3. N/A: 145821.16 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Find top performers in Brazil':
+   📈 API Results: Message length 10668, Contains data: True
+   📈 SOQL Results: 50 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 38/50 ====================
+
+🔍 Testing: 'Analyze performance in Healthcare industry'
+   Metric Key: 'PG'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'primary_industry__c = 'Healthcare''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 619 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: primary_industry__c = 'Healthcare'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 0...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_pg__c != null
+     AND (primary_industry__c = 'Healthcare') GROUP BY work_location_country__c ORDER BY SUM(cq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Analyze performance in Healthcare industry':
+   📈 API Results: Message length 619, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 39/50 ====================
+
+🔍 Testing: 'Show me calls in UK and Germany'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'work_location_country__c IN ('UK','Germany')'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 753 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: work_location_country__c IN ('UK','Germany')
+- **Per-AE Normalized**: No
+- **Total Recor...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (work_location_country__c IN ('UK','Germany')) GROUP BY work_location_country__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 1 grouped results found
+   1. N/A: 733.0 (303 records)
+
+📊 COMPARISON for 'Show me calls in UK and Germany':
+   📈 API Results: Message length 753, Contains data: True
+   📈 SOQL Results: 1 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 40/50 ====================
+
+🔍 Testing: 'Find meetings in Financial Services'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Filter: 'primary_industry__c = 'Financial Services''
+   Limit: 10
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 60396 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: MEETINGS
+- **Timeframe**: CURRENT
+- **Grouped By**: AE
+- **Filter**: primary_industry__c = 'Financial Services'
+- **Per-AE Normalized**: No
+- **Total Records F...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_customer_meeting__c != null
+     AND (primary_industry__c = 'Financial Services') GROUP BY full_name__c ORDER BY SUM(cq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 95.0 (1 records)
+   2. N/A: 69.0 (1 records)
+   3. N/A: 67.0 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Find meetings in Financial Services':
+   📈 API Results: Message length 60396, Contains data: True
+   📈 SOQL Results: 50 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 41/50 ====================
+
+🔍 Testing: 'Show me average ACV by country'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Aggregation: 'AVG'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2071 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assessme...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 25090104.3236 (4400 records)
+   2. N/A: 3084574.7701 (562 records)
+   3. N/A: 2144806.42 (645 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Show me average ACV by country':
+   📈 API Results: Message length 2071, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 42/50 ====================
+
+🔍 Testing: 'Find maximum PG by industry'
+   Metric Key: 'PG'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Aggregation: 'MAX'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1464 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: CURRENT
+- **Grouped By**: INDUSTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Assessme...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(cq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_pg__c != null
+     GROUP BY primary_industry__c ORDER BY SUM(cq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 15 grouped results found
+   1. N/A: 150724446.73 (1916 records)
+   2. N/A: 126134449.13 (1374 records)
+   3. N/A: 106690170.45 (815 records)
+   ... and 12 more groups
+
+📊 COMPARISON for 'Find maximum PG by industry':
+   📈 API Results: Message length 1464, Contains data: True
+   📈 SOQL Results: 15 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 43/50 ====================
+
+🔍 Testing: 'Show me minimum calls by AE'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'AE'
+   Limit: 10
+   Aggregation: 'MIN'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ❌ API Error: 500
+   📝 Response: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18868382\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     GROUP BY full_name__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 279.0 (1 records)
+   2. N/A: 255.0 (1 records)
+   3. N/A: 213.0 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Show me minimum calls by AE':
+   ❌ API failed: HTTP 500: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18868382\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 225, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+==================== TEST 44/50 ====================
+
+🔍 Testing: 'Count meetings by country'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Aggregation: 'COUNT'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1997 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: MEETINGS
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9345
+
+## Data Quality Ass...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_customer_meeting__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(cq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 72041.0 (4400 records)
+   2. N/A: 6840.0 (528 records)
+   3. N/A: 6597.0 (645 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Count meetings by country':
+   📈 API Results: Message length 1997, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 45/50 ====================
+
+🔍 Testing: 'Show me median AI mentions by industry'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Aggregation: 'MEDIAN'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(call_ai_mention__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE call_ai_mention__c != null
+     GROUP BY primary_industry__c ORDER BY SUM(call_ai_mention__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Show me median AI mentions by industry':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 46/50 ====================
+
+🔍 Testing: 'Compare ACV current vs previous'
+   Metric Key: 'ACV'
+   Timeframe: 'PREVIOUS'
+   Group By: 'COUNTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2121 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: PREVIOUS
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9269
+
+## Data Quality Assessm...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(pq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE pq_acv__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(pq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 621334542.3142 (4348 records)
+   2. N/A: 74382009.2767 (643 records)
+   3. N/A: 56521706.4197 (559 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Compare ACV current vs previous':
+   📈 API Results: Message length 2121, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 47/50 ====================
+
+🔍 Testing: 'Show me PG trends in previous period'
+   Metric Key: 'PG'
+   Timeframe: 'PREVIOUS'
+   Group By: 'INDUSTRY'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1467 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: PREVIOUS
+- **Grouped By**: INDUSTRY
+- **Filter**: None
+- **Per-AE Normalized**: No
+- **Total Records Found**: 9269
+
+## Data Quality Assessm...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(pq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE pq_pg__c != null
+     GROUP BY primary_industry__c ORDER BY SUM(pq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 15 grouped results found
+   1. N/A: 2067359693.2205 (1912 records)
+   2. N/A: 1823867219.9964 (1368 records)
+   3. N/A: 1443084859.6116 (1180 records)
+   ... and 12 more groups
+
+📊 COMPARISON for 'Show me PG trends in previous period':
+   📈 API Results: Message length 1467, Contains data: True
+   📈 SOQL Results: 15 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 48/50 ====================
+
+🔍 Testing: 'Analyze calls in previous quarter'
+   Metric Key: 'CALLS'
+   Timeframe: 'PREVIOUS'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%AMER%''
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 759 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: PREVIOUS
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%AMER%'
+- **Per-AE Normalized**: No
+- **Total Records Found**: 3900
+
+#...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(pq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE pq_call_connect__c != null
+     AND (ou_name__c LIKE '%AMER%') GROUP BY work_location_country__c ORDER BY SUM(pq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 2 grouped results found
+   1. N/A: 678768.0 (3443 records)
+   2. N/A: 109573.0 (457 records)
+
+📊 COMPARISON for 'Analyze calls in previous quarter':
+   📈 API Results: Message length 759, Contains data: True
+   📈 SOQL Results: 2 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 49/50 ====================
+
+🔍 Testing: 'Find previous period meeting leaders'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'PREVIOUS'
+   Group By: 'AE'
+   Limit: 5
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ❌ API Error: 500
+   📝 Response: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18745880\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 227, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT full_name__c, SUM(pq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE pq_customer_meeting__c != null
+     GROUP BY full_name__c ORDER BY SUM(pq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 50 grouped results found
+   1. N/A: 1224.0 (1 records)
+   2. N/A: 1208.0 (1 records)
+   3. N/A: 1058.0 (1 records)
+   ... and 47 more groups
+
+📊 COMPARISON for 'Find previous period meeting leaders':
+   ❌ API failed: HTTP 500: [{"errorCode":"APEX_ERROR","message":"System.LimitException: Apex heap size too large: 18745880\n\nExternal entry point\nClass.ANAGENTKPIAnalysisServiceV5.buildAnalysisMessage: line 1315, column 1\nClass.ANAGENTKPIAnalysisServiceV5.analyzeKPIs: line 849, column 1\nClass.ANAGENTKPIAnalysisHandlerV5.analyzeKPIs: line 203, column 1\nClass.QPTopicAgentAPIController.handleKPIAnalysis: line 227, column 1\nClass.QPTopicAgentAPIController.handleGet: line 32, column 1"}]
+
+==================== TEST 50/50 ====================
+
+🔍 Testing: 'Show me previous AI adoption by region'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'PREVIOUS'
+   Group By: 'OU'
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   ❌ SOQL Skipped: AI_MENTIONS not available for PREVIOUS
+
+📊 COMPARISON for 'Show me previous AI adoption by region':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: ERROR - Metric AI_MENTIONS not available for PREVIOUS
+
+==================== TEST 51/50 ====================
+
+🔍 Testing: 'Show me average ACV per AE by country'
+   Metric Key: 'ACV'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 2071 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: ACV
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: None
+- **Per-AE Normalized**: Yes
+- **Total Records Found**: 9345
+
+## Data Quality Assessm...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_acv__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_acv__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(cq_acv__c) DESC LIMIT 50
+   ✅ SOQL Success: 35 grouped results found
+   1. N/A: 25090104.3236 (4400 records)
+   2. N/A: 3084574.7701 (562 records)
+   3. N/A: 2144806.42 (645 records)
+   ... and 32 more groups
+
+📊 COMPARISON for 'Show me average ACV per AE by country':
+   📈 API Results: Message length 2071, Contains data: True
+   📈 SOQL Results: 35 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 52/50 ====================
+
+🔍 Testing: 'Find average calls per AE in Tech'
+   Metric Key: 'CALLS'
+   Timeframe: 'CURRENT'
+   Group By: 'INDUSTRY'
+   Filter: 'primary_industry__c = 'Tech''
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 615 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: CALLS
+- **Timeframe**: CURRENT
+- **Grouped By**: INDUSTRY
+- **Filter**: primary_industry__c = 'Tech'
+- **Per-AE Normalized**: Yes
+- **Total Records Found**: 0
+...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT primary_industry__c, SUM(cq_call_connect__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_call_connect__c != null
+     AND (primary_industry__c = 'Tech') GROUP BY primary_industry__c ORDER BY SUM(cq_call_connect__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Find average calls per AE in Tech':
+   📈 API Results: Message length 615, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+==================== TEST 53/50 ====================
+
+🔍 Testing: 'Show me normalized PG by AE in EMEA'
+   Metric Key: 'PG'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Filter: 'ou_name__c LIKE '%EMEA%''
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1489 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: PG
+- **Timeframe**: CURRENT
+- **Grouped By**: COUNTRY
+- **Filter**: ou_name__c LIKE '%EMEA%'
+- **Per-AE Normalized**: Yes
+- **Total Records Found**: 1353
+
+## D...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(cq_pg__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_pg__c != null
+     AND (ou_name__c LIKE '%EMEA%') GROUP BY work_location_country__c ORDER BY SUM(cq_pg__c) DESC LIMIT 50
+   ✅ SOQL Success: 19 grouped results found
+   1. N/A: 14930474.18 (267 records)
+   2. N/A: 11549406.58 (499 records)
+   3. N/A: 5991683.09 (32 records)
+   ... and 16 more groups
+
+📊 COMPARISON for 'Show me normalized PG by AE in EMEA':
+   📈 API Results: Message length 1489, Contains data: True
+   📈 SOQL Results: 19 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 54/50 ====================
+
+🔍 Testing: 'Analyze meetings per AE by organizational unit'
+   Metric Key: 'MEETINGS'
+   Timeframe: 'CURRENT'
+   Group By: 'OU'
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 1373 characters
+   📈 Analysis Preview: # KPI Analysis
+
+## Summary
+- **Metric**: MEETINGS
+- **Timeframe**: CURRENT
+- **Grouped By**: OU
+- **Filter**: None
+- **Per-AE Normalized**: Yes
+- **Total Records Found**: 9345
+
+## Data Quality Assessm...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT ou_name__c, SUM(cq_customer_meeting__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE cq_customer_meeting__c != null
+     GROUP BY ou_name__c ORDER BY SUM(cq_customer_meeting__c) DESC LIMIT 50
+   ✅ SOQL Success: 18 grouped results found
+   1. N/A: 21616.0 (1717 records)
+   2. N/A: 15507.0 (870 records)
+   3. N/A: 14707.0 (794 records)
+   ... and 15 more groups
+
+📊 COMPARISON for 'Analyze meetings per AE by organizational unit':
+   📈 API Results: Message length 1373, Contains data: True
+   📈 SOQL Results: 18 grouped results
+   ✅ Results appear consistent
+
+==================== TEST 55/50 ====================
+
+🔍 Testing: 'Find average AI mentions per AE'
+   Metric Key: 'AI_MENTIONS'
+   Timeframe: 'CURRENT'
+   Group By: 'COUNTRY'
+   Aggregation: 'AVG'
+   Per AE Normalize: true
+   Expected Objects: ['AGENT_OU_PIPELINE_V2__c']
+   ✅ API Success: True
+   📝 Message: KPI Analysis completed successfully
+   📊 Analysis Message Length: 433 characters
+   📈 Analysis Preview: Invalid metric key: AI_MENTIONS. Valid values are: ACV, PG, CALLS, MEETINGS, COVERAGE, GROWTH_FACTOR, GF, QUOTA, CC_ACV, CQ_CC_ACV, DAYS_ACV, CQ_DAYS_ACV, DAYS_ACV_PART, CQ_DAYS_ACV_PART, DAYS_PG_PART...
+   📊 Contains Analysis Data: True
+
+🔍 SOQL Query for AGENT_OU_PIPELINE_V2__c
+   📝 Query: SELECT work_location_country__c, SUM(call_ai_mention__c) total_metric, COUNT(Id) record_count
+    FROM AGENT_OU_PIPELINE_V2__c
+    WHERE call_ai_mention__c != null
+     GROUP BY work_location_country__c ORDER BY SUM(call_ai_mention__c) DESC LIMIT 50
+   ✅ SOQL Success: 0 grouped results found
+
+📊 COMPARISON for 'Find average AI mentions per AE':
+   📈 API Results: Message length 433, Contains data: True
+   📈 SOQL Results: 0 grouped results
+   ⚠️  POTENTIAL DISCREPANCY: API shows data but SOQL found no results
+
+================================================================================
+📊 FINAL SUMMARY
+================================================================================
+Total Tests: 55
+Successful API Calls: 49
+Success Rate: 89.1%
+Discrepancies Found: 16
+
+⚠️  DISCREPANCIES FOUND:
+1. 'Show me PG performance in APAC' - DISCREPANCY
+2. 'Analyze calls in Tech industry' - DISCREPANCY
+3. 'Show me AI mentions by country' - DISCREPANCY
+4. 'Find top AI mention performers' - DISCREPANCY
+5. 'Analyze AI mentions in Tech industry' - DISCREPANCY
+6. 'Show me AI adoption in APAC' - DISCREPANCY
+7. 'Compare AI mentions by organizational unit' - DISCREPANCY
+8. 'Show me slow rampers in LATAM' - DISCREPANCY
+9. 'Find fast rampers in AMER' - DISCREPANCY
+10. 'Analyze new hire performance' - DISCREPANCY
+11. 'Compare ramp status across regions' - DISCREPANCY
+12. 'Show me ACV in US Tech industry' - DISCREPANCY
+13. 'Analyze performance in Healthcare industry' - DISCREPANCY
+14. 'Show me median AI mentions by industry' - DISCREPANCY
+15. 'Find average calls per AE in Tech' - DISCREPANCY
+16. 'Find average AI mentions per AE' - DISCREPANCY
+
+🔍 Detailed Results:
+ 1. ✅ 'Show me ACV by country' - Data: True (MATCH)
+ 2. ✅ 'Analyze ACV performance in AMER' - Data: True (MATCH)
+ 3. ✅ 'Show me ACV by organizational unit' - Data: True (MATCH)
+ 4. ✅ 'Find top ACV performers by industry' - Data: True (MATCH)
+ 5. ✅ 'Show me ACV trends in EMEA' - Data: True (MATCH)
+ 6. ✅ 'Analyze pipeline generation by country' - Data: True (MATCH)
+ 7. ⚠️ 'Show me PG performance in APAC' - Data: True (DISCREPANCY)
+ 8. ❌ 'Find top PG generators by AE' - Data: False (API_ERROR)
+ 9. ✅ 'Show me PG by industry' - Data: True (MATCH)
+10. ✅ 'Compare PG between current and previous period' - Data: True (MATCH)
+11. ✅ 'Show me call connect performance by country' - Data: True (MATCH)
+12. ⚠️ 'Analyze calls in Tech industry' - Data: True (DISCREPANCY)
+13. ❌ 'Find top call performers by AE' - Data: False (API_ERROR)
+14. ✅ 'Show me calls in LATAM region' - Data: True (MATCH)
+15. ✅ 'Analyze call performance by organizational unit' - Data: True (MATCH)
+16. ✅ 'Show me customer meetings by country' - Data: True (MATCH)
+17. ❌ 'Find top meeting performers in AMER' - Data: False (API_ERROR)
+18. ✅ 'Analyze meetings by industry' - Data: True (MATCH)
+19. ✅ 'Show me meeting performance in EMEA' - Data: True (MATCH)
+20. ✅ 'Compare meetings between periods' - Data: True (MATCH)
+21. ⚠️ 'Show me AI mentions by country' - Data: True (DISCREPANCY)
+22. ⚠️ 'Find top AI mention performers' - Data: True (DISCREPANCY)
+23. ⚠️ 'Analyze AI mentions in Tech industry' - Data: True (DISCREPANCY)
+24. ⚠️ 'Show me AI adoption in APAC' - Data: True (DISCREPANCY)
+25. ⚠️ 'Compare AI mentions by organizational unit' - Data: True (DISCREPANCY)
+26. ✅ 'Show me coverage by country' - Data: True (MATCH)
+27. ❌ 'Find top coverage performers' - Data: False (API_ERROR)
+28. ✅ 'Analyze coverage in LATAM' - Data: True (MATCH)
+29. ✅ 'Show me coverage by industry' - Data: True (MATCH)
+30. ✅ 'Compare coverage across regions' - Data: True (MATCH)
+31. ⚠️ 'Show me slow rampers in LATAM' - Data: True (DISCREPANCY)
+32. ⚠️ 'Find fast rampers in AMER' - Data: True (DISCREPANCY)
+33. ⚠️ 'Analyze new hire performance' - Data: True (DISCREPANCY)
+34. ⚠️ 'Compare ramp status across regions' - Data: True (DISCREPANCY)
+35. ✅ 'Show me AE performance by onboarding tenure' - Data: True (MATCH)
+36. ⚠️ 'Show me ACV in US Tech industry' - Data: True (DISCREPANCY)
+37. ✅ 'Find top performers in Brazil' - Data: True (MATCH)
+38. ⚠️ 'Analyze performance in Healthcare industry' - Data: True (DISCREPANCY)
+39. ✅ 'Show me calls in UK and Germany' - Data: True (MATCH)
+40. ✅ 'Find meetings in Financial Services' - Data: True (MATCH)
+41. ✅ 'Show me average ACV by country' - Data: True (MATCH)
+42. ✅ 'Find maximum PG by industry' - Data: True (MATCH)
+43. ❌ 'Show me minimum calls by AE' - Data: False (API_ERROR)
+44. ✅ 'Count meetings by country' - Data: True (MATCH)
+45. ⚠️ 'Show me median AI mentions by industry' - Data: True (DISCREPANCY)
+46. ✅ 'Compare ACV current vs previous' - Data: True (MATCH)
+47. ✅ 'Show me PG trends in previous period' - Data: True (MATCH)
+48. ✅ 'Analyze calls in previous quarter' - Data: True (MATCH)
+49. ❌ 'Find previous period meeting leaders' - Data: False (API_ERROR)
+50. 🔧 'Show me previous AI adoption by region' - Data: True (SOQL_ERROR)
+51. ✅ 'Show me average ACV per AE by country' - Data: True (MATCH)
+52. ⚠️ 'Find average calls per AE in Tech' - Data: True (DISCREPANCY)
+53. ✅ 'Show me normalized PG by AE in EMEA' - Data: True (MATCH)
+54. ✅ 'Analyze meetings per AE by organizational unit' - Data: True (MATCH)
+55. ⚠️ 'Find average AI mentions per AE' - Data: True (DISCREPANCY)
+
+📝 Discrepancies written to: kpi_analysis_discrepancies.json

@@ -1,0 +1,231 @@
+{
+  "testCases": [
+    {
+      "id": "OP_001",
+      "utterance": "Show me open pipe analysis for AMER ACC with minimum stage 4",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": 4
+      }
+    },
+    {
+      "id": "OP_002",
+      "utterance": "Analyze open pipeline for EMEA ENTR post stage 3",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": 3
+      }
+    },
+    {
+      "id": "OP_003",
+      "utterance": "What's the open pipe for UKI with stage 5 and above?",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": 5
+      }
+    },
+    {
+      "id": "OP_004",
+      "utterance": "Show open pipeline analysis for AMER-ACC current quarter",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "OP_005",
+      "utterance": "Find open pipe opportunities in EMEA ENTR for Data Cloud",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Data Cloud"
+      }
+    },
+    {
+      "id": "OP_006",
+      "utterance": "Analyze open pipeline for UKI with Sales Cloud and Service Cloud",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "products": ["Sales Cloud", "Service Cloud"]
+      }
+    },
+    {
+      "id": "OP_007",
+      "utterance": "Show me open pipe for AMER ACC enterprise segment",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "OP_008",
+      "utterance": "What's the open pipeline in EMEA ENTR mid-market?",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "OP_009",
+      "utterance": "Find open pipe opportunities for UKI small business segment",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "OP_010",
+      "utterance": "Show open pipeline analysis for AMER ACC with Marketing Cloud",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Marketing Cloud"
+      }
+    },
+    {
+      "id": "OP_011",
+      "utterance": "Analyze open pipe for EMEA ENTR previous quarter",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "timeFrame": "previous"
+      }
+    },
+    {
+      "id": "OP_012",
+      "utterance": "What are the open pipeline opportunities in UKI with stage 4+?",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": 4
+      }
+    },
+    {
+      "id": "OP_013",
+      "utterance": "Show me open pipe for AMER ACC with Data Cloud and Service Cloud",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "products": ["Data Cloud", "Service Cloud"]
+      }
+    },
+    {
+      "id": "OP_014",
+      "utterance": "Find open pipeline in EMEA ENTR for Sales Cloud enterprise",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Sales Cloud",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "OP_015",
+      "utterance": "Analyze open pipe opportunities for UKI mid-market segment",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "OP_016",
+      "utterance": "Show open pipeline for AMER ACC with minimum stage 3",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": 3
+      }
+    },
+    {
+      "id": "OP_017",
+      "utterance": "What's the open pipe in EMEA ENTR for Marketing Cloud?",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Marketing Cloud"
+      }
+    },
+    {
+      "id": "OP_018",
+      "utterance": "Find open pipeline for UKI with Service Cloud and Data Cloud",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "products": ["Service Cloud", "Data Cloud"]
+      }
+    },
+    {
+      "id": "OP_019",
+      "utterance": "Show me open pipe analysis for AMER ACC small business",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "OP_020",
+      "utterance": "Analyze open pipeline in EMEA ENTR with stage 5 and above",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": 5
+      }
+    },
+    {
+      "id": "OP_021",
+      "utterance": "What are the open pipe opportunities for UKI current quarter?",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "timeFrame": "current"
+      }
+    },
+    {
+      "id": "OP_022",
+      "utterance": "Show open pipeline for AMER ACC with Sales Cloud enterprise",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Sales Cloud",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "OP_023",
+      "utterance": "Find open pipe in EMEA ENTR for Marketing Cloud and Service Cloud",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "products": ["Marketing Cloud", "Service Cloud"]
+      }
+    },
+    {
+      "id": "OP_024",
+      "utterance": "Analyze open pipeline for UKI with minimum stage 4",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": 4
+      }
+    },
+    {
+      "id": "OP_025",
+      "utterance": "Show me open pipe opportunities in AMER ACC mid-market segment",
+      "expectedTool": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "segment": "mid-market"
+      }
+    }
+  ]
+}

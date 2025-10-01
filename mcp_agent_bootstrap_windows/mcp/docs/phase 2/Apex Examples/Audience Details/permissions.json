@@ -1,0 +1,16 @@
+{
+  "objectApiName": "Audience__c",
+  "crud": {
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  "fieldPermissions": {},
+  "recordTypeVisibility": [],
+  "sources": {
+    "profiles": [],
+    "permissionSets": []
+  },
+  "customPermissions": []
+}

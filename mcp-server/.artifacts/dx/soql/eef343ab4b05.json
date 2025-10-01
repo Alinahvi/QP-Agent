@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2025-09-29T20:56:30.216Z",
+  "orgAlias": "innovation",
+  "soql": "SELECT Id, Name FROM Account WHERE Name LIKE '%Test%' LIMIT 1",
+  "rowCount": 1,
+  "records": [
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v64.0/sobjects/Account/001D700001aI4Y4IAK"
+      },
+      "Id": "001D700001aI4Y4IAK",
+      "Name": "Test Account for Billy Vaught"
+    }
+  ],
+  "raw": "{\n  \"status\": 0,\n  \"result\": {\n    \"records\": [\n      {\n        \"attributes\": {\n          \"type\": \"Account\",\n          \"url\": \"/services/data/v64.0/sobjects/Account/001D700001aI4Y4IAK\"\n        },\n        \"Id\": \"001D700001aI4Y4IAK\",\n        \"Name\": \"Test Account for Billy Vaught\"\n      }\n    ],\n    \"totalSize\": 1,\n    \"done\": true\n  },\n  \"warnings\": [\n    \"The \\\"-u\\\" flag has been deprecated. Use \\\"--target-org | -o\\\" instead.\"\n  ]\n}"
+}

@@ -1,0 +1,20 @@
+.min-height {
+  min-height: calc(100vh - 120px);
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .slds-large-size_2-of-3 {
+    width: 100% !important;
+  }
+  
+  .slds-large-size_1-of-3 {
+    width: 100% !important;
+  }
+  
+  .slds-border_left {
+    border-left: none !important;
+    border-top: 1px solid #dddbda;
+    margin-top: 1rem;
+  }
+}

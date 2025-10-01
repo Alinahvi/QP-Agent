@@ -1,0 +1,11 @@
+node -v: v22.19.0
+npm -v: 11.6.0
+python --version: Python 3.13.6
+java -version:
+  openjdk version ""21.0.8"" 2025-07-15 LTS
+  OpenJDK Runtime Environment Zulu21.44+17-CA (build 21.0.8+9-LTS)
+  OpenJDK 64-Bit Server VM Zulu21.44+17-CA (build 21.0.8+9-LTS, mixed mode, sharing)
+sf --version: @salesforce/cli/2.107.6 win32-x64 node-v22.19.0
+sfdx --version: @salesforce/cli/2.107.6 win32-x64 node-v22.19.0
+git --version: git version 2.49.0.windows.1
+MCP server version: 0.1.0 (mcp/package.json)

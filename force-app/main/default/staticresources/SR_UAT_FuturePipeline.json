@@ -1,0 +1,263 @@
+{
+  "testCases": [
+    {
+      "id": "FP_001",
+      "utterance": "How many cross-sell opportunities do we have in AMER-ACC for Data Cloud?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Data Cloud",
+        "opportunityType": "cross-sell"
+      }
+    },
+    {
+      "id": "FP_002", 
+      "utterance": "What is the most valuable renewal product, top five products, in UKI?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "opportunityType": "renewal",
+        "limit": 5
+      }
+    },
+    {
+      "id": "FP_003",
+      "utterance": "Which product has the highest amount of upsell and cross-sell opportunity in the USA?",
+      "expectedTool": "future_pipeline", 
+      "expectedArgs": {
+        "ouName": "AMER",
+        "opportunityType": "upsell"
+      }
+    },
+    {
+      "id": "FP_004",
+      "utterance": "Which product has the highest amount of renewal in AMER-ACC within the enterprise segment?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "opportunityType": "renewal",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "FP_005",
+      "utterance": "Show me cross-sell opportunities for Sales Cloud in EMEA ENTR",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Sales Cloud",
+        "opportunityType": "cross-sell"
+      }
+    },
+    {
+      "id": "FP_006",
+      "utterance": "Find upsell opportunities for Service Cloud in AMER ACC enterprise segment",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Service Cloud",
+        "opportunityType": "upsell",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "FP_007",
+      "utterance": "What are the renewal opportunities for Marketing Cloud in UKI?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Marketing Cloud",
+        "opportunityType": "renewal"
+      }
+    },
+    {
+      "id": "FP_008",
+      "utterance": "Show me future pipeline analysis for Data Cloud in EMEA ENTR mid-market",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Data Cloud",
+        "opportunityType": "future_pipeline",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "FP_009",
+      "utterance": "Analyze cross-sell potential for Sales Cloud in AMER ACC small business segment",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Sales Cloud",
+        "opportunityType": "cross-sell",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "FP_010",
+      "utterance": "What's the upsell opportunity for Data Cloud in UKI enterprise?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Data Cloud",
+        "opportunityType": "upsell",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "FP_011",
+      "utterance": "Find renewal opportunities in AMER-ACC for Service Cloud",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Service Cloud",
+        "opportunityType": "renewal"
+      }
+    },
+    {
+      "id": "FP_012",
+      "utterance": "Show cross-sell analysis for Marketing Cloud in EMEA ENTR",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Marketing Cloud",
+        "opportunityType": "cross-sell"
+      }
+    },
+    {
+      "id": "FP_013",
+      "utterance": "What are the top 10 upsell opportunities in AMER ACC?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "opportunityType": "upsell",
+        "limit": 10
+      }
+    },
+    {
+      "id": "FP_014",
+      "utterance": "Analyze renewal potential for Data Cloud in UKI mid-market",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Data Cloud",
+        "opportunityType": "renewal",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "FP_015",
+      "utterance": "Show me future pipeline for Sales Cloud in EMEA ENTR enterprise",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Sales Cloud",
+        "opportunityType": "future_pipeline",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "FP_016",
+      "utterance": "Find cross-sell opportunities for Service Cloud in AMER ACC",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Service Cloud",
+        "opportunityType": "cross-sell"
+      }
+    },
+    {
+      "id": "FP_017",
+      "utterance": "What's the upsell potential for Marketing Cloud in UKI small business?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Marketing Cloud",
+        "opportunityType": "upsell",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "FP_018",
+      "utterance": "Show renewal analysis for Data Cloud in EMEA ENTR",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Data Cloud",
+        "opportunityType": "renewal"
+      }
+    },
+    {
+      "id": "FP_019",
+      "utterance": "Analyze future pipeline opportunities in AMER ACC for all products",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "opportunityType": "future_pipeline"
+      }
+    },
+    {
+      "id": "FP_020",
+      "utterance": "Find cross-sell opportunities for Sales Cloud in UKI enterprise segment",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Sales Cloud",
+        "opportunityType": "cross-sell",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "FP_021",
+      "utterance": "What are the top 5 renewal opportunities in EMEA ENTR?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "opportunityType": "renewal",
+        "limit": 5
+      }
+    },
+    {
+      "id": "FP_022",
+      "utterance": "Show upsell analysis for Service Cloud in AMER ACC mid-market",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Service Cloud",
+        "opportunityType": "upsell",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "FP_023",
+      "utterance": "Find future pipeline opportunities for Marketing Cloud in UKI",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "product": "Marketing Cloud",
+        "opportunityType": "future_pipeline"
+      }
+    },
+    {
+      "id": "FP_024",
+      "utterance": "Analyze cross-sell potential in AMER ACC for Data Cloud enterprise",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "product": "Data Cloud",
+        "opportunityType": "cross-sell",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "FP_025",
+      "utterance": "What's the renewal opportunity for Sales Cloud in EMEA ENTR small business?",
+      "expectedTool": "future_pipeline",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "product": "Sales Cloud",
+        "opportunityType": "renewal",
+        "segment": "small business"
+      }
+    }
+  ]
+}

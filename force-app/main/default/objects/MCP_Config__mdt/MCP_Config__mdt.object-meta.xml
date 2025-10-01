@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>MCP Config</label>
+    <pluralLabel>MCP Configs</pluralLabel>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>BaseUrl__c</fullName>
+        <label>Base URL</label>
+        <type>Url</type>
+        <description>Override URL for MCP server (overrides Named Credential)</description>
+    </fields>
+    <fields>
+        <fullName>Mode__c</fullName>
+        <label>Mode</label>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <value>
+                    <fullName>ROUTE</fullName>
+                    <default>false</default>
+                    <label>ROUTE</label>
+                </value>
+                <value>
+                    <fullName>ANALYZE</fullName>
+                    <default>false</default>
+                    <label>ANALYZE</label>
+                </value>
+                <value>
+                    <fullName>BOTH</fullName>
+                    <default>true</default>
+                    <label>BOTH</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <description>MCP operation mode: ROUTE for utterance routing, ANALYZE for tool execution, BOTH for both</description>
+    </fields>
+    <fields>
+        <fullName>AuthHeaderName__c</fullName>
+        <label>Auth Header Name</label>
+        <type>Text</type>
+        <length>255</length>
+        <description>Custom authentication header name (e.g., X-MCP-Token)</description>
+    </fields>
+    <fields>
+        <fullName>AuthHeaderValue__c</fullName>
+        <label>Auth Header Value</label>
+        <type>Text</type>
+        <length>255</length>
+        <description>Custom authentication header value</description>
+    </fields>
+    <fields>
+        <fullName>Timeout__c</fullName>
+        <label>Timeout (seconds)</label>
+        <type>Number</type>
+        <precision>18</precision>
+        <scale>0</scale>
+        <defaultValue>15</defaultValue>
+        <description>Request timeout in seconds</description>
+    </fields>
+    <fields>
+        <fullName>RetryCount__c</fullName>
+        <label>Retry Count</label>
+        <type>Number</type>
+        <precision>18</precision>
+        <scale>0</scale>
+        <defaultValue>2</defaultValue>
+        <description>Number of retries for failed requests</description>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Whether this MCP configuration is active</description>
+    </fields>
+    <fields>
+        <fullName>ShadowMode__c</fullName>
+        <label>Shadow Mode</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+        <description>Whether to run in shadow mode (parallel execution for comparison)</description>
+    </fields>
+    <fields>
+        <fullName>CorrelationIdPrefix__c</fullName>
+        <label>Correlation ID Prefix</label>
+        <type>Text</type>
+        <length>50</length>
+        <description>Prefix for correlation IDs to track requests across MCP and Apex</description>
+    </fields>
+</CustomObject>

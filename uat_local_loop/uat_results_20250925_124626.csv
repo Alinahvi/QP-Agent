@@ -1,0 +1,8 @@
+Case ID,Description,Utterance,MCP Success,MCP Tool,MCP Args,MCP Time (ms),Apex Success,Apex Time (ms),Overall Success,Error Message
+1,Open Pipe Analysis - AMER ACC Stage 4,Show me all products that passed stage 4 within AMER ACC,True,open_pipe_analyze,"{""limitN"": 10, ""minStage"": 4, ""ouName"": ""AMER ACC"", ""timeFrame"": ""CURRENT""}",9.1,True,0.0,True,
+2,Open Pipe with Country Filter,"Open pipe passed stage 4 in AMER ACC, country = US, top 20",True,open_pipe_analyze,"{""country"": ""United States"", ""limitN"": 20, ""minStage"": 4, ""ouName"": ""AMER ACC"", ""timeFrame"": ""CURRENT""}",2.6,True,0.0,True,
+3,Open Pipe with Product Filter,Filter to Data Cloud and Sales Cloud only for AMER ACC,False,Could not determine the appropriate tool for this request. Please be more specific about what you want to do.,{},3.0,True,0.0,False,MCP Error: Could not determine the appropriate tool for this request. Please be more specific about what you want to do.
+4,Open Pipe Previous Quarter,Compare last quarter open pipe post stage 4 for AMER ACC,True,open_pipe_analyze,"{""limitN"": 10, ""minStage"": 4, ""ouName"": ""AMER ACC"", ""timeFrame"": ""PREVIOUS""}",2.4,True,0.0,True,
+5,KPI Analysis - EMEA ENTR,Show me KPI analysis for EMEA ENTR current quarter,True,kpi_analyze,"{""ouName"": ""EMEA ENTR"", ""timeFrame"": ""CURRENT""}",2.8,True,0.0,True,
+6,Content Search - Data Cloud,Content search for Data Cloud topics in ACT,True,content_search,"{""source"": ""ACT"", ""topic"": ""Data Cloud topics in ACT""}",2.9,True,0.0,True,
+7,SME Search - UKI Region,SME search for Salesforce experts in UKI,True,sme_search,"{""expertise"": ""UKI"", ""region"": ""UKI""}",2.4,True,0.0,True,

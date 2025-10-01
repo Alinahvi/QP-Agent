@@ -1,0 +1,1163 @@
+{
+  "summary": {
+    "total_utterances": 120,
+    "successful": 112,
+    "failed": 8,
+    "success_rate": 93.33333333333333
+  },
+  "batch_results": [
+    {
+      "batch": 1,
+      "total": 12,
+      "successful": 11,
+      "failed": 1,
+      "details": [
+        {
+          "utterance": "Show me avg calls in Germany for EMEA ENTR",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "country": "Germany",
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What's the average ACV for AMER ACC this quarter?",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Compare coverage rates between US and UK for this month",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Find meeting statistics for APAC region",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me call connections in LATAM OU",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "country": "LATAM OU",
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Break down meetings by slow ramping vs fast ramping AEs in EMEA ENTR",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Compare ACV performance between ramped and ramping AEs in AMER ACC",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me coverage by ramp status in UKI OU",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "country": "UKI OU",
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What's the pipeline generation difference between ramped and ramping AEs in APAC?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Analyze call connections by ramp status in LATAM",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Compare this quarter vs last quarter ACV in Germany",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "country": "Germany",
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me meeting trends: current vs previous quarter in EMEA ENTR",
+          "status": "failed",
+          "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "total": 12,
+      "successful": 10,
+      "failed": 2,
+      "details": [
+        {
+          "utterance": "What's the ACV growth from last quarter to this quarter in AMER ACC?",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Compare call connection improvement in UKI this quarter vs last quarter",
+          "status": "failed",
+          "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+        },
+        {
+          "utterance": "Show me coverage changes from last quarter in APAC",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "country": "APAC",
+            "ouName": "APAC",
+            "timeFrame": "PREVIOUS"
+          }
+        },
+        {
+          "utterance": "Show me performance metrics by management level in EMEA ENTR",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Compare ACV by vertical industry in AMER ACC",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What's the meeting performance by management tier in UKI?",
+          "status": "failed",
+          "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+        },
+        {
+          "utterance": "Show me call connections by vertical in APAC",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "country": "APAC",
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Analyze coverage rates by management level in LATAM",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me ACT articles on AI and machine learning for EMEA ENTR",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "AI"
+          }
+        },
+        {
+          "utterance": "Find ACT courses on Data Cloud implementation in AMER ACC",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "Data"
+          }
+        },
+        {
+          "utterance": "Search for ACT content about Service Cloud best practices in UKI",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "ACT content about Service Cloud best practices in UKI"
+          }
+        },
+        {
+          "utterance": "Look for ACT articles on Marketing Cloud automation in APAC",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "Marketing"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "total": 12,
+      "successful": 10,
+      "failed": 2,
+      "details": [
+        {
+          "utterance": "Get ACT courses on Platform development for LATAM",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "Platform"
+          }
+        },
+        {
+          "utterance": "Find documentation about Sales Cloud configuration in EMEA ENTR",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "Sales Cloud configuration in EMEA ENTR"
+          }
+        },
+        {
+          "utterance": "Look for guides on Einstein Analytics setup in AMER ACC",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Look for guides on Einstein Analytics setup in AMER ACC",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Search for documentation on Lightning Web Components in UKI",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "documentation on Lightning Web Components in UKI"
+          }
+        },
+        {
+          "utterance": "Get guides on Apex programming best practices in APAC",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Get guides on Apex programming best practices in APAC",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Find documentation about Flow automation in LATAM",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "Flow automation in LATAM"
+          }
+        },
+        {
+          "utterance": "Show me content about healthcare industry solutions in EMEA ENTR",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "healthcare industry solutions in EMEA ENTR"
+          }
+        },
+        {
+          "utterance": "Find articles on financial services implementations in AMER ACC",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "financial"
+          }
+        },
+        {
+          "utterance": "Search for manufacturing industry content in UKI",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "manufacturing industry content in UKI"
+          }
+        },
+        {
+          "utterance": "Look for retail industry solutions in APAC",
+          "status": "failed",
+          "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+        },
+        {
+          "utterance": "Get content about government sector implementations in LATAM",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "government sector implementations in LATAM"
+          }
+        },
+        {
+          "utterance": "Find management training content for EMEA ENTR leaders",
+          "status": "failed",
+          "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "total": 12,
+      "successful": 10,
+      "failed": 2,
+      "details": [
+        {
+          "utterance": "Search for executive-level Salesforce content in AMER ACC",
+          "status": "success",
+          "tool": "content_search",
+          "args": {
+            "source": "Course",
+            "topic": "executive-level Salesforce content in AMER ACC"
+          }
+        },
+        {
+          "utterance": "Look for team management guides in UKI",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Look for team management guides in UKI",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Get leadership development content in APAC",
+          "status": "failed",
+          "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+        },
+        {
+          "utterance": "Find strategic planning resources for LATAM management",
+          "status": "failed",
+          "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+        },
+        {
+          "utterance": "Search for experts on Salesforce CRM in EMEA ENTR",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "EMEA ENTR",
+            "region": "EMEA"
+          }
+        },
+        {
+          "utterance": "Find SMEs for Data Cloud in AMER ACC region",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "AMER"
+          }
+        },
+        {
+          "utterance": "Who are the Service Cloud experts in UKI?",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "UKI?",
+            "region": "UKI"
+          }
+        },
+        {
+          "utterance": "Look for Marketing Cloud specialists in APAC",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "APAC"
+          }
+        },
+        {
+          "utterance": "Find Platform development experts in LATAM",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "LATAM",
+            "region": "LATA"
+          }
+        },
+        {
+          "utterance": "Who knows about healthcare industry solutions in EMEA ENTR?",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "EMEA"
+          }
+        },
+        {
+          "utterance": "Find experts on financial services implementations in AMER ACC",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "AMER ACC",
+            "region": "AMER"
+          }
+        },
+        {
+          "utterance": "Search for manufacturing industry specialists in UKI",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "UKI"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "total": 12,
+      "successful": 11,
+      "failed": 1,
+      "details": [
+        {
+          "utterance": "Look for retail industry experts in APAC",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "APAC",
+            "region": "APAC"
+          }
+        },
+        {
+          "utterance": "Who are the government sector specialists in LATAM?",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "LATA"
+          }
+        },
+        {
+          "utterance": "Find Apex programming experts in EMEA ENTR",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "EMEA ENTR",
+            "region": "EMEA"
+          }
+        },
+        {
+          "utterance": "Who knows about Lightning Web Components in AMER ACC?",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "AMER"
+          }
+        },
+        {
+          "utterance": "Search for Flow automation specialists in UKI",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "UKI"
+          }
+        },
+        {
+          "utterance": "Look for Einstein Analytics experts in APAC",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "APAC",
+            "region": "ANAL"
+          }
+        },
+        {
+          "utterance": "Find Integration specialists in LATAM",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "LATA"
+          }
+        },
+        {
+          "utterance": "Who are the management consultants in EMEA ENTR?",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "EMEA"
+          }
+        },
+        {
+          "utterance": "Find executive advisors in AMER ACC",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "AMER"
+          }
+        },
+        {
+          "utterance": "Search for leadership coaches in UKI",
+          "status": "failed",
+          "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+        },
+        {
+          "utterance": "Look for strategic advisors in APAC",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "region": "APAC"
+          }
+        },
+        {
+          "utterance": "Who are the change management experts in LATAM?",
+          "status": "success",
+          "tool": "sme_search",
+          "args": {
+            "expertise": "LATAM?",
+            "region": "LATA"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 6,
+      "total": 12,
+      "successful": 12,
+      "failed": 0,
+      "details": [
+        {
+          "utterance": "What are the top renewal products for UKI OU?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "renewal",
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me renewal opportunities for EMEA ENTR",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "renewal",
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Generate renewal pipeline for AMER ACC",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "renewal",
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Find renewal opportunities in APAC region",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "renewal",
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What are the best renewal products for LATAM?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "renewal",
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me cross-sell opportunities for Data Cloud in EMEA ENTR",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "cross-sell",
+            "ouName": "EMEA ENTR",
+            "product": "Data Cloud",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Generate cross-sell pipeline for Service Cloud in AMER ACC",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "cross-sell",
+            "ouName": "AMER ACC",
+            "product": "Service Cloud",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Find cross-sell opportunities for Marketing Cloud in UKI",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "cross-sell",
+            "ouName": "UKI",
+            "product": "Marketing Cloud",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What are the top cross-sell products for APAC?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "cross-sell",
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Create cross-sell opportunities for Platform in LATAM",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "cross-sell",
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me upsell potential for Einstein Analytics in EMEA ENTR",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "upsell",
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Generate upsell pipeline for Lightning Web Components in AMER ACC",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "upsell",
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 7,
+      "total": 12,
+      "successful": 12,
+      "failed": 0,
+      "details": [
+        {
+          "utterance": "Find upsell opportunities for Apex in UKI",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "upsell",
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What are the highest value upsell products for APAC?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "upsell",
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Create upsell opportunities for Flow in LATAM",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "opportunityType": "upsell",
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What are the top products for healthcare industry in EMEA ENTR?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me opportunities for financial services in AMER ACC",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Generate pipeline for manufacturing industry in UKI",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Find opportunities for retail sector in APAC",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What are the best products for government sector in LATAM?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me open pipe analysis for EMEA ENTR by stage",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What products are in the passed stage for AMER ACC?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Analyze open pipe by stage for UKI OU",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me stage breakdown for APAC region",
+          "status": "success",
+          "tool": "kpi_analyze",
+          "args": {
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 8,
+      "total": 12,
+      "successful": 12,
+      "failed": 0,
+      "details": [
+        {
+          "utterance": "What's the open pipe analysis for LATAM by stage?",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me Data Cloud products in open pipe for EMEA ENTR",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "EMEA ENTR",
+            "product": "Data Cloud",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What Service Cloud opportunities are in open pipe for AMER ACC?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "AMER ACC",
+            "product": "Service Cloud",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Analyze Marketing Cloud open pipe for UKI",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me Platform products in open pipe for APAC",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What Einstein Analytics opportunities are open for LATAM?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me healthcare industry open pipe for EMEA ENTR",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What financial services opportunities are open for AMER ACC?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Analyze manufacturing industry open pipe for UKI",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me retail sector open pipe for APAC",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What government sector opportunities are open for LATAM?",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me high-value open pipe opportunities for EMEA ENTR",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "EMEA ENTR",
+            "timeFrame": "CURRENT"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 9,
+      "total": 12,
+      "successful": 12,
+      "failed": 0,
+      "details": [
+        {
+          "utterance": "What are the largest open pipe deals for AMER ACC?",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "AMER ACC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Analyze open pipe by deal size for UKI",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "UKI",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me strategic open pipe opportunities for APAC",
+          "status": "success",
+          "tool": "future_pipeline",
+          "args": {
+            "ouName": "APAC",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "What are the priority open pipe deals for LATAM?",
+          "status": "success",
+          "tool": "open_pipe_analyze",
+          "args": {
+            "limitN": 10,
+            "ouName": "LATAM",
+            "timeFrame": "CURRENT"
+          }
+        },
+        {
+          "utterance": "Show me the workflow for lead qualification in EMEA ENTR",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the workflow for lead qualification in EMEA ENTR",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for opportunity management in AMER ACC?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for opportunity management in AMER ACC?",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Guide me through the sales process workflow in UKI",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Guide me through the sales process workflow in UKI",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Show me the customer onboarding workflow in APAC",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the customer onboarding workflow in APAC",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for contract renewal in LATAM?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for contract renewal in LATAM?",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Show me the management approval workflow in EMEA ENTR",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the management approval workflow in EMEA ENTR",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for budget approval in AMER ACC?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for budget approval in AMER ACC?",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Guide me through the performance review workflow in UKI",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Guide me through the performance review workflow in UKI",
+            "process": "general"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 10,
+      "total": 12,
+      "successful": 12,
+      "failed": 0,
+      "details": [
+        {
+          "utterance": "Show me the strategic planning workflow in APAC",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the strategic planning workflow in APAC",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for team management in LATAM?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for team management in LATAM?",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Show me the deployment workflow for EMEA ENTR",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the deployment workflow for EMEA ENTR",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for code review in AMER ACC?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for code review in AMER ACC?",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Guide me through the testing workflow in UKI",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Guide me through the testing workflow in UKI",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Show me the release management workflow in APAC",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the release management workflow in APAC",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for system maintenance in LATAM?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for system maintenance in LATAM?",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Show me the healthcare compliance workflow in EMEA ENTR",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the healthcare compliance workflow in EMEA ENTR",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for financial services approval in AMER ACC?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for financial services approval in AMER ACC?",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Guide me through the manufacturing quality workflow in UKI",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Guide me through the manufacturing quality workflow in UKI",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "Show me the retail inventory workflow in APAC",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "Show me the retail inventory workflow in APAC",
+            "process": "general"
+          }
+        },
+        {
+          "utterance": "What's the process for government procurement in LATAM?",
+          "status": "success",
+          "tool": "workflow",
+          "args": {
+            "context": "What's the process for government procurement in LATAM?",
+            "process": "general"
+          }
+        }
+      ]
+    }
+  ]
+}

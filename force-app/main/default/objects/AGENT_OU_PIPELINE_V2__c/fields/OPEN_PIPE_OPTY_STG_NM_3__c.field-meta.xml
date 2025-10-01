@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPEN_PIPE_OPTY_STG_NM_3__c</fullName>
+    <description>Open Pipeline Opportunity Stage Name for Stage 3. This field identifies the sales stage for the third pipeline opportunity, focusing on validating benefits and value, developing pricing proposal, scoping implementation, business benefits (ROI), and political influence mapping.</description>
+    <externalId>false</externalId>
+    <label>Open Pipe Opty Stg Nm 3</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField> 

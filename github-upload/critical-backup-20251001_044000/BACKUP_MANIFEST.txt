@@ -1,0 +1,8 @@
+=== CRITICAL BACKUP MANIFEST ===
+Date: 20251001_044000
+Git Commit: 8d77738c73431b53488f3c7074f88d5e56be20b8
+Git Branch: feature/consolidated-content-search-v2
+
+=== RESTORE COMMANDS ===
+# To restore from git archive: unzip complete-git-archive.zip
+# To restore from consolidated package: cp -r consolidated-content-search-v2/* .

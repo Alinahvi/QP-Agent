@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>OpenPipe UAT</label>
+    <protected>false</protected>
+    <values>
+        <field>IsActive__c</field>
+        <value>true</value>
+    </values>
+    <values>
+        <field>Mode__c</field>
+        <value>ROUTE</value>
+    </values>
+    <values>
+        <field>BaseUrl__c</field>
+        <value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </values>
+    <values>
+        <field>AuthHeaderName__c</field>
+        <value>X-MCP-Token</value>
+    </values>
+    <values>
+        <field>AuthHeaderValue__c</field>
+        <value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </values>
+    <values>
+        <field>Timeout__c</field>
+        <value>15</value>
+    </values>
+    <values>
+        <field>RetryCount__c</field>
+        <value>2</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPEN_PIPE_AE_SCORE_5__c</fullName>
+    <description>Open Pipeline AE Health Score for Stage 5 opportunity. This field contains the AE health score (0-5) for the fifth pipeline stage opportunity, where 0 indicates low confidence and 5 indicates high confidence.</description>
+    <externalId>false</externalId>
+    <label>Open Pipe AE Score 5</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField> 

@@ -1,0 +1,68 @@
+{
+  "objectApiName": "Audience__c",
+  "label": "Audience",
+  "recordTypes": [
+    {
+      "apiName": "Dynamic_Audience",
+      "label": "Dynamic",
+      "active": true
+    },
+    {
+      "apiName": "Cohort",
+      "label": "Manual",
+      "active": true
+    }
+  ],
+  "fields": [
+    {
+      "fullName": "externalid__c",
+      "label": "externalid",
+      "type": "Text",
+      "required": false,
+      "unique": true,
+      "externalId": true,
+      "formula": "",
+      "length": 18,
+      "referenceTo": []
+    },
+    {
+      "fullName": "Filter_Logic__c",
+      "label": "Filter Logic",
+      "type": "Text",
+      "required": false,
+      "unique": false,
+      "externalId": false,
+      "formula": "",
+      "length": 255,
+      "referenceTo": []
+    },
+    {
+      "fullName": "Rendering__c",
+      "label": "Rendering",
+      "type": "Checkbox",
+      "required": false,
+      "unique": false,
+      "externalId": false,
+      "formula": "",
+      "referenceTo": []
+    },
+    {
+      "fullName": "Use_Custom_Filter__c",
+      "label": "Use Custom Filter",
+      "type": "Checkbox",
+      "required": false,
+      "unique": false,
+      "externalId": false,
+      "formula": "",
+      "referenceTo": []
+    }
+  ],
+  "validationRules": [],
+  "triggers": [],
+  "crud": {
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  }
+}

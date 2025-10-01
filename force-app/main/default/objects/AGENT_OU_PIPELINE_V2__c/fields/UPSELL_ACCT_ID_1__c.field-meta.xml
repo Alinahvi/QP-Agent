@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UPSELL_ACCT_ID_1__c</fullName>
+    <description>Upsell opportunity no 1. Example values: 0013y00001focD2, 0010M00001QqTzb, 0013000001Msa5V.</description>
+    <externalId>false</externalId>
+    <label>Upsell Acct Id 1</label>
+    <length>18</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField> 

@@ -1,0 +1,8 @@
+utterance,expected_tool,expected_keys,description
+"Show me all products that passed stage 4 within AMER ACC",open_pipe_analyze,"ouName,minStage,timeFrame","Open Pipe Analysis - AMER ACC Stage 4"
+"Open pipe passed stage 4 in AMER ACC, country = US, top 20",open_pipe_analyze,"ouName,minStage,country,limitN","Open Pipe with Country Filter"
+"Show me open pipe analysis for AMER ACC, filter to Data Cloud and Sales Cloud only",open_pipe_analyze,"ouName,productListCsv","Open Pipe with Product Filter"
+"Compare last quarter open pipe post stage 4 for AMER ACC",open_pipe_analyze,"ouName,minStage,timeFrame","Open Pipe Previous Quarter"
+"Show me KPI analysis for EMEA ENTR current quarter",kpi_analyze,"ouName,timeFrame","KPI Analysis - EMEA ENTR"
+"Content search for Data Cloud topics in ACT",content_search,"topic,source","Content Search - Data Cloud"
+"SME search for Salesforce experts in UKI",sme_search,"region,expertise","SME Search - UKI Region"

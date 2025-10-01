@@ -1,0 +1,197 @@
+### UAT Scripts for KPI Analysis Service
+### Test the enhanced ANAgentKPIAnalysisService and ANAgentKPIAnalysisHandler
+
+### 1. Growth factors – AMER ACC (CURRENT)
+### Expect: no SOQL missing-field error; actionable populated; warnings empty for complete data
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "GROWTH_FACTORS",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "includeRampAnalysis": true,
+      "maxResults": 10
+    }
+  ]
+}
+
+### 2. Meetings – AMER ACC (PREVIOUS)
+### Expect: cqMeetings populated; fallback warning for ramping AEs without prior data
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "MEETINGS",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "PREVIOUS",
+      "maxResults": 10
+    }
+  ]
+}
+
+### 3. Revenue – AMER ACC (CURRENT)
+### Expect: cqACV, cqPG; agg.totalACV > 0 when data exists
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "REVENUE",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "maxResults": 10
+    }
+  ]
+}
+
+### 4. Coverage Trend – AMER ACC (CURRENT)
+### Expect: coverage data populated; no missing-field errors
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "COVERAGE_TREND",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "maxResults": 10
+    }
+  ]
+}
+
+### 5. Scorecard – AMER ACC (CURRENT) with Ramp Analysis
+### Expect: all fields populated; ramp analysis included
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "SCORECARD",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "includeRampAnalysis": true,
+      "maxResults": 10
+    }
+  ]
+}
+
+### 6. Error Handling Test - Invalid Analysis Type
+### Expect: error response with appropriate message
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "INVALID_TYPE",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT"
+    }
+  ]
+}
+
+### 7. Error Handling Test - Missing Analysis Type
+### Expect: error response indicating missing required field
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT"
+    }
+  ]
+}
+
+### 8. Multiple Requests Test
+### Expect: multiple responses for different analysis types
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "GROWTH_FACTORS",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "maxResults": 5
+    },
+    {
+      "analysisType": "MEETINGS",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "maxResults": 5
+    },
+    {
+      "analysisType": "REVENUE",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "maxResults": 5
+    }
+  ]
+}
+
+### 9. Legacy Method Test - Growth Factors
+### Test the legacy analyzeKPIs method for backward compatibility
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "GROWTH_FACTORS",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "filterCriteria": "OU_NAME__c='AMER ACC'",
+      "maxResults": 10
+    }
+  ]
+}
+
+### 10. Performance Test - Large Dataset
+### Test with higher limit to ensure performance
+POST {{salesforce_url}}/services/data/v58.0/actions/custom/ANAgentKPIAnalysisHandler/analyzeKPIs
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "inputs": [
+    {
+      "analysisType": "SCORECARD",
+      "primaryDimension": "OU_NAME",
+      "primaryValue": "AMER ACC",
+      "timeFrame": "CURRENT",
+      "includeRampAnalysis": true,
+      "maxResults": 100
+    }
+  ]
+}

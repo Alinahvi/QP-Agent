@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CS_NEXT_BEST_PRODUCT_1__c</fullName>
+    <description>Cross-Sell Next Best Product 1 for the AE. This field identifies the first recommended product for cross-selling to existing customers, expanding their Salesforce footprint.</description>
+    <externalId>false</externalId>
+    <label>CS Next Best Product 1</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField> 

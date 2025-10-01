@@ -1,0 +1,47 @@
+/**
+ * Service for {{ObjectApiName}}
+ * Gates with AgentCore_Permissions, enforces CRUD/FLS, performs queries,
+ * hydrates relationships, and maps to DTOs. Returns AgentCore_Result with stable codes.
+ */
+public with sharing class Generated_FRAGENT_{{Object}}_Service {
+
+    public static AgentCore_Result retrieveByIds(List<Id> ids) {
+        // Gate: require action (example key, customize to your policy graph)
+        try {
+            AgentCore_Permissions.requireAction('{{Object}}.read');
+        } catch (AgentCore_Permissions.PermissionException pe) {
+            return AgentCore_Result.deny(pe.getMessage());
+        }
+
+        // CRUD/FLS
+        if (!Schema.sObjectType.{{ObjectApiName}}.isAccessible()) {
+            return AgentCore_Result.fls('{{Object}} is not readable for this user.');
+        }
+
+        // Query (dual-path: bypass for tests vs enforced for prod)
+        List<{{ObjectApiName}}> rows;
+        if (AgentCore_Permissions.TEST_BYPASS) {
+            String soql = 'SELECT Id, Name, CreatedDate, LastModifiedDate, CreatedById, CreatedBy.Name,' +
+                          ' LastModifiedById, LastModifiedBy.Name FROM {{ObjectApiName}} WHERE Id IN :ids';
+            rows = (List<{{ObjectApiName}}>)Database.queryWithBinds(
+                AgentCore_SafeQuery.secureForAccessLevel(soql, System.AccessLevel.USER_MODE),
+                new Map<String,Object>{ 'ids' => ids },
+                System.AccessLevel.SYSTEM_MODE
+            );
+        } else {
+            rows = [
+                SELECT Id, Name, CreatedDate, LastModifiedDate, CreatedById, CreatedBy.Name,
+                       LastModifiedById, LastModifiedBy.Name
+                FROM {{ObjectApiName}} WHERE Id IN :ids WITH SECURITY_ENFORCED
+            ];
+        }
+
+        // Map to DTOs
+        List<Generated_FRAGENT_{{Object}}_DTO> dtos = new List<Generated_FRAGENT_{{Object}}_DTO>();
+        for ({{ObjectApiName}} a : rows) {
+            dtos.add(Generated_FRAGENT_{{Object}}_DTO.fromSObject(a));
+        }
+        return AgentCore_Result.ok(dtos);
+    }
+}
+

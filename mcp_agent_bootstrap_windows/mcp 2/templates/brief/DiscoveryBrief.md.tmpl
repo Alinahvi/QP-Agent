@@ -1,0 +1,64 @@
+---
+object: {{objectApiName}}
+generatedAt: {{generatedAt}}
+---
+
+# Discovery Brief — {{objectLabel}} ({{objectApiName}})
+
+## What Exists Today
+- **Record Types**: {{recordTypes}}
+- **Key Fields**: {{keyFields}}
+- **Validation Rules** (active):
+{{#validationRules}}
+  - **{{fullName}}** — field: {{errorDisplayField}}  
+    Condition: `{{errorConditionFormula}}`  
+    Message: “{{errorMessage}}”
+{{/validationRules}}
+- **Triggers**: {{triggers}}
+- **Permissions snapshot**:
+  - CRUD: C={{crud.create}} R={{crud.read}} U={{crud.update}} D={{crud.delete}}
+  - Field update allowlist: {{fieldUpdateWhitelist}}
+  - Field read allowlist: {{fieldReadWhitelist}}
+
+## What To Add
+{{#whatToAdd}}
+- {{item}}
+{{/whatToAdd}}
+
+## Nice‑to‑Haves (Optional)
+{{#niceToHaves}}
+- {{item}}
+{{/niceToHaves}}
+
+## Impacted Metadata
+{{#impacted}}
+- {{item}}
+{{/impacted}}
+
+## Rollout
+{{#rollout}}
+- {{item}}
+{{/rollout}}
+
+## Test Plan
+{{#tests}}
+- {{item}}
+{{/tests}}
+
+## Risks / Considerations
+{{#risks}}
+- {{item}}
+{{/risks}}
+
+## Impacted Code/Flows/LWCs
+{{#usageApex}}
+- Apex: {{.}}
+{{/usageApex}}
+{{#usageFlows}}
+- Flows: {{.}}
+{{/usageFlows}}
+{{#usageLwc}}
+- LWCs: {{.}}
+{{/usageLwc}}
+
+> Machine artifacts: `.artifacts/discovery/{{objectApiName}}/*` and `.artifacts/plan/{{objectApiName}}.plan.json`

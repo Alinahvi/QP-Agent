@@ -1,0 +1,9 @@
+.accordion-icon {
+  transition: transform 0.2s ease;
+}
+
+.slds-accordion__summary-action-icon .accordion-icon {
+  transform: rotate(90deg);
+}
+
+

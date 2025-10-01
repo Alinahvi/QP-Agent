@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>FPA Intelligence Features</label>
+    <pluralLabel>FPA Intelligence Features</pluralLabel>
+    <visibility>Public</visibility>
+    <description>Feature toggles for Future Pipeline Analysis Intelligence capabilities</description>
+    <fields>
+        <fullName>EnableRenewalRisk__c</fullName>
+        <label>Enable Renewal Risk</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+        <description>Enable renewal risk scoring and analysis</description>
+    </fields>
+    <fields>
+        <fullName>EnableAEPerf__c</fullName>
+        <label>Enable AE Performance</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+        <description>Enable AE performance intelligence and benchmarking</description>
+    </fields>
+    <fields>
+        <fullName>EnablePMF__c</fullName>
+        <label>Enable Product-Market Fit</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+        <description>Enable product-market fit analysis</description>
+    </fields>
+    <fields>
+        <fullName>EnableHealthScore__c</fullName>
+        <label>Enable Health Score</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+        <description>Enable pipeline health scoring</description>
+    </fields>
+    <fields>
+        <fullName>EnableExplain__c</fullName>
+        <label>Enable Explainability</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable explainability and rationale for all scored outputs</description>
+    </fields>
+    <fields>
+        <fullName>EnableLearnerEnrichment__c</fullName>
+        <label>Enable Learner Enrichment</label>
+        <type>Checkbox</type>
+        <defaultValue>false</defaultValue>
+        <description>Enable Learner Profile enrichment for AE data</description>
+    </fields>
+</CustomObject>

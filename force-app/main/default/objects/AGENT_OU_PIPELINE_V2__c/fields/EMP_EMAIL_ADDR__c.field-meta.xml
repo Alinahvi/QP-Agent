@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMP_EMAIL_ADDR__c</fullName>
+    <description>The employee's corporate email address. Use for contacting the user and as a secondary join key when necessary. Example values: cwentz@salesforce.com, abarnhart@salesforce.com, sean.mcmillan@salesforce.com.</description>
+    <externalId>false</externalId>
+    <label>Employee Email</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField> 
