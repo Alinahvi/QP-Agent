@@ -1,3 +1,8 @@
+# QP-Agent
+QP Agent Apex Code - Salesforce AI Agent Implementation with Version Control
+
+---
+
 # Agent Guide UI
 
 A production-ready Next.js application that helps users discover what to ask an AI sales-enablement agent. The UI provides a guided menu → subflow experience where every click corresponds to a future "utterance" sent to the agent.
