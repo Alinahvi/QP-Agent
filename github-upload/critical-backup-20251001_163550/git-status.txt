@@ -1,0 +1,82 @@
+On branch feature/consolidated-content-search-v2
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../force-app/main/default/classes/ABAgentFuturePipeAnalysisServiceEnhanced_Test.cls
+	deleted:    ../force-app/main/default/classes/ABAgentFuturePipeAnalysisServiceEnhanced_Test.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisHandlerMinimal.cls
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisHandlerMinimal.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisServiceMinimal.cls
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisServiceMinimal.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisService_OLD.cls
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisService_OLD.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisTests.cls
+	deleted:    ../force-app/main/default/classes/ABAgentRenewalsAnalysisTests.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentContentSearchHandler.cls
+	deleted:    ../force-app/main/default/classes/ANAgentContentSearchHandler.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentContentSearchService.cls
+	deleted:    ../force-app/main/default/classes/ANAgentContentSearchService.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentGenericTSVExportHandlerTest.cls
+	deleted:    ../force-app/main/default/classes/ANAgentGenericTSVExportHandlerTest.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentKPIAnalysisHandlerTest.cls
+	deleted:    ../force-app/main/default/classes/ANAgentKPIAnalysisHandlerTest.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentKPIAnalysisServiceTest.cls
+	deleted:    ../force-app/main/default/classes/ANAgentKPIAnalysisServiceTest.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentKPIOutlierServiceTest.cls
+	deleted:    ../force-app/main/default/classes/ANAgentKPIOutlierServiceTest.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentKPIResponseFormatterTest.cls
+	deleted:    ../force-app/main/default/classes/ANAgentKPIResponseFormatterTest.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentOfferingEfficacyHandlerBasic.cls
+	deleted:    ../force-app/main/default/classes/ANAgentOfferingEfficacyHandlerBasic.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentOfferingEfficacyServiceBasic.cls
+	deleted:    ../force-app/main/default/classes/ANAgentOfferingEfficacyServiceBasic.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentOpenPipeAnalysisV3IntelligenceTest.cls
+	deleted:    ../force-app/main/default/classes/ANAgentOpenPipeAnalysisV3IntelligenceTest.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentSMESearchHandlerSimple.cls
+	deleted:    ../force-app/main/default/classes/ANAgentSMESearchHandlerSimple.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANAgentSMESearchServiceSimple.cls
+	deleted:    ../force-app/main/default/classes/ANAgentSMESearchServiceSimple.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANContentSearchHandler.cls
+	deleted:    ../force-app/main/default/classes/ANContentSearchHandler.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANContentSearchService.cls
+	deleted:    ../force-app/main/default/classes/ANContentSearchService.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/ANGeneralService.cls
+	deleted:    ../force-app/main/default/classes/ANGeneralService.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AN_ContentSearch_Schema_Tests.cls
+	deleted:    ../force-app/main/default/classes/AN_FuturePipeline_FromMCP_Simple.cls
+	deleted:    ../force-app/main/default/classes/AN_FuturePipeline_FromMCP_Simple.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AN_KPIRecord.cls
+	deleted:    ../force-app/main/default/classes/AN_KPIRecord.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AN_KPI_FromMCP_Simple.cls
+	deleted:    ../force-app/main/default/classes/AN_KPI_FromMCP_Simple.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AN_RefineByField.cls
+	deleted:    ../force-app/main/default/classes/AN_RefineByField.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AN_SearchContent_FromMCP_Simple.cls
+	deleted:    ../force-app/main/default/classes/AN_SearchContent_FromMCP_Simple.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AN_SearchSME_FromMCP_Simple.cls
+	deleted:    ../force-app/main/default/classes/AN_SearchSME_FromMCP_Simple.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AN_Workflow_FromMCP_Simple.cls
+	deleted:    ../force-app/main/default/classes/AN_Workflow_FromMCP_Simple.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/AgentLog.cls
+	deleted:    ../force-app/main/default/classes/AgentLog.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/SalesCoachFeedbackServiceTest.cls
+	deleted:    ../force-app/main/default/classes/SalesCoachFeedbackServiceTest.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/TestEnhancedFuturePipelineAnalysis.cls
+	deleted:    ../force-app/main/default/classes/TestEnhancedFuturePipelineAnalysis.cls-meta.xml
+	deleted:    ../force-app/main/default/classes/TicketControllerTest.cls
+	deleted:    ../force-app/main/default/classes/TicketControllerTest.cls-meta.xml
+	modified:   ../test-results/test-run-id.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../backup/non-critical-classes-removal-20251001_145056/
+	../consolidated-content-search-v2.patch
+	../consolidated-content-search-v2.zip
+	../force-app/main/default/classes/TestDemoVideosSearch.cls
+	../force-app/main/default/classes/TestDemoVideosSearch.cls-meta.xml
+	./
+	../non-critical-classes-to-remove.txt
+	../remove-actual-non-critical-classes.sh
+	../remove-non-critical-classes.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
