@@ -1,0 +1,36 @@
+<template>
+  <div>
+    <div class="slds-text-heading_large slds-m-bottom_medium">What are you trying to do?</div>
+    <p class="slds-text-body_regular slds-m-bottom_large slds-text-color_weak">
+      Choose a topic to explore available actions and discover what you can ask the AI agent.
+    </p>
+    
+    <div class="slds-grid slds-wrap slds-gutters">
+      <template for:each={filteredTopics} for:item="topic">
+        <div key={topic.id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+          <div class="slds-card slds-card_boundary topic-card">
+            <div class="slds-card__body slds-p-around_medium">
+              <h3 class="slds-text-heading_small slds-m-bottom_small">{topic.title}</h3>
+              <p class="slds-text-body_regular slds-m-bottom_medium slds-text-color_weak">
+                {topic.blurb}
+              </p>
+              <div class="slds-text-body_small slds-text-color_weak slds-m-bottom_medium">
+                {topic.subflows.length} subflows
+              </div>
+              <div class="slds-grid slds-grid_align-end">
+                <lightning-button 
+                  variant="brand" 
+                  label="Open" 
+                  onclick={handleOpenTopic}
+                  data-topic-id={topic.id}>
+                </lightning-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>
+
+

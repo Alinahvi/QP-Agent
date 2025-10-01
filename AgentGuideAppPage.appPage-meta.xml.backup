@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isAvailableInTouch>true</isAvailableInTouch>
+    <isAvailableInCommunity>false</isAvailableInCommunity>
+    <label>Agent Guide App Page</label>
+    <lightningComponentBundle>
+        <componentName>agentGuide</componentName>
+    </lightningComponentBundle>
+    <masterLabel>Agent Guide App Page</masterLabel>
+    <pageType>AppPage</pageType>
+    <summary>Agent Guide application for discovering AI sales-enablement agent capabilities</summary>
+</LightningPage>
+
+

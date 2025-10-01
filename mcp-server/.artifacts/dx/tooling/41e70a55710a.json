@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2025-09-29T20:56:39.750Z",
+  "orgAlias": "innovation",
+  "soql": "SELECT Id, Name, NamespacePrefix FROM ApexClass WHERE Name LIKE '%Agent%' OR Name LIKE '%Handler%' LIMIT 10",
+  "rowCount": 10,
+  "records": [
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllSuQAJ"
+      },
+      "Id": "01p2E00000BllSuQAJ",
+      "Name": "LurnitureRoomTriggerHandler",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllWEQAZ"
+      },
+      "Id": "01p2E00000BllWEQAZ",
+      "Name": "TriggerHandler_Test",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllWDQAZ"
+      },
+      "Id": "01p2E00000BllWDQAZ",
+      "Name": "TriggerHandler",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000CepFnQAJ"
+      },
+      "Id": "01p2E00000CepFnQAJ",
+      "Name": "VideoScoreTriggerHandlerTest",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000CepFmQAJ"
+      },
+      "Id": "01p2E00000CepFmQAJ",
+      "Name": "VideoScoreTriggerHandler",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllSPQAZ"
+      },
+      "Id": "01p2E00000BllSPQAZ",
+      "Name": "LevelJumpUserTriggerHandlerTest",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllVEQAZ"
+      },
+      "Id": "01p2E00000BllVEQAZ",
+      "Name": "RemoteActionHandler",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllVFQAZ"
+      },
+      "Id": "01p2E00000BllVFQAZ",
+      "Name": "RemoteActionHandlerTest",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllWwQAJ"
+      },
+      "Id": "01p2E00000BllWwQAJ",
+      "Name": "VideoTriggerHandler",
+      "NamespacePrefix": "LRN"
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllSOQAZ"
+      },
+      "Id": "01p2E00000BllSOQAZ",
+      "Name": "LevelJumpUserTriggerHandler",
+      "NamespacePrefix": "LRN"
+    }
+  ],
+  "raw": "{\n  \"status\": 0,\n  \"result\": {\n    \"records\": [\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllSuQAJ\"\n        },\n        \"Id\": \"01p2E00000BllSuQAJ\",\n        \"Name\": \"LurnitureRoomTriggerHandler\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllWEQAZ\"\n        },\n        \"Id\": \"01p2E00000BllWEQAZ\",\n        \"Name\": \"TriggerHandler_Test\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllWDQAZ\"\n        },\n        \"Id\": \"01p2E00000BllWDQAZ\",\n        \"Name\": \"TriggerHandler\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000CepFnQAJ\"\n        },\n        \"Id\": \"01p2E00000CepFnQAJ\",\n        \"Name\": \"VideoScoreTriggerHandlerTest\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000CepFmQAJ\"\n        },\n        \"Id\": \"01p2E00000CepFmQAJ\",\n        \"Name\": \"VideoScoreTriggerHandler\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllSPQAZ\"\n        },\n        \"Id\": \"01p2E00000BllSPQAZ\",\n        \"Name\": \"LevelJumpUserTriggerHandlerTest\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllVEQAZ\"\n        },\n        \"Id\": \"01p2E00000BllVEQAZ\",\n        \"Name\": \"RemoteActionHandler\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllVFQAZ\"\n        },\n        \"Id\": \"01p2E00000BllVFQAZ\",\n        \"Name\": \"RemoteActionHandlerTest\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllWwQAJ\"\n        },\n        \"Id\": \"01p2E00000BllWwQAJ\",\n        \"Name\": \"VideoTriggerHandler\",\n        \"NamespacePrefix\": \"LRN\"\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01p2E00000BllSOQAZ\"\n        },\n        \"Id\": \"01p2E00000BllSOQAZ\",\n        \"Name\": \"LevelJumpUserTriggerHandler\",\n        \"NamespacePrefix\": \"LRN\"\n      }\n    ],\n    \"totalSize\": 10,\n    \"done\": true\n  },\n  \"warnings\": [\n    \"The \\\"-u\\\" flag has been deprecated. Use \\\"--target-org | -o\\\" instead.\"\n  ]\n}"
+}

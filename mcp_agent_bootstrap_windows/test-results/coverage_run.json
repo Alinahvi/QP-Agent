@@ -1,0 +1,39 @@
+{
+  "status": 100,
+  "result": {
+    "summary": {
+      "failRate": "31%",
+      "failing": 331,
+      "hostname": "https://readiness--innovation.sandbox.my.salesforce.com",
+      "orgId": "00DD7000000jTUCMA2",
+      "outcome": "Failed",
+      "passRate": "69%",
+      "passing": 740,
+      "skipped": 0,
+      "testRunId": "707D700004IV0UT",
+      "testStartTime": "2025-09-26T11:02:35Z",
+      "testsRan": 1071,
+      "userId": "0052E00000NjqfeQAB",
+      "username": "gardisana@readiness.salesforce.com.innovation",
+      "commandTime": "424 ms",
+      "testExecutionTime": "445131 ms",
+      "testTotalTime": "665171 ms",
+      "orgWideCoverage": "20%",
+      "testRunCoverage": "56%"
+    },
+    "projectCoverage": {
+      "fragent": {
+        "totalClasses": 23,
+        "totalLines": 5372.0,
+        "totalCovered": 4130.0,
+        "coveragePercent": 76.88
+      }
+    },
+    "artifacts": {
+      "outputDir": ".artifacts/coverage_run",
+      "testResult": "test-result-707D700004IV0UT.json",
+      "coverageResult": "test-result-codecoverage.json"
+    }
+  },
+  "warnings": []
+}

@@ -1,0 +1,14 @@
+{
+  "objectApiName": "Account",
+  "label": "Account",
+  "recordTypes": [],
+  "fields": [],
+  "validationRules": [],
+  "triggers": [],
+  "crud": {
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  }
+}

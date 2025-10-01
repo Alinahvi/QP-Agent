@@ -1,0 +1,35 @@
+<template>
+  <div class="slds-page-header slds-p-around_medium slds-border_bottom">
+    <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+      <div class="slds-text-heading_medium">Agent Guide</div>
+      <div class="slds-form-element">
+        <div class="slds-form-element__control">
+          <lightning-input 
+            type="search" 
+            label="Filter" 
+            variant="label-hidden"
+            placeholder="Search topics, subflows, actions"
+            value={filter}
+            onchange={handleFilter}>
+          </lightning-input>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slds-grid slds-wrap min-height">
+    <main class="slds-col slds-size_1-of-1 slds-large-size_2-of-3 slds-p-around_medium">
+      <template if:true={isHome}>
+        <c-topic-home filter={filter}></c-topic-home>
+      </template>
+      <template if:false={isHome}>
+        <c-topic-page filter={filter} topic-id={topicId}></c-topic-page>
+      </template>
+    </main>
+    <aside class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-border_left slds-p-around_medium">
+      <c-agent-panel-placeholder></c-agent-panel-placeholder>
+    </aside>
+  </div>
+</template>
+
+

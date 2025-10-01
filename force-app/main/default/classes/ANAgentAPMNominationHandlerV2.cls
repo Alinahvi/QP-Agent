@@ -11,19 +11,19 @@ public with sharing class ANAgentAPMNominationHandlerV2 {
     public class Request {
         @InvocableVariable(label='Offering Name' description='The name of the offering/course to be nominated.' required=true)
         public String offeringName;
-        @InvocableVariable(label='Enablements IDs' description='Enablement event/program identifier (e.g., DATA_CLOUD_CERT_2025, AS_PATHWAYS_2025).' required=true)
+        @InvocableVariable(label='Enablements IDs' description='Enablement event/program identifier (auto-generated if not provided).')
         public String enablementsId;
-        @InvocableVariable(label='Program Type' description='The type of program (e.g., Certification, Training, Workshop).' required=true)
+        @InvocableVariable(label='Program Type' description='The type of program (defaults to Training if not provided).')
         public String programType;
-        @InvocableVariable(label='Enablement Tool' description='The tool or platform used for enablement (e.g., Trailhead, MyTrailhead, LMS).' required=true)
+        @InvocableVariable(label='Enablement Tool' description='The tool or platform used for enablement (defaults to Trailhead if not provided).')
         public String enablementTool;
         @InvocableVariable(label='Start Date' description='The start date of the nomination period.' required=true)
         public Date startDate;
         @InvocableVariable(label='End Date' description='The end date of the nomination period.' required=true)
         public Date endDate;
-        @InvocableVariable(label='Notes' description='Optional notes or additional information about the nomination.')
+        @InvocableVariable(label='Notes' description='Optional notes or additional information about the nomination (auto-generated if not provided).')
         public String notes;
-        @InvocableVariable(label='Created User' description='The name of the user creating the nomination.' required=true)
+        @InvocableVariable(label='Created User' description='The name of the user creating the nomination (defaults to Agent User if not provided).')
         public String createdUser;
     }
     /**
@@ -39,6 +39,7 @@ public with sharing class ANAgentAPMNominationHandlerV2 {
             this.message = '';
         }
     }
+    
     /**
      * @description The main invocable method that creates APM nominations and calls the external API.
      * @param requests A list of nomination requests, though typically only one is processed.
@@ -62,21 +63,6 @@ public with sharing class ANAgentAPMNominationHandlerV2 {
                     responses.add(res);
                     continue;
                 }
-                if (String.isBlank(req.enablementsId)) {
-                    res.message = 'Enablements IDs is required.';
-                    responses.add(res);
-                    continue;
-                }
-                if (String.isBlank(req.programType)) {
-                    res.message = 'Program Type is required.';
-                    responses.add(res);
-                    continue;
-                }
-                if (String.isBlank(req.enablementTool)) {
-                    res.message = 'Enablement Tool is required.';
-                    responses.add(res);
-                    continue;
-                }
                 if (req.startDate == null) {
                     res.message = 'Start Date is required.';
                     responses.add(res);
@@ -87,21 +73,55 @@ public with sharing class ANAgentAPMNominationHandlerV2 {
                     responses.add(res);
                     continue;
                 }
-                if (String.isBlank(req.createdUser)) {
-                    res.message = 'Created User is required.';
-                    responses.add(res);
-                    continue;
-                }
                 // Create nomination input
                 ANAgentAPMNominationServiceV2.NominationInput input = new ANAgentAPMNominationServiceV2.NominationInput();
                 input.offeringName = req.offeringName;
-                input.enablementsId = req.enablementsId;
-                input.programType = req.programType;
-                input.enablementTool = req.enablementTool;
+                
+                // Auto-generate enablementsId if it's a default value or missing
+                if (String.isBlank(req.enablementsId) || req.enablementsId == 'DEFAULT123' || req.enablementsId.startsWith('DEFAULT')) {
+                    String realCourseId = getRealCourseId(req.offeringName);
+                    if (String.isNotBlank(realCourseId)) {
+                        input.enablementsId = realCourseId;
+                        System.debug('Auto-generated enablementsId: ' + realCourseId + ' for course: ' + req.offeringName);
+                    } else {
+                        // Fallback to generated ID if course not found
+                        input.enablementsId = generateEnablementId(req.offeringName);
+                        System.debug('Generated fallback enablementsId: ' + input.enablementsId + ' for course: ' + req.offeringName);
+                    }
+                } else {
+                    input.enablementsId = req.enablementsId;
+                }
+                
+                // Auto-populate program type if not provided
+                if (String.isBlank(req.programType)) {
+                    input.programType = 'Training'; // Default to Training
+                } else {
+                    input.programType = req.programType;
+                }
+                
+                // Auto-populate enablement tool if not provided
+                if (String.isBlank(req.enablementTool)) {
+                    input.enablementTool = 'Trailhead'; // Default to Trailhead
+                } else {
+                    input.enablementTool = req.enablementTool;
+                }
+                
                 input.startDate = req.startDate;
                 input.endDate = req.endDate;
-                input.notes = req.notes;
-                input.createdUser = req.createdUser;
+                
+                // Auto-populate notes if not provided
+                if (String.isBlank(req.notes)) {
+                    input.notes = 'APM nomination created via agent for course: ' + req.offeringName;
+                } else {
+                    input.notes = req.notes;
+                }
+                
+                // Auto-populate created user if not provided
+                if (String.isBlank(req.createdUser)) {
+                    input.createdUser = 'Agent User'; // Default user name
+                } else {
+                    input.createdUser = req.createdUser;
+                }
                 // Call service
                 List<ANAgentAPMNominationServiceV2.NominationInput> inputList = new List<ANAgentAPMNominationServiceV2.NominationInput>{input};
                 List<ANAgentAPMNominationServiceV2.NominationOutput> serviceResults = ANAgentAPMNominationServiceV2.invocableCreateV2(inputList);
@@ -110,13 +130,11 @@ public with sharing class ANAgentAPMNominationHandlerV2 {
                     res.success = serviceResults[0].success;
                     res.message = serviceResults[0].message;
                     
-                    // If successful, enhance the message with course details
-                    if (res.success) {
-                        Map<String, Object> courseDetails = ANAgentAPMNominationServiceV2.getCourseDetails(req.offeringName);
-                        if (!courseDetails.isEmpty()) {
-                            String enhancedMessage = buildEnhancedResponse(courseDetails, res.message);
-                            res.message = enhancedMessage;
-                        }
+                    // Enhance the message with course details and API response
+                    Map<String, Object> courseDetails = ANAgentAPMNominationServiceV2.getCourseDetails(req.offeringName);
+                    if (!courseDetails.isEmpty()) {
+                        String enhancedMessage = buildEnhancedResponse(courseDetails, res.message, res.success);
+                        res.message = enhancedMessage;
                     }
                 } else {
                     res.success = false;
@@ -137,7 +155,7 @@ public with sharing class ANAgentAPMNominationHandlerV2 {
      * @param baseMessage The original success message
      * @return String Enhanced message with course details
      */
-    private static String buildEnhancedResponse(Map<String, Object> courseDetails, String baseMessage) {
+    private static String buildEnhancedResponse(Map<String, Object> courseDetails, String baseMessage, Boolean isSuccess) {
         String enhancedMessage = baseMessage + '\n\n';
         
         // Add course information
@@ -184,9 +202,59 @@ public with sharing class ANAgentAPMNominationHandlerV2 {
             enhancedMessage += '🔗 **Course Link:** ' + (String)courseDetails.get('shareUrl') + '\n\n';
         }
         
-        enhancedMessage += '✅ **API Status:** The external APM system has been notified and will process this nomination.';
+        if (isSuccess) {
+            enhancedMessage += '✅ **API Status:** The nomination has been successfully processed by the external APM system.';
+        } else {
+            enhancedMessage += '❌ **API Status:** The nomination was created but failed API validation.';
+        }
         
         return enhancedMessage;
+    }
+    
+    /**
+     * @description Gets the real course ID from the Course__c object based on course name
+     * @param courseName The name of the course to look up
+     * @return String The real course ID, or null if not found
+     */
+    private static String getRealCourseId(String courseName) {
+        try {
+            if (String.isBlank(courseName)) {
+                return null;
+            }
+            
+            // Query for the course by name
+            List<Course__c> courses = [
+                SELECT Id, Name 
+                FROM Course__c 
+                WHERE Name = :courseName 
+                AND IsDeleted = false 
+                LIMIT 1
+            ];
+            
+            if (!courses.isEmpty()) {
+                return courses[0].Id;
+            }
+            
+            // If exact match not found, try partial match
+            List<Course__c> partialMatches = [
+                SELECT Id, Name 
+                FROM Course__c 
+                WHERE Name LIKE :('%' + courseName + '%')
+                AND IsDeleted = false 
+                LIMIT 1
+            ];
+            
+            if (!partialMatches.isEmpty()) {
+                System.debug('Found partial match for course: ' + courseName + ' -> ' + partialMatches[0].Name);
+                return partialMatches[0].Id;
+            }
+            
+            return null;
+            
+        } catch (Exception e) {
+            System.debug('Error getting real course ID for ' + courseName + ': ' + e.getMessage());
+            return null;
+        }
     }
     
     /**

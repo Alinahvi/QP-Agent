@@ -19,6 +19,7 @@ public with sharing class ANAgentContentSearchServiceV2 {
         @AuraEnabled public Integer learnerCount { get; set; }
         @AuraEnabled public Integer completionCount { get; set; }
         @AuraEnabled public Double completionRate { get; set; }
+        @AuraEnabled public String link { get; set; }
 
         public UnifiedContent() {
             this.learnerCount = 0;
@@ -39,19 +40,21 @@ public with sharing class ANAgentContentSearchServiceV2 {
     }
 
     /**
-     * @description Search result wrapper
+     * @description Search result wrapper with routing information
      */
     public class ContentSearchResult {
         @AuraEnabled public Boolean success { get; set; }
         @AuraEnabled public List<UnifiedContent> records { get; set; }
         @AuraEnabled public List<String> errors { get; set; }
         @AuraEnabled public Integer totalCount { get; set; }
+        @AuraEnabled public String searchSource { get; set; }
 
         public ContentSearchResult() {
             this.success = false;
             this.records = new List<UnifiedContent>();
             this.errors = new List<String>();
             this.totalCount = 0;
+            this.searchSource = 'ACT';
         }
 
         public ContentSearchResult(Boolean success, List<UnifiedContent> records, List<String> errors) {
@@ -60,6 +63,11 @@ public with sharing class ANAgentContentSearchServiceV2 {
             this.records = records != null ? records : new List<UnifiedContent>();
             this.errors = errors != null ? errors : new List<String>();
             this.totalCount = this.records.size();
+        }
+
+        public ContentSearchResult(Boolean success, List<UnifiedContent> records, List<String> errors, String searchSource) {
+            this(success, records, errors);
+            this.searchSource = searchSource;
         }
     }
 
@@ -103,6 +111,9 @@ public with sharing class ANAgentContentSearchServiceV2 {
                 }
             }
 
+            // Populate enrollment and completion data for courses
+            populateLearnerCountData(allResults);
+            
             result.success = true;
             result.records = allResults;
             result.totalCount = allResults.size();
@@ -173,7 +184,7 @@ public with sharing class ANAgentContentSearchServiceV2 {
      * @return SOQL query string
      */
     private static String buildSearchQuery(String objectName, String searchTerm) {
-        String baseQuery = 'SELECT Id, Name, Description__c, Status__c, CreatedDate, LastModifiedDate FROM ' + objectName;
+        String baseQuery = 'SELECT Id, Name, Description__c, Status__c, CreatedDate, LastModifiedDate, Share_URL__c FROM ' + objectName;
         
         // Add WHERE clause for search
         String whereClause = ' WHERE (Name LIKE \'%' + String.escapeSingleQuotes(searchTerm) + '%\'';
@@ -314,5 +325,107 @@ public with sharing class ANAgentContentSearchServiceV2 {
         } catch (Exception e) {
             System.debug('Error populating learner count data: ' + e.getMessage());
         }
+    }
+
+    /**
+     * @description Search Consensus demo videos
+     * @param searchTerm The search term to look for
+     * @return ContentSearchResult with Consensus content
+     */
+    public static ContentSearchResult searchConsensus(String searchTerm) {
+        ContentSearchResult result = new ContentSearchResult();
+        result.searchSource = 'CONSENSUS';
+        
+        try {
+            // Validate input
+            if (String.isBlank(searchTerm)) {
+                result.errors.add('Search term is required.');
+                return result;
+            }
+
+            // Search Consensus content using existing Consensus service
+            List<ANAgentConsensusContentSearchService.ConsensusContent> consensusResults = 
+                ANAgentConsensusContentSearchService.searchBasic(searchTerm, 25);
+
+            // Convert to UnifiedContent format
+            List<UnifiedContent> unifiedResults = new List<UnifiedContent>();
+            for (ANAgentConsensusContentSearchService.ConsensusContent consensusContent : consensusResults) {
+                UnifiedContent unified = new UnifiedContent();
+                unified.id = consensusContent.id;
+                unified.name = consensusContent.title;
+                unified.description = consensusContent.description;
+                unified.type = 'Consensus';
+                unified.status = consensusContent.isPublished ? 'Published' : 'Draft';
+                unified.createdDate = consensusContent.createdAt;
+                unified.learnerCount = 0; // Consensus doesn't have learner data
+                unified.completionCount = 0;
+                unified.completionRate = 0.0;
+                unified.link = consensusContent.previewLink; // Add the preview link
+                unifiedResults.add(unified);
+            }
+
+            result.success = true;
+            result.records = unifiedResults;
+            result.totalCount = unifiedResults.size();
+            
+            if (unifiedResults.isEmpty()) {
+                result.errors.add('No Consensus demo videos found matching: ' + searchTerm);
+            }
+
+        } catch (Exception e) {
+            result.success = false;
+            result.errors.add('Consensus search failed: ' + e.getMessage());
+            System.debug('Consensus search error: ' + e.getMessage());
+        }
+
+        return result;
+    }
+
+    /**
+     * @description Search both ACT and Consensus content
+     * @param searchTerm The search term to look for
+     * @param contentType Optional content type filter for ACT content
+     * @return ContentSearchResult with combined content
+     */
+    public static ContentSearchResult searchBoth(String searchTerm, String contentType) {
+        ContentSearchResult result = new ContentSearchResult();
+        result.searchSource = 'BOTH';
+        
+        try {
+            // Validate input
+            if (String.isBlank(searchTerm)) {
+                result.errors.add('Search term is required.');
+                return result;
+            }
+
+            List<UnifiedContent> allResults = new List<UnifiedContent>();
+
+            // Search ACT content (preserve existing lifecycle features)
+            ContentSearchResult actResult = search(searchTerm, contentType);
+            if (actResult.success && actResult.records != null) {
+                allResults.addAll(actResult.records);
+            }
+
+            // Search Consensus content
+            ContentSearchResult consensusResult = searchConsensus(searchTerm);
+            if (consensusResult.success && consensusResult.records != null) {
+                allResults.addAll(consensusResult.records);
+            }
+
+            result.success = true;
+            result.records = allResults;
+            result.totalCount = allResults.size();
+            
+            if (allResults.isEmpty()) {
+                result.errors.add('No content found matching: ' + searchTerm + ' in either ACT or Consensus sources');
+            }
+
+        } catch (Exception e) {
+            result.success = false;
+            result.errors.add('Combined search failed: ' + e.getMessage());
+            System.debug('Combined search error: ' + e.getMessage());
+        }
+
+        return result;
     }
 } 

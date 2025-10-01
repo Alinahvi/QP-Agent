@@ -1,0 +1,10 @@
+{
+  "ticketId": "EBP_TEST_001",
+  "generatedAt": "2025-09-29T20:55:19.416Z",
+  "agentApiName": "EBP_Agent_POC",
+  "orgAlias": "innovation",
+  "packPath": ".artifacts/tmp/agent/EBP_TEST_001-e894bc74-7af0-4c11-999a-3c6d58bac834.json",
+  "response": {
+    "raw": " Did you mean agent test run? (Y/n)\u001b[37G\n\u001b[?25h"
+  }
+}

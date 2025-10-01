@@ -1,7 +1,12 @@
-public with sharing class ANAgentContentSearchService extends FRAGENTGeneralService {
+/**
+ * @description Simplified content search service for agent actions.
+ * Searches across Course, Asset, and Curriculum objects with minimal dependencies.
+ * @version 2.0
+ */
+public with sharing class ANAgentContentSearchServiceV2 {
 
     /**
-     * Unified DTO for content records.
+     * @description Unified content record for search results
      */
     public class UnifiedContent {
         @AuraEnabled public String id { get; set; }
@@ -13,9 +18,16 @@ public with sharing class ANAgentContentSearchService extends FRAGENTGeneralServ
         @AuraEnabled public Datetime lastModifiedDate { get; set; }
         @AuraEnabled public Integer learnerCount { get; set; }
         @AuraEnabled public Integer completionCount { get; set; }
-        @AuraEnabled public Decimal completionRate { get; set; }
+        @AuraEnabled public Double completionRate { get; set; }
+
+        public UnifiedContent() {
+            this.learnerCount = 0;
+            this.completionCount = 0;
+            this.completionRate = 0.0;
+        }
 
         public UnifiedContent(SObject record, String recordType) {
+            this();
             this.id = record.Id;
             this.name = (String)record.get('Name');
             this.description = (String)record.get('Description__c');
@@ -23,147 +35,285 @@ public with sharing class ANAgentContentSearchService extends FRAGENTGeneralServ
             this.createdDate = (Datetime)record.get('CreatedDate');
             this.lastModifiedDate = (Datetime)record.get('LastModifiedDate');
             this.type = recordType;
-            this.learnerCount = 0;
-            this.completionCount = 0;
-            this.completionRate = 0.0;
         }
     }
 
     /**
-     * @description A wrapper class to hold the list of content results. This is specific to content search.
+     * @description Search result wrapper
      */
     public class ContentSearchResult {
         @AuraEnabled public Boolean success { get; set; }
         @AuraEnabled public List<UnifiedContent> records { get; set; }
         @AuraEnabled public List<String> errors { get; set; }
+        @AuraEnabled public Integer totalCount { get; set; }
+
+        public ContentSearchResult() {
+            this.success = false;
+            this.records = new List<UnifiedContent>();
+            this.errors = new List<String>();
+            this.totalCount = 0;
+        }
 
         public ContentSearchResult(Boolean success, List<UnifiedContent> records, List<String> errors) {
+            this();
             this.success = success;
-            this.records = records;
-            this.errors = errors;
+            this.records = records != null ? records : new List<UnifiedContent>();
+            this.errors = errors != null ? errors : new List<String>();
+            this.totalCount = this.records.size();
         }
     }
 
     /**
-     * Searches across Course, Asset, and Curriculum objects.
+     * @description Main search method
+     * @param searchTerm The search term to look for
+     * @param contentType Optional content type filter (Course, Asset, Curriculum)
+     * @return ContentSearchResult with search results
      */
-    public static ContentSearchResult search(Map<String, Object> params) {
-        if (!hasPermission(FRAGENTGeneralService.PERM_LABEL_CRUD)) {
-            return new ContentSearchResult(false, null, new List<String>{'Insufficient permission: ' + FRAGENTGeneralService.PERM_LABEL_CRUD});
-        }
-
-        String searchTerm = (String)params.get('searchTerm');
-        String contentType = (String)params.get('contentType');
-
-        if (String.isBlank(searchTerm)) {
-            return new ContentSearchResult(false, null, new List<String>{'Search term is required.'});
-        }
-
+    public static ContentSearchResult search(String searchTerm, String contentType) {
+        ContentSearchResult result = new ContentSearchResult();
+        
         try {
-            Map<String, String> validTypes = new Map<String, String>{
-                'Course' => 'Course__c (Id, Name, Description__c, Status__c, CreatedDate, LastModifiedDate)',
-                'Asset' => 'Asset__c (Id, Name, Description__c, Status__c, CreatedDate, LastModifiedDate)',
-                'Curriculum' => 'Curriculum__c (Id, Name, Description__c, Status__c, CreatedDate, LastModifiedDate)'
-            };
+            // Validate input
+            if (String.isBlank(searchTerm)) {
+                result.errors.add('Search term is required.');
+                return result;
+            }
 
-            List<String> typesToSearch = new List<String>();
+            // Determine which objects to search
+            List<String> objectsToSearch = new List<String>();
             if (String.isBlank(contentType)) {
-                typesToSearch.addAll(validTypes.keySet());
-            } else if (validTypes.containsKey(contentType)) {
-                typesToSearch.add(contentType);
-            }
-
-            if (typesToSearch.isEmpty()) {
-                return new ContentSearchResult(false, null, new List<String>{'Invalid content type specified.'});
-            }
-
-            List<String> returningQueries = new List<String>();
-            for(String type : typesToSearch) {
-                returningQueries.add(validTypes.get(type));
-            }
-
-            String searchQuery = 'FIND :searchTerm IN ALL FIELDS RETURNING ' + String.join(returningQueries, ', ') + ' LIMIT 200';
-            List<List<SObject>> results = Search.query(searchQuery);
-
-            List<UnifiedContent> unifiedResults = new List<UnifiedContent>();
-            for (Integer i = 0; i < results.size(); i++) {
-                String type = typesToSearch[i];
-                for (SObject record : results[i]) {
-                    unifiedResults.add(new UnifiedContent(record, type));
+                objectsToSearch.addAll(new List<String>{'Course__c', 'Asset__c', 'Curriculum__c'});
+            } else {
+                String objectName = getObjectNameForType(contentType);
+                if (String.isNotBlank(objectName)) {
+                    objectsToSearch.add(objectName);
+                } else {
+                    result.errors.add('Invalid content type: ' + contentType + '. Valid types: Course, Asset, Curriculum');
+                    return result;
                 }
             }
 
-            // Populate learner count data for courses
-            populateLearnerCountData(unifiedResults);
+            // Perform search
+            List<UnifiedContent> allResults = new List<UnifiedContent>();
+            
+            for (String objectName : objectsToSearch) {
+                List<UnifiedContent> objectResults = searchObject(objectName, searchTerm);
+                if (objectResults != null) {
+                    allResults.addAll(objectResults);
+                }
+            }
 
-            return new ContentSearchResult(true, unifiedResults, new List<String>());
+            // Populate enrollment and completion data for courses
+            populateLearnerCountData(allResults);
+            
+            result.success = true;
+            result.records = allResults;
+            result.totalCount = allResults.size();
+            
+            if (allResults.isEmpty()) {
+                result.errors.add('No content found matching: ' + searchTerm);
+            }
 
         } catch (Exception e) {
-            return new ContentSearchResult(false, null, new List<String>{e.getMessage()});
+            result.success = false;
+            result.errors.add('Search failed: ' + e.getMessage());
         }
+
+        return result;
     }
 
     /**
-     * @description Populates learner count data for course records
-     * @param contentList List of UnifiedContent records to populate
+     * @description Search a specific object
+     * @param objectName The API name of the object to search
+     * @param searchTerm The search term
+     * @return List of UnifiedContent records
      */
-    private static void populateLearnerCountData(List<UnifiedContent> contentList) {
-        if (contentList == null || contentList.isEmpty()) return;
-
-        // Filter to only course records
-        List<UnifiedContent> courseRecords = new List<UnifiedContent>();
-        Set<Id> courseIds = new Set<Id>();
+    private static List<UnifiedContent> searchObject(String objectName, String searchTerm) {
+        List<UnifiedContent> results = new List<UnifiedContent>();
         
-        for (UnifiedContent content : contentList) {
-            if (content.type == 'Course') {
-                courseRecords.add(content);
-                courseIds.add(content.id);
+        try {
+            // Check if object is accessible
+            if (!Schema.getGlobalDescribe().containsKey(objectName)) {
+                return results;
             }
+
+            Schema.SObjectType objectType = Schema.getGlobalDescribe().get(objectName);
+            if (!objectType.getDescribe().isAccessible()) {
+                return results;
+            }
+
+            // Build query based on object type
+            String query = buildSearchQuery(objectName, searchTerm);
+            if (String.isBlank(query)) {
+                return results;
+            }
+
+            // Execute query
+            List<SObject> records = Database.query(query);
+            
+            // Convert to UnifiedContent
+            String recordType = getTypeForObject(objectName);
+            for (SObject record : records) {
+                results.add(new UnifiedContent(record, recordType));
+            }
+            
+            // Populate learner count data for courses
+            if (objectName == 'Course__c') {
+                populateLearnerCountData(results);
+            }
+
+        } catch (Exception e) {
+            System.debug('Error searching ' + objectName + ': ' + e.getMessage());
         }
 
-        if (courseIds.isEmpty()) return;
+        return results;
+    }
 
+    /**
+     * @description Build search query for an object
+     * @param objectName The API name of the object
+     * @param searchTerm The search term
+     * @return SOQL query string
+     */
+    private static String buildSearchQuery(String objectName, String searchTerm) {
+        String baseQuery = 'SELECT Id, Name, Description__c, Status__c, CreatedDate, LastModifiedDate FROM ' + objectName;
+        
+        // Add WHERE clause for search
+        String whereClause = ' WHERE (Name LIKE \'%' + String.escapeSingleQuotes(searchTerm) + '%\'';
+        
+        // Add Description__c if the field exists
         try {
-            // Query for learner count data
-            Map<Id, Integer> totalLearnersMap = new Map<Id, Integer>();
-            Map<Id, Integer> completionCountMap = new Map<Id, Integer>();
-
-            // Get total learners per course
-            for (AggregateResult ar : [
-                SELECT Course__c courseId, COUNT(Id) totalLearners
-                FROM Assigned_Course__c 
-                WHERE Course__c IN :courseIds
-                GROUP BY Course__c
-            ]) {
-                Id courseId = (Id)ar.get('courseId');
-                Integer totalLearners = (Integer)ar.get('totalLearners');
-                totalLearnersMap.put(courseId, totalLearners);
+            Schema.SObjectField descField = Schema.getGlobalDescribe().get(objectName).getDescribe().fields.getMap().get('Description__c');
+            if (descField != null && descField.getDescribe().isAccessible()) {
+                whereClause += ' OR Description__c LIKE \'%' + String.escapeSingleQuotes(searchTerm) + '%\'';
             }
-
-            // Get completion count per course
-            for (AggregateResult ar : [
-                SELECT Course__c courseId, COUNT(Id) completionCount
-                FROM Assigned_Course__c 
-                WHERE Course__c IN :courseIds 
-                AND Completion_Date__c != null
-                GROUP BY Course__c
-            ]) {
-                Id courseId = (Id)ar.get('courseId');
-                Integer completionCount = (Integer)ar.get('completionCount');
-                completionCountMap.put(courseId, completionCount);
+        } catch (Exception e) {
+            // Field doesn't exist or not accessible, continue without it
+        }
+        
+        whereClause += ')';
+        
+        // Add Status__c filter if the field exists
+        try {
+            Schema.SObjectField statusField = Schema.getGlobalDescribe().get(objectName).getDescribe().fields.getMap().get('Status__c');
+            if (statusField != null && statusField.getDescribe().isAccessible()) {
+                whereClause += ' AND Status__c = \'Active\'';
             }
+        } catch (Exception e) {
+            // Field doesn't exist or not accessible, continue without it
+        }
+        
+        return baseQuery + whereClause + ' ORDER BY Name LIMIT 50';
+    }
 
-            // Populate the data
-            for (UnifiedContent course : courseRecords) {
-                course.learnerCount = totalLearnersMap.get(course.id) != null ? totalLearnersMap.get(course.id) : 0;
-                course.completionCount = completionCountMap.get(course.id) != null ? completionCountMap.get(course.id) : 0;
-                
-                if (course.learnerCount > 0) {
-                    course.completionRate = (course.completionCount * 100.0) / course.learnerCount;
-                } else {
-                    course.completionRate = 0.0;
+    /**
+     * @description Get object name for content type
+     * @param contentType The content type (Course, Asset, Curriculum)
+     * @return Object API name
+     */
+    private static String getObjectNameForType(String contentType) {
+        Map<String, String> typeToObject = new Map<String, String>{
+            'Course' => 'Course__c',
+            'Asset' => 'Asset__c',
+            'Curriculum' => 'Curriculum__c'
+        };
+        return typeToObject.get(contentType);
+    }
+
+    /**
+     * @description Get content type for object name
+     * @param objectName The object API name
+     * @return Content type string
+     */
+    private static String getTypeForObject(String objectName) {
+        Map<String, String> objectToType = new Map<String, String>{
+            'Course__c' => 'Course',
+            'Asset__c' => 'Asset',
+            'Curriculum__c' => 'Curriculum'
+        };
+        return objectToType.get(objectName);
+    }
+    
+    /**
+     * @description Populates learner count data for course records
+     * @param courseRecords List of UnifiedContent records to populate
+     */
+    private static void populateLearnerCountData(List<UnifiedContent> courseRecords) {
+        if (courseRecords == null || courseRecords.isEmpty()) {
+            return;
+        }
+        
+        try {
+            // Get course IDs
+            Set<String> courseIds = new Set<String>();
+            for (UnifiedContent content : courseRecords) {
+                if (content.type == 'Course' && String.isNotBlank(content.id)) {
+                    courseIds.add(content.id);
                 }
             }
+            
+            if (courseIds.isEmpty()) {
+                return;
+            }
+            
+            // Query Assigned_Course__c to get learner counts
+            List<AggregateResult> learnerCounts = [
+                SELECT Course__c, COUNT(Id) learnerCount
+                FROM Assigned_Course__c 
+                WHERE Course__c IN :courseIds 
+                GROUP BY Course__c
+            ];
+            
+            // Query Assigned_Course__c to get completion counts
+            List<AggregateResult> completionCounts = [
+                SELECT Course__c, COUNT(Id) completionCount
+                FROM Assigned_Course__c 
+                WHERE Course__c IN :courseIds AND Completed__c = true
+                GROUP BY Course__c
+            ];
+            
+            // Create a map for quick lookup
+            Map<String, Map<String, Integer>> courseStats = new Map<String, Map<String, Integer>>();
+            
+            // Process total learner counts
+            for (AggregateResult ar : learnerCounts) {
+                String courseId = (String)ar.get('Course__c');
+                Integer totalLearners = (Integer)ar.get('learnerCount');
+                
+                if (!courseStats.containsKey(courseId)) {
+                    courseStats.put(courseId, new Map<String, Integer>{
+                        'total' => totalLearners,
+                        'completed' => 0
+                    });
+                } else {
+                    courseStats.get(courseId).put('total', totalLearners);
+                }
+            }
+            
+            // Process completion counts
+            for (AggregateResult ar : completionCounts) {
+                String courseId = (String)ar.get('Course__c');
+                Integer completions = (Integer)ar.get('completionCount');
+                
+                if (courseStats.containsKey(courseId)) {
+                    courseStats.get(courseId).put('completed', completions);
+                }
+            }
+            
+            // Update the UnifiedContent records
+            for (UnifiedContent content : courseRecords) {
+                if (content.type == 'Course' && courseStats.containsKey(content.id)) {
+                    Map<String, Integer> stats = courseStats.get(content.id);
+                    content.learnerCount = stats.get('total');
+                    content.completionCount = stats.get('completed');
+                    
+                    // Calculate completion rate
+                    if (content.learnerCount > 0) {
+                        content.completionRate = (Double)content.completionCount / content.learnerCount * 100;
+                    }
+                }
+            }
+            
         } catch (Exception e) {
             System.debug('Error populating learner count data: ' + e.getMessage());
         }

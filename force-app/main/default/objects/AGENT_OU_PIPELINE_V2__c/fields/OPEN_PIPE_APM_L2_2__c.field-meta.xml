@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPEN_PIPE_APM_L2_2__c</fullName>
+    <description>Open Pipeline APM Level 2 (Product Family) for Stage 2 opportunity. This field identifies the product family category for the second pipeline stage opportunity.</description>
+    <externalId>false</externalId>
+    <label>Open Pipe APM L2 2</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField> 

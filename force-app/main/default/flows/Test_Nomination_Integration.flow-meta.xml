@@ -65,13 +65,13 @@
         <inputAssignments>
             <field>startDate</field>
             <value>
-                <dateValue>TODAY</dateValue>
+                <dateValue>2025-01-15</dateValue>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>endDate</field>
             <value>
-                <dateValue>TODAY</dateValue>
+                <dateValue>2025-01-15</dateValue>
             </value>
         </inputAssignments>
         <inputAssignments>

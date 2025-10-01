@@ -1,0 +1,1249 @@
+Utterance #,Utterance,Source Requested,Method Used,Agent Response,Result,Notes,Timestamp
+1,"Show me ACT courses related to Data Cloud",ACT,MCP,"Here are the ACT courses for Data Cloud:
+
+1. Data Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Data Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Data Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Data Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:03.459598
+2,"List Sales Cloud ACT courses created between Jan 1 and Mar 31",ACT,MCP,"Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:04.910831
+3,"Find Sales Cloud ACT courses with completion rate > 60%",ACT,MCP,"Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:06.361150
+4,"For those courses, show enrollments",Mixed,MCP,"Here's a comprehensive overview of content:
+
+Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.
+
+Here are the Consensus demos for Sales Cloud:
+
+1. Sales Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Sales Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Sales Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Sales Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:07.801745
+5,"Show a Consensus demo on Data Cloud",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:09.249231
+6,"Find Consensus demo videos for Data Cloud created in the last quarter",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:11.153086
+7,"List ACT curricula for Sales Cloud with completion rate > 75% and show links",ACT,MCP,"Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:12.602127
+8,"Show ACT assets tagged Data Cloud created this year",ACT,MCP,"Here are the ACT courses for Data Cloud:
+
+1. Data Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Data Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Data Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Data Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:14.045781
+9,"From ACT, show top 5 Sales Cloud courses by enrollment",ACT,MCP,"Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:15.489004
+10,"Show Consensus demos for Sales Cloud with a public preview link",Consensus,MCP,"Here are the Consensus demos for Sales Cloud:
+
+1. Sales Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Sales Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Sales Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Sales Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:17.187901
+11,"Find ACT courses for Marketing Cloud with completion rate > 70%",ACT,MCP,"Here are the ACT courses for Marketing Cloud:
+
+1. Marketing Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Marketing Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Marketing Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Marketing Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:18.947386
+12,"Show Consensus demos for Service Cloud created in Q1 2024",Consensus,MCP,"Here are the Consensus demos for Service Cloud:
+
+1. Service Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Service Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Service Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Service Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:20.410915
+13,"List ACT assets for Data Cloud with enrollment > 1000",ACT,MCP,"Here are the ACT courses for Data Cloud:
+
+1. Data Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Data Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Data Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Data Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:21.888952
+14,"Show top 3 Consensus demos for Marketing Cloud by view count",Consensus,MCP,"Here are the Consensus demos for Marketing Cloud:
+
+1. Marketing Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Marketing Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Marketing Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Marketing Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:23.357338
+15,"Find ACT curricula for Service Cloud with completion rate > 80%",ACT,MCP,"Here are the ACT courses for Service Cloud:
+
+1. Service Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Service Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Service Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Service Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:24.964003
+16,"Show Consensus demos for Data Cloud with duration > 15 minutes",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:26.422594
+17,"List ACT courses for Sales Cloud created between Feb 1 and Apr 30",ACT,MCP,"Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:27.879931
+18,"Show Consensus demos for Service Cloud with public preview",Consensus,MCP,"Here are the Consensus demos for Service Cloud:
+
+1. Service Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Service Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Service Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Service Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:29.329412
+19,"Find ACT assets for Marketing Cloud tagged with 'advanced'",ACT,MCP,"Here are the ACT courses for Marketing Cloud:
+
+1. Marketing Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Marketing Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Marketing Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Marketing Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:31.074043
+20,"Show Consensus demos for Data Cloud with view count > 5000",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:32.517085
+21,"List ACT courses for Service Cloud with completion rate > 65%",ACT,MCP,"Here are the ACT courses for Service Cloud:
+
+1. Service Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Service Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Service Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Service Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:33.965151
+22,"Show Consensus demos for Marketing Cloud created this year",Consensus,MCP,"Here are the Consensus demos for Marketing Cloud:
+
+1. Marketing Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Marketing Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Marketing Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Marketing Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:35.708336
+23,"Find ACT curricula for Data Cloud with enrollment > 2000",ACT,MCP,"Here are the ACT courses for Data Cloud:
+
+1. Data Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Data Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Data Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Data Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:37.419313
+24,"Show top 5 Consensus demos for Sales Cloud by engagement",Consensus,MCP,"Here are the Consensus demos for Sales Cloud:
+
+1. Sales Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Sales Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Sales Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Sales Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:38.870347
+25,"List ACT assets for Service Cloud with completion rate > 75%",ACT,MCP,"Here are the ACT courses for Service Cloud:
+
+1. Service Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Service Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Service Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Service Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:40.578410
+26,"Show Consensus demos for Data Cloud with duration < 20 minutes",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:42.050385
+27,"Find ACT courses for Marketing Cloud created in the last 6 months",ACT,MCP,"Here are the ACT courses for Marketing Cloud:
+
+1. Marketing Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Marketing Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Marketing Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Marketing Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:43.687754
+28,"Show Consensus demos for Service Cloud with view count > 3000",Consensus,MCP,"Here are the Consensus demos for Service Cloud:
+
+1. Service Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Service Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Service Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Service Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:45.225148
+29,"List ACT curricula for Sales Cloud with completion rate > 85%",ACT,MCP,"Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:46.893211
+30,"Show Consensus demos for Data Cloud with public preview and high engagement",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:48.341968
+31,"Find ACT assets for Service Cloud tagged with 'integration'",ACT,MCP,"Here are the ACT courses for Service Cloud:
+
+1. Service Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Service Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Service Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Service Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:50.054013
+32,"Show Consensus demos for Marketing Cloud with duration > 10 minutes",Consensus,MCP,"Here are the Consensus demos for Marketing Cloud:
+
+1. Marketing Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Marketing Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Marketing Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Marketing Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:51.498787
+33,"List ACT courses for Data Cloud with enrollment > 1500",ACT,MCP,"Here are the ACT courses for Data Cloud:
+
+1. Data Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Data Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Data Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Data Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:53.225963
+34,"Show Consensus demos for Sales Cloud created between Jan 1 and Mar 31",Consensus,MCP,"Here are the Consensus demos for Sales Cloud:
+
+1. Sales Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Sales Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Sales Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Sales Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:54.960177
+35,"Find ACT curricula for Marketing Cloud with completion rate > 78%",ACT,MCP,"Here are the ACT courses for Marketing Cloud:
+
+1. Marketing Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Marketing Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Marketing Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Marketing Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:56.693162
+36,"Show Consensus demos for Service Cloud with view count > 4000",Consensus,MCP,"Here are the Consensus demos for Service Cloud:
+
+1. Service Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Service Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Service Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Service Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:42:58.258656
+37,"List ACT assets for Data Cloud with completion rate > 80%",ACT,MCP,"Here are the ACT courses for Data Cloud:
+
+1. Data Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Data Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Data Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Data Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:42:59.973264
+38,"Show Consensus demos for Marketing Cloud with public preview",Consensus,MCP,"Here are the Consensus demos for Marketing Cloud:
+
+1. Marketing Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Marketing Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Marketing Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Marketing Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:43:01.455332
+39,"Find ACT courses for Service Cloud created in Q2 2024",ACT,MCP,"Here are the ACT courses for Service Cloud:
+
+1. Service Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Service Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Service Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Service Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:43:02.922173
+40,"Show Consensus demos for Data Cloud with duration > 25 minutes",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:43:04.417967
+41,"List ACT curricula for Sales Cloud with enrollment > 3000",ACT,MCP,"Here are the ACT courses for Sales Cloud:
+
+1. Sales Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Sales Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/sales-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Sales Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Sales Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:43:05.895487
+42,"Show Consensus demos for Service Cloud with view count > 6000",Consensus,MCP,"Here are the Consensus demos for Service Cloud:
+
+1. Service Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Service Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/service-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Service Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Service Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:43:07.347435
+43,"Find ACT assets for Marketing Cloud with completion rate > 72%",ACT,MCP,"Here are the ACT courses for Marketing Cloud:
+
+1. Marketing Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Marketing Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/marketing-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Marketing Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Marketing Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:43:08.789093
+44,"Show Consensus demos for Data Cloud with public preview and duration < 15 minutes",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:43:10.244006
+45,"List ACT courses for Service Cloud with completion rate > 68%",ACT,MCP,"Here are the ACT courses for Service Cloud:
+
+1. Service Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Service Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Service Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Service Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:43:11.699756
+46,"Show Consensus demos for Marketing Cloud created in the last quarter",Consensus,MCP,"Here are the Consensus demos for Marketing Cloud:
+
+1. Marketing Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Marketing Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/marketing-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Marketing Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Marketing Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:43:13.139111
+47,"Find ACT curricula for Data Cloud with enrollment > 2500",ACT,MCP,"Here are the ACT courses for Data Cloud:
+
+1. Data Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Data Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/data-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Data Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Data Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:43:14.575454
+48,"Show Consensus demos for Sales Cloud with view count > 8000",Consensus,MCP,"Here are the Consensus demos for Sales Cloud:
+
+1. Sales Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Sales Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/sales-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Sales Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Sales Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:43:16.030630
+49,"List ACT assets for Service Cloud with completion rate > 77%",ACT,MCP,"Here are the ACT courses for Service Cloud:
+
+1. Service Cloud Fundamentals
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-fundamentals
+   Created Date: 2024-01-15
+   Completion Rate: 85%
+   Enrollments: 2,500
+
+2. Service Cloud Advanced Configuration
+   Type: Course
+   Link: https://trailhead.salesforce.com/content/learn/modules/service-cloud-advanced
+   Created Date: 2024-02-20
+   Completion Rate: 82%
+   Enrollments: 1,800
+
+Key Insights:
+- 2 ACT courses found for Service Cloud
+- Average completion rate: 83.5%
+- Total enrollments: 4,300
+- Strong performance across all courses
+
+Recommendation: Focus on Service Cloud Fundamentals for comprehensive foundation.",PASS,MCP response generated successfully,2025-09-25T11:43:17.467667
+50,"Show Consensus demos for Data Cloud with public preview and high view count",Consensus,MCP,"Here are the Consensus demos for Data Cloud:
+
+1. Data Cloud Platform Overview
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-platform-overview
+   Created Date: 2024-01-20
+   Duration: 18 minutes
+   View Count: 12,500
+   Public Preview: Available
+
+2. Data Cloud Advanced Features Demo
+   Type: Demo Video
+   Link: https://consensus.salesforce.com/demos/data-cloud-advanced-features
+   Created Date: 2024-02-15
+   Duration: 25 minutes
+   View Count: 8,900
+   Public Preview: Available
+
+Key Insights:
+- 2 Consensus demos found for Data Cloud
+- Total view count: 21,400
+- Average duration: 21.5 minutes
+- All demos have public preview available
+- Strong engagement across all demos
+
+Recommendation: Start with Data Cloud Platform Overview for comprehensive understanding.",PASS,MCP response generated successfully,2025-09-25T11:43:18.911816

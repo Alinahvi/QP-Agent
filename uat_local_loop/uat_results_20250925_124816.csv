@@ -1,0 +1,5 @@
+Case ID,Description,Utterance,MCP Success,MCP Tool,MCP Args,MCP Time (ms),Apex Success,Apex Time (ms),Overall Success,Error Message
+1,Open Pipe Analysis - AMER ACC Stage 4,Show me all products that passed stage 4 within AMER ACC,True,open_pipe_analyze,"{""limitN"": 10, ""minStage"": 4, ""ouName"": ""AMER ACC"", ""timeFrame"": ""CURRENT""}",10.8,True,0.0,True,
+2,Open Pipe with Country Filter,"Open pipe passed stage 4 in AMER ACC, country = US, top 20",True,open_pipe_analyze,"{""country"": ""United States"", ""limitN"": 20, ""minStage"": 4, ""ouName"": ""AMER ACC"", ""timeFrame"": ""CURRENT""}",3.2,True,0.0,True,
+3,Open Pipe with Product Filter,"Show me open pipe analysis for AMER ACC, filter to Data Cloud and Sales Cloud only",True,open_pipe_analyze,"{""limitN"": 10, ""ouName"": ""AMER ACC"", ""productListCsv"": ""Data Cloud and Sales Cloud only"", ""timeFrame"": ""CURRENT""}",3.3,True,0.0,True,
+4,Open Pipe Previous Quarter,Compare last quarter open pipe post stage 4 for AMER ACC,True,open_pipe_analyze,"{""limitN"": 10, ""minStage"": 4, ""ouName"": ""AMER ACC"", ""timeFrame"": ""PREVIOUS""}",2.6,True,0.0,True,

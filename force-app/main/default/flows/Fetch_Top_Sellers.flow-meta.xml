@@ -26,9 +26,12 @@
         </value>
     </processMetadataValues>
     <startElementReference>Screen_Fetch_Top_Sellers</startElementReference>
-    <screenElements>
+    <screens>
         <name>Screen_Fetch_Top_Sellers</name>
         <label>Fetch Top Sellers</label>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
         <fields>
             <fieldTextInput>
                 <name>Product</name>
@@ -36,6 +39,8 @@
                 <label>Product SKU</label>
                 <isRequired>true</isRequired>
             </fieldTextInput>
+        </fields>
+        <fields>
             <fieldNumberInput>
                 <name>N</name>
                 <label>Number of Sellers</label>
@@ -43,5 +48,7 @@
                 <isRequired>true</isRequired>
             </fieldNumberInput>
         </fields>
-    </screenElements>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
 </Flow>

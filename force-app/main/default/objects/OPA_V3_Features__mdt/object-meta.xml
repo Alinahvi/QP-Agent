@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>OPA V3 Features</label>
+    <pluralLabel>OPA V3 Features</pluralLabel>
+    <visibility>Public</visibility>
+    <description>Feature toggles for Open Pipe Analysis V3 intelligence capabilities</description>
+    <fields>
+        <fullName>EnableScoreProb__c</fullName>
+        <label>Enable Score Probability</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable AE score to closure probability analysis</description>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>EnableStageBottleneck__c</fullName>
+        <label>Enable Stage Bottleneck</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable stage bottleneck detection with peer comparison</description>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>EnablePMF__c</fullName>
+        <label>Enable PMF</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable product-market fit analysis</description>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>EnableAEBenchmark__c</fullName>
+        <label>Enable AE Benchmark</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable AE performance benchmarking</description>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>EnableHealthScore__c</fullName>
+        <label>Enable Health Score</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+        <description>Enable pipeline health scoring</description>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>HealthScoreWeights__c</fullName>
+        <label>Health Score Weights</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <description>JSON weights for health score components</description>
+        <required>false</required>
+    </fields>
+</CustomObject>

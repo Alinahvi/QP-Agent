@@ -1,0 +1,49 @@
+🚨 8 Failed Utterances Analysis
+================================================================================
+
+1. Batch 1 - Failed Utterance:
+   Utterance: "Show me meeting trends: current vs previous quarter in EMEA ENTR"
+   Agent Response: "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+   Issue: Tool detection failed
+
+2. Batch 2 - Failed Utterance:
+   Utterance: "Compare call connection improvement in UKI this quarter vs last quarter"
+   Agent Response: "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+   Issue: Tool detection failed
+
+3. Batch 2 - Failed Utterance:
+   Utterance: "What's the meeting performance by management tier in UKI?"
+   Agent Response: "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+   Issue: Tool detection failed
+
+4. Batch 3 - Failed Utterance:
+   Utterance: "Look for retail industry solutions in APAC"
+   Agent Response: "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+   Issue: Tool detection failed
+
+5. Batch 3 - Failed Utterance:
+   Utterance: "Find management training content for EMEA ENTR leaders"
+   Agent Response: "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+   Issue: Tool detection failed
+
+6. Batch 4 - Failed Utterance:
+   Utterance: "Get leadership development content in APAC"
+   Agent Response: "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+   Issue: Tool detection failed
+
+7. Batch 4 - Failed Utterance:
+   Utterance: "Find strategic planning resources for LATAM management"
+   Agent Response: "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+   Issue: Tool detection failed
+
+8. Batch 5 - Failed Utterance:
+   Utterance: "Search for leadership coaches in UKI"
+   Agent Response: "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+   Issue: Tool detection failed
+
+================================================================================
+Summary of Issues:
+- 3 KPI Analyze failures: missing patterns
+- 3 Content Search failures: missing patterns
+- 1 SME Search failure: missing pattern
+- 1 Content Search failure: topic validation issue

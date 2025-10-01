@@ -1,0 +1,18 @@
+// In src/server.ts add imports:
+import { centralView, impactMatrix, proposePlans, seedTickets, normalizeDiscovery } from './tools/architect.js';
+
+// In register(adapter):
+adapter.registerTool('architect:central_view', {}, async ({ repoDir }) =>
+  centralView(repoDir), 'Inventory existing handlers/services/actions');
+
+adapter.registerTool('architect:impact_matrix', {}, async ({ repoDir, objects }) =>
+  impactMatrix(repoDir, objects), 'Summarize legacy impact from discovery + repo');
+
+adapter.registerTool('architect:propose_plans', {}, async ({ repoDir, objects }) =>
+  proposePlans(repoDir, objects), 'Generate Plan v2 JSON + MD from discovery');
+
+adapter.registerTool('architect:seed_tickets', {}, async ({ repoDir }) =>
+  seedTickets(repoDir), 'Create derived tickets from Plans');
+
+adapter.registerTool('architect:normalize_discovery', {}, async ({ repoDir, sourceDir }) =>
+  normalizeDiscovery(repoDir, sourceDir), 'Normalize discovery files into canonical shape');

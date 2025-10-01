@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2025-09-29T20:56:56.847Z",
+  "orgAlias": "innovation",
+  "soql": "SELECT Id, Name FROM Agent_Renewals__c LIMIT 1",
+  "rowCount": 1,
+  "records": [
+    {
+      "attributes": {
+        "type": "Agent_Renewals__c",
+        "url": "/services/data/v64.0/sobjects/Agent_Renewals__c/a7wD7000000LmVtIAK"
+      },
+      "Id": "a7wD7000000LmVtIAK",
+      "Name": "c54b7a296f210381e3cbc35259e93e60ce578618ae4889b98d25b8ad4a53c74f"
+    }
+  ],
+  "raw": "{\n  \"status\": 0,\n  \"result\": {\n    \"records\": [\n      {\n        \"attributes\": {\n          \"type\": \"Agent_Renewals__c\",\n          \"url\": \"/services/data/v64.0/sobjects/Agent_Renewals__c/a7wD7000000LmVtIAK\"\n        },\n        \"Id\": \"a7wD7000000LmVtIAK\",\n        \"Name\": \"c54b7a296f210381e3cbc35259e93e60ce578618ae4889b98d25b8ad4a53c74f\"\n      }\n    ],\n    \"totalSize\": 1,\n    \"done\": true\n  },\n  \"warnings\": [\n    \"The \\\"-u\\\" flag has been deprecated. Use \\\"--target-org | -o\\\" instead.\"\n  ]\n}"
+}

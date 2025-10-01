@@ -1,0 +1,221 @@
+specVersion: '1.0'
+project: Audience Command Center
+scope:
+  objects:
+  - Audience__c
+  - Audience_Member__c
+  - Audience_Checklist__c
+  primaryObject: Audience__c
+actionLayer:
+  invocableMethod:
+    className: FRAGENTAudienceHandler
+    methodLabel: FRAGENT Manage Audience
+    methodName: manageAudiences
+    singleOutputEnvelope:
+      contractName: AudienceResult
+      version: '1.0'
+  actions:
+  - name: retrieve
+    description: Retrieve by Id or search by name/date/creator.
+    actionKey: Audience.read
+  - name: create
+    description: Create audience with manual RT; dedupe by Name.
+    actionKey: Audience.create
+  - name: update
+    description: Update audience name; dedupe conflicts.
+    actionKey: Audience.update
+  - name: delete
+    description: Delete audience iff no members or assigned learning.
+    actionKey: Audience.delete
+  inputs:
+  - key: action
+    type: String
+    required: true
+    enum:
+    - create
+    - retrieve
+    - update
+    - delete
+  - key: audienceId
+    type: Id
+    required: false
+    appliesTo:
+    - retrieve
+    - update
+    - delete
+  - key: audienceName
+    type: String
+    required: false
+    appliesTo:
+    - retrieve
+    - create
+    - update
+  - key: dateFieldToSearch
+    type: String
+    enum:
+    - CreatedDate
+    - LastModifiedDate
+    required: false
+    appliesTo:
+    - retrieve
+  - key: dateLiteral
+    type: String
+    enum:
+    - YESTERDAY
+    - LAST_7_DAYS
+    - LAST_30_DAYS
+    - THIS_MONTH
+    - LAST_MONTH
+    required: false
+    appliesTo:
+    - retrieve
+  - key: startDate
+    type: Date
+    required: false
+    appliesTo:
+    - retrieve
+  - key: endDate
+    type: Date
+    required: false
+    appliesTo:
+    - retrieve
+  - key: createdByUserId
+    type: Id
+    required: false
+    appliesTo:
+    - retrieve
+  - key: recordLimit
+    type: Integer
+    required: false
+    default: 50
+    max: 200
+    appliesTo:
+    - retrieve
+  - key: payloadJson
+    type: String
+    required: false
+    appliesTo:
+    - create
+    - update
+    description: JSON with allowed upsert fields
+  outputData:
+    fields:
+    - Id
+    - Name
+    - CreatedDate
+    - LastModifiedDate
+    - CreatedById
+    - CreatedBy.Name
+    - LastModifiedById
+    - LastModifiedBy.Name
+    audienceDetails:
+      memberCount: Integer
+      members: List<AudienceMemberSummary> (optional)
+  stableCodes:
+  - OK
+  - INVALID_INPUT
+  - PERMISSION_DENIED
+  - DUPLICATE_NAME
+  - BLOCKED_MEMBERS_EXIST
+  - BLOCKED_ASSIGNED_LEARNING_EXISTS
+  - NOT_FOUND
+businessRules:
+  defaults:
+    recordLimit: 50
+    maxLimit: 200
+    dateFieldDefault: CreatedDate
+  search:
+    exactMatchPriority: true
+    fuzzy:
+      enabled: true
+      threshold: 0.4
+      stopWords:
+      - audience
+      - test
+      tokenSplitRegex: '[\s\-\/_]+'
+  create:
+    recordType: Manual
+    dedupeBy: Name
+  update:
+    dedupeBy: Name
+    verifyIdsExist: true
+  delete:
+    blockIfMembers: true
+    blockIfAssignedLearning: true
+  security:
+    crud:
+      create: true
+      read: true
+      update: true
+      delete: true
+    fls:
+    - Name
+    - CreatedById
+    - LastModifiedById
+    customPermissions: []
+    testBypass: true
+tests:
+  users:
+  - crudUser
+  - cruUser
+  - retrieveUser
+  scenarios:
+  - id: RET_BY_ID_OK
+    given: read perm
+    when: retrieve by Id
+    then: code=OK; totalCount=1
+  - id: RET_BY_NAME_EXACT
+    when: retrieve by exact Name
+    then: exact match first
+  - id: RET_FUZZY
+    when: retrieve fuzzy
+    then: top result score>=0.4
+  - id: CREATE_DUPLICATE
+    when: create duplicate name
+    then: code=DUPLICATE_NAME
+  - id: UPDATE_NO_ID
+    when: update w/o Id
+    then: code=INVALID_INPUT
+  - id: DELETE_BLOCKED_MEMBERS
+    when: delete with members
+    then: code=BLOCKED_MEMBERS_EXIST
+  - id: PERM_DENIED_READ
+    given: no read perm
+    when: retrieve
+    then: permissionDenied=true; code=PERMISSION_DENIED
+testFactory:
+  requiredMethods:
+  - Users.crud
+  - Users.cru
+  - Users.retrieve
+  - createAudiences
+  - createLearnerProfiles
+  - linkAudienceMembers
+  recordTypes:
+    Audience__c: Manual
+dependencies:
+  apexLibs:
+  - AgentCore_Permissions
+  - AgentCore_SafeQuery
+  - AgentCore_Dedupe
+  - AgentCore_TestFactory
+  permissionSets:
+  - Checklist Manager
+  - Agent Retrieve
+  - Agent CRU
+  - Agent CRUD
+
+# Phase 2 scaffold parameters for generalization
+related:
+  member:
+    objectApiName: Audience_Member__c
+    parentFieldApiName: Audience__c
+    relationshipNameOnParent: Audience_Members__r
+  checklist:
+    objectApiName: Audience_Checklist__c
+  assignedLearning:
+    objectApiName: Assigned_Learning__c
+recordTypes:
+  create:
+    developerName: Cohort
+    label: Manual

@@ -1,0 +1,251 @@
+{
+  "testCases": [
+    {
+      "id": "SME_001",
+      "utterance": "Find SMEs for Data Cloud in AMER ACC",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Data Cloud",
+        "ouName": "AMER ACC"
+      }
+    },
+    {
+      "id": "SME_002",
+      "utterance": "Show me Sales Cloud experts in EMEA ENTR",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Sales Cloud",
+        "ouName": "EMEA ENTR"
+      }
+    },
+    {
+      "id": "SME_003",
+      "utterance": "Find Service Cloud specialists in UKI",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Service Cloud",
+        "ouName": "UKI"
+      }
+    },
+    {
+      "id": "SME_004",
+      "utterance": "Show Marketing Cloud experts for AMER ACC enterprise segment",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Marketing Cloud",
+        "ouName": "AMER ACC",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "SME_005",
+      "utterance": "Find Data Cloud specialists in EMEA ENTR mid-market",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Data Cloud",
+        "ouName": "EMEA ENTR",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "SME_006",
+      "utterance": "Show me Sales Cloud experts for UKI small business",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Sales Cloud",
+        "ouName": "UKI",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "SME_007",
+      "utterance": "Find Service Cloud SMEs in AMER ACC with high expertise",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Service Cloud",
+        "ouName": "AMER ACC",
+        "expertiseLevel": "high"
+      }
+    },
+    {
+      "id": "SME_008",
+      "utterance": "Show Marketing Cloud specialists in EMEA ENTR with certifications",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Marketing Cloud",
+        "ouName": "EMEA ENTR",
+        "hasCertifications": true
+      }
+    },
+    {
+      "id": "SME_009",
+      "utterance": "Find Data Cloud experts in UKI with 5+ years experience",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Data Cloud",
+        "ouName": "UKI",
+        "experienceYears": "5+"
+      }
+    },
+    {
+      "id": "SME_010",
+      "utterance": "Show me Sales Cloud SMEs for AMER ACC with availability",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Sales Cloud",
+        "ouName": "AMER ACC",
+        "available": true
+      }
+    },
+    {
+      "id": "SME_011",
+      "utterance": "Find Service Cloud specialists in EMEA ENTR enterprise segment",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Service Cloud",
+        "ouName": "EMEA ENTR",
+        "segment": "enterprise"
+      }
+    },
+    {
+      "id": "SME_012",
+      "utterance": "Show Marketing Cloud experts for UKI mid-market",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Marketing Cloud",
+        "ouName": "UKI",
+        "segment": "mid-market"
+      }
+    },
+    {
+      "id": "SME_013",
+      "utterance": "Find Data Cloud SMEs in AMER ACC with recent projects",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Data Cloud",
+        "ouName": "AMER ACC",
+        "recentProjects": true
+      }
+    },
+    {
+      "id": "SME_014",
+      "utterance": "Show me Sales Cloud specialists in EMEA ENTR with training experience",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Sales Cloud",
+        "ouName": "EMEA ENTR",
+        "trainingExperience": true
+      }
+    },
+    {
+      "id": "SME_015",
+      "utterance": "Find Service Cloud experts for UKI small business segment",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Service Cloud",
+        "ouName": "UKI",
+        "segment": "small business"
+      }
+    },
+    {
+      "id": "SME_016",
+      "utterance": "Show Marketing Cloud SMEs in AMER ACC with consulting background",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Marketing Cloud",
+        "ouName": "AMER ACC",
+        "consultingBackground": true
+      }
+    },
+    {
+      "id": "SME_017",
+      "utterance": "Find Data Cloud specialists in EMEA ENTR with implementation experience",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Data Cloud",
+        "ouName": "EMEA ENTR",
+        "implementationExperience": true
+      }
+    },
+    {
+      "id": "SME_018",
+      "utterance": "Show me Sales Cloud experts for UKI with architecture expertise",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Sales Cloud",
+        "ouName": "UKI",
+        "architectureExpertise": true
+      }
+    },
+    {
+      "id": "SME_019",
+      "utterance": "Find Service Cloud SMEs in AMER ACC with support experience",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Service Cloud",
+        "ouName": "AMER ACC",
+        "supportExperience": true
+      }
+    },
+    {
+      "id": "SME_020",
+      "utterance": "Show Marketing Cloud specialists in EMEA ENTR with integration skills",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Marketing Cloud",
+        "ouName": "EMEA ENTR",
+        "integrationSkills": true
+      }
+    },
+    {
+      "id": "SME_021",
+      "utterance": "Find Data Cloud experts for UKI with data modeling expertise",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Data Cloud",
+        "ouName": "UKI",
+        "dataModelingExpertise": true
+      }
+    },
+    {
+      "id": "SME_022",
+      "utterance": "Show me Sales Cloud SMEs in AMER ACC with CRM experience",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Sales Cloud",
+        "ouName": "AMER ACC",
+        "crmExperience": true
+      }
+    },
+    {
+      "id": "SME_023",
+      "utterance": "Find Service Cloud specialists in EMEA ENTR with automation skills",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Service Cloud",
+        "ouName": "EMEA ENTR",
+        "automationSkills": true
+      }
+    },
+    {
+      "id": "SME_024",
+      "utterance": "Show Marketing Cloud experts for UKI with campaign management experience",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Marketing Cloud",
+        "ouName": "UKI",
+        "campaignManagement": true
+      }
+    },
+    {
+      "id": "SME_025",
+      "utterance": "Find Data Cloud SMEs in AMER ACC with analytics expertise",
+      "expectedTool": "search_sme",
+      "expectedArgs": {
+        "product": "Data Cloud",
+        "ouName": "AMER ACC",
+        "analyticsExpertise": true
+      }
+    }
+  ]
+}

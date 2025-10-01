@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>false</customObject>
+    <description>Agent Guide UI - Discover what to ask an AI sales-enablement agent</description>
+    <flexiPage>Agent_Guide_UI</flexiPage>
+    <label>Agent Guide</label>
+    <motif>Custom53:Bot</motif>
+</CustomTab>

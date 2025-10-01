@@ -1,0 +1,87 @@
+<template>
+    <div class="page slds-p-vertical_medium slds-p-horizontal_large">
+        <h1 class="slds-text-heading_medium slds-m-bottom_x-small">
+            <lightning-icon icon-name="utility:apps" size="small" class="slds-m-right_small"></lightning-icon>
+            Agent Guide V2
+        </h1>
+        <p class="slds-text-color_weak slds-m-bottom_small">Find the right tools and actions for your enablement needs.</p>
+
+        <template if:false={showBuilder}>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-3">
+                    <div class="slds-card">
+                        <div class="slds-card__header">
+                            <h2 class="slds-text-heading_small">Available Topics</h2>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <div class="slds-grid slds-wrap slds-gutters">
+                                <template for:each={topics} for:item="topic">
+                                    <div key={topic.id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                                        <div class="slds-box slds-box_small slds-text-align_center topic-card" onclick={handleTopicClick} data-topic-id={topic.id}>
+                                            <lightning-icon icon-name={topic.icon} size="medium" class="slds-m-bottom_small"></lightning-icon>
+                                            <h3 class="slds-text-heading_small slds-m-bottom_x-small">{topic.title}</h3>
+                                            <p class="slds-text-body_small slds-text-color_weak">{topic.blurb}</p>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                    <div class="slds-card">
+                        <div class="slds-card__header">
+                            <h3 class="slds-text-heading_small">Agent Panel</h3>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <p class="slds-text-body_small slds-text-color_weak">Select a topic to get started</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={showBuilder}>
+            <lightning-tabset>
+                <lightning-tab label="Topics & Actions" value="topics">
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-large-size_2-of-3 slds-size_1-of-1">
+                            <div class="slds-card">
+                                <div class="slds-card__header">
+                                    <h2 class="slds-text-heading_small">{selectedTopic.title}</h2>
+                                    <p class="slds-text-body_small slds-text-color_weak">{selectedTopic.blurb}</p>
+                                </div>
+                                <div class="slds-card__body slds-card__body_inner">
+                                    <lightning-button variant="neutral" label="← Back to Topics" onclick={handleBackClick} class="slds-m-bottom_medium"></lightning-button>
+                                    <p class="slds-text-body_regular">Topic details and actions will be implemented here.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-large-size_1-of-3 slds-size_1-of-1">
+                            <div class="slds-card">
+                                <div class="slds-card__header">
+                                    <h3 class="slds-text-heading_small">Agent Panel</h3>
+                                </div>
+                                <div class="slds-card__body slds-card__body_inner">
+                                    <template if:true={lastUtterance}>
+                                        <p class="slds-text-body_small slds-text-color_weak">Last Utterance:</p>
+                                        <p class="slds-text-body_small">{lastUtterance}</p>
+                                    </template>
+                                    <template if:false={lastUtterance}>
+                                        <p class="slds-text-body_small slds-text-color_weak">No utterance yet</p>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-tab>
+                <lightning-tab label="Search & Filter" value="search">
+                    <div class="slds-card">
+                        <div class="slds-card__body slds-card__body_inner">
+                            <p class="slds-text-body_regular">Search and filter functionality will be implemented here.</p>
+                        </div>
+                    </div>
+                </lightning-tab>
+            </lightning-tabset>
+        </template>
+    </div>
+</template>

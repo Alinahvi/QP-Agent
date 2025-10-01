@@ -1,0 +1,119 @@
+### KPI Outlier Analysis UAT Scripts
+### Test various outlier detection scenarios
+
+### 1. Basic KPI outliers for AMER ACC (CURRENT)
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "AMER ACC",
+  "timeFrame": "CURRENT",
+  "enableOutliers": true,
+  "limitN": 100
+}
+
+### 2. UKI PREVIOUS - meetings and coverage outliers, top 50
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "UKI",
+  "timeFrame": "PREVIOUS",
+  "enableOutliers": true,
+  "metrics": ["CQ_CUSTOMER_MEETING__c", "Coverage__c"],
+  "limitN": 50
+}
+
+### 3. Benchmark AEs by AE_Score and Coverage with outliers ON
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "EMEA SMB",
+  "timeFrame": "CURRENT",
+  "enableOutliers": true,
+  "metrics": ["AE_Score__c", "Coverage__c"],
+  "limitN": 200
+}
+
+### 4. Revenue outliers for APAC REG
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "APAC REG",
+  "timeFrame": "CURRENT",
+  "enableOutliers": true,
+  "metrics": ["CQ_ACV__c", "CQ_PG__c"],
+  "limitN": 150
+}
+
+### 5. Country-based outlier analysis
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "workLocationCountry": "United States",
+  "timeFrame": "CURRENT",
+  "enableOutliers": true,
+  "metrics": ["CQ_CUSTOMER_MEETING__c", "CQ_CALL_CONNECT__c"],
+  "limitN": 100
+}
+
+### 6. Growth factors with outlier detection
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "AMER SMB",
+  "timeFrame": "CURRENT",
+  "analysisType": "GROWTH_FACTORS",
+  "enableOutliers": true,
+  "metrics": ["Coverage__c", "AE_Score__c"],
+  "limitN": 100
+}
+
+### 7. Large dataset test (max rows)
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "AMER REG",
+  "timeFrame": "CURRENT",
+  "enableOutliers": true,
+  "limitN": 2000
+}
+
+### 8. Outlier analysis disabled (should not include outlier section)
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "EMEA ACC",
+  "timeFrame": "CURRENT",
+  "enableOutliers": false,
+  "limitN": 100
+}
+
+### 9. Specific metrics only
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "APAC SMB",
+  "timeFrame": "CURRENT",
+  "enableOutliers": true,
+  "metrics": ["CQ_CUSTOMER_MEETING__c"],
+  "limitN": 50
+}
+
+### 10. Edge case - very small dataset
+POST {{baseUrl}}/services/apexrest/mcp/agent/kpi-analyze
+Content-Type: application/json
+
+{
+  "ouName": "TMT",
+  "timeFrame": "CURRENT",
+  "enableOutliers": true,
+  "limitN": 10
+}

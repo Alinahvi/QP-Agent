@@ -81,7 +81,17 @@ public with sharing class ANContentSearchHandler {
                     responses.add(res);
                     continue;
                 }
-                res = handleSearch(req);
+                // Use the new unified service for all searches with proper formatting
+                ANAgentUnifiedContentSearchService.UnifiedSearchResult searchResult = 
+                    ANAgentUnifiedContentSearchService.search(req.searchTerm);
+                
+                if (searchResult.success) {
+                    res.message = searchResult.composedMessage;
+                    res.success = true;
+                } else {
+                    res.message = '**Content Search Error**\n\nSearch failed: ' + String.join(searchResult.errors, '; ');
+                    res.success = false;
+                }
             } catch (AuraHandledException e) {
                 res.success = false;
                 res.message = e.getMessage();

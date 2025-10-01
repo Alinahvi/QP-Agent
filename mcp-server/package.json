@@ -1,0 +1,31 @@
+{
+  "name": "mcp-server-v3",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "lint": "echo \"add eslint if desired\"",
+    "test": "echo \"use your CI to run Apex and AgentDX\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.1",
+    "ajv": "^8.17.1",
+    "execa": "^8.0.1",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "mustache": "^4.2.0",
+    "p-limit": "^5.0.0",
+    "yaml": "^2.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/mustache": "^4.2.6",
+    "@types/node": "^24.5.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}

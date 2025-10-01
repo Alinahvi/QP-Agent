@@ -1,0 +1,19 @@
+.topic-card {
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.topic-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .slds-medium-size_1-of-2 {
+    width: 100% !important;
+  }
+  
+  .slds-large-size_1-of-3 {
+    width: 100% !important;
+  }
+}

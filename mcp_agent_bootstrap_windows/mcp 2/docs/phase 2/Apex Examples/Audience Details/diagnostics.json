@@ -1,0 +1,24 @@
+{
+  "objectApiName": "Audience__c",
+  "startedAt": "2025-09-24T18:18:14.511Z",
+  "finishedAt": "2025-09-24T18:19:28.891Z",
+  "orgCliAvailable": true,
+  "counts": {
+    "fields": 4,
+    "recordTypes": 2,
+    "validationRules": 0,
+    "triggers": 0,
+    "usageApex": 25,
+    "usageFlows": 0,
+    "usageLwcs": 0,
+    "permsFields": 0
+  },
+  "outputs": {
+    "object": ".artifacts\\discovery\\Audience__c\\object.json",
+    "usage": ".artifacts\\discovery\\Audience__c\\usage.json",
+    "permissions": ".artifacts\\discovery\\Audience__c\\permissions.json",
+    "planV1": ".artifacts\\plan\\Audience__c.plan.json",
+    "planV2": ".artifacts\\plan\\Audience__c.plan.v2.json",
+    "brief": ""
+  }
+}

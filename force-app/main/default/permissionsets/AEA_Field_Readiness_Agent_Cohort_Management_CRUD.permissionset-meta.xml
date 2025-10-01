@@ -80,6 +80,82 @@
         <apexClass>ANAgentAPMNominationHandlerV2</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    
+    <!-- V2 KPI Analysis Service & Handler -->
+    <classAccesses>
+        <apexClass>ANAgentKPIAnalysisV2Service</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentKPIAnalysisV2Handler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    
+    <!-- V2 KPI Analysis Top-Level DTOs -->
+    <classAccesses>
+        <apexClass>ANAgentKPIAnalysisV2Request</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentKPIAnalysisV2Response</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentKPIAnalysisV2GroupRow</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    
+    <!-- Aggregation Stack - Core Service Layer -->
+    <classAccesses>
+        <apexClass>ANAgentMetricRegistry</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentDimensionRegistry</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentStats</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentErrors</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentLog</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    
+    <!-- Aggregation Stack - Data Models & Builders -->
+    <classAccesses>
+        <apexClass>ANAgentAggregationSpec</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentSOQLBuilder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentAggregationRunner</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ANAgentAggregationJob</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    
+    <!-- Aggregation Stack - Filter Parser -->
+    <classAccesses>
+        <apexClass>ANAgentFilterParser</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    
+    <!-- KPI Utils (used by legacy service) -->
+    <classAccesses>
+        <apexClass>ANAgentKPIUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <description>Provides full Create, Read, Update, and Delete access to cohort management features for the Field Readiness Agent.</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>AEA Field Readiness Agent Cohort Management CRUD</label>

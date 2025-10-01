@@ -1,0 +1,23 @@
+/**
+ * Minimal DTO for {{ObjectApiName}} records.
+ */
+public class Generated_FRAGENT_{{Object}}_DTO {
+    public Id id;
+    public String name;
+    public DateTime createdDate;
+    public String createdByName;
+    public DateTime lastModifiedDate;
+    public String lastModifiedByName;
+
+    public static Generated_FRAGENT_{{Object}}_DTO fromSObject({{ObjectApiName}} a) {
+        Generated_FRAGENT_{{Object}}_DTO d = new Generated_FRAGENT_{{Object}}_DTO();
+        d.id = a.Id;
+        d.name = a.Name;
+        d.createdDate = a.CreatedDate;
+        d.createdByName = (a.CreatedBy != null) ? a.CreatedBy.Name : null;
+        d.lastModifiedDate = a.LastModifiedDate;
+        d.lastModifiedByName = (a.LastModifiedBy != null) ? a.LastModifiedBy.Name : null;
+        return d;
+    }
+}
+

@@ -1,0 +1,4 @@
+Conversation_Time__c,User_Id__c,Agent_Feedback_data_structure,Agent_Response__c
+2024-01-15T10:30:00Z,0051234567890ABCD,John Doe,"What are my KPIs for this quarter? Here are your KPIs for Q4: ACV: $2.5M, Calls: 150, Meetings: 45"
+2024-01-15T11:15:00Z,0051234567890EFGH,Jane Smith,"Show me top performers. Top performers this quarter: 1. Sarah Smith ($3.2M ACV), 2. Mike Johnson ($2.8M ACV)"
+2024-01-15T14:20:00Z,0051234567890IJKL,Mike Johnson,"What is my pipeline coverage? Your pipeline coverage is 3.2x quota with $8.5M in opportunities"

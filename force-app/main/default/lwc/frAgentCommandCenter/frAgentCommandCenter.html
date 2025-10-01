@@ -1,0 +1,32 @@
+<template>
+    <div class="page slds-p-vertical_medium slds-p-horizontal_large">
+        <h1 class="slds-text-heading_medium slds-m-bottom_x-small">Audience Builder Command Center</h1>
+        <p class="slds-text-color_weak slds-m-bottom_small">Define your audience visually, preview live results, then create and provision with one click.</p>
+
+        <template if:false={showBuilder}>
+            <c-intent-selection onintent={handleIntent}></c-intent-selection>
+        </template>
+        <template if:true={showBuilder}>
+            <lightning-tabset>
+                <lightning-tab label="Build & Provision" value="build">
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-large-size_2-of-3 slds-size_1-of-1">
+                            <c-audience-builder
+                                onpreviewupdate={handlePreviewUpdate}
+                                onprovisionstart={handleProvisionStart}
+                                onprovisionprogress={handleProvisionProgress}
+                                onprovisioncomplete={handleProvisionComplete}
+                            ></c-audience-builder>
+                        </div>
+                        <div class="slds-col slds-large-size_1-of-3 slds-size_1-of-1">
+                            <c-agent-status-panel steps={steps} messages={messages}></c-agent-status-panel>
+                        </div>
+                    </div>
+                </lightning-tab>
+                <lightning-tab label="Preview & Review" value="preview">
+                    <c-audience-preview-panel rows={previewRows} columns={previewColumns}></c-audience-preview-panel>
+                </lightning-tab>
+            </lightning-tabset>
+        </template>
+    </div>
+</template>

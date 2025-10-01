@@ -1,0 +1,12 @@
+{
+  "name": "TypeError",
+  "message": "Cannot read properties of null (reading 'Id')",
+  "exitCode": 10,
+  "context": "Test",
+  "stack": "TypeError: Cannot read properties of null (reading 'Id')\n    at SfCommandError.from (file:///C:/Program%20Files/sf/client/node_modules/@salesforce/sf-plugins-core/lib/SfCommandError.js:39:16)\n    at Test.catch (file:///C:/Program%20Files/sf/client/node_modules/@salesforce/sf-plugins-core/lib/sfCommand.js:323:47)\n    at Test._run (C:\\Program Files\\sf\\client\\node_modules\\@oclif\\core\\lib\\command.js:185:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Config.runCommand (C:\\Program Files\\sf\\client\\node_modules\\@oclif\\core\\lib\\config\\config.js:456:25)\n    at async run (C:\\Program Files\\sf\\client\\node_modules\\@oclif\\core\\lib\\main.js:97:16)\n    at async file:///C:/Program%20Files/sf/client/bin/run.js:15:1",
+  "cause": "TypeError: Cannot read properties of null (reading 'Id')\n    at C:\\Program Files\\sf\\client\\node_modules\\@salesforce\\apex-node\\lib\\src\\tests\\codeCoverage.js:137:57\n    at Array.map (<anonymous>)\n    at C:\\Program Files\\sf\\client\\node_modules\\@salesforce\\apex-node\\lib\\src\\tests\\codeCoverage.js:131:59\n    at Array.forEach (<anonymous>)\n    at CodeCoverage.getAggregateCodeCoverage (C:\\Program Files\\sf\\client\\node_modules\\@salesforce\\apex-node\\lib\\src\\tests\\codeCoverage.js:130:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async calculateCodeCoverage (C:\\Program Files\\sf\\client\\node_modules\\@salesforce\\apex-node\\lib\\src\\tests\\utils.js:154:67)\n    at async AsyncTests.formatAsyncResults (C:\\Program Files\\sf\\client\\node_modules\\@salesforce\\apex-node\\lib\\src\\tests\\asyncTests.js:271:13)\n    at async AsyncTests.reportAsyncResults (C:\\Program Files\\sf\\client\\node_modules\\@salesforce\\apex-node\\lib\\src\\tests\\asyncTests.js:177:38)\n    at async TestService.reportAsyncResults (C:\\Program Files\\sf\\client\\node_modules\\@salesforce\\apex-node\\lib\\src\\tests\\testService.js:173:20)",
+  "warnings": [],
+  "code": "10",
+  "status": 10,
+  "commandName": "Test"
+}

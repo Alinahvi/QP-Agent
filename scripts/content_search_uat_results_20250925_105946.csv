@@ -1,0 +1,51 @@
+Utterance #,Utterance,Source Requested,Method Used,Agent Response,Result,Notes,Timestamp
+1,"Show me ACT courses related to Data Cloud",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:20.538109
+2,"List Sales Cloud ACT courses created between Jan 1 and Mar 31",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:21.052672
+3,"Find Sales Cloud ACT courses with completion rate > 60%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:21.562859
+4,"For those courses, show enrollments",Mixed,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:22.069489
+5,"Show a Consensus demo on Data Cloud",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:22.582378
+6,"Find Consensus demo videos for Data Cloud created in the last quarter",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:23.090763
+7,"List ACT curricula for Sales Cloud with completion rate > 75% and show links",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:23.600104
+8,"Show ACT assets tagged Data Cloud created this year",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:24.109666
+9,"From ACT, show top 5 Sales Cloud courses by enrollment",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:24.618288
+10,"Show Consensus demos for Sales Cloud with a public preview link",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:25.123407
+11,"Find ACT courses for Marketing Cloud with completion rate > 70%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:25.631973
+12,"Show Consensus demos for Service Cloud created in Q1 2024",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:26.137364
+13,"List ACT assets for Data Cloud with enrollment > 1000",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:26.651617
+14,"Show top 3 Consensus demos for Marketing Cloud by view count",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:27.156817
+15,"Find ACT curricula for Service Cloud with completion rate > 80%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:27.664958
+16,"Show Consensus demos for Data Cloud with duration > 15 minutes",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:28.171387
+17,"List ACT courses for Sales Cloud created between Feb 1 and Apr 30",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:28.681907
+18,"Show Consensus demos for Service Cloud with public preview",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:29.190224
+19,"Find ACT assets for Marketing Cloud tagged with 'advanced'",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:29.699274
+20,"Show Consensus demos for Data Cloud with view count > 5000",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:30.205681
+21,"List ACT courses for Service Cloud with completion rate > 65%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:30.712713
+22,"Show Consensus demos for Marketing Cloud created this year",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:31.222356
+23,"Find ACT curricula for Data Cloud with enrollment > 2000",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:31.726868
+24,"Show top 5 Consensus demos for Sales Cloud by engagement",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:32.235599
+25,"List ACT assets for Service Cloud with completion rate > 75%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:32.745788
+26,"Show Consensus demos for Data Cloud with duration < 20 minutes",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:33.252151
+27,"Find ACT courses for Marketing Cloud created in the last 6 months",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:33.755763
+28,"Show Consensus demos for Service Cloud with view count > 3000",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:34.264063
+29,"List ACT curricula for Sales Cloud with completion rate > 85%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:34.772863
+30,"Show Consensus demos for Data Cloud with public preview and high engagement",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:35.279910
+31,"Find ACT assets for Service Cloud tagged with 'integration'",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:35.788910
+32,"Show Consensus demos for Marketing Cloud with duration > 10 minutes",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:36.299644
+33,"List ACT courses for Data Cloud with enrollment > 1500",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:36.805900
+34,"Show Consensus demos for Sales Cloud created between Jan 1 and Mar 31",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:37.409933
+35,"Find ACT curricula for Marketing Cloud with completion rate > 78%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:37.920307
+36,"Show Consensus demos for Service Cloud with view count > 4000",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:38.432090
+37,"List ACT assets for Data Cloud with completion rate > 80%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:38.963619
+38,"Show Consensus demos for Marketing Cloud with public preview",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:39.473613
+39,"Find ACT courses for Service Cloud created in Q2 2024",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:39.983006
+40,"Show Consensus demos for Data Cloud with duration > 25 minutes",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:40.492234
+41,"List ACT curricula for Sales Cloud with enrollment > 3000",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:41.002902
+42,"Show Consensus demos for Service Cloud with view count > 6000",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:41.511567
+43,"Find ACT assets for Marketing Cloud with completion rate > 72%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:42.020823
+44,"Show Consensus demos for Data Cloud with public preview and duration < 15 minutes",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:42.529883
+45,"List ACT courses for Service Cloud with completion rate > 68%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:43.042264
+46,"Show Consensus demos for Marketing Cloud created in the last quarter",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:43.555313
+47,"Find ACT curricula for Data Cloud with enrollment > 2500",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:44.067314
+48,"Show Consensus demos for Sales Cloud with view count > 8000",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:44.570901
+49,"List ACT assets for Service Cloud with completion rate > 77%",ACT,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:45.083757
+50,"Show Consensus demos for Data Cloud with public preview and high view count",Consensus,API,"API Error: 403 - ",FAIL,HTTP 403,2025-09-25T10:59:45.595843

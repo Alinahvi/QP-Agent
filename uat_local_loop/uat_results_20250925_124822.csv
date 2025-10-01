@@ -1,0 +1,2 @@
+Case ID,Description,Utterance,MCP Success,MCP Tool,MCP Args,MCP Time (ms),Apex Success,Apex Time (ms),Overall Success,Error Message
+1,KPI Analysis - EMEA ENTR,Show me KPI analysis for EMEA ENTR current quarter,True,kpi_analyze,"{""ouName"": ""EMEA ENTR"", ""timeFrame"": ""CURRENT""}",8.3,True,0.0,True,

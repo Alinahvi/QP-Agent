@@ -1,0 +1,979 @@
+{
+  "object": "Audience__c",
+  "orgAlias": "innovation",
+  "generatedAt": "2025-09-24T12:15:30",
+  "org": {
+    "interactingPermissionSets": [
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002umgaOAA"
+          },
+          "Id": "0PSD7000002umgaOAA",
+          "Name": "AEA_Field_Readiness_Agent_Cohort_Management_CRUD",
+          "Label": "AEA Field Readiness Agent Cohort Management CRUD",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kSMr9IAG"
+            },
+            "ParentId": "0PSD7000002umgaOAA",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS2E000000qtdxWAA"
+          },
+          "Id": "0PS2E000000qtdxWAA",
+          "Name": "X00e2E000001jhjeQAA",
+          "Label": "00e2E000001jhjeQAA",
+          "IsOwnedByProfile": true,
+          "ProfileId": "00e2E000001jhjeQAA"
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/00000000qtdxa6GAAQ"
+            },
+            "ParentId": "0PS2E000000qtdxWAA",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS800000008if4GAA"
+          },
+          "Id": "0PS800000008if4GAA",
+          "Name": "X00e800000011vG4AAI",
+          "Label": "00e800000011vG4AAI",
+          "IsOwnedByProfile": true,
+          "ProfileId": "00e800000011vG4AAI"
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/000000008if4a6GAAQ"
+            },
+            "ParentId": "0PS800000008if4GAA",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS800000004R9jGAE"
+          },
+          "Id": "0PS800000004R9jGAE",
+          "Name": "X00ex00000018ozT_128_09_43_34_1",
+          "Label": "00ex00000018ozT_128_09_43_34_1",
+          "IsOwnedByProfile": true,
+          "ProfileId": "00e80000001OXaeAAG"
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/000000004R9ja6GAQQ"
+            },
+            "ParentId": "0PS800000004R9jGAE",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS2E000000e6rRWAQ"
+          },
+          "Id": "0PS2E000000e6rRWAQ",
+          "Name": "ACT_Learner",
+          "Label": "ACT Learner",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00003KOxfcIAD"
+            },
+            "ParentId": "0PS2E000000e6rRWAQ",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000000fCKAOA2"
+          },
+          "Id": "0PSHu000000fCKAOA2",
+          "Name": "sfdc_a360_sfcrm_data_extract",
+          "Label": "Data Cloud Salesforce Connector",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kT199IAC"
+            },
+            "ParentId": "0PSHu000000fCKAOA2",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000003BdFNOA0"
+          },
+          "Id": "0PSHu000003BdFNOA0",
+          "Name": "ACT_Learning_Admin",
+          "Label": "ACT Learning Admin",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00003KOlu7IAD"
+            },
+            "ParentId": "0PSHu000003BdFNOA0",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": [
+          {
+            "attributes": {
+              "type": "PermissionSetGroup",
+              "url": "/services/data/v64.0/sobjects/PermissionSetGroup/0PG2E000000blJdWAI"
+            },
+            "Id": "0PG2E000000blJdWAI",
+            "DeveloperName": "ACT_Designer",
+            "MasterLabel": "ACT Designer"
+          }
+        ]
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000003bRr2OAE"
+          },
+          "Id": "0PSHu000003bRr2OAE",
+          "Name": "Co_edit_Dashboard_permission",
+          "Label": "Co-edit Dashboard permission",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00003ahDyPIAU"
+            },
+            "ParentId": "0PSHu000003bRr2OAE",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000003BdFMOA0"
+          },
+          "Id": "0PSHu000003BdFMOA0",
+          "Name": "ACT_Assign_Required_Learning",
+          "Label": "ACT Assign Required Learning",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00002TKxfJIAT"
+            },
+            "ParentId": "0PSHu000003BdFMOA0",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002uqaOOAQ"
+          },
+          "Id": "0PSD7000002uqaOOAQ",
+          "Name": "AEAE_AN_Agents_CRUD",
+          "Label": "AEAE AN Agents CRUD",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kT2jCIAS"
+            },
+            "ParentId": "0PSD7000002uqaOOAQ",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000003bJDvOAM"
+          },
+          "Id": "0PSHu000003bJDvOAM",
+          "Name": "MulesoftUser_Permission_set",
+          "Label": "MulesoftUser Permission set",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00003KP9gUIAT"
+            },
+            "ParentId": "0PSHu000003bJDvOAM",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS2E000000e6jOWAQ"
+          },
+          "Id": "0PS2E000000e6jOWAQ",
+          "Name": "ViewPerms_DistributionEvent",
+          "Label": "ViewPerms_DistributionEvent",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu000070sL39IAE"
+            },
+            "ParentId": "0PS2E000000e6jOWAQ",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002umklOAA"
+          },
+          "Id": "0PSD7000002umklOAA",
+          "Name": "sfdc_slack",
+          "Label": "Slack Integration User",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kSNVYIA4"
+            },
+            "ParentId": "0PSD7000002umklOAA",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002ukynOAA"
+          },
+          "Id": "0PSD7000002ukynOAA",
+          "Name": "AEA_Field_Readiness_Agent",
+          "Label": "AEA - Field Readiness Agent",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kRNI2IAO"
+            },
+            "ParentId": "0PSD7000002ukynOAA",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000003BeCbOAK"
+          },
+          "Id": "0PSHu000003BeCbOAK",
+          "Name": "act2dataload",
+          "Label": "act2dataload",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00002TLNKRIA5"
+            },
+            "ParentId": "0PSHu000003BeCbOAK",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS2E000001eO31WAE"
+          },
+          "Id": "0PS2E000001eO31WAE",
+          "Name": "X00e2E0000016XElQAM",
+          "Label": "00e2E0000016XElQAM",
+          "IsOwnedByProfile": true,
+          "ProfileId": "00e2E0000016XElQAM"
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00002TKxeUIAT"
+            },
+            "ParentId": "0PS2E000001eO31WAE",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002uno5OAA"
+          },
+          "Id": "0PSD7000002uno5OAA",
+          "Name": "AEA_Field_Readiness_Agent_Cohort_Management_Admin",
+          "Label": "AEA Field Readiness Agent Cohort Management Admin",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kSZFoIAO"
+            },
+            "ParentId": "0PSD7000002uno5OAA",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS2E000000e6rWWAQ"
+          },
+          "Id": "0PS2E000000e6rWWAQ",
+          "Name": "ACT_Designer",
+          "Label": "ACT Designer",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00003KOxfzIAD"
+            },
+            "ParentId": "0PS2E000000e6rWWAQ",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS2E000000fgX3WAI"
+          },
+          "Id": "0PS2E000000fgX3WAI",
+          "Name": "X00e2E000001WgcUQAS",
+          "Label": "00e2E000001WgcUQAS",
+          "IsOwnedByProfile": true,
+          "ProfileId": "00e2E000001WgcUQAS"
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00002TKxeTIAT"
+            },
+            "ParentId": "0PS2E000000fgX3WAI",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002umgZOAQ"
+          },
+          "Id": "0PSD7000002umgZOAQ",
+          "Name": "AEA_Field_Readiness_Agent_Cohort_Management_CRU",
+          "Label": "AEA Field Readiness Agent Cohort Management CRU",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kSMqxIAG"
+            },
+            "ParentId": "0PSD7000002umgZOAQ",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS800000008jG5GAI"
+          },
+          "Id": "0PS800000008jG5GAI",
+          "Name": "X00e800000011vQiAAI",
+          "Label": "00e800000011vQiAAI",
+          "IsOwnedByProfile": true,
+          "ProfileId": "00e800000011vQiAAI"
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/000000008jG5a6GAAR"
+            },
+            "ParentId": "0PS800000008jG5GAI",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PS2E0000028NmOWAU"
+          },
+          "Id": "0PS2E0000028NmOWAU",
+          "Name": "Dev_Console",
+          "Label": "Dev Console",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00002TKxeVIAT"
+            },
+            "ParentId": "0PS2E0000028NmOWAU",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000003b6xLOAQ"
+          },
+          "Id": "0PSHu000003b6xLOAQ",
+          "Name": "ACT_Learning",
+          "Label": "ACT Learning",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110Hu00003KNBKCIA5"
+            },
+            "ParentId": "0PSHu000003b6xLOAQ",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": [
+          {
+            "attributes": {
+              "type": "PermissionSetGroup",
+              "url": "/services/data/v64.0/sobjects/PermissionSetGroup/0PG2E000000blJYWAY"
+            },
+            "Id": "0PG2E000000blJYWAY",
+            "DeveloperName": "ACT_Learner",
+            "MasterLabel": "ACT Learner"
+          },
+          {
+            "attributes": {
+              "type": "PermissionSetGroup",
+              "url": "/services/data/v64.0/sobjects/PermissionSetGroup/0PG2E000000blJdWAI"
+            },
+            "Id": "0PG2E000000blJdWAI",
+            "DeveloperName": "ACT_Designer",
+            "MasterLabel": "ACT Designer"
+          }
+        ]
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSHu000006TZu7OAG"
+          },
+          "Id": "0PSHu000006TZu7OAG",
+          "Name": "Checklist_Manager",
+          "Label": "Checklist Manager",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kQvQQIA0"
+            },
+            "ParentId": "0PSHu000006TZu7OAG",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002umKrOAI"
+          },
+          "Id": "0PSD7000002umKrOAI",
+          "Name": "X00eD7000001hhEdIAI",
+          "Label": "00eD7000001hhEdIAI",
+          "IsOwnedByProfile": true,
+          "ProfileId": "00eD7000001hhEdIAI"
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/00000002umKra6GAAR"
+            },
+            "ParentId": "0PSD7000002umKrOAI",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": true,
+            "PermissionsRead": true,
+            "PermissionsEdit": true,
+            "PermissionsDelete": true,
+            "PermissionsViewAllRecords": true,
+            "PermissionsModifyAllRecords": true
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      },
+      {
+        "permissionSet": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v64.0/sobjects/PermissionSet/0PSD7000002umgbOAA"
+          },
+          "Id": "0PSD7000002umgbOAA",
+          "Name": "AEA_Field_Readiness_Agent_Cohort_Management_Retrieve",
+          "Label": "AEA Field Readiness Agent Cohort Management Retrieve",
+          "IsOwnedByProfile": false,
+          "ProfileId": null
+        },
+        "objectCRUD": [
+          {
+            "attributes": {
+              "type": "ObjectPermissions",
+              "url": "/services/data/v64.0/sobjects/ObjectPermissions/110D700003kSMrLIAW"
+            },
+            "ParentId": "0PSD7000002umgbOAA",
+            "SobjectType": "Audience__c",
+            "PermissionsCreate": false,
+            "PermissionsRead": true,
+            "PermissionsEdit": false,
+            "PermissionsDelete": false,
+            "PermissionsViewAllRecords": false,
+            "PermissionsModifyAllRecords": false
+          }
+        ],
+        "audienceFields": [],
+        "relatedFields": [],
+        "recordTypes": [],
+        "groups": []
+      }
+    ],
+    "counts": {
+      "permissionSets": 26,
+      "objectCRUD": 26,
+      "objectFLS": 0,
+      "relatedFLS": 0,
+      "recordTypeVis": 0
+    }
+  },
+  "repo": {
+    "permissionSets": [
+      {
+        "file": "C:\\Users\\gardisana\\Field Readiness Agent\\force-app\\main\\default\\permissionsets\\ACT_Learning_Admin.permissionset-meta.xml",
+        "objectCRUD": true,
+        "objectFields": [
+          "Audience__c.externalid__c",
+          "Audience__c.Filter_Logic__c",
+          "Audience__c.Rendering__c",
+          "Audience__c.Use_Custom_Filter__c"
+        ],
+        "relatedFields": [
+          "Audience_Member__c.Audience__c",
+          "Recommended_Audience__c.Audience__c",
+          "Recommended_Learning__c.Audience__c",
+          "Target_Criteria__c.Audience__c"
+        ],
+        "recordTypes": [
+          "Audience__c.Cohort",
+          "Audience__c.Dynamic_Audience"
+        ]
+      },
+      {
+        "file": "C:\\Users\\gardisana\\Field Readiness Agent\\force-app\\main\\default\\permissionsets\\ACT_Learning.permissionset-meta.xml",
+        "objectCRUD": true,
+        "objectFields": [
+          "Audience__c.externalid__c",
+          "Audience__c.Filter_Logic__c",
+          "Audience__c.Rendering__c",
+          "Audience__c.Use_Custom_Filter__c"
+        ],
+        "relatedFields": [
+          "Assigned_Learning__c.Audience__c",
+          "Audience_Member__c.Audience__c",
+          "Recommended_Audience__c.Audience__c",
+          "Recommended_Learning__c.Audience__c"
+        ],
+        "recordTypes": null
+      },
+      {
+        "file": "C:\\Users\\gardisana\\Field Readiness Agent\\force-app\\main\\default\\permissionsets\\AEA_Field_Readiness_Agent_Cohort_Management_CRU.permissionset-meta.xml",
+        "objectCRUD": true,
+        "objectFields": null,
+        "relatedFields": null,
+        "recordTypes": null
+      },
+      {
+        "file": "C:\\Users\\gardisana\\Field Readiness Agent\\force-app\\main\\default\\permissionsets\\AEA_Field_Readiness_Agent_Cohort_Management_CRUD.permissionset-meta.xml",
+        "objectCRUD": true,
+        "objectFields": null,
+        "relatedFields": null,
+        "recordTypes": null
+      },
+      {
+        "file": "C:\\Users\\gardisana\\Field Readiness Agent\\force-app\\main\\default\\permissionsets\\AEA_Field_Readiness_Agent_Cohort_Management_Retrieve.permissionset-meta.xml",
+        "objectCRUD": true,
+        "objectFields": null,
+        "relatedFields": null,
+        "recordTypes": null
+      },
+      {
+        "file": "C:\\Users\\gardisana\\Field Readiness Agent\\force-app\\main\\default\\permissionsets\\Checklist_Manager.permissionset-meta.xml",
+        "objectCRUD": true,
+        "objectFields": null,
+        "relatedFields": "Audience_Checklist__c.Audience__c",
+        "recordTypes": null
+      }
+    ],
+    "counts": {
+      "permissionSets": 6,
+      "objectCRUD": 6,
+      "objectFLS": 2,
+      "relatedFLS": 3,
+      "recordTypeVis": 1
+    }
+  }
+}

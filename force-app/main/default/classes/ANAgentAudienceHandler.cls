@@ -1,40 +1,113 @@
 /**
- * @description Invocable Apex class for handling APM nominations for all asset types.
- *              Entry point for the agent/Flow.
+ * @description Audience handler for agent actions.
+ * Provides interface for managing audiences.
+ * @version 1.0
  */
 public with sharing class ANAgentAudienceHandler {
-    public class NominationRequest {
-        @InvocableVariable(label='Offering Id' description='Id of the course/program/asset/curriculum to nominate.' required=false)
-        public Id offeringId;
-        @InvocableVariable(label='Offering Type' description='Type of the offering (Course, Program, Asset, Curriculum).' required=false)
-        public String offeringType;
-        @InvocableVariable(label='Nominator Name' description='Name of the nominator.' required=true)
-        public String nominatorName;
-        @InvocableVariable(label='Offering Name' description='Name of the offering (optional, used if Id is not provided).' required=false)
-        public String offeringName;
+
+    /**
+     * @description Request class for audience operations
+     */
+    public class AudienceRequest {
+        @InvocableVariable(
+            label='Action'
+            description='The action to perform: Search, Create, Update, or Delete'
+            required=true
+        )
+        public String action;
+
+        @InvocableVariable(
+            label='Audience Name'
+            description='Name of the audience to search for or create'
+        )
+        public String audienceName;
+
+        @InvocableVariable(
+            label='Audience ID'
+            description='ID of the audience for update/delete operations'
+        )
+        public String audienceId;
+
+        public AudienceRequest() {}
     }
-    public class NominationResponse {
-        @InvocableVariable(label='Success' description='Whether the nomination was successful.')
+
+    /**
+     * @description Response class for audience operations
+     */
+    public class AudienceResponse {
+        @InvocableVariable(
+            label='Success'
+            description='Indicates whether the operation was successful'
+        )
         public Boolean success;
-        @InvocableVariable(label='Message' description='Result message for the nomination.')
+
+        @InvocableVariable(
+            label='Message'
+            description='Human-readable message about the operation results'
+        )
         public String message;
-        public NominationResponse() {}
-        public NominationResponse(Boolean success, String message) {
-            this.success = success;
-            this.message = message;
+
+        @InvocableVariable(
+            label='Audience Data'
+            description='JSON string containing audience information'
+        )
+        public String audienceData;
+
+        public AudienceResponse() {
+            this.success = false;
+            this.message = '';
+            this.audienceData = '';
         }
     }
-    @InvocableMethod(label='ANAgent Nominate Offering' description='Nominate a course/program/asset/curriculum for APM measurement.')
-    public static List<NominationResponse> handleNomination(List<NominationRequest> requests) {
-        List<NominationResponse> responses = new List<NominationResponse>();
-        if (requests == null || requests.isEmpty()) {
-            responses.add(new NominationResponse(false, 'No nomination requests provided.'));
-            return responses;
+
+    /**
+     * @description Main invocable method for audience operations
+     */
+    @InvocableMethod(
+        label='Manage Audiences'
+        description='Search, create, update, or delete audiences'
+        category='ANAgent'
+    )
+    public static List<AudienceResponse> manageAudiences(List<AudienceRequest> requests) {
+        List<AudienceResponse> responses = new List<AudienceResponse>();
+        
+        for (AudienceRequest request : requests) {
+            AudienceResponse response = new AudienceResponse();
+            
+            try {
+                if (String.isBlank(request.action)) {
+                    response.message = 'Action is required';
+                    responses.add(response);
+                    continue;
+                }
+                
+                switch on request.action.toUpperCase() {
+                    when 'SEARCH' {
+                        response = ANAgentAudienceService.searchAudiences(request);
+                    }
+                    when 'CREATE' {
+                        response = ANAgentAudienceService.createAudience(request);
+                    }
+                    when 'UPDATE' {
+                        response = ANAgentAudienceService.updateAudience(request);
+                    }
+                    when 'DELETE' {
+                        response = ANAgentAudienceService.deleteAudience(request);
+                    }
+                    when else {
+                        response.message = 'Invalid action: ' + request.action;
+                    }
+                }
+                
+            } catch (Exception e) {
+                response.success = false;
+                response.message = 'Error: ' + e.getMessage();
+                System.debug('Error in ANAgentAudienceHandler: ' + e.getMessage());
+            }
+            
+            responses.add(response);
         }
-        for (NominationRequest req : requests) {
-            ANAgentAudienceService.NominationResult result = ANAgentAudienceService.nominate(req.offeringId, req.offeringType, req.nominatorName, req.offeringName);
-            responses.add(new NominationResponse(result.success, result.message));
-        }
+        
         return responses;
     }
-} 
+}

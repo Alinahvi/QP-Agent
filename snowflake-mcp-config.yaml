@@ -1,0 +1,5 @@
+# snowflake-mcp-config.yaml
+service: snowflake
+# No credentials here; all secrets flow via environment variables from Cursor
+# Add advanced options here if needed (timeouts, etc.)
+

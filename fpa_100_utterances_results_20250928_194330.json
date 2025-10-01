@@ -1,0 +1,2616 @@
+{
+  "start_time": "2025-09-28T19:43:02.004584",
+  "total_tests": 100,
+  "total_successful": 100,
+  "total_failed": 0,
+  "total_tool_detections": 81,
+  "total_ou_detections": 81,
+  "total_product_detections": 19,
+  "total_opportunity_type_detections": 45,
+  "total_intelligence_flags_set": 0,
+  "total_execution_time": 463.8323783874512,
+  "average_execution_time": 4.638323783874512,
+  "batches": [
+    {
+      "batch_number": 1,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 9,
+      "ou_detections": 9,
+      "product_detections": 0,
+      "opportunity_type_detections": 9,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 39.68691825866699,
+      "average_execution_time": 3.968691825866699,
+      "tools_detected": {
+        "future_pipeline": 9
+      },
+      "ous_detected": [
+        "AMER",
+        "EMEA ENTR",
+        "APAC",
+        "AMER ACC",
+        "UKI"
+      ],
+      "products_detected": [],
+      "opportunity_types_detected": [
+        "renewal"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me renewal opportunities in AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 7.399797439575195,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What are the top renewal products for EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.3338069915771484,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Find renewal opportunities in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.2362937927246094,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "APAC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me renewals in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.879070281982422,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "UKI",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Generate renewal pipeline for AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.3462047576904297,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "What renewal data is available for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.1011104583740234,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Show me renewal analysis by country",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.2172203063964844,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Find renewal opportunities in Germany",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.7832260131835938,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What are the highest value renewals?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 3.734111785888672,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me renewal trends in AMER",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.656076431274414,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 2,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 9,
+      "ou_detections": 9,
+      "product_detections": 0,
+      "opportunity_type_detections": 9,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 44.71397399902344,
+      "average_execution_time": 4.471397399902344,
+      "tools_detected": {
+        "future_pipeline": 9
+      },
+      "ous_detected": [
+        "AMER",
+        "EMEA ENTR",
+        "APAC",
+        "AMER ACC",
+        "UKI"
+      ],
+      "products_detected": [],
+      "opportunity_types_detected": [
+        "cross-sell"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me cross-sell opportunities in AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.568742752075195,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What are the top cross-sell products for EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.505157470703125,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Find cross-sell opportunities in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 2.916097640991211,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "APAC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me cross-sell data in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 2.931833267211914,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "UKI",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Generate cross-sell pipeline for AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 2.9180049896240234,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "What cross-sell data is available for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.123044967651367,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Show me cross-sell analysis by country",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.162073135375977,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Find cross-sell opportunities in Germany",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 9.340047836303711,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What are the highest value cross-sell products?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 4.86302375793457,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me cross-sell trends in AMER",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.385948181152344,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "AMER",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 3,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 9,
+      "ou_detections": 9,
+      "product_detections": 0,
+      "opportunity_type_detections": 9,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 40.920257568359375,
+      "average_execution_time": 4.0920257568359375,
+      "tools_detected": {
+        "future_pipeline": 9
+      },
+      "ous_detected": [
+        "AMER",
+        "EMEA ENTR",
+        "APAC",
+        "AMER ACC",
+        "UKI"
+      ],
+      "products_detected": [],
+      "opportunity_types_detected": [
+        "upsell"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me upsell opportunities in AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.2758712768554688,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What are the top upsell products for EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.5169124603271484,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Find upsell opportunities in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.5561065673828125,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "APAC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me upsell data in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.4759979248046875,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "UKI",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Generate upsell pipeline for AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.8370361328125,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "What upsell data is available for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.189968109130859,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Show me upsell analysis by country",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.0989646911621094,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Find upsell opportunities in Germany",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.004167556762695,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What are the highest value upsell products?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 2.7430057525634766,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me upsell trends in AMER",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.222227096557617,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "AMER",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 4,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 6,
+      "ou_detections": 6,
+      "product_detections": 4,
+      "opportunity_type_detections": 0,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 56.65159225463867,
+      "average_execution_time": 5.665159225463867,
+      "tools_detected": {
+        "future_pipeline": 4,
+        "open_pipe_analyze": 1,
+        "kpi_analyze": 1
+      },
+      "ous_detected": [
+        "AMER",
+        "APAC",
+        "EMEA ENTR",
+        "AMER ACC"
+      ],
+      "products_detected": [
+        "Commerce Cloud",
+        "Service Cloud",
+        "Sales Cloud",
+        "Data Cloud"
+      ],
+      "opportunity_types_detected": [],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me Data Cloud opportunities in AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.088090896606445,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "product": "Data Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What are the top Tableau deals for EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.1217803955078125,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Find Sales Cloud opportunities in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.297971725463867,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "APAC",
+              "product": "Sales Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me Marketing Cloud data in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 12.675046920776367,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Generate Service Cloud pipeline for AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 2.7539730072021484,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "product": "Service Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "What Platform Cloud data is available for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 5.786895751953125,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Show me Analytics Cloud analysis by country",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 6.457090377807617,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Find Commerce Cloud opportunities in Germany",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 6.782770156860352,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "Germany",
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "EMEA ENTR",
+              "productListCsv": "Commerce Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What are the highest value Data Cloud products?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 4.945039749145508,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me Tableau trends in AMER",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "kpi_analyze",
+            "execution_time": 3.7429332733154297,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "AMER",
+              "ouName": "AMER",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 5,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 7,
+      "ou_detections": 7,
+      "product_detections": 0,
+      "opportunity_type_detections": 1,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 42.994022369384766,
+      "average_execution_time": 4.299402236938477,
+      "tools_detected": {
+        "future_pipeline": 4,
+        "open_pipe_analyze": 2,
+        "kpi_analyze": 1
+      },
+      "ous_detected": [
+        "EMEA ENTR",
+        "AMER ACC"
+      ],
+      "products_detected": [],
+      "opportunity_types_detected": [
+        "renewal"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me renewals in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.016948699951172,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What pipeline for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.4041404724121094,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Find opportunities in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 3.8678646087646484,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "AMERACC",
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me data in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 5.464076995849609,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Generate pipeline for AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 6.706953048706055,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "What data is available for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 5.358695983886719,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Show me analysis in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 5.202054977416992,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Find opportunities in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 3.8499832153320312,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "EMEAENTR",
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What are the top products in AMERACC?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 2.897024154663086,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me trends in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "kpi_analyze",
+            "execution_time": 3.2262802124023438,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "EMEAENTR",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 6,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 7,
+      "ou_detections": 7,
+      "product_detections": 5,
+      "opportunity_type_detections": 1,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 43.3347225189209,
+      "average_execution_time": 4.33347225189209,
+      "tools_detected": {
+        "future_pipeline": 5,
+        "open_pipe_analyze": 1,
+        "kpi_analyze": 1
+      },
+      "ous_detected": [
+        "EMEA ENTR",
+        "AMER ACC"
+      ],
+      "products_detected": [
+        "Commerce Cloud",
+        "Service Cloud",
+        "Sales Cloud",
+        "Data Cloud"
+      ],
+      "opportunity_types_detected": [
+        "renewal"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me Data Cloud renewals in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.323886871337891,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "product": "Data Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What are Tableau deals for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.8826465606689453,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Find Sales Cloud opportunities in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.569934844970703,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "product": "Sales Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me Marketing Cloud data in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 4.668235778808594,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Generate Service Cloud pipeline for AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 2.9778480529785156,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "product": "Service Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "What Platform Cloud data is available for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 3.5610198974609375,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Show me Analytics Cloud analysis in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 3.5469532012939453,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Find Commerce Cloud opportunities in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 4.453897476196289,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "EMEAENTR",
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "EMEA ENTR",
+              "productListCsv": "Commerce Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What are the highest value Data Cloud products in AMERACC?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.5680999755859375,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "product": "Data Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me Tableau trends in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "kpi_analyze",
+            "execution_time": 4.782199859619141,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "EMEAENTR",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 7,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 10,
+      "ou_detections": 10,
+      "product_detections": 0,
+      "opportunity_type_detections": 4,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 50.608158111572266,
+      "average_execution_time": 5.060815811157227,
+      "tools_detected": {
+        "open_pipe_analyze": 6,
+        "future_pipeline": 4
+      },
+      "ous_detected": [
+        "APAC",
+        "EMEA ENTR",
+        "UKI",
+        "AMER ACC"
+      ],
+      "products_detected": [],
+      "opportunity_types_detected": [
+        "renewal"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me AE performance in AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 2.802133560180664,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEBenchmarks": true,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "Which AEs need coaching in EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 7.161855697631836,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEBenchmarks": true,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Benchmark AE performance in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 4.326820373535156,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "APAC",
+              "includeAEBenchmarks": true,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "APAC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Find underperforming AEs in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 5.353212356567383,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "UKI",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Show me AE coaching opportunities in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 4.754066467285156,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "AMERACC",
+              "includeAEBenchmarks": true,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "Rate AE performance by product in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 4.995107650756836,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "EMEAENTR",
+              "includeAEBenchmarks": true,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Analyze renewal risk for AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.424022674560547,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": true,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Which renewals are at high risk in EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.434989929199219,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": true,
+              "opportunityType": "renewal",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "Show me renewal probability scores in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 6.670236587524414,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": true,
+              "opportunityType": "renewal",
+              "ouName": "APAC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Find risky renewals in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.6857128143310547,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "UKI",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 8,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 8,
+      "ou_detections": 8,
+      "product_detections": 4,
+      "opportunity_type_detections": 1,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 54.100990295410156,
+      "average_execution_time": 5.410099029541016,
+      "tools_detected": {
+        "open_pipe_analyze": 6,
+        "future_pipeline": 2
+      },
+      "ous_detected": [
+        "APAC",
+        "UKI",
+        "EMEA ENTR",
+        "AMER ACC"
+      ],
+      "products_detected": [
+        "Health Cloud",
+        "Data Cloud",
+        "Platform Cloud"
+      ],
+      "opportunity_types_detected": [
+        "renewal"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me PMF analysis for Data Cloud in AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 5.297183990478516,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": true,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "AMER ACC",
+              "productListCsv": "Data Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What's the PMF for Sales Cloud in EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 5.345821380615234,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Analyze product efficiency by segment in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 5.278110504150391,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me PMF signals for Platform in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 5.050897598266602,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": true,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "UKI",
+              "productListCsv": "Platform Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Rate the health of our Data Cloud pipeline in AMERACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.0679702758789062,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": true,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "product": "Data Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "Show me pipeline health scores in EMEAENTR",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 10.7269287109375,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "EMEAENTR",
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": true,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "EMEA ENTR",
+              "productListCsv": "Health Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Find bottleneck analysis for renewals in AMER ACC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.784107208251953,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Which products fit best in enterprise segment in EMEA?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 5.133867263793945,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "enterprise segment",
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": true,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "Give me comprehensive pipeline analysis in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 5.033969879150391,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "country": "APAC",
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "APAC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me product-market fit opportunities in UKI",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "open_pipe_analyze",
+            "execution_time": 4.382133483886719,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEBenchmarks": false,
+              "includeClosureProb": false,
+              "includeHealthScore": false,
+              "includePMF": true,
+              "includeStageBottlenecks": false,
+              "limitN": 10,
+              "ouName": "UKI",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 9,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 6,
+      "ou_detections": 6,
+      "product_detections": 1,
+      "opportunity_type_detections": 4,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 43.128013610839844,
+      "average_execution_time": 4.312801361083984,
+      "tools_detected": {
+        "future_pipeline": 5,
+        "kpi_analyze": 1
+      },
+      "ous_detected": [
+        "APAC",
+        "EMEA ENTR",
+        "UKI",
+        "AMER ACC"
+      ],
+      "products_detected": [
+        "Service Cloud"
+      ],
+      "opportunity_types_detected": [
+        "renewal",
+        "cross-sell"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me renewal data by country",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 2.748250961303711,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "Give me cross-sell analysis for Sales Cloud",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 6.498098373413086,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "What's the pipeline for Data Cloud renewals?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 4.441738128662109,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me upsell potential for Marketing Cloud",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 3.8471221923828125,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "What are the highest value renewal products?",
+          "result": {
+            "success": true,
+            "tool_detected": false,
+            "tool": "N/A",
+            "execution_time": 3.8979053497314453,
+            "ou_detected": false,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {},
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "Generate pipeline for Service Cloud in EMEA",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.770112991333008,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "EMEA ENTR",
+              "product": "Service Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Find renewal opportunities in EMEA",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.396842956542969,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Show me cross-sell data in APAC",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 6.181955337524414,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "APAC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What upsell trends are there in UKI?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "kpi_analyze",
+            "execution_time": 2.9790401458740234,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "ouName": "UKI",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me renewal analysis in Germany",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.3669471740722656,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    },
+    {
+      "batch_number": 10,
+      "total": 10,
+      "successful": 10,
+      "failed": 0,
+      "tool_detections": 10,
+      "ou_detections": 10,
+      "product_detections": 5,
+      "opportunity_type_detections": 7,
+      "intelligence_flags_set": 0,
+      "total_execution_time": 47.693729400634766,
+      "average_execution_time": 4.769372940063477,
+      "tools_detected": {
+        "future_pipeline": 10
+      },
+      "ous_detected": [
+        "EMEA ENTR",
+        "AMER ACC"
+      ],
+      "products_detected": [
+        "Service Cloud",
+        "Sales Cloud",
+        "Data Cloud",
+        "Marketing Cloud"
+      ],
+      "opportunity_types_detected": [
+        "upsell",
+        "renewal",
+        "cross-sell"
+      ],
+      "detailed_results": [
+        {
+          "test_number": 1,
+          "utterance": "Show me Data Cloud renewal opportunities in AMERACC for enterprise segment",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.315065383911133,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": true,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "product": "Data Cloud",
+              "segment": "enterprise",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 2,
+          "utterance": "What are the top Tableau cross-sell deals for EMEAENTR this quarter?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.03087043762207,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 3,
+          "utterance": "Find Sales Cloud upsell opportunities in AMERACC with high value",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.139350891113281,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "upsell",
+              "ouName": "AMER ACC",
+              "product": "Sales Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 4,
+          "utterance": "Show me Marketing Cloud renewal data in EMEAENTR by country",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 6.916999816894531,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "EMEA ENTR",
+              "product": "Marketing Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 5,
+          "utterance": "Generate Service Cloud pipeline for AMERACC with PMF analysis",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.239154815673828,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": true,
+              "includeRenewalRisk": false,
+              "ouName": "AMER ACC",
+              "product": "Service Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 6,
+          "utterance": "What Platform Cloud opportunities are available for EMEAENTR?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 5.896329879760742,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 7,
+          "utterance": "Show me Analytics Cloud renewal analysis in AMERACC by AE performance",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.7760009765625,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": true,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 8,
+          "utterance": "Find Commerce Cloud cross-sell opportunities in EMEAENTR with health scores",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.846883773803711,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": true,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "opportunityType": "cross-sell",
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 9,
+          "utterance": "What are the highest value Data Cloud products in AMERACC with renewal risk?",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 3.267049789428711,
+            "ou_detected": true,
+            "product_detected": true,
+            "opportunity_type_detected": true,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": false,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": true,
+              "opportunityType": "renewal",
+              "ouName": "AMER ACC",
+              "product": "Data Cloud",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        },
+        {
+          "test_number": 10,
+          "utterance": "Show me Tableau trends in EMEAENTR with AE coaching opportunities",
+          "result": {
+            "success": true,
+            "tool_detected": true,
+            "tool": "future_pipeline",
+            "execution_time": 4.266023635864258,
+            "ou_detected": true,
+            "product_detected": false,
+            "opportunity_type_detected": false,
+            "intelligence_flags_set": false,
+            "parameters": {
+              "includeAEPerf": true,
+              "includeHealthScore": false,
+              "includePMF": false,
+              "includeRenewalRisk": false,
+              "ouName": "EMEA ENTR",
+              "timeFrame": "CURRENT"
+            },
+            "intelligence_flags": {}
+          }
+        }
+      ]
+    }
+  ],
+  "tools_detected": {
+    "future_pipeline": 61,
+    "open_pipe_analyze": 16,
+    "kpi_analyze": 4
+  },
+  "ous_detected": [
+    "AMER",
+    "EMEA ENTR",
+    "APAC",
+    "AMER ACC",
+    "UKI"
+  ],
+  "products_detected": [
+    "Commerce Cloud",
+    "Sales Cloud",
+    "Marketing Cloud",
+    "Service Cloud",
+    "Health Cloud",
+    "Data Cloud",
+    "Platform Cloud"
+  ],
+  "opportunity_types_detected": [
+    "upsell",
+    "renewal",
+    "cross-sell"
+  ],
+  "success_rate": 100.0,
+  "tool_detection_rate": 81.0,
+  "ou_detection_rate": 81.0,
+  "product_detection_rate": 19.0,
+  "opportunity_type_detection_rate": 45.0,
+  "intelligence_flags_rate": 0.0
+}

@@ -13,45 +13,43 @@ public with sharing class ANAgentAPMNominationServiceV2 {
             if (params.containsKey('NOTES__c')) nom.NOTES__c = (String)params.get('NOTES__c');
             if (params.containsKey('CREATED_USER__c')) nom.CREATED_USER__c = (String)params.get('CREATED_USER__c');
             
-            // Check for duplicate nominations
-            if (String.isNotBlank(nom.OFFERING_NAME__c)) {
-                List<apm_nomination_v2__c> existingNominations = [
-                    SELECT Id, OFFERING_NAME__c, CREATED_USER__c, CreatedDate 
-                    FROM apm_nomination_v2__c 
-                    WHERE OFFERING_NAME__c = :nom.OFFERING_NAME__c 
-                    ORDER BY CreatedDate DESC 
-                    LIMIT 1
-                ];
-                
-                if (!existingNominations.isEmpty()) {
-                    apm_nomination_v2__c existing = existingNominations[0];
-                    result.put('success', false);
-                    result.put('message', 'This offering "' + nom.OFFERING_NAME__c + '" has already been nominated by ' + existing.CREATED_USER__c + ' on ' + existing.CreatedDate.format('MMM dd, yyyy') + '.');
-                    return result;
-                }
-            }
+            // Removed duplicate checking logic - let the API handle duplicate detection
             
             // Get real completion count instead of hardcoded value
             Integer completionCount = getCourseCompletionCount(nom.OFFERING_NAME__c);
             nom.UNIQUE_LEARNERS__c = completionCount;
-            insert nom;
-            // Query User email
+            
+            // Query User email before making API call
             String email = '';
             if (nom.CreatedById != null) {
                 User u = [SELECT Email FROM User WHERE Id = :nom.CreatedById LIMIT 1];
                 email = u.Email;
             }
+            
+            // Get the real course ID for API callout (this should be the auto-generated one)
+            String apiCourseId = nom.ENABLEMENTS_ID__c;
+            
+            // Auto-generate enablement ID if it's empty
+            if (String.isBlank(apiCourseId)) {
+                apiCourseId = generateEnablementId(nom.OFFERING_NAME__c);
+                nom.ENABLEMENTS_ID__c = apiCourseId;
+                System.debug('Auto-generated enablement ID: ' + apiCourseId);
+            }
+            
             // Prepare API payload
+            // Add "Agentforce_" prefix to nominator name for agent-created nominations
+            String nominatorName = String.isNotBlank(nom.CREATED_USER__c) ? 'Agentforce_' + nom.CREATED_USER__c : 'Agentforce_Agent User';
+            
             Map<String, Object> payload = new Map<String, Object>{
                 'offering_name' => nom.OFFERING_NAME__c,
-                'selected_events_ids' => nom.ENABLEMENTS_ID__c,
+                'selected_events_ids' => apiCourseId,
                 'program_type' => nom.PROGRAM_TYPE__c,
                 'enablement_tool' => nom.ENABLEMENT_TOOL__c,
                 'no_unique_learners' => completionCount,
                 'start_date' => String.valueOf(nom.START_DATE__c),
                 'end_date' => String.valueOf(nom.END_DATE__c),
                 'notes' => nom.NOTES__c,
-                'user_name' => nom.CREATED_USER__c,
+                'user_name' => nominatorName,
                 'email' => email
             };
             // Remove null/empty optional fields
@@ -59,13 +57,27 @@ public with sharing class ANAgentAPMNominationServiceV2 {
         if (String.isBlank(nom.NOTES__c)) {
             payload.put('notes', '');
         }
-            // Callout - Use @future to avoid DML+Callout limitation
-            calloutToAPMAsync(nom.Id, JSON.serialize(payload));
-            nom.APM_PROCESSED_STATUS__c = 'Processing...';
-            update nom;
-            result.put('success', true);
-            result.put('message', 'Nomination created and API called.');
+            
+            // Make synchronous API call BEFORE inserting the record
+            String apiResponse = calloutToAPM(payload);
+            
+            // Set the API response status before inserting
+            if (apiResponse.startsWith('Success:')) {
+                nom.APM_PROCESSED_STATUS__c = 'Success';
+                nom.APM_STATUS_DETAILED__c = apiResponse;
+                result.put('success', true);
+                result.put('message', 'Nomination created successfully. ' + apiResponse);
+            } else {
+                nom.APM_PROCESSED_STATUS__c = 'Failed';
+                nom.APM_STATUS_DETAILED__c = apiResponse;
+                result.put('success', false);
+                result.put('message', 'Nomination created but API call failed: ' + apiResponse);
+            }
+            
+            // Insert the record with the API response already set
+            insert nom;
             result.put('record', nom);
+            result.put('nominationId', nom.Id);
         } catch (Exception e) {
             result.put('success', false);
             result.put('message', 'Error: ' + e.getMessage());
@@ -77,7 +89,7 @@ public with sharing class ANAgentAPMNominationServiceV2 {
         HttpRequest req = new HttpRequest();
         
         // Build query parameters
-        String endpoint = 'https://det-ai-platform-flex-gateway-8b51709713f1.herokuapp.com/apm/nominate_offering?';
+        String endpoint = 'https://flex-gateway-sandbox-6fb019630b06.herokuapp.com/apm/nominate_offering?';
         List<String> params = new List<String>();
         
         // Add required parameters
@@ -100,11 +112,45 @@ public with sharing class ANAgentAPMNominationServiceV2 {
         
         try {
             HttpResponse res = http.send(req);
-            if (res.getStatusCode() == 201 || res.getStatusCode() == 200) {
-                return 'Success';
-            } else {
-                return 'Error: ' + res.getStatusCode() + ' - ' + res.getBody();
+            String responseBody = res.getBody();
+            System.debug('API Response Status: ' + res.getStatusCode());
+            System.debug('API Response Body: ' + responseBody);
+            
+            // Always try to parse the response body first to check for API-level errors
+            try {
+                Map<String, Object> responseData = (Map<String, Object>)JSON.deserializeUntyped(responseBody);
+                
+                // Check if the API returned an error status in the JSON response
+                if (responseData.containsKey('status') && (String)responseData.get('status') == 'error') {
+                    String errorMessage = responseData.containsKey('message') ? (String)responseData.get('message') : 'Unknown API error';
+                    return 'Error: API returned error status - ' + errorMessage;
+                }
+                
+                // Check if the API returned a success status
+                if (responseData.containsKey('status') && (String)responseData.get('status') == 'success') {
+                    String successMessage = responseData.containsKey('message') ? (String)responseData.get('message') : 'API call completed successfully';
+                    return 'Success: ' + successMessage;
+                }
+                
+                // If no status field, check HTTP status code
+                if (res.getStatusCode() == 201 || res.getStatusCode() == 200) {
+                    String message = responseData.containsKey('message') ? (String)responseData.get('message') : 'API call completed successfully';
+                    return 'Success: ' + message;
+                } else {
+                    String errorMessage = responseData.containsKey('message') ? (String)responseData.get('message') : 'HTTP error: ' + res.getStatusCode();
+                    return 'Error: ' + errorMessage;
+                }
+                
+            } catch (Exception parseEx) {
+                // If JSON parsing fails, fall back to HTTP status code
+                System.debug('Failed to parse JSON response: ' + parseEx.getMessage());
+                if (res.getStatusCode() == 201 || res.getStatusCode() == 200) {
+                    return 'Success: API call completed. Response: ' + responseBody;
+                } else {
+                    return 'Error: ' + res.getStatusCode() + ' - ' + responseBody;
+                }
             }
+            
         } catch (Exception e) {
             return 'Exception: ' + e.getMessage();
         }
@@ -127,15 +173,22 @@ public with sharing class ANAgentAPMNominationServiceV2 {
     public static List<NominationOutput> invocableCreateV2(List<NominationInput> inputs) {
         List<NominationOutput> results = new List<NominationOutput>();
         for (NominationInput input : inputs) {
+            // Auto-populate missing values with defaults
+            String enablementsId = String.isNotBlank(input.enablementsId) ? input.enablementsId : generateEnablementId(input.offeringName);
+            String programType = String.isNotBlank(input.programType) ? input.programType : 'Training';
+            String enablementTool = String.isNotBlank(input.enablementTool) ? mapEnablementTool(input.enablementTool) : 'course';
+            String notes = String.isNotBlank(input.notes) ? input.notes : 'APM nomination created via agent for course: ' + input.offeringName;
+            String createdUser = String.isNotBlank(input.createdUser) ? input.createdUser : 'Agent User';
+            
             Map<String, Object> params = new Map<String, Object>{
                 'OFFERING_NAME__c' => input.offeringName,
-                'ENABLEMENTS_ID__c' => input.enablementsId,
-                'PROGRAM_TYPE__c' => input.programType,
-                'ENABLEMENT_TOOL__c' => input.enablementTool,
+                'ENABLEMENTS_ID__c' => enablementsId,
+                'PROGRAM_TYPE__c' => programType,
+                'ENABLEMENT_TOOL__c' => enablementTool,
                 'START_DATE__c' => input.startDate,
                 'END_DATE__c' => input.endDate,
-                'NOTES__c' => input.notes,
-                'CREATED_USER__c' => input.createdUser
+                'NOTES__c' => notes,
+                'CREATED_USER__c' => createdUser
             };
             Map<String, Object> result = create(params);
             NominationOutput out = new NominationOutput();
@@ -154,12 +207,26 @@ public with sharing class ANAgentAPMNominationServiceV2 {
             
             // Update the record with the API response
             apm_nomination_v2__c nom = new apm_nomination_v2__c(Id = nominationId);
-            nom.APM_PROCESSED_STATUS__c = status;
+            
+            // Determine if it's a success or failure based on the status
+            if (status.startsWith('Error:') || status.startsWith('Exception:')) {
+                nom.APM_PROCESSED_STATUS__c = 'Failed';
+                nom.APM_STATUS_DETAILED__c = status;
+            } else if (status.startsWith('Success:')) {
+                nom.APM_PROCESSED_STATUS__c = 'Success';
+                nom.APM_STATUS_DETAILED__c = status;
+            } else {
+                // Default to failed for unknown status
+                nom.APM_PROCESSED_STATUS__c = 'Failed';
+                nom.APM_STATUS_DETAILED__c = 'Unknown status: ' + status;
+            }
+            
             update nom;
         } catch (Exception e) {
             // Update the record with error status
             apm_nomination_v2__c nom = new apm_nomination_v2__c(Id = nominationId);
-            nom.APM_PROCESSED_STATUS__c = 'Exception: ' + e.getMessage();
+            nom.APM_PROCESSED_STATUS__c = 'Failed';
+            nom.APM_STATUS_DETAILED__c = 'Exception: ' + e.getMessage();
             update nom;
         }
     }
@@ -175,28 +242,39 @@ public with sharing class ANAgentAPMNominationServiceV2 {
                 return 40; // Fallback to default if no course name
             }
             
-            // Query for completed assignments for this course
-            List<Assigned_Course__c> completedAssignments = [
-                SELECT Id, Learner_Profile__c 
-                FROM Assigned_Course__c 
-                WHERE Course__r.Name = :courseName 
-                AND Completed__c = true 
-                AND Inactive__c = false
+            // First, get the course ID from the course name
+            List<Course__c> courses = [
+                SELECT Id, Name 
+                FROM Course__c 
+                WHERE Name = :courseName 
+                AND IsDeleted = false 
+                LIMIT 1
             ];
             
-            // Count unique learners
-            Set<Id> uniqueLearners = new Set<Id>();
-            for (Assigned_Course__c assignment : completedAssignments) {
-                if (assignment.Learner_Profile__c != null) {
-                    uniqueLearners.add(assignment.Learner_Profile__c);
-                }
+            if (courses.isEmpty()) {
+                System.debug('Course not found: ' + courseName);
+                return 40; // Fallback to default value
             }
             
-            Integer count = uniqueLearners.size();
-            System.debug('Course: ' + courseName + ' - Completion count: ' + count);
+            String courseId = courses[0].Id;
             
-            // Return the count, with a minimum of 1 to avoid zero values
-            return Math.max(count, 1);
+            // Query for completed assignments for this specific course (same logic as content search)
+            List<AggregateResult> completionCounts = [
+                SELECT COUNT(Id) completionCount
+                FROM Assigned_Course__c 
+                WHERE Course__c = :courseId 
+                AND Completed__c = true
+            ];
+            
+            Integer completionCount = 0;
+            if (!completionCounts.isEmpty()) {
+                completionCount = (Integer)completionCounts[0].get('completionCount');
+            }
+            
+            System.debug('Course: ' + courseName + ' - Real completion count: ' + completionCount);
+            
+            // Return the actual completion count (no artificial minimum)
+            return completionCount;
             
         } catch (Exception e) {
             System.debug('Error getting completion count for ' + courseName + ': ' + e.getMessage());
@@ -258,5 +336,70 @@ public with sharing class ANAgentAPMNominationServiceV2 {
         }
         
         return details;
+    }
+    
+    /**
+     * @description Generates a meaningful enablement ID based on the offering name
+     * @param offeringName The name of the offering
+     * @return String A meaningful enablement ID
+     */
+    public static String generateEnablementId(String offeringName) {
+        if (String.isBlank(offeringName)) {
+            return 'ENABLEMENT_' + String.valueOf(Datetime.now().getTime());
+        }
+        
+        // Extract key words from the offering name
+        String cleanName = offeringName.replaceAll('[^a-zA-Z0-9\\s]', '').toUpperCase();
+        String[] words = cleanName.split('\\s+');
+        
+        // Build a meaningful ID from key words
+        List<String> keyWords = new List<String>();
+        for (String word : words) {
+            if (word.length() > 2 && !word.equals('THE') && !word.equals('AND') && !word.equals('FOR')) {
+                keyWords.add(word);
+            }
+        }
+        
+        // Take first 2-3 meaningful words
+        String idPrefix = '';
+        for (Integer i = 0; i < Math.min(3, keyWords.size()); i++) {
+            if (i > 0) idPrefix += '_';
+            idPrefix += keyWords[i];
+        }
+        
+        // Add current year
+        String currentYear = String.valueOf(Date.today().year());
+        
+        return idPrefix + '_' + currentYear;
+    }
+
+    /**
+     * @description Maps enablement tool names to the correct APM API values.
+     * The APM API only accepts: asset, course, session
+     * @param toolName The name of the enablement tool (e.g., 'Trailhead', 'course', 'session', 'asset')
+     * @return String The API-specific value for the enablement tool
+     */
+    public static String mapEnablementTool(String toolName) {
+        if (String.isBlank(toolName)) {
+            return 'course'; // Default for courses
+        }
+        
+        String lowerToolName = toolName.toLowerCase();
+        
+        // Map common enablement tool names to APM API values
+        switch on lowerToolName {
+            when 'trailhead', 'course', 'learning', 'training' {
+                return 'course';
+            }
+            when 'session', 'workshop', 'event', 'webinar' {
+                return 'session';
+            }
+            when 'asset', 'resource', 'document', 'video', 'pdf' {
+                return 'asset';
+            }
+            when else {
+                return 'course'; // Default to 'course' for unknown tools
+            }
+        }
     }
 } 

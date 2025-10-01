@@ -1,0 +1,27 @@
+/**
+ * {{methodLabel}}
+ * {{methodDesc}}
+ * Output Contract: {{outputContractName}} v{{outputContractVersion}}
+ * {{outputContractDesc}}
+ */
+public with sharing class Generated_FRAGENT_{{Object}}_Handler {
+
+    /**
+     * Example entrypoint: retrieve by Ids
+     * Validates input then delegates to Service.
+     */
+    public static AgentCore_Result handleRetrieve(List<Id> ids) {
+        if (ids == null || ids.isEmpty()) {
+            return AgentCore_Result.invalid('At least one {{Object}} Id is required.');
+        }
+        try {
+            return Generated_FRAGENT_{{Object}}_Service.retrieveByIds(ids);
+        } catch (AgentCore_Permissions.PermissionException pe) {
+            return AgentCore_Result.deny(pe.getMessage());
+        } catch (Exception e) {
+            // Map unexpected errors to a stable code and log details elsewhere
+            return AgentCore_Result.deny('Unable to retrieve {{Object}} at this time.');
+        }
+    }
+}
+

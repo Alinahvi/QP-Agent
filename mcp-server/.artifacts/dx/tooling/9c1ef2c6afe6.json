@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2025-09-29T20:56:46.958Z",
+  "orgAlias": "innovation",
+  "soql": "SELECT Id, Name, NamespacePrefix FROM ApexClass WHERE Name LIKE '%ANAgent%' OR Name LIKE '%ABAgent%' LIMIT 10",
+  "rowCount": 10,
+  "records": [
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUjtUIAS"
+      },
+      "Id": "01pD700000aUjtUIAS",
+      "Name": "ABAgentCrossSellAnalysisHandler",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUjtVIAS"
+      },
+      "Id": "01pD700000aUjtVIAS",
+      "Name": "ABAgentCrossSellAnalysisService",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUkqWIAS"
+      },
+      "Id": "01pD700000aUkqWIAS",
+      "Name": "ABAgentCrossSellTSVTest",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUlPCIA0"
+      },
+      "Id": "01pD700000aUlPCIA0",
+      "Name": "ABAgentFuturePipeAnalysisHandler",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUnLWIA0"
+      },
+      "Id": "01pD700000aUnLWIA0",
+      "Name": "ABAgentFuturePipeAnalysisHandlerEnhanced",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUmXvIAK"
+      },
+      "Id": "01pD700000aUmXvIAK",
+      "Name": "ABAgentFuturePipeAnalysisHandlerV2",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUlPDIA0"
+      },
+      "Id": "01pD700000aUlPDIA0",
+      "Name": "ABAgentFuturePipeAnalysisService",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUnLRIA0"
+      },
+      "Id": "01pD700000aUnLRIA0",
+      "Name": "ABAgentFuturePipeAnalysisServiceEnhanced",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUmXwIAK"
+      },
+      "Id": "01pD700000aUmXwIAK",
+      "Name": "ABAgentFuturePipeAnalysisServiceV2",
+      "NamespacePrefix": null
+    },
+    {
+      "attributes": {
+        "type": "ApexClass",
+        "url": "/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUjuIIAS"
+      },
+      "Id": "01pD700000aUjuIIAS",
+      "Name": "ABAgentRenewalsAnalysisHandler",
+      "NamespacePrefix": null
+    }
+  ],
+  "raw": "{\n  \"status\": 0,\n  \"result\": {\n    \"records\": [\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUjtUIAS\"\n        },\n        \"Id\": \"01pD700000aUjtUIAS\",\n        \"Name\": \"ABAgentCrossSellAnalysisHandler\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUjtVIAS\"\n        },\n        \"Id\": \"01pD700000aUjtVIAS\",\n        \"Name\": \"ABAgentCrossSellAnalysisService\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUkqWIAS\"\n        },\n        \"Id\": \"01pD700000aUkqWIAS\",\n        \"Name\": \"ABAgentCrossSellTSVTest\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUlPCIA0\"\n        },\n        \"Id\": \"01pD700000aUlPCIA0\",\n        \"Name\": \"ABAgentFuturePipeAnalysisHandler\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUnLWIA0\"\n        },\n        \"Id\": \"01pD700000aUnLWIA0\",\n        \"Name\": \"ABAgentFuturePipeAnalysisHandlerEnhanced\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUmXvIAK\"\n        },\n        \"Id\": \"01pD700000aUmXvIAK\",\n        \"Name\": \"ABAgentFuturePipeAnalysisHandlerV2\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUlPDIA0\"\n        },\n        \"Id\": \"01pD700000aUlPDIA0\",\n        \"Name\": \"ABAgentFuturePipeAnalysisService\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUnLRIA0\"\n        },\n        \"Id\": \"01pD700000aUnLRIA0\",\n        \"Name\": \"ABAgentFuturePipeAnalysisServiceEnhanced\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUmXwIAK\"\n        },\n        \"Id\": \"01pD700000aUmXwIAK\",\n        \"Name\": \"ABAgentFuturePipeAnalysisServiceV2\",\n        \"NamespacePrefix\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"ApexClass\",\n          \"url\": \"/services/data/v64.0/tooling/sobjects/ApexClass/01pD700000aUjuIIAS\"\n        },\n        \"Id\": \"01pD700000aUjuIIAS\",\n        \"Name\": \"ABAgentRenewalsAnalysisHandler\",\n        \"NamespacePrefix\": null\n      }\n    ],\n    \"totalSize\": 10,\n    \"done\": true\n  },\n  \"warnings\": [\n    \"The \\\"-u\\\" flag has been deprecated. Use \\\"--target-org | -o\\\" instead.\"\n  ]\n}"
+}

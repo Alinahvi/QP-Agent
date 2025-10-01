@@ -1,0 +1,574 @@
+{
+  "generatedAt": "2025-09-26T20:08:53.227Z",
+  "endpoints": [
+    {
+      "url": "ws://localhost:5173",
+      "status": "error",
+      "error": "Received network error or non-101 status code."
+    },
+    {
+      "url": "ws://127.0.0.1:5173",
+      "status": "error",
+      "error": "Received network error or non-101 status code."
+    }
+  ],
+  "toolCatalog": [
+    {
+      "name": "org:discover_object",
+      "title": "Discover Object",
+      "description": "Describe object (fields/rules/triggers).",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "org:discover_usage",
+      "title": "Discover Usage",
+      "description": "Find Apex/Flows/LWCs referencing the object.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "org:discover_permissions",
+      "title": "Discover Permissions",
+      "description": "Snapshot object/field permissions.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "discovery:plan",
+      "title": "Discovery Plan",
+      "description": "Merge discovery into a build plan.",
+      "inputs": [
+        "repoDir",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "discovery:brief",
+      "title": "Discovery Brief",
+      "description": "Render human Discovery Brief (Markdown).",
+      "inputs": [
+        "repoDir",
+        "objectApiName",
+        "branchRef"
+      ]
+    },
+    {
+      "name": "discovery:run",
+      "title": "Discovery Orchestrator",
+      "description": "Run object, usage, permissions, plan, and brief in one step.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName",
+        "branchRef"
+      ]
+    },
+    {
+      "name": "discovery:fanout",
+      "title": "Discovery Fanout",
+      "description": "Run discovery across object and LWC lists.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objects",
+        "lwcComponents",
+        "staleHours",
+        "maxConcurrency",
+        "doPlan",
+        "doBrief"
+      ]
+    },
+    {
+      "name": "discovery:fromProject",
+      "title": "Discovery From Project",
+      "description": "Scan repo for objects/LWCs then run discovery fanout.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "staleHours",
+        "maxConcurrency",
+        "doPlan",
+        "doBrief"
+      ]
+    },
+    {
+      "name": "docs:scan",
+      "title": "Scan Docs",
+      "description": "Locate ActionPlan, Session_Log, and plan dir; return metadata.",
+      "inputs": [
+        "repoDir"
+      ]
+    },
+    {
+      "name": "schema:index",
+      "title": "Schema Index",
+      "description": "Scan LWC bundles for @salesforce/schema imports; write schema index.",
+      "inputs": [
+        "repoDir",
+        "staleHours"
+      ]
+    },
+    {
+      "name": "planning:status",
+      "title": "Planning Status",
+      "description": "Report freshness of Discovery + Plan for an object.",
+      "inputs": [
+        "repoDir",
+        "objectApiName",
+        "staleHours"
+      ]
+    },
+    {
+      "name": "planning:resume",
+      "title": "Planning Resume",
+      "description": "Auto-run intake->propose->ticketize only if missing/stale, then refresh discovery & brief.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName",
+        "staleHours"
+      ]
+    },
+    {
+      "name": "discovery:start_from_object",
+      "title": "Start From Object",
+      "description": "Run/refresh discovery and ensure a plan/brief exists for an object.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName",
+        "staleHours"
+      ]
+    },
+    {
+      "name": "discovery:start_from_lwc",
+      "title": "Start From LWC",
+      "description": "Infer object(s) from LWC schema imports, then run discovery.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "componentName",
+        "staleHours"
+      ]
+    },
+    {
+      "name": "planning:intake",
+      "title": "Planning Intake",
+      "description": "Parse requirements docs/tickets into structured intake.",
+      "inputs": [
+        "repoDir",
+        "objectApiName",
+        "requirementsPath"
+      ]
+    },
+    {
+      "name": "planning:propose",
+      "title": "Planning Propose",
+      "description": "Generate Plan v2 and human plan doc from Discovery + Intake.",
+      "inputs": [
+        "repoDir",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "planning:ticketize",
+      "title": "Planning Ticketize",
+      "description": "Create derived tickets from Plan v2.",
+      "inputs": [
+        "repoDir",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "planning:verify",
+      "title": "Planning Verify",
+      "description": "Check Plan v2 consistency against Discovery.",
+      "inputs": [
+        "repoDir",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "planning:fanout",
+      "title": "Planning Fanout",
+      "description": "Resume planning across many objects.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objects",
+        "staleHours",
+        "maxConcurrency"
+      ]
+    },
+    {
+      "name": "actionlayer:scaffold",
+      "title": "Action Layer Scaffold",
+      "description": "Generate/refresh Handler/Service/DTO from templates (generated|phase2).",
+      "inputs": [
+        "repoDir",
+        "planPath",
+        "mode",
+        "templateSet",
+        "requirementsPath"
+      ]
+    },
+    {
+      "name": "actionlayer:requirements_stub",
+      "title": "Phase 2 Requirements Stub",
+      "description": "Create a YAML requirements stub for Phase 2 scaffold.",
+      "inputs": [
+        "repoDir",
+        "objectApiName",
+        "outPath"
+      ]
+    },
+    {
+      "name": "actionlayer:scaffold_phase2",
+      "title": "Scaffold Phase 2 (by Object)",
+      "description": "Generate Handler/Service/Tests for an object using Audience-based templates; auto-create requirements stub if missing.",
+      "inputs": [
+        "repoDir",
+        "objectApiName",
+        "mode",
+        "planPath",
+        "requirementsPath"
+      ]
+    },
+    {
+      "name": "tests:apex",
+      "title": "Tests: Apex",
+      "description": "Run project-scoped Apex tests.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "mode",
+        "fromRef",
+        "suiteNames",
+        "allowlist",
+        "waitSeconds"
+      ]
+    },
+    {
+      "name": "tests:agent",
+      "title": "Tests: Agent",
+      "description": "Run non-destructive Agent utterance tests.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "waitMinutes"
+      ]
+    },
+    {
+      "name": "agent:doc-sync",
+      "title": "Agent Doc Sync",
+      "description": "Sync @Invocable descriptions into Agent actions.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "requirements:validate",
+      "title": "Requirements Validate",
+      "description": "Validate requirements YAML against schema.",
+      "inputs": [
+        "repoDir",
+        "file"
+      ]
+    },
+    {
+      "name": "requirements:gapcheck",
+      "title": "Requirements Gapcheck",
+      "description": "Generate gap questions for a requirements topic.",
+      "inputs": [
+        "repoDir",
+        "topic",
+        "file"
+      ]
+    },
+    {
+      "name": "requirements:ingest_docs",
+      "title": "Requirements Ingest Docs",
+      "description": "Parse source docs into structured ingestion JSON.",
+      "inputs": [
+        "repoDir",
+        "topic",
+        "sources"
+      ]
+    },
+    {
+      "name": "requirements:dissect",
+      "title": "Requirements Dissect",
+      "description": "Map ingested notes into template buckets.",
+      "inputs": [
+        "repoDir",
+        "topic"
+      ]
+    },
+    {
+      "name": "requirements:assemble",
+      "title": "Requirements Assemble",
+      "description": "Produce canonical requirements YAML from dissect output.",
+      "inputs": [
+        "repoDir",
+        "topic",
+        "dissectPath"
+      ]
+    },
+    {
+      "name": "utterance:seed",
+      "title": "Utterance Seed",
+      "description": "Generate an utterance pack from Plan data.",
+      "inputs": [
+        "repoDir",
+        "objectApiName",
+        "planPath",
+        "outPath"
+      ]
+    },
+    {
+      "name": "utterance:run",
+      "title": "Utterance Run",
+      "description": "Execute a non-destructive utterance pack.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "pack",
+        "mode",
+        "scope",
+        "waitMinutes",
+        "ticketId"
+      ]
+    },
+    {
+      "name": "utterance:analyze",
+      "title": "Utterance Analyze",
+      "description": "Compare utterance results against expectations.",
+      "inputs": [
+        "repoDir",
+        "pack",
+        "resultPath"
+      ]
+    },
+    {
+      "name": "deploy:safe",
+      "title": "Deploy (Safe)",
+      "description": "Deploy with NoTestRun (safe).",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "manifestPath"
+      ]
+    },
+    {
+      "name": "deploy_metadata",
+      "title": "Deploy Metadata",
+      "description": "Alias for deploy:safe (NoTestRun).",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "manifestPath"
+      ]
+    },
+    {
+      "name": "release:branch",
+      "title": "Release Branch",
+      "description": "Deploy + tests (Apex + Agent) orchestrator.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "runAgentTests",
+        "apexShards",
+        "maxAttempts"
+      ]
+    },
+    {
+      "name": "release:branch+plan",
+      "title": "Release Branch (with Planning)",
+      "description": "Runs planning verify, discovery, brief, scaffold, doc-sync, deploy, tests.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "objectApiName",
+        "runAgentTests",
+        "force",
+        "dryRun"
+      ]
+    },
+    {
+      "name": "audit:actionlayer",
+      "title": "Audit Action Layer",
+      "description": "Audit/repair to single-output handler.",
+      "inputs": [
+        "repoDir",
+        "objectApiName",
+        "apply"
+      ]
+    },
+    {
+      "name": "audit:actionlayer:fanout",
+      "title": "Audit Action Layer Fanout",
+      "description": "Batch audit action-layer handlers.",
+      "inputs": [
+        "repoDir",
+        "objects",
+        "maxConcurrency",
+        "apply"
+      ]
+    },
+    {
+      "name": "resume:context",
+      "title": "Resume Context",
+      "description": "Write next-steps (resume) note.",
+      "inputs": [
+        "repoDir",
+        "objectApiName"
+      ]
+    },
+    {
+      "name": "repo:tools_catalog",
+      "title": "Tools Catalog",
+      "description": "Write .artifacts/catalog/tools.json with current tool list.",
+      "inputs": [
+        "repoDir",
+        "writeFile"
+      ]
+    },
+    {
+      "name": "repo:sync_tool_docs",
+      "title": "Sync Tool Docs",
+      "description": "Update README.md, AGENTS.md, and .mcp.project.json with tool list.",
+      "inputs": [
+        "repoDir",
+        "readmePath",
+        "agentsPath",
+        "mcpConfigPath",
+        "sectionTitle",
+        "dryRun"
+      ]
+    },
+    {
+      "name": "tickets:collect",
+      "title": "Tickets Collect",
+      "description": "Index tickets and derived tickets into .artifacts.",
+      "inputs": [
+        "repoDir",
+        "includeBacklog",
+        "includeDerived",
+        "glob"
+      ]
+    },
+    {
+      "name": "tickets:fanout",
+      "title": "Tickets Fanout",
+      "description": "Execute scaffold/deploy/tests/agent per ticket.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "maxConcurrency",
+        "runScaffold",
+        "runDeploy",
+        "runApex",
+        "runAgent"
+      ]
+    },
+    {
+      "name": "org:soql",
+      "title": "Org SOQL",
+      "description": "Run SOQL via sf data query and capture artifact.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "soql"
+      ]
+    },
+    {
+      "name": "org:tooling_soql",
+      "title": "Org Tooling SOQL",
+      "description": "Run Tooling API query and capture artifact.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "soql"
+      ]
+    },
+    {
+      "name": "org:assign_permission_set",
+      "title": "Org Assign Permission Set",
+      "description": "Assign a permission set via sf CLI.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "permissionSetName"
+      ]
+    },
+    {
+      "name": "org:agent_test",
+      "title": "Org Agent Test",
+      "description": "Run agent utterance test via sf CLI bridge.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "ticketId",
+        "agentApiName",
+        "utterances",
+        "capture",
+        "mode",
+        "scope",
+        "maxTurns",
+        "waitMinutes"
+      ]
+    },
+    {
+      "name": "agenttest:from_utterances",
+      "title": "Agent Test From Utterances",
+      "description": "Create an Agent Test from utterances and run it.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "agentApiName",
+        "testApiName",
+        "utterances",
+        "waitMinutes",
+        "nonDestructive"
+      ]
+    },
+    {
+      "name": "agent:preview",
+      "title": "Agent Preview",
+      "description": "Start an interactive preview session and save transcripts.",
+      "inputs": [
+        "repoDir",
+        "orgAlias",
+        "agentApiName",
+        "clientApp",
+        "outputDir",
+        "apexDebug"
+      ]
+    },
+    {
+      "name": "scaffold:apex",
+      "title": "Scaffold Apex",
+      "description": "Alias for actionlayer:scaffold.",
+      "inputs": [
+        "repoDir",
+        "planPath",
+        "mode",
+        "templateSet",
+        "requirementsPath"
+      ]
+    }
+  ],
+  "toolCatalogSource": "node mcp/dist/server.js list noop --json"
+}

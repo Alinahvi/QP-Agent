@@ -1,0 +1,239 @@
+{
+  "objectApiName": "Audience__c",
+  "architecture": {
+    "templates": [
+      "Generated_Handler_SingleOutput",
+      "Generated_Service_Dispatch",
+      "Generated_DTO"
+    ],
+    "outputContract": {
+      "name": "AudienceResult",
+      "version": "1.0"
+    },
+    "inputs": [
+      {
+        "key": "action",
+        "type": "String",
+        "required": true,
+        "enum": [
+          "create",
+          "retrieve",
+          "update",
+          "delete"
+        ]
+      },
+      {
+        "key": "audienceId",
+        "type": "Id",
+        "required": false,
+        "appliesTo": [
+          "retrieve",
+          "update",
+          "delete"
+        ]
+      },
+      {
+        "key": "audienceName",
+        "type": "String",
+        "required": false,
+        "appliesTo": [
+          "retrieve",
+          "create",
+          "update"
+        ]
+      },
+      {
+        "key": "dateFieldToSearch",
+        "type": "String",
+        "enum": [
+          "CreatedDate",
+          "LastModifiedDate"
+        ],
+        "required": false,
+        "appliesTo": [
+          "retrieve"
+        ]
+      },
+      {
+        "key": "dateLiteral",
+        "type": "String",
+        "enum": [
+          "YESTERDAY",
+          "LAST_7_DAYS",
+          "LAST_30_DAYS",
+          "THIS_MONTH",
+          "LAST_MONTH"
+        ],
+        "required": false,
+        "appliesTo": [
+          "retrieve"
+        ]
+      },
+      {
+        "key": "startDate",
+        "type": "Date",
+        "required": false,
+        "appliesTo": [
+          "retrieve"
+        ]
+      },
+      {
+        "key": "endDate",
+        "type": "Date",
+        "required": false,
+        "appliesTo": [
+          "retrieve"
+        ]
+      },
+      {
+        "key": "createdByUserId",
+        "type": "Id",
+        "required": false,
+        "appliesTo": [
+          "retrieve"
+        ]
+      },
+      {
+        "key": "recordLimit",
+        "type": "Integer",
+        "required": false,
+        "default": 50,
+        "max": 200,
+        "appliesTo": [
+          "retrieve"
+        ]
+      },
+      {
+        "key": "payloadJson",
+        "type": "String",
+        "required": false,
+        "appliesTo": [
+          "create",
+          "update"
+        ],
+        "description": "JSON with allowed upsert fields"
+      }
+    ],
+    "helpers": [
+      "AgentCore_Permissions",
+      "AgentCore_SafeQuery",
+      "DTO",
+      "Errors",
+      "AgentCore_Dedupe"
+    ],
+    "businessLogic": [
+      "Prioritize exact Name match before fuzzy",
+      "Fuzzy fallback with threshold 0.4 and stopWords",
+      "Date filters via CreatedDate/LastModifiedDate",
+      "Test bypass honored (SYSTEM_MODE)",
+      "Hydrate CreatedBy/LastModifiedBy names after enrichment"
+    ]
+  },
+  "policy": {
+    "crud": {
+      "create": true,
+      "read": true,
+      "update": true,
+      "delete": true
+    },
+    "fls": [
+      "Name",
+      "CreatedById",
+      "LastModifiedById"
+    ],
+    "customPermissions": [],
+    "testBypass": true
+  },
+  "dto": {
+    "detailFields": [
+      "Name",
+      "CreatedById",
+      "LastModifiedById"
+    ],
+    "upsertFields": [
+      "Name"
+    ],
+    "search": {
+      "queryFields": [
+        "Name"
+      ],
+      "defaultOrderBy": "LastModifiedDate DESC, Id ASC",
+      "limit": 200
+    }
+  },
+  "tests": {
+    "apex": [
+      "FRAGENTAudienceService_Test",
+      "FRAGENTAudienceHandler_Test"
+    ],
+    "agent": [],
+    "smoke": [
+      "FR_Smoke"
+    ]
+  },
+  "tickets": [
+    {
+      "key": "SCF-01",
+      "title": "Scaffold FRAGENT Audience handler/service/DTO (single-output envelope)",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "PERM-02",
+      "title": "Wire AgentCore_ActionKeys/Permissions for CRUD; seed test policies",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "SRCH-03",
+      "title": "Implement exact->fuzzy search with stop words and secure queries",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "DED-04",
+      "title": "Add duplicate-name guard on create/update using AgentCore_Dedupe",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "RT-05",
+      "title": "Assign 'Manual' record type on create; verify visibility",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "DEL-06",
+      "title": "Block delete when members or assigned learning exist",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "TEST-07",
+      "title": "Write FRAGENTAudienceService_Test (CRUD happy/negative + perms)",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "TEST-08",
+      "title": "Write FRAGENTAudienceHandler_Test (invocable + permissionDenied flag)",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "FACT-09",
+      "title": "Extend AgentCore_TestFactory for audiences, members, users",
+      "status": "OPEN",
+      "runAgent": false
+    },
+    {
+      "key": "AUD-10",
+      "title": "Audit single-output invariant (Response.message JSON envelope)",
+      "status": "OPEN",
+      "runAgent": false
+    }
+  ],
+  "meta": {
+    "sourceRequirements": "/mnt/data/mcp_proposal/audience.requirements.yaml"
+  }
+}

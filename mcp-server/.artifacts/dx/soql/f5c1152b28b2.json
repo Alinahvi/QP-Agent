@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2025-09-29T20:50:07.205Z",
+  "orgAlias": "innovation",
+  "soql": "SELECT Id, Name, Type FROM Account LIMIT 5",
+  "rowCount": 5,
+  "records": [
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v64.0/sobjects/Account/0012E00001j4GPDQA2"
+      },
+      "Id": "0012E00001j4GPDQA2",
+      "Name": "Hillsboro",
+      "Type": null
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v64.0/sobjects/Account/0012E00001j4GPNQA2"
+      },
+      "Id": "0012E00001j4GPNQA2",
+      "Name": "Alpharetta",
+      "Type": null
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v64.0/sobjects/Account/0012E00001j4GQVQA2"
+      },
+      "Id": "0012E00001j4GQVQA2",
+      "Name": "Chicago",
+      "Type": null
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v64.0/sobjects/Account/0012E00001j4GRnQAM"
+      },
+      "Id": "0012E00001j4GRnQAM",
+      "Name": "Chicago - Kinzie",
+      "Type": null
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v64.0/sobjects/Account/0012E00001j4GUSQA2"
+      },
+      "Id": "0012E00001j4GUSQA2",
+      "Name": "Deerfield",
+      "Type": null
+    }
+  ],
+  "raw": "{\n  \"status\": 0,\n  \"result\": {\n    \"records\": [\n      {\n        \"attributes\": {\n          \"type\": \"Account\",\n          \"url\": \"/services/data/v64.0/sobjects/Account/0012E00001j4GPDQA2\"\n        },\n        \"Id\": \"0012E00001j4GPDQA2\",\n        \"Name\": \"Hillsboro\",\n        \"Type\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"Account\",\n          \"url\": \"/services/data/v64.0/sobjects/Account/0012E00001j4GPNQA2\"\n        },\n        \"Id\": \"0012E00001j4GPNQA2\",\n        \"Name\": \"Alpharetta\",\n        \"Type\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"Account\",\n          \"url\": \"/services/data/v64.0/sobjects/Account/0012E00001j4GQVQA2\"\n        },\n        \"Id\": \"0012E00001j4GQVQA2\",\n        \"Name\": \"Chicago\",\n        \"Type\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"Account\",\n          \"url\": \"/services/data/v64.0/sobjects/Account/0012E00001j4GRnQAM\"\n        },\n        \"Id\": \"0012E00001j4GRnQAM\",\n        \"Name\": \"Chicago - Kinzie\",\n        \"Type\": null\n      },\n      {\n        \"attributes\": {\n          \"type\": \"Account\",\n          \"url\": \"/services/data/v64.0/sobjects/Account/0012E00001j4GUSQA2\"\n        },\n        \"Id\": \"0012E00001j4GUSQA2\",\n        \"Name\": \"Deerfield\",\n        \"Type\": null\n      }\n    ],\n    \"totalSize\": 5,\n    \"done\": true\n  },\n  \"warnings\": [\n    \"The \\\"-u\\\" flag has been deprecated. Use \\\"--target-org | -o\\\" instead.\"\n  ]\n}"
+}

@@ -1,0 +1,195 @@
+<template>
+  <div class="main-container">
+    <!-- Top Bar -->
+    <div class="slds-col slds-size_1-of-1 slds-p-around_medium slds-border_bottom">
+      <div class="slds-grid slds-grid_align-spread">
+        <div class="slds-col">
+          <h1 class="slds-text-heading_large">
+            <lightning-icon icon-name="utility:apps" size="small" class="slds-m-right_small"></lightning-icon>
+            QP Topic Guide
+          </h1>
+        </div>
+        <div class="slds-col slds-no-flex">
+          <lightning-input 
+            type="text" 
+            placeholder="Search topics and actions..." 
+            class="search-input">
+          </lightning-input>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+      <!-- Home View -->
+      <template if:true={showHome}>
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2>
+            <lightning-icon icon-name="utility:apps" class="section-header-icon" size="small"></lightning-icon>
+            Available Topics
+          </h2>
+        </div>
+
+        <!-- Topic Cards Grid -->
+        <div class="topic-cards-container">
+          <template for:each={topics} for:item="topic">
+            <div key={topic.id} class="topic-card" onclick={handleTopicClick} data-topic-id={topic.id}>
+              <div>
+                <h3>
+                  <lightning-icon icon-name={topic.icon} class="topic-card-icon" size="small"></lightning-icon>
+                  {topic.title}
+                </h3>
+                <p>{topic.blurb}</p>
+              </div>
+              <lightning-button
+                variant="brand"
+                label="Open"
+                onclick={handleTopicClick}
+                data-topic-id={topic.id}
+                class="slds-button_stretch">
+              </lightning-button>
+            </div>
+          </template>
+        </div>
+      </template>
+
+      <!-- Topic Detail View -->
+      <template if:false={showHome}>
+        <div class="slds-m-bottom_large">
+          <h2 class="slds-text-heading_large slds-m-bottom_small">{currentTopic.title}</h2>
+          <p class="slds-text-body_regular slds-text-color_weak slds-m-bottom_medium">{currentTopic.blurb}</p>
+          
+          <lightning-button 
+            variant="neutral" 
+            label="← Back to Topics" 
+            onclick={handleBackClick}
+            class="slds-m-bottom_medium">
+          </lightning-button>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+          <div class="slds-card slds-card_boundary">
+            <div class="slds-card__header">
+              <h3 class="slds-card__header-title">
+                <lightning-icon icon-name="utility:filter" class="filter-section-icon" size="small"></lightning-icon>
+                Filters
+              </h3>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+              <div class="filter-grid">
+                <div class="slds-form-element">
+                  <lightning-combobox
+                    name="ouFilter"
+                    label="Operating Unit (OU)"
+                    value={selectedOU}
+                    placeholder="Select OU"
+                    options={ouOptions}
+                    onchange={handleOUChange}
+                    required="true">
+                  </lightning-combobox>
+                </div>
+                <div class="slds-form-element">
+                  <lightning-combobox
+                    name="countryFilter"
+                    label="Country"
+                    value={selectedCountry}
+                    placeholder="Select Country"
+                    options={countryOptions}
+                    onchange={handleCountryChange}
+                    disabled={isCountryDisabled}>
+                  </lightning-combobox>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subflow-sections">
+          <template for:each={currentTopic.subflows} for:item="subflow">
+            <div key={subflow.id} class="subflow-section">
+              <div class="subflow-header" onclick={toggleSubflow} data-subflow-id={subflow.id}>
+                <h3 class="subflow-title">
+                  <span class="subflow-icon">
+                    <lightning-icon icon-name="utility:chevrondown" size="x-small"></lightning-icon>
+                  </span>
+                  {subflow.title}
+                </h3>
+                <p class="subflow-description">{subflow.description}</p>
+              </div>
+              
+              <div class="subflow-content" data-subflow-content={subflow.id}>
+                <div class="action-cards-container">
+                  <template for:each={subflow.actions} for:item="action">
+                    <div key={action.id} class="action-card" data-utterance={action.utterance}>
+                      <div class="slds-card__body_inner">
+                        <h4>
+                          <lightning-icon icon-name="utility:action" class="action-card-icon" size="x-small"></lightning-icon>
+                          {action.title}
+                        </h4>
+                        <p>{action.description}</p>
+                        
+                        <!-- Tags -->
+                        <div class="tag-container">
+                          <template for:each={action.tags} for:item="tag">
+                            <span key={tag} class="slds-badge slds-badge_lightest">{tag}</span>
+                          </template>
+                        </div>
+                        
+                        <!-- Buttons -->
+                        <div class="slds-grid slds-grid_align-spread">
+                          <lightning-button 
+                            variant="brand" 
+                            label="Use this" 
+                            onclick={handleUseClick}
+                            data-utterance={action.utterance}
+                            class="slds-m-right_x-small">
+                            <lightning-icon icon-name="utility:send" slot="icon" size="x-small"></lightning-icon>
+                          </lightning-button>
+                          <lightning-button 
+                            variant="neutral" 
+                            label="Copy" 
+                            onclick={handleCopyClick}
+                            data-utterance={action.utterance}>
+                            <lightning-icon icon-name="utility:copy" slot="icon" size="x-small"></lightning-icon>
+                          </lightning-button>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </template>
+    </main>
+
+    <!-- Agent Dock -->
+    <aside class="placeholder-area agent-dock">
+      <div class="agent-dock-container">
+        <h3 class="slds-text-heading_small slds-m-bottom_medium">
+          <lightning-icon icon-name="utility:bot" size="small" class="slds-m-right_small"></lightning-icon>
+          Agent Panel
+        </h3>
+        
+        <div class="slds-box slds-box_small slds-m-bottom_medium">
+          <div class="slds-text-body_small slds-text-color_weak slds-m-bottom_small">Last Utterance:</div>
+          <div class="utterance-preview">
+            <template if:true={lastUtterance}>
+              <p class="slds-text-body_small">{lastUtterance}</p>
+            </template>
+            <template if:false={lastUtterance}>
+              <p class="slds-text-body_small slds-text-color_weak">No utterance yet</p>
+            </template>
+          </div>
+        </div>
+        
+        <div class="slds-box slds-box_small slds-m-bottom_medium">
+          <p class="slds-text-body_small slds-text-color_weak text-center">Coming Soon</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</template>

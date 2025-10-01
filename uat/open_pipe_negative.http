@@ -1,0 +1,141 @@
+### UAT Scenarios for Open Pipe Analysis Negative Filters
+
+### Scenario 1: UKI AEs without Agentforce deals
+POST {{baseUrl}}/services/data/v{{version}}/actions/custom/ANAGENT_Open_Pipe_Analysis_V3
+Content-Type: application/json
+
+{
+  "inputs": [
+    {
+      "ouName": "UKI",
+      "workLocationCountry": "",
+      "groupBy": "AE",
+      "filterCriteria": "",
+      "restrictInValuesCsv": "",
+      "perAENormalize": false,
+      "limitN": 50,
+      "aggregationType": "COUNT",
+      "analysisType": "STAGE_COUNT",
+      "includeClosureProb": false,
+      "includeStageBottlenecks": false,
+      "includePMF": false,
+      "includeAEBenchmarks": false,
+      "includeHealthScore": false,
+      "excludeProductListCsv": "Agentforce",
+      "requireNoProductMatch": true,
+      "negativeIntent": true
+    }
+  ]
+}
+
+### Scenario 2: AMER ACC AEs excluding Data Cloud and Slack
+POST {{baseUrl}}/services/data/v{{version}}/actions/custom/ANAGENT_Open_Pipe_Analysis_V3
+Content-Type: application/json
+
+{
+  "inputs": [
+    {
+      "ouName": "AMER ACC",
+      "workLocationCountry": "",
+      "groupBy": "AE",
+      "filterCriteria": "",
+      "restrictInValuesCsv": "",
+      "perAENormalize": false,
+      "limitN": 50,
+      "aggregationType": "COUNT",
+      "analysisType": "STAGE_COUNT",
+      "includeClosureProb": false,
+      "includeStageBottlenecks": false,
+      "includePMF": false,
+      "includeAEBenchmarks": false,
+      "includeHealthScore": false,
+      "excludeProductListCsv": "Data Cloud,Slack",
+      "requireNoProductMatch": true,
+      "negativeIntent": true
+    }
+  ]
+}
+
+### Scenario 3: EMEA AEs without Salesforce Platform deals
+POST {{baseUrl}}/services/data/v{{version}}/actions/custom/ANAGENT_Open_Pipe_Analysis_V3
+Content-Type: application/json
+
+{
+  "inputs": [
+    {
+      "ouName": "EMEA",
+      "workLocationCountry": "",
+      "groupBy": "AE",
+      "filterCriteria": "",
+      "restrictInValuesCsv": "",
+      "perAENormalize": false,
+      "limitN": 50,
+      "aggregationType": "COUNT",
+      "analysisType": "STAGE_COUNT",
+      "includeClosureProb": false,
+      "includeStageBottlenecks": false,
+      "includePMF": false,
+      "includeAEBenchmarks": false,
+      "includeHealthScore": false,
+      "excludeProductListCsv": "Salesforce Platform",
+      "requireNoProductMatch": true,
+      "negativeIntent": true
+    }
+  ]
+}
+
+### Scenario 4: US AEs without Marketing Cloud deals (with country filter)
+POST {{baseUrl}}/services/data/v{{version}}/actions/custom/ANAGENT_Open_Pipe_Analysis_V3
+Content-Type: application/json
+
+{
+  "inputs": [
+    {
+      "ouName": "AMER",
+      "workLocationCountry": "US",
+      "groupBy": "AE",
+      "filterCriteria": "",
+      "restrictInValuesCsv": "",
+      "perAENormalize": false,
+      "limitN": 50,
+      "aggregationType": "COUNT",
+      "analysisType": "STAGE_COUNT",
+      "includeClosureProb": false,
+      "includeStageBottlenecks": false,
+      "includePMF": false,
+      "includeAEBenchmarks": false,
+      "includeHealthScore": false,
+      "excludeProductListCsv": "Marketing Cloud",
+      "requireNoProductMatch": true,
+      "negativeIntent": true
+    }
+  ]
+}
+
+### Scenario 5: APAC AEs without Service Cloud deals (previous timeframe)
+POST {{baseUrl}}/services/data/v{{version}}/actions/custom/ANAGENT_Open_Pipe_Analysis_V3
+Content-Type: application/json
+
+{
+  "inputs": [
+    {
+      "ouName": "APAC",
+      "workLocationCountry": "",
+      "groupBy": "AE",
+      "filterCriteria": "open_pipe_opty_stg_nm='Qualified'",
+      "restrictInValuesCsv": "",
+      "perAENormalize": false,
+      "limitN": 50,
+      "aggregationType": "COUNT",
+      "analysisType": "STAGE_COUNT",
+      "includeClosureProb": false,
+      "includeStageBottlenecks": false,
+      "includePMF": false,
+      "includeAEBenchmarks": false,
+      "includeHealthScore": false,
+      "excludeProductListCsv": "Service Cloud",
+      "requireNoProductMatch": true,
+      "negativeIntent": true
+    }
+  ]
+}

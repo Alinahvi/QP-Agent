@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPEN_PIPE_OPTY_STG_NM_4__c</fullName>
+    <description>Open Pipeline Opportunity Stage Name for Stage 4. This field identifies the sales stage for the fourth pipeline opportunity, focusing on confirming value with power, mutual close plan, refined pricing proposal, and verbal selection.</description>
+    <externalId>false</externalId>
+    <label>Open Pipe Opty Stg Nm 4</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField> 

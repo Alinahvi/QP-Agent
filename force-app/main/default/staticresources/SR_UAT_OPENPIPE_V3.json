@@ -1,0 +1,400 @@
+{
+  "testCases": [
+    {
+      "utterance": "Show me all the products that passed stage 4 within AMER ACC for open pipe.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE"
+      }
+    },
+    {
+      "utterance": "Open pipe post stage 4 in AMER-ACC, country = US, top 20.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 20,
+        "workLocationCountry": "US",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Compare last quarter open pipe post stage 4 for AMER ACC.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "PREVIOUS",
+        "limitN": 100,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Open pipe >= stage 4 for UKI, current quarter, limit 10.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 10,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Filter open pipe to Data Cloud and Sales Cloud in EMEA ENTR after stage 4, top 20.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 20,
+        "productListCsv": "Data Cloud,Sales Cloud",
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE"
+      }
+    },
+    {
+      "utterance": "Open pipe post stage 4 in AMER ACC (United States), current quarter — products Service Cloud, Marketing Cloud.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "workLocationCountry": "United States",
+        "productListCsv": "Service Cloud,Marketing Cloud",
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE"
+      }
+    },
+    {
+      "utterance": "Show me high-value products in open pipe for AMER ACC post stage 3.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    },
+    {
+      "utterance": "Count opportunities between stage 2 and 5 for Data Cloud in EMEA ENTR.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "2",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "productListCsv": "Data Cloud",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT",
+        "aggregationType": "COUNT"
+      }
+    },
+    {
+      "utterance": "Find products with highest stagnation in stage 4 for UKI.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Show me open pipe analysis for LATAM post stage 4, current quarter.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "LATAM",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Open pipe analysis for AMER ACC with country filter US, post stage 3.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "workLocationCountry": "US",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Show me top 10 products by value in open pipe for EMEA ENTR after stage 4.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 10,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    },
+    {
+      "utterance": "Open pipe stagnation analysis for UKI in stage 5, top 5 products.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "5",
+        "timeFrame": "CURRENT",
+        "limitN": 5,
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Compare current vs previous quarter open pipe for AMER ACC post stage 4.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Show me open pipe opportunities in EMEA ENTR for Service Cloud and Marketing Cloud, post stage 3.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "productListCsv": "Service Cloud,Marketing Cloud",
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE"
+      }
+    },
+    {
+      "utterance": "Open pipe analysis for LATAM with country filter Brazil, post stage 4, top 15.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "LATAM",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 15,
+        "workLocationCountry": "Brazil",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Find stagnation days for Data Cloud in AMER ACC stage 4, current quarter.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "productListCsv": "Data Cloud",
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Show me open pipe count by stage for UKI, post stage 2, limit 50.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "2",
+        "timeFrame": "CURRENT",
+        "limitN": 50,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT",
+        "aggregationType": "COUNT"
+      }
+    },
+    {
+      "utterance": "Open pipe analysis for EMEA ENTR with country UK, post stage 4, top 25.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 25,
+        "workLocationCountry": "UK",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Show me products with highest value in open pipe for AMER ACC, post stage 3, current quarter.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    },
+    {
+      "utterance": "Count opportunities in stage 3-5 for Sales Cloud in LATAM, current quarter.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "LATAM",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "productListCsv": "Sales Cloud",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT",
+        "aggregationType": "COUNT"
+      }
+    },
+    {
+      "utterance": "Open pipe stagnation analysis for UKI, stage 4, top 10 products by days.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 10,
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Show me open pipe for AMER ACC with country filter United States, post stage 4, limit 30.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 30,
+        "workLocationCountry": "United States",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Find highest value products in open pipe for EMEA ENTR, post stage 4, current quarter.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    },
+    {
+      "utterance": "Open pipe analysis for LATAM with Brazil filter, post stage 3, top 20 opportunities.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "LATAM",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 20,
+        "workLocationCountry": "Brazil",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Show me stagnation days for Marketing Cloud in UKI, stage 4, current quarter.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 100,
+        "productListCsv": "Marketing Cloud",
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Open pipe count by stage for AMER ACC, post stage 2, limit 40.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "2",
+        "timeFrame": "CURRENT",
+        "limitN": 40,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT",
+        "aggregationType": "COUNT"
+      }
+    },
+    {
+      "utterance": "Show me open pipe for EMEA ENTR with UK country filter, post stage 4, top 35.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "EMEA ENTR",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 35,
+        "workLocationCountry": "UK",
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Find products with highest stagnation in AMER ACC, stage 4, current quarter, top 8.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "AMER ACC",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 8,
+        "groupBy": "PRODUCT",
+        "analysisType": "DAYS_IN_STAGE"
+      }
+    },
+    {
+      "utterance": "Open pipe analysis for LATAM, post stage 4, current quarter, limit 45.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "LATAM",
+        "minStage": "4",
+        "timeFrame": "CURRENT",
+        "limitN": 45,
+        "groupBy": "STAGE",
+        "analysisType": "STAGE_COUNT"
+      }
+    },
+    {
+      "utterance": "Show me high-value products in open pipe for UKI, post stage 3, current quarter, top 12.",
+      "expectedIntent": "open_pipe_analyze",
+      "expectedArgs": {
+        "ouName": "UKI",
+        "minStage": "3",
+        "timeFrame": "CURRENT",
+        "limitN": 12,
+        "groupBy": "PRODUCT",
+        "analysisType": "PRODUCT_PERFORMANCE",
+        "aggregationType": "SUM"
+      }
+    }
+  ]
+}

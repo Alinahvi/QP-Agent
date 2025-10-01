@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PQ_CC_ACV__c</fullName>
+    <description>Previous quarter Create and Close (C&C) by AE. C&C means ACV generated from same-period opportunities over the past three months measures the effectiveness of sales efforts. Example values: 258226.09, 248706.03, 67205.39.</description>
+    <externalId>false</externalId>
+    <label>Previous Quarter Cc Acv</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+    <unique>false</unique>
+</CustomField>

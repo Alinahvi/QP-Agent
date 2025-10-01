@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "total": 8,
+    "successful": 0,
+    "failed": 8,
+    "success_rate": 0.0
+  },
+  "results": [
+    {
+      "utterance": "Show me meeting trends: current vs previous quarter in EMEA ENTR",
+      "status": "failed",
+      "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+    },
+    {
+      "utterance": "Compare call connection improvement in UKI this quarter vs last quarter",
+      "status": "failed",
+      "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+    },
+    {
+      "utterance": "What's the meeting performance by management tier in UKI?",
+      "status": "failed",
+      "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+    },
+    {
+      "utterance": "Look for retail industry solutions in APAC",
+      "status": "failed",
+      "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+    },
+    {
+      "utterance": "Find management training content for EMEA ENTR leaders",
+      "status": "failed",
+      "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+    },
+    {
+      "utterance": "Get leadership development content in APAC",
+      "status": "failed",
+      "error": "Please specify a topic to search for (e.g., 'Data Cloud', 'Sales Cloud')."
+    },
+    {
+      "utterance": "Find strategic planning resources for LATAM management",
+      "status": "failed",
+      "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+    },
+    {
+      "utterance": "Search for leadership coaches in UKI",
+      "status": "failed",
+      "error": "Could not determine the appropriate tool for this request. Please be more specific about what you want to do."
+    }
+  ]
+}

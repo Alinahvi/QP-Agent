@@ -1,0 +1,6 @@
+{
+  "transport": "websocket",
+  "urlEnv": "MCP_WS_URL",
+  "fallbackUrl": "ws://localhost:5173",
+  "capabilities": {}
+}
