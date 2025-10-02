@@ -280,9 +280,9 @@ public with sharing class ABAgentFuturePipeAnalysisServiceEnhanced {
             
             // Query individual AE performance
             String aeQuery = 'SELECT full_name__c, ' + productField + ', ou_name__c, ' +
-                            'AE_Score__c, Coverage__c, ' + amountField + ' ' +
+                            'AVG(AE_Score__c) avgScore, AVG(Coverage__c) avgCoverage, SUM(' + amountField + ') totalAmount ' +
                             'FROM ' + objectName + ' WHERE ' + whereClause + ' AND AE_Score__c != null AND Coverage__c != null ' +
-                            'GROUP BY full_name__c, ' + productField + ', ou_name__c, AE_Score__c, Coverage__c, ' + amountField + ' ' +
+                            'GROUP BY full_name__c, ' + productField + ', ou_name__c ' +
                             'LIMIT 20';
             
             List<sObject> aeRecords = Database.query(aeQuery);
@@ -300,9 +300,9 @@ public with sharing class ABAgentFuturePipeAnalysisServiceEnhanced {
                 String aeName = (String) record.get('full_name__c');
                 String product = (String) record.get(productField);
                 String recordOU = (String) record.get('ou_name__c');
-                Decimal aeScore = (Decimal) record.get('AE_Score__c');
-                Decimal coverage = (Decimal) record.get('Coverage__c');
-                Decimal amount = (Decimal) record.get(amountField);
+                Decimal aeScore = (Decimal) record.get('avgScore');
+                Decimal coverage = (Decimal) record.get('avgCoverage');
+                Decimal amount = (Decimal) record.get('totalAmount');
                 
                 perf.put('aeName', aeName);
                 perf.put('ou', recordOU);

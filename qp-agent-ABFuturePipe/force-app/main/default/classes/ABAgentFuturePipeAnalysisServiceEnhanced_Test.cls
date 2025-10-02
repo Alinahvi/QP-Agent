@@ -11,7 +11,7 @@
  * @version 1.0
  */
 @isTest
-public class ABAgentFuturePipeAnalysisServiceEnhanced_Test {
+public class ABAgentFuturePipeEnhanced_Test {
     
     @TestSetup
     static void setupTestData() {

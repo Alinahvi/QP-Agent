@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2025-10-02T13:01:03.000Z" hostname="https://readiness--innovation.sandbox.my.salesforce.com" tests="5" failures="1"  errors="0"  time="0.09">
+        <properties>
+            <property name="outcome" value="Failed"/>
+            <property name="testsRan" value="5"/>
+            <property name="passing" value="4"/>
+            <property name="failing" value="1"/>
+            <property name="skipped" value="0"/>
+            <property name="passRate" value="80%"/>
+            <property name="failRate" value="20%"/>
+            <property name="testStartTime" value="Thu Oct 02 2025 9:01:03 AM"/>
+            <property name="testSetupTimeInMs" value="157"/>
+            <property name="testExecutionTime" value="0.09 s"/>
+            <property name="testTotalTime" value="0.24 s"/>
+            <property name="commandTime" value="0.22 s"/>
+            <property name="hostname" value="https://readiness--innovation.sandbox.my.salesforce.com"/>
+            <property name="orgId" value="00DD7000000jTUCMA2"/>
+            <property name="username" value="anahvi@readiness.salesforce.com.innovation"/>
+            <property name="testRunId" value="707D700004J2ztv"/>
+            <property name="userId" value="0052E00000Njzb7QAB"/>
+        </properties>
+        <testcase name="testBasicPipelineAnalysis" classname="ABAgentFuturePipeEnhanced_Test" time="0.04">
+        </testcase>
+        <testcase name="testDataAvailability" classname="ABAgentFuturePipeEnhanced_Test" time="0.00">
+        </testcase>
+        <testcase name="testEnhancedPipelineAnalysis" classname="ABAgentFuturePipeEnhanced_Test" time="0.04">
+            <failure message="System.UnexpectedException: Field must be grouped or aggregated: AE_Score__c"><![CDATA[Class.ABAgentFuturePipeAnalysisServiceEnhanced.addAEPerformanceAnalysis: line 288, column 1
+Class.ABAgentFuturePipeAnalysisServiceEnhanced.analyzePipelineEnhanced: line 87, column 1
+Class.ABAgentFuturePipeEnhanced_Test.testEnhancedPipelineAnalysis: line 143, column 1]]></failure>
+        </testcase>
+        <testcase name="testErrorHandling" classname="ABAgentFuturePipeEnhanced_Test" time="0.00">
+        </testcase>
+    </testsuite>
+</testsuites>

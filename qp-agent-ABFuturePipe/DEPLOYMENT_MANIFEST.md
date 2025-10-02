@@ -17,11 +17,23 @@ This deployment package contains the complete ABAgentFuturePipeAnalysisHandler s
 - `ABAgentFuturePipeAnalysisServiceEnhanced.cls` - Intelligence layer with AI features
 - `ABAgentFuturePipeAnalysisServiceEnhanced.cls-meta.xml` - Enhanced service metadata
 
+### Logging Classes
+- `AgentInteractionLogger.cls` - Logging utility for agent interactions
+- `AgentInteractionLogger.cls-meta.xml` - Logging class metadata
+- `AgentLog.cls` - General logging utility
+- `AgentLog.cls-meta.xml` - General logging metadata
+
 ### Test Classes
 - `ABAgentFuturePipeAnalysisServiceEnhanced_Test.cls` - Enhanced service tests
 - `ABAgentFuturePipeAnalysisServiceEnhanced_Test.cls-meta.xml` - Test metadata
 - `TestEnhancedFuturePipelineAnalysis.cls` - Comprehensive test suite
 - `TestEnhancedFuturePipelineAnalysis.cls-meta.xml` - Test metadata
+
+### Custom Objects
+- `Agent_Renewals__c/` - Renewals data object with all required fields
+- `Agent_Cross_Sell__c/` - Cross-sell data object with all required fields  
+- `Agent_Upsell__c/` - Upsell data object with all required fields
+- `Agent_Conversation_Log__c/` - Conversation logging object
 
 ### Permission Sets
 - `QP_Agent_Pilot_Perms.permissionset-meta.xml` - Required permissions for the system
@@ -38,22 +50,27 @@ This deployment package contains the complete ABAgentFuturePipeAnalysisHandler s
 
 ### Deployment Steps
 
-1. **Deploy Classes**
+1. **Deploy Custom Objects**
+   ```bash
+   sfdx force:source:deploy -p force-app/main/default/objects -u your-org-alias
+   ```
+
+2. **Deploy Classes**
    ```bash
    sfdx force:source:deploy -p force-app/main/default/classes -u your-org-alias
    ```
 
-2. **Deploy Permission Sets**
+3. **Deploy Permission Sets**
    ```bash
    sfdx force:source:deploy -p force-app/main/default/permissionsets -u your-org-alias
    ```
 
-3. **Assign Permission Sets**
+4. **Assign Permission Sets**
    ```bash
    sfdx force:user:permset:assign -n QP_Agent_Pilot_Perms -u your-org-alias
    ```
 
-4. **Run Tests**
+5. **Run Tests**
    ```bash
    sfdx force:apex:test:run -n TestEnhancedFuturePipelineAnalysis,ABAgentFuturePipeAnalysisServiceEnhanced_Test -u your-org-alias
    ```
