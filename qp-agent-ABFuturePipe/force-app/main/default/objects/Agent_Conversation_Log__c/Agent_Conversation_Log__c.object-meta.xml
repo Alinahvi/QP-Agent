@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores conversation logs for agent interactions</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Session_Id__c</fullName>
+        <description>Unique session identifier for the conversation</description>
+        <externalId>false</externalId>
+        <label>Session Id</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Id__c</fullName>
+        <description>User ID who initiated the conversation</description>
+        <externalId>false</externalId>
+        <label>User Id</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+        <fields>
+            <fullName>Turn_Number__c</fullName>
+            <description>Turn number in the conversation</description>
+            <externalId>false</externalId>
+            <label>Turn Number</label>
+            <precision>18</precision>
+            <required>true</required>
+            <scale>0</scale>
+            <trackHistory>false</trackHistory>
+            <trackTrending>false</trackTrending>
+            <type>Number</type>
+            <unique>false</unique>
+        </fields>
+    <fields>
+        <fullName>Interaction_Timestamp__c</fullName>
+        <description>Timestamp of the interaction</description>
+        <externalId>false</externalId>
+        <label>Interaction Timestamp</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Detected_Intent__c</fullName>
+        <description>Intent detected from the user input</description>
+        <externalId>false</externalId>
+        <label>Detected Intent</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+        <fields>
+            <fullName>Action_Parameters__c</fullName>
+            <description>JSON string of action parameters</description>
+            <externalId>false</externalId>
+            <label>Action Parameters</label>
+            <length>32768</length>
+            <required>false</required>
+            <trackHistory>false</trackHistory>
+            <trackTrending>false</trackTrending>
+            <type>LongTextArea</type>
+            <unique>false</unique>
+            <visibleLines>3</visibleLines>
+        </fields>
+        <fields>
+            <fullName>Response_Message__c</fullName>
+            <description>Response message sent to the user</description>
+            <externalId>false</externalId>
+            <label>Response Message</label>
+            <length>32768</length>
+            <required>false</required>
+            <trackHistory>false</trackHistory>
+            <trackTrending>false</trackTrending>
+            <type>LongTextArea</type>
+            <unique>false</unique>
+            <visibleLines>3</visibleLines>
+        </fields>
+        <fields>
+            <fullName>Structured_Response__c</fullName>
+            <description>JSON string of structured response data</description>
+            <externalId>false</externalId>
+            <label>Structured Response</label>
+            <length>32768</length>
+            <required>false</required>
+            <trackHistory>false</trackHistory>
+            <trackTrending>false</trackTrending>
+            <type>LongTextArea</type>
+            <unique>false</unique>
+            <visibleLines>3</visibleLines>
+        </fields>
+    <fields>
+        <fullName>Response_Status__c</fullName>
+        <description>Status of the response (Success, Error, etc.)</description>
+        <externalId>false</externalId>
+        <label>Response Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Query_Template__c</fullName>
+        <description>Query template used for the request</description>
+        <externalId>false</externalId>
+        <label>Query Template</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Agent Conversation Log</label>
+    <nameField>
+        <displayFormat>CL-{00000000}</displayFormat>
+        <label>Conversation Log Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Agent Conversation Logs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -27,26 +27,26 @@ public with sharing class AgentInteractionLogger {
      */
     public static void log(List<LogInput> logInputs) {
         try {
-            List<Agent_Conversation_Log__c> logs = new List<Agent_Conversation_Log__c>();
+            List<Agent_Conversation_Log__c> conversationLogs = new List<Agent_Conversation_Log__c>();
             
             for (LogInput input : logInputs) {
-                Agent_Conversation_Log__c log = new Agent_Conversation_Log__c();
-                log.Session_Id__c = input.sessionId;
-                log.User_Id__c = input.userId;
-                log.Turn_Number__c = input.turnNumber;
-                log.Interaction_Timestamp__c = input.interactionTimestamp;
-                log.Detected_Intent__c = input.detectedIntent;
-                log.Action_Parameters__c = input.actionParameters != null ? String.valueOf(input.actionParameters) : null;
-                log.Response_Message__c = input.responseMessage;
-                log.Structured_Response__c = input.structuredResponse != null ? JSON.serialize(input.structuredResponse) : null;
-                log.Response_Status__c = input.responseStatus;
-                log.Query_Template__c = input.queryTemplate;
+                Agent_Conversation_Log__c conversationLog = new Agent_Conversation_Log__c();
+                conversationLog.Session_Id__c = input.sessionId;
+                conversationLog.User_Id__c = input.userId;
+                conversationLog.Turn_Number__c = input.turnNumber;
+                conversationLog.Interaction_Timestamp__c = input.interactionTimestamp;
+                conversationLog.Detected_Intent__c = input.detectedIntent;
+                conversationLog.Action_Parameters__c = input.actionParameters != null ? String.valueOf(input.actionParameters) : null;
+                conversationLog.Response_Message__c = input.responseMessage;
+                conversationLog.Structured_Response__c = input.structuredResponse != null ? JSON.serialize(input.structuredResponse) : null;
+                conversationLog.Response_Status__c = input.responseStatus;
+                conversationLog.Query_Template__c = input.queryTemplate;
                 
-                logs.add(log);
+                conversationLogs.add(conversationLog);
             }
             
-            if (!logs.isEmpty()) {
-                insert logs;
+            if (!conversationLogs.isEmpty()) {
+                insert conversationLogs;
             }
             
         } catch (Exception e) {

@@ -31,9 +31,9 @@ public with sharing class AgentLog {
     /**
      * Logs a warning message
      */
-    public static void warning(String className, String method, Map<String, Object> context) {
+    public static void warn(String className, String method, Map<String, Object> context) {
         try {
-            System.debug('WARNING [' + className + '.' + method + ']: ' + (context != null ? JSON.serialize(context) : 'No context'));
+            System.debug('WARN [' + className + '.' + method + ']: ' + (context != null ? JSON.serialize(context) : 'No context'));
         } catch (Exception e) {
             System.debug('Error logging warning: ' + e.getMessage());
         }
