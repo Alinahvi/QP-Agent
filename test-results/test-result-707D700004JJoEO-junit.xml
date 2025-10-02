@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2025-10-02T13:02:00.000Z" hostname="https://readiness--innovation.sandbox.my.salesforce.com" tests="5" failures="0"  errors="0"  time="0.13">
+        <properties>
+            <property name="outcome" value="Successful"/>
+            <property name="testsRan" value="5"/>
+            <property name="passing" value="5"/>
+            <property name="failing" value="0"/>
+            <property name="skipped" value="0"/>
+            <property name="passRate" value="100%"/>
+            <property name="failRate" value="0%"/>
+            <property name="testStartTime" value="Thu Oct 02 2025 9:02:00 AM"/>
+            <property name="testSetupTimeInMs" value="153"/>
+            <property name="testExecutionTime" value="0.13 s"/>
+            <property name="testTotalTime" value="0.28 s"/>
+            <property name="commandTime" value="0.29 s"/>
+            <property name="hostname" value="https://readiness--innovation.sandbox.my.salesforce.com"/>
+            <property name="orgId" value="00DD7000000jTUCMA2"/>
+            <property name="username" value="anahvi@readiness.salesforce.com.innovation"/>
+            <property name="testRunId" value="707D700004JJoEO"/>
+            <property name="userId" value="0052E00000Njzb7QAB"/>
+        </properties>
+        <testcase name="testBasicPipelineAnalysis" classname="ABAgentFuturePipeEnhanced_Test" time="0.04">
+        </testcase>
+        <testcase name="testDataAvailability" classname="ABAgentFuturePipeEnhanced_Test" time="0.00">
+        </testcase>
+        <testcase name="testEnhancedPipelineAnalysis" classname="ABAgentFuturePipeEnhanced_Test" time="0.08">
+        </testcase>
+        <testcase name="testErrorHandling" classname="ABAgentFuturePipeEnhanced_Test" time="0.00">
+        </testcase>
+    </testsuite>
+</testsuites>

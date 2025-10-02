@@ -1,0 +1,31 @@
+
+
+=== Test Results
+TEST NAME                                                    OUTCOME  MESSAGE  RUNTIME (MS)
+───────────────────────────────────────────────────────────  ───────  ───────  ────────────
+ABAgentFuturePipeEnhanced_Test.testBasicPipelineAnalysis     Pass              43          
+ABAgentFuturePipeEnhanced_Test.testDataAvailability          Pass              3           
+ABAgentFuturePipeEnhanced_Test.testEnhancedPipelineAnalysis  Pass              80          
+ABAgentFuturePipeEnhanced_Test.testErrorHandling             Pass              3           
+
+
+=== Test Setup Time by Test Class for Run 707D700004JJoEO
+TEST SETUP METHOD NAME                        SETUP TIME
+────────────────────────────────────────────  ──────────
+ABAgentFuturePipeEnhanced_Test.setupTestData  153       
+
+
+=== Test Summary
+NAME                 VALUE                                     
+───────────────────  ──────────────────────────────────────────
+Outcome              Passed                                    
+Tests Ran            5                                         
+Pass Rate            100%                                      
+Fail Rate            0%                                        
+Skip Rate            0%                                        
+Test Run Id          707D700004JJoEO                           
+Test Setup Time      153 ms                                    
+Test Execution Time  129 ms                                    
+Test Total Time      282 ms                                    
+Org Id               00DD7000000jTUCMA2                        
+Username             anahvi@readiness.salesforce.com.innovation
