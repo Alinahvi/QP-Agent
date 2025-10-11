@@ -1,0 +1,95 @@
+═══════════════════════════════════════════════════════════════════
+  V3 ENHANCED - QUICK REFERENCE CARD
+═══════════════════════════════════════════════════════════════════
+
+🎯 DEPLOYMENT STATUS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Handler:     ANAgentOpenPipeAnalysisHandlerV3Enhanced  (DEPLOYED)
+✅ Service:     ANAgentOpenPipeAnalysisServiceV3Enhanced  (DEPLOYED)
+✅ Tests:       ANAgentOpenPipeAnalysisV3EnhancedTest     (DEPLOYED)
+✅ Unit Tests:  16/20 Passing (80% pass rate)
+✅ Coverage:    Handler 100%, Service 53%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 MANUAL STEP REQUIRED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open Agent Builder → Your Agent
+2. Click "Actions" tab
+3. Click "+ New Action"
+4. Choose "Apex Action"
+5. Select:
+   - Class: ANAgentOpenPipeAnalysisHandlerV3Enhanced
+   - Method: analyzeOpenPipe
+6. Save
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🧪 QUICK TEST (Copy & Paste in Agent)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Test 1 - Basic Query:
+"Show me UKI opportunities in stage 2"
+
+Expected:
+✅ Agent shows results with emojis
+✅ JSON structure with context, summary, results
+✅ Stage auto-converted to "02 - Determining Problem, Impact, Ideal"
+
+---
+
+Test 2 - Region Clarification:
+"Show me AMER opportunities"
+
+Expected:
+✅ Agent asks: "Which OU in AMER?"
+✅ Lists: AMER ACC, AMER ICE, SMB - AMER SMB, etc.
+
+---
+
+Test 3 - Your Original Use Case:
+"Show me top products that have stagnation in stage 2 more than 40 days"
+
+Expected:
+✅ Agent asks for OU if not specified
+✅ When you say "UKI" → queries with days in stage > 40
+✅ Returns products sorted by stagnation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ SUCCESS CRITERIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASS if:
+1. ✅ Agent understands "stage 2" (not "02 - Determining...")
+2. ✅ Agent asks for clarification when you say "AMER"
+3. ✅ Agent adds emojis (service output is clean JSON)
+4. ✅ Agent explains fields using fieldContext
+5. ✅ No errors during execution
+
+FAIL if:
+1. ❌ Agent asks YOU for query parameters
+2. ❌ Agent doesn't understand "stage 2"
+3. ❌ Agent doesn't detect "AMER" as high-level region
+4. ❌ Service output contains emojis
+5. ❌ Errors occur
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Detailed Guides:
+- V3_ENHANCED_COMPLETE_TESTING_GUIDE.md   (Full test results & troubleshooting)
+- V3_ENHANCED_AGENT_TESTING_INSTRUCTIONS.md   (10 test utterances with expected results)
+- V3_ENHANCED_FINAL_SUMMARY.md   (This document)
+- V3_ENHANCED_DEPLOYMENT_SUCCESS.md   (Technical deployment details)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎬 START TESTING NOW!
+
+1. Add action to Agent Builder (see above)
+2. Try the 3 quick tests
+3. Run all 10 utterances from testing guide
+4. Report back with results!
+
+═══════════════════════════════════════════════════════════════════
+
