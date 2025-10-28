@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>🎯 SME DISCOVERY V5 - Find Subject Matter Experts from AGENT_SME_ACADEMIES__c enriched with Learner_Profile__c. 🔍 REQUIRED: searchTerm="Sales Cloud"|"John Smith". Search by product expertise (PRODUCT_L2__c, PRODUCT_L3__c) or SME name. 📧 MANAGER: managerEmail="sallen@salesforce.com" (auto-searches ALL 12 levels). ✅ FLEXIBLE INPUT: academyMembersOnly accepts true/"true"/"yes"/"1", limit accepts 20/"20", minTenureDays accepts 365/"365", includeOnLeave accepts true/"true". Examples: {"searchTerm":"Agentforce","searchType":"Product","limit":"50","academyMembersOnly":"true"} OR {"searchTerm":"Agentforce","searchType":"Product","limit":50,"academyMembersOnly":true}. Both work! Returns ranked SMEs with expertise, AE rank, total ACV, tenure, location, manager chain. Filters: OU, country, industry, vertical, tenure, academy membership, leave status.</description>
+    <developerName>SearchSMEsV5</developerName>
+    <invocationTarget>ANAgentSMESearchHandlerV5</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>SearchSMEsV5</localDeveloperName>
+    <masterLabel>SearchSMEsV5</masterLabel>
+    <progressIndicatorMessage>Searching SMEs</progressIndicatorMessage>
+</GenAiFunction>
