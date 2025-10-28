@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>🎯 OPEN PIPELINE ANALYSIS V5 - Analyze current deals for bottlenecks and stagnation. 📧 MANAGER: managerEmail="sallen@salesforce.com" (auto-searches ALL 12 levels). 🌍 TERRITORY: ouName="UKI" OR workLocationCountry="United States". ✅ FLEXIBLE INPUT: summaryOnly accepts true/"true"/"yes"/"1", limit accepts 40000/"40000". Examples: {"ouName":"UKI","summaryOnly":"true","limit":"40000"} OR {"ouName":"UKI","summaryOnly":true,"limit":40000}. Both work! Returns aggregations by product/segment/industry/stage. Use summaryOnly=true unless user asks for customer names.</description>
+    <developerName>ANAGENT_Open_Pipe_Analysis_V5</developerName>
+    <invocationTarget>ANAgentOpenPipeAnalysisHandlerV5</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>ANAGENT_Open_Pipe_Analysis_V5</localDeveloperName>
+    <masterLabel>ANAGENT Open Pipe Analysis V5</masterLabel>
+    <progressIndicatorMessage>Analyzing open pipeline</progressIndicatorMessage>
+</GenAiFunction>
