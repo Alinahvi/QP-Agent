@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>🎯 PROGRAM DISCOVERY V5 - Search Product Catalog (172 global programs) and Regional Programs (861 local programs). 🔍 REQUIRED: searchTerm="Agentforce", programType="BOTH"|"GLOBAL"|"REGIONAL". ✅ FLEXIBLE INPUT: includeUsageMetrics accepts true/"true"/"yes"/"1", limit accepts 50/"50", includeArchived accepts false/"false"/"no"/"0". Examples: {"searchTerm":"Tableau","programType":"BOTH","limit":"50","includeUsageMetrics":"true"} OR {"searchTerm":"Tableau","programType":"BOTH","limit":50,"includeUsageMetrics":true}. Both work! Returns programs with smart synonym expansion, usage metrics (enrollment, learners, recent delivery), and comprehensive filtering by enablement type, level, role, region, session type, business priority, duration.</description>
+    <developerName>SearchProgramsV5</developerName>
+    <invocationTarget>ANAgentProgramSearchHandlerV5</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>SearchProgramsV5</localDeveloperName>
+    <masterLabel>SearchProgramsV5</masterLabel>
+    <progressIndicatorMessage>Searching programs</progressIndicatorMessage>
+</GenAiFunction>
+
