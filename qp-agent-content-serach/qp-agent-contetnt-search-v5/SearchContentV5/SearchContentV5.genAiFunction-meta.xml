@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>🎯 CONTENT DISCOVERY V5 - Unified search across ACT Learning Content (45,000+ courses with performance metrics) + Consensus Demo Videos (2,000+ customer-facing demos). ✅ FLEXIBLE INPUT: limit accepts 100 OR "100", includeInactive accepts true OR "true"/"yes"/"1". KEY USE CASES: (1) Lifecycle management - find underperforming content needing promotion. (2) Training recommendations - rank by enrollment and CSAT. (3) Content gap analysis - identify missing topics. (4) Demo discovery - search Consensus for customer-facing videos. INTELLIGENT ROUTING: AUTO mode analyzes keywords - routes to ACT for "course/training" mentions, Consensus for "demo/video" mentions, BOTH if both mentioned. RETURNS: JSON with summary (total enrollment, avg CSAT, avg completion rate) + detailed records with metrics. Agent guidance: Present summary first, highlight high/low performers for actionable insights.</description>
+    <developerName>SearchContentV5</developerName>
+    <invocationTarget>ANAgentContentSearchHandlerV5</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>SearchContentV5</localDeveloperName>
+    <masterLabel>SearchContentV5</masterLabel>
+    <progressIndicatorMessage>Searching content</progressIndicatorMessage>
+</GenAiFunction>
